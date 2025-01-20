@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="overflow-y-hidden h-screen">
       <Navbar />
-      <img className="z-0 mt-[-88px]" src={moonBackground} alt="moonBackground" />
+      <img className="z-0 mt-[-88px] w-full h-screen object-cover" src={moonBackground} alt="moonBackground" />
     </div>
   );
 }
