@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../assets/images/header/logo.png";
+import logo from "../assets/images/header/logo.svg";
 import homeIcon from "../assets/images/header/home_icon.svg";
 import locationIcon from "../assets/images/header/location_icon.svg";
 import bedroomIcon from "../assets/images/header/bedroom_number_icon.svg";
