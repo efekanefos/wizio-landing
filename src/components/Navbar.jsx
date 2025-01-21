@@ -1,15 +1,15 @@
 import React from "react";
 import logo from "../assets/images/header/logo.png";
-import homeIcon from "../assets/images/header/home_icon.png";
-import locationIcon from "../assets/images/header/location_icon.png";
-import bedroomIcon from "../assets/images/header/bedroom_number_icon.png";
-import priceRangeIcon from "../assets/images/header/price_range_icon.png";
-import dropDownArrowIcon from "../assets/images/header/dropdown_arrow_icon.png";
-import whiteDropDownArrowIcon from "../assets/images/header/white_dropdown_arrow_icon.png";
-import searchIcon from "../assets/images/header/search_icon.png";
+import homeIcon from "../assets/images/header/home_icon.svg";
+import locationIcon from "../assets/images/header/location_icon.svg";
+import bedroomIcon from "../assets/images/header/bedroom_number_icon.svg";
+import priceRangeIcon from "../assets/images/header/price_range_icon.svg";
+import dropDownArrowIcon from "../assets/images/header/dropdown_arrow_icon.svg";
+import whiteDropDownArrowIcon from "../assets/images/header/white_dropdown_arrow_icon.svg";
+import searchIcon from "../assets/images/header/search_icon.svg";
 import callIcon from "../assets/images/header/call_icon.svg";
 import globalIcon from "../assets/images/header/global.svg";
-import lightModeIcon from "../assets/images/header/light_mode_icon.png";
+import lightModeIcon from "../assets/images/header/light_mode_icon.svg";
 import octagonProfileIcon from "../assets/images/header/octagon_profile_icon.svg";
 
 function Navbar() {
@@ -28,30 +28,30 @@ function Navbar() {
       <div className="border border-[#DEDEDE] flex justify-between items-center rounded-full shadow-xl py-1 pl-10 pr-1 max-w-[900px] w-full">
         <div className="flex justify-center items-center gap-5 ">
           {/* Location Button */}
-          <div className="flex justify-start items-center gap-3 border-r border-[#D7D7D7] pr-3 h-full min-h-[47px]">
+          <div className="flex justify-start items-center gap-3 border-r border-[#D7D7D7] pr-5 h-full min-h-[47px]">
             <img src={locationIcon} alt="location" />
             <div className="flex justify-start items-center">
-              <a className="text-[12px] font-inter text-middleMenuTextBlack mr-[2.5vw]" href="/">
+              <a className="text-[12px] font-inter text-middleMenuTextBlack mr-9" href="/">
                 Location
               </a>
               <img src={dropDownArrowIcon} alt="dropDownArrowIcon" />
             </div>
           </div>
           {/* Number of Bedrooms Button */}
-          <div className="flex justify-start items-center gap-3 border-r border-[#D7D7D7] pr-3 h-full min-h-[47px]">
+          <div className="flex justify-start items-center gap-3 border-r border-[#D7D7D7] pr-5 h-full min-h-[47px]">
             <img src={bedroomIcon} alt="bedroomIcon" />
             <div className="flex justify-start items-center">
-              <a className="text-[12px] font-inter text-middleMenuTextBlack mr-[2.5vw]" href="/">
+              <a className="text-[12px] font-inter text-middleMenuTextBlack mr-9" href="/">
                 Number Of Bedrooms
               </a>
               <img src={dropDownArrowIcon} alt="dropDownArrowIcon" />
             </div>
           </div>
           {/* Price Range Button */}
-          <div className="flex justify-start items-center gap-3 border-r border-[#D7D7D7] pr-3 h-full min-h-[47px]">
+          <div className="flex justify-start items-center gap-3 border-r border-[#D7D7D7] pr-5 h-full min-h-[47px]">
             <img src={priceRangeIcon} alt="priceRangeIcon" />
             <div className="flex justify-start items-center">
-              <a className="text-[12px] font-inter text-middleMenuTextBlack mr-[2.5vw]" href="/">
+              <a className="text-[12px] font-inter text-middleMenuTextBlack mr-9" href="/">
                 Price Range
               </a>
               <img src={dropDownArrowIcon} alt="dropDownArrowIcon" />
@@ -61,7 +61,7 @@ function Navbar() {
           <div className="flex justify-start items-center gap-3 h-full min-h-[47px]">
             <img src={priceRangeIcon} alt="priceRangeIcon" />
             <div className="flex justify-start items-center">
-              <a className="text-[12px] font-inter text-middleMenuTextBlack mr-[2.5vw]" href="/">
+              <a className="text-[12px] font-inter text-middleMenuTextBlack mr-9" href="/">
                 Property Details
               </a>
               <img src={dropDownArrowIcon} alt="dropDownArrowIcon" />
@@ -75,7 +75,7 @@ function Navbar() {
       </div>
       {/* Profile Side */}
       <div className="flex justify-start items-center gap-3">
-        <div className="w-full flex justify-start items-center gap-3">
+        <div className="w-full flex justify-start items-center gap-5">
           <div className="w-full max-w-[21px]">
             <img className="w-full" src={callIcon} alt="callIcon" />
           </div>
