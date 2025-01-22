@@ -8,7 +8,7 @@ import notifications from "../../assets/images/loggedInWindows/notifications.svg
 import logout from "../../assets/images/loggedInWindows/logout.svg";
 function Status() {
   return (
-    <div className="absolute top-[110px] right-[30px] bg-white rounded-2xl max-w-[360px] w-full">
+    <div className="absolute top-[110px] right-[30px] bg-white rounded-[21px] max-w-[360px] w-full">
       {/* Close Button */}
       <div className="rounded-full p-3 bg-[#F2F2F2] absolute top-6 right-5">
         <img src={close} alt="close button" />
@@ -36,7 +36,7 @@ function Status() {
         </div>
       </div>
       {/* Last Visits */}
-      <div className="flex justify-between items-center py-7 px-5  border-b border-[#D2D3D7] border-opacity-50">
+      <div className="flex justify-between items-center py-7 px-5 border-b border-[#D2D3D7] border-opacity-50">
         <div className="flex justify-start items-center gap-3">
           <div className="max-w-[24px] max-h-[24px]">
             <img className="w-full h-full" src={lastVisits} alt="lastVisits" />
