@@ -24,7 +24,7 @@ function Status() {
         </div>
       </div>
       {/* Profile Setting */}
-      <div className="flex justify-between items-center py-7 px-5  border border-[#D2D3D7] border-r-0 border-l-0 border-opacity-50">
+      <div className="flex justify-between items-center py-7 px-9 border border-[#D2D3D7] border-r-0 border-l-0 border-opacity-50">
         <div className="flex justify-start items-center gap-3">
           <div className="max-w-[24px] max-h-[24px]">
             <img className="w-full h-full" src={profileSetting} alt="profileSetting" />
@@ -36,7 +36,7 @@ function Status() {
         </div>
       </div>
       {/* Last Visits */}
-      <div className="flex justify-between items-center py-7 px-5 border-b border-[#D2D3D7] border-opacity-50">
+      <div className="flex justify-between items-center py-7 px-9 border-b border-[#D2D3D7] border-opacity-50">
         <div className="flex justify-start items-center gap-3">
           <div className="max-w-[24px] max-h-[24px]">
             <img className="w-full h-full" src={lastVisits} alt="lastVisits" />
@@ -48,7 +48,7 @@ function Status() {
         </div>
       </div>
       {/* Notifications */}
-      <div className="flex justify-between items-center py-7 px-5  border-b border-[#D2D3D7] border-r-0 border-l-0 border-opacity-50">
+      <div className="flex justify-between items-center py-7 px-9  border-b border-[#D2D3D7] border-r-0 border-l-0 border-opacity-50">
         <div className="flex justify-start items-center gap-3">
           <div className="max-w-[24px] max-h-[24px]">
             <img className="w-full h-full" src={notifications} alt="notifications" />
@@ -65,7 +65,7 @@ function Status() {
         </div>
       </div>
       {/* Logout */}
-      <div className="flex justify-between items-center py-7 px-5">
+      <div className="flex justify-between items-center py-7 px-9">
         <div className="flex justify-start items-center gap-3">
           <div className="max-w-[24px] max-h-[24px]">
             <img className="w-full h-full" src={logout} alt="logout" />

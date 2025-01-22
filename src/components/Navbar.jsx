@@ -15,6 +15,7 @@ import octagonProfileIcon from "../assets/images/header/octagon_profile_icon.svg
 /* Components */
 import Status from "./loggedInWindows/Status";
 import ProfileSetting from "./loggedInWindows/ProfileSetting";
+import LastVisits from "./loggedInWindows/LastVisits";
 
 function Navbar() {
   return (
@@ -23,9 +24,10 @@ function Navbar() {
       {/* <Status /> */}
 
       {/* Profile Settings Window ⬇️ */}
-      <ProfileSetting />
+      {/* <ProfileSetting /> */}
 
       {/* Last Visits Window ⬇️ */}
+      <LastVisits />
 
       {/* Notifications Window ⬇️ */}
 
@@ -104,7 +106,7 @@ function Navbar() {
           <div className="w-full flex justify-between items-center">
             <div className="flex w-full gap-3">
               <img className="w-full max-w-[22px] ml-2" src={octagonProfileIcon} alt="octagonProfileIcon" />
-              <div className="border-l border-[#D7D7D7] pl-4">
+              <div className="border-l border-[#D7D7D7] border-opacity-20 pl-4">
                 <p className="text-[14px] text-white font-medium">B.Douglas</p>
                 <p className="text-[12px] text-white font-regular">Customer</p>
               </div>
