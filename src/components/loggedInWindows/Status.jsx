@@ -18,8 +18,8 @@ function Status() {
         <div className="bg-grayIconBg p-5 rounded-full">
           <img src={user} alt="user" />
         </div>
-        <div className="flex flex-col gap-0">
-          <p className="text-[18px] text-middleMenuTextBlack font-medium">B.Douglas</p>
+        <div className="flex flex-col">
+          <p className="text-[18px] text-middleMenuTextBlack font-medium mb-[-2px]">B.Douglas</p>
           <p className="text-[14px] text-middleMenuTextBlack font-regular">Customer</p>
         </div>
       </div>
