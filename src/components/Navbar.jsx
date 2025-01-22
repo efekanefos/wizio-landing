@@ -19,7 +19,7 @@ import LastVisits from "./loggedInWindows/LastVisits";
 
 function Navbar() {
   return (
-    <nav className="flex justify-between items-center mt-0 py-3 px-5 z-10 relative bg-white font-inter">
+    <nav className="flex justify-between items-center mt-0 py-3 px-7 z-10 relative bg-white font-inter">
       {/* Profile Status Window ⬇️ */}
       {/* <Status /> */}
 
