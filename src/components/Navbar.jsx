@@ -16,6 +16,7 @@ import octagonProfileIcon from "../assets/images/header/octagon_profile_icon.svg
 import Status from "./loggedInWindows/Status";
 import ProfileSetting from "./loggedInWindows/ProfileSetting";
 import LastVisits from "./loggedInWindows/LastVisits";
+import Notifications from "./loggedInWindows/Notifications";
 
 function Navbar() {
   return (
@@ -27,9 +28,10 @@ function Navbar() {
       {/* <ProfileSetting /> */}
 
       {/* Last Visits Window ⬇️ */}
-      <LastVisits />
+      {/* <LastVisits /> */}
 
       {/* Notifications Window ⬇️ */}
+      <Notifications />
 
       {/* Logo Side */}
       <div className="flex justify-start items-center gap-5">
