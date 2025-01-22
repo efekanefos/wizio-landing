@@ -1,4 +1,5 @@
 import React from "react";
+/* Images */
 import logo from "../assets/images/header/logo.svg";
 import homeIcon from "../assets/images/header/home_icon.svg";
 import locationIcon from "../assets/images/header/location_icon.svg";
@@ -11,10 +12,17 @@ import callIcon from "../assets/images/header/call_icon.svg";
 import globalIcon from "../assets/images/header/global.svg";
 import lightModeIcon from "../assets/images/header/light_mode_icon.svg";
 import octagonProfileIcon from "../assets/images/header/octagon_profile_icon.svg";
+/* Components */
+import Status from "./loggedInWindows/Status";
 
 function Navbar() {
   return (
     <nav className="flex justify-between items-center mt-0 py-3 px-5 z-10 relative bg-white">
+      {/* Profile Status Window */}
+      <Status />
+      {/* Profile Settings Window */}
+      {/* Last Visits Window */}
+      {/* Notifications Window */}
       {/* Logo Side */}
       <div className="flex justify-start items-center gap-5">
         <div>

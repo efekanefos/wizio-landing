@@ -1,5 +1,5 @@
 import Navbar from "./components/Navbar";
-import moonBackground from "./assets/images/header/moon_background.png";
+import moonBackground from "./assets/images/homepage/moon_background.png";
 
 function App() {
   return (
