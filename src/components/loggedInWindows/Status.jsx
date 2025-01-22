@@ -8,14 +8,14 @@ import notifications from "../../assets/images/loggedInWindows/notifications.svg
 import logout from "../../assets/images/loggedInWindows/logout.svg";
 function Status() {
   return (
-    <div className="absolute top-[110px] right-[30px] bg-white rounded-2xl p-7 max-w-[360px] w-full">
+    <div className="absolute top-[110px] right-[30px] bg-white rounded-2xl max-w-[360px] w-full">
       {/* Close Button */}
-      <div className="rounded-full p-2 bg-[#F2F2F2] absolute top-3 right-3">
+      <div className="rounded-full p-3 bg-[#F2F2F2] absolute top-6 right-5">
         <img src={close} alt="close button" />
       </div>
       {/* Profile Img,Name,Role */}
-      <div className="flex justify-start items-center gap-3">
-        <div className="bg-grayIconBg p-3 rounded-full">
+      <div className="flex justify-start items-center gap-5 p-8 pb-2 mb-5">
+        <div className="bg-grayIconBg p-5 rounded-full">
           <img src={user} alt="user" />
         </div>
         <div className="flex flex-col gap-0">
@@ -24,14 +24,58 @@ function Status() {
         </div>
       </div>
       {/* Profile Setting */}
-      <div>
-        <div>
-          <img src={profileSetting} alt="profileSetting" />
+      <div className="flex justify-between items-center py-7 px-5  border border-[#D2D3D7] border-r-0 border-l-0 border-opacity-50">
+        <div className="flex justify-start items-center gap-3">
+          <div className="max-w-[24px] max-h-[24px]">
+            <img className="w-full h-full" src={profileSetting} alt="profileSetting" />
+          </div>
+          <p className="text-[14px]">Profile Setting</p>
+        </div>
+        <div className="max-w-[24px] max-h-[24px]">
+          <img className="w-full h-full" src={blackRightArrow} alt="blackRightArrow" />
         </div>
       </div>
       {/* Last Visits */}
+      <div className="flex justify-between items-center py-7 px-5  border-b border-[#D2D3D7] border-opacity-50">
+        <div className="flex justify-start items-center gap-3">
+          <div className="max-w-[24px] max-h-[24px]">
+            <img className="w-full h-full" src={lastVisits} alt="lastVisits" />
+          </div>
+          <p className="text-[14px]">Last visits</p>
+        </div>
+        <div className="max-w-[24px] max-h-[24px]">
+          <img className="w-full h-full" src={blackRightArrow} alt="blackRightArrow" />
+        </div>
+      </div>
       {/* Notifications */}
+      <div className="flex justify-between items-center py-7 px-5  border-b border-[#D2D3D7] border-r-0 border-l-0 border-opacity-50">
+        <div className="flex justify-start items-center gap-3">
+          <div className="max-w-[24px] max-h-[24px]">
+            <img className="w-full h-full" src={notifications} alt="notifications" />
+          </div>
+          <p className="text-[14px]">Notifications</p>
+        </div>
+        <div className="flex justify-start items-center gap-3">
+          <span className="flex justify-center items-center bg-[#FF0004] p-1 rounded-full w-[25px] h-[25px]">
+            <p className="text-white font-medium text-[14px]">5</p>
+          </span>
+          <div className="max-w-[24px] max-h-[24px]">
+            <img className="w-full h-full" src={blackRightArrow} alt="blackRightArrow" />
+          </div>
+        </div>
+      </div>
       {/* Logout */}
+      <div className="flex justify-between items-center py-7 px-5">
+        <div className="flex justify-start items-center gap-3">
+          <div className="max-w-[24px] max-h-[24px]">
+            <img className="w-full h-full" src={logout} alt="logout" />
+          </div>
+          <p className="text-[14px]">Log out</p>
+        </div>
+        <div className="max-w-[24px] max-h-[24px]">
+          <img className="w-full h-full" src={blackRightArrow} alt="blackRightArrow" />
+        </div>
+      </div>
     </div>
   );
 }
