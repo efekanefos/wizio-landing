@@ -28,10 +28,10 @@ function Navbar() {
       {/* <ProfileSetting /> */}
 
       {/* Last Visits Window ⬇️ */}
-      {/* <LastVisits /> */}
+      <LastVisits />
 
       {/* Notifications Window ⬇️ */}
-      <Notifications />
+      {/* <Notifications /> */}
 
       {/* Logo Side */}
       <div className="flex justify-start items-center gap-5">

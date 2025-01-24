@@ -4,6 +4,7 @@ import LogoutNavbar from "./components/LogoutNavbar";
 import DiscoverProjects from "./components/DiscoverProjects";
 import LocalAmenities from "./components/LocalAmenities";
 import Contact from "./components/logoutWindows/Contact";
+import IndexPage from "./components/IndexPage";
 //? Images
 import moonBackground from "./assets/images/homepage/moon_background.png";
 import grayLocationMap from "./assets/images/homepage/gray_location_map.svg";
@@ -12,11 +13,12 @@ import LocalAmenitiesBackground from "./assets/images/homepage/local_amenities_b
 function App() {
   return (
     <div className="overflow-y-hidden h-screen relative">
-      {/* <Navbar/> */}
+      {/* <Navbar /> */}
       {/* <LogoutNavbar/> */}
       {/* <DiscoverProjects /> */}
       {/* <LocalAmenities />*/}
-      <Contact />
+      {/* <Contact /> */}
+      <IndexPage />
       <img className="z-0 mt-[-88px] w-full h-screen object-cover" src={moonBackground} alt="moonBackground" />
       {/* <img className="z-0 mt-[-88px] w-full h-screen object-cover" src={grayLocationMap} alt="grayLocationMap" /> */}
       {/*<img className="z-0 mt-[-88px] w-full h-screen object-cover" src={LocalAmenitiesBackground} alt="LocalAmenitiesBackground" />
