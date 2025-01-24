@@ -15,9 +15,9 @@ import blackSearchIcon from "../assets/images/header/black_search_icon.svg";
 import lowOpacityLocalAmenitiesIcon from "../assets/images/header/low_opacity_local_amenities_icon.svg";
 import blackRightArrow from "../assets/images/loggedInWindows/black_right_arrow.svg";
 
-function LogoutNavbar() {
+function DiscoverProjects() {
   return (
-    <nav className="flex justify-between items-start mt-0 py-3 pt-4 px-9 z-10 relative bg-white font-inter">
+    <nav className="flex justify-between items-start mt-0 py-6 px-9 z-10 relative bg-white font-inter border-b border-[#D2D3D7]">
       {/* Logo Side */}
       <div className="flex justify-start items-center gap-5">
         <div>
@@ -106,7 +106,7 @@ function LogoutNavbar() {
             <p className="text-white font-semibold text-[12px]">Search</p>
           </div>
           {/* Location List */}
-          <div className="grid grid-cols-5 justify-evenly items-start absolute w-full bottom-[-272px] left-0 py-8 px-10 bg-white shadow-2xl rounded-[40px]">
+          <div className="grid grid-cols-5 justify-evenly items-start absolute w-full bottom-[-275px] left-0 py-8 px-10 bg-white shadow-2xl rounded-[40px]">
             <div className="col-span-1">
               {/* Location Side */}
               <h3 className="text-middleMenuTextBlack text-opacity-55 font-medium text-[12px] mb-3">Location</h3>
@@ -262,4 +262,4 @@ function LogoutNavbar() {
   );
 }
 
-export default LogoutNavbar;
+export default DiscoverProjects;

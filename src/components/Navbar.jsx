@@ -20,7 +20,7 @@ import Notifications from "./loggedInWindows/Notifications";
 
 function Navbar() {
   return (
-    <nav className="flex justify-between items-center mt-0 py-3 px-7 z-10 relative bg-white font-inter">
+    <nav className="flex justify-between items-center mt-0 py-3 px-7 z-10 relative bg-white font-inter border-b border-[#D2D3D7]">
       {/* Profile Status Window ⬇️ */}
       {/* <Status /> */}
 
