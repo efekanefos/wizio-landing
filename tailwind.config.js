@@ -7,6 +7,9 @@ export default {
         grayIconBg: "#DDD",
         middleMenuTextBlack: "#171717",
         buttonOrange: "#F78E2F",
+        blackContentColor: "#1A1A1A",
+        darkBlue: "#0069FF",
+        textDarkBlue: "#0060E6",
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"], // Fontu tanımla
