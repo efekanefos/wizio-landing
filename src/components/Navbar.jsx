@@ -12,27 +12,10 @@ import callIcon from "../assets/images/header/call_icon.svg";
 import globalIcon from "../assets/images/header/global.svg";
 import lightModeIcon from "../assets/images/header/light_mode_icon.svg";
 import octagonProfileIcon from "../assets/images/header/octagon_profile_icon.svg";
-/* Components */
-import Status from "./loggedInWindows/Status";
-import ProfileSetting from "./loggedInWindows/ProfileSetting";
-import LastVisits from "./loggedInWindows/LastVisits";
-import Notifications from "./loggedInWindows/Notifications";
 
 function Navbar() {
   return (
     <nav className="flex justify-between items-center mt-0 py-3 px-7 z-10 relative bg-white font-inter border-b border-[#D2D3D7]">
-      {/* Profile Status Window ⬇️ */}
-      {/* <Status /> */}
-
-      {/* Profile Settings Window ⬇️ */}
-      {/* <ProfileSetting /> */}
-
-      {/* Last Visits Window ⬇️ */}
-      <LastVisits />
-
-      {/* Notifications Window ⬇️ */}
-      {/* <Notifications /> */}
-
       {/* Logo Side */}
       <div className="flex justify-start items-center gap-5">
         <div>
