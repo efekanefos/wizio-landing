@@ -8,6 +8,9 @@ import IndexPage from "./components/IndexPage";
 import NumberOfBedrooms from "./components/NumberOfBedrooms";
 import LocalAmenitiesList from "./components/LocalAmenitiesList";
 import Calender from "./components/Calender";
+import Homepage from "./components/Homepage";
+import PriceRange from "./components/PriceRange";
+import LocalAmenitiesGPS from "./components/LocalAmenitiesGPS";
 //? Images
 import moonBackground from "./assets/images/homepage/moon_background.png";
 import grayLocationMap from "./assets/images/homepage/gray_location_map.svg";
@@ -25,11 +28,14 @@ function App() {
       {/* <IndexPage /> */}
       {/* <NumberOfBedrooms /> */}
       {/* <LocalAmenitiesList /> */}
-      <Calender />
-      <img className="z-0 mt-[-88px] w-full h-screen object-cover" src={moonBackground} alt="moonBackground" />
-      {/* <img className="z-0 mt-[-88px] w-full h-screen object-cover" src={grayLocationMap} alt="grayLocationMap" /> */}
+      {/* <Calender /> */}
+      {/* <Homepage /> */}
+      {/* <PriceRange /> */}
+      <LocalAmenitiesGPS />
+      {/* <img className="z-0 mt-[-88px] w-full h-screen object-cover" src={moonBackground} alt="moonBackground" /> */}
+      <img className="z-0 mt-[-88px] w-full h-screen object-cover" src={grayLocationMap} alt="grayLocationMap" />
 
-      {/*<img className="z-0 mt-[-88px] w-full h-screen object-cover" src={LocalAmenitiesBackground} alt="LocalAmenitiesBackground" />
+      {/* <img className="z-0 mt-[-88px] w-full h-screen object-cover" src={LocalAmenitiesBackground} alt="LocalAmenitiesBackground" /> */}
       {/* Location Map Numbered Circle */}
       {/*
       <span className="absolute top-[50%] left-[50%] z-10 flex justify-center items-center w-[34px] h-[34px] rounded-full border-[3px] border-white bg-buttonOrange shadow-2xl">
