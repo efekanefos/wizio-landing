@@ -13,6 +13,8 @@ import octagonProfileIcon from "../../assets/images/header/octagon_profile_icon.
 import earthBackground from "../../assets/images/homepage/planet_earth_background.png";
 import blackSearchIcon from "../../assets/images/header/black_search_icon.svg";
 import localAmenitiesIcon from "../../assets/images/header/local_amenities_icon.svg";
+/* Windows */
+import DiscoverProjects from "../DiscoverProjects";
 
 function LandingPage() {
   const [showUpperOptions, setShowUpperOptions] = useState(false);
@@ -121,7 +123,9 @@ function LandingPage() {
             </div>
           </div>
         </div>
+        {showUpperOptions && <DiscoverProjects />}
       </nav>
+
       <img className="z-0 -mt-20 w-full h-screen object-cover" src={earthBackground} alt="earthBackground" />
     </div>
   );
