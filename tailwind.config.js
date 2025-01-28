@@ -11,6 +11,9 @@ export default {
         darkBlue: "#0069FF",
         textDarkBlue: "#0060E6",
       },
+      fontSize: {
+        base: ["14px", "1.5"],
+      },
       fontFamily: {
         inter: ["Inter", "sans-serif"], // Fontu tanımla
       },

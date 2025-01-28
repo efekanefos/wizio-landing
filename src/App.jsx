@@ -32,7 +32,7 @@ function App() {
           path="/"
           element={
             <div className="overflow-y-hidden h-screen relative">
-              <Status />
+              <LandingPage />
             </div>
           }
         />

@@ -1,4 +1,4 @@
-import { StrictMode } from "react";
+import { StrictMode, useState } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
@@ -22,17 +22,20 @@ const links = [
 ];
 
 function DropdownMenu() {
+  const [selectedValue, setSelectedValue] = useState("");
+
   const handleChange = (event) => {
     const selectedHref = event.target.value;
+    setSelectedValue(selectedHref); // Update state
     if (selectedHref) {
-      window.location.href = selectedHref; // Seçilen bağlantıya yönlendir
+      window.location.href = selectedHref; // Redirect to the selected link
     }
   };
 
   return (
     <div className="absolute bottom-3 right-3 z-20">
-      <select className="bg-white border border-middleMenuTextBlack rounded-[30px] p-2 w-[250px] text-[12px]" onChange={handleChange}>
-        <option value="" disabled selected>
+      <select className="bg-white border border-middleMenuTextBlack rounded-[30px] p-2 w-[250px] text-[12px]" value={selectedValue} onChange={handleChange}>
+        <option value="" disabled>
           Select a Page
         </option>
         {links.map((link) => (
