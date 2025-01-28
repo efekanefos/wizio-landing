@@ -25,13 +25,13 @@ function DiscoverProjects() {
         <h3 className="text-middleMenuTextBlack text-opacity-55 font-medium text-xs mb-6">Location</h3>
         <ul className="list-none">
           <li>
-            <p className="text-middleMenuTextBlack text-xl text-opacity-[18%] font-medium my-0 hover:text-opacity-100 cursor-pointer">Paphos</p>
+            <p className="text-middleMenuTextBlack text-xl text-opacity-20 font-medium my-0 hover:text-opacity-100 cursor-pointer">Paphos</p>
           </li>
           <li>
-            <p className="text-middleMenuTextBlack text-xl text-opacity-[100%] font-medium my-0 hover:text-opacity-100 cursor-pointer">Limassol</p>
+            <p className="text-middleMenuTextBlack text-xl font-medium my-0 hover:text-opacity-100 cursor-pointer">Limassol</p>
           </li>
           <li>
-            <p className="text-middleMenuTextBlack text-xl text-opacity-[18%] font-medium my-0 hover:text-opacity-100 cursor-pointer">Athens</p>
+            <p className="text-middleMenuTextBlack text-xl text-opacity-20 font-medium my-0 hover:text-opacity-100 cursor-pointer">Athens</p>
           </li>
         </ul>
       </div>
@@ -42,28 +42,28 @@ function DiscoverProjects() {
           <div>
             <h3 className="text-middleMenuTextBlack text-opacity-55 font-medium text-xs mb-6">Project</h3>
             <ul className="list-none flex flex-col gap-3">
-              <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-[12px] before:h-[1px]">
+              <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-3 before:h-px">
                 <p className="text-middleMenuTextBlack text-xs font-medium hover:translate-x-4 cursor-pointer">Ava Plaza</p>
               </li>
-              <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-[12px] before:h-[1px]">
+              <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-3 before:h-px">
                 <p className="text-middleMenuTextBlack text-xs font-medium hover:translate-x-4 cursor-pointer">Beachside</p>
               </li>
-              <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-[12px] before:h-[1px]">
+              <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-3 before:h-px">
                 <p className="text-middleMenuTextBlack text-xs font-medium hover:translate-x-4 cursor-pointer">Coral Vista</p>
               </li>
-              <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-[12px] before:h-[1px]">
+              <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-3 before:h-px">
                 <p className="text-middleMenuTextBlack text-xs font-medium hover:translate-x-4 cursor-pointer">Domus</p>
               </li>
-              <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-[12px] before:h-[1px]">
+              <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-3 before:h-px">
                 <p className="text-middleMenuTextBlack text-xs font-medium hover:translate-x-4 cursor-pointer">Enscape</p>
               </li>
-              <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-[12px] before:h-[1px]">
+              <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-3 before:h-px">
                 <p className="text-middleMenuTextBlack text-xs font-medium hover:translate-x-4 cursor-pointer">Konia Green</p>
               </li>
-              <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-[12px] before:h-[1px]">
+              <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-3 before:h-px">
                 <p className="text-middleMenuTextBlack text-xs font-medium hover:translate-x-4 cursor-pointer">Konia Park 3</p>
               </li>
-              <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-[12px] before:h-[1px]">
+              <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-3 before:h-px">
                 <p className="text-middleMenuTextBlack text-xs font-medium hover:translate-x-4 cursor-pointer">One</p>
               </li>
             </ul>
@@ -71,76 +71,76 @@ function DiscoverProjects() {
 
           {/* Col #2 */}
           <ul className="list-none flex flex-col gap-3">
-            <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-[12px] before:h-[1px]">
+            <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-3 before:h-px">
               <p className="text-middleMenuTextBlack text-xs font-medium hover:translate-x-4 cursor-pointer">Minthis</p>
             </li>
-            <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-[12px] before:h-[1px]">
+            <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-3 before:h-px">
               <p className="text-middleMenuTextBlack text-xs font-medium hover:translate-x-4 cursor-pointer">Pafilia Plaza</p>
             </li>
-            <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-[12px] before:h-[1px]">
+            <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-3 before:h-px">
               <p className="text-middleMenuTextBlack text-xs font-medium hover:translate-x-4 cursor-pointer">Vida Suites</p>
             </li>
-            <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-[12px] before:h-[1px]">
+            <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-3 before:h-px">
               <p className="text-middleMenuTextBlack text-xs font-medium hover:translate-x-4 cursor-pointer">The Grove</p>
             </li>
-            <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-[12px] before:h-[1px]">
+            <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-3 before:h-px">
               <p className="text-middleMenuTextBlack text-xs font-medium hover:translate-x-4 cursor-pointer">Elysia Park</p>
             </li>
-            <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-[12px] before:h-[1px]">
+            <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-3 before:h-px">
               <p className="text-middleMenuTextBlack text-xs font-medium hover:translate-x-4 cursor-pointer">Aria Residences</p>
             </li>
-            <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-[12px] before:h-[1px]">
+            <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-3 before:h-px">
               <p className="text-middleMenuTextBlack text-xs font-medium hover:translate-x-4 cursor-pointer">Lana Villas</p>
             </li>
-            <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-[12px] before:h-[1px]">
+            <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-3 before:h-px">
               <p className="text-middleMenuTextBlack text-xs font-medium hover:translate-x-4 cursor-pointer">Olea Residences</p>
             </li>
           </ul>
           {/* Col #3 */}
           <ul className="list-none flex flex-col gap-3">
-            <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-[12px] before:h-[1px]">
+            <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-3 before:h-px">
               <p className="text-middleMenuTextBlack text-xs font-medium hover:translate-x-4 cursor-pointer">Aurai Residences</p>
             </li>
-            <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-[12px] before:h-[1px]">
+            <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-3 before:h-px">
               <p className="text-middleMenuTextBlack text-xs font-medium hover:translate-x-4 cursor-pointer">Anarita Valley</p>
             </li>
-            <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-[12px] before:h-[1px]">
+            <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-3 before:h-px">
               <p className="text-middleMenuTextBlack text-xs font-medium hover:translate-x-4 cursor-pointer">Amathos</p>
             </li>
-            <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-[12px] before:h-[1px]">
+            <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-3 before:h-px">
               <p className="text-middleMenuTextBlack text-xs font-medium hover:translate-x-4 cursor-pointer">Amaya</p>
             </li>
-            <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-[12px] before:h-[1px]">
+            <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-3 before:h-px">
               <p className="text-middleMenuTextBlack text-xs font-medium hover:translate-x-4 cursor-pointer">Amarosa</p>
             </li>
-            <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-[12px] before:h-[1px]">
+            <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-3 before:h-px">
               <p className="text-middleMenuTextBlack text-xs font-medium hover:translate-x-4 cursor-pointer">Hesperides Gardens</p>
             </li>
-            <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-[12px] before:h-[1px]">
+            <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-3 before:h-px">
               <p className="text-middleMenuTextBlack text-xs font-medium hover:translate-x-4 cursor-pointer">Nerina</p>
             </li>
-            <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-[12px] before:h-[1px]">
+            <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-3 before:h-px">
               <p className="text-middleMenuTextBlack text-xs font-medium hover:translate-x-4 cursor-pointer">Pafia Gardens</p>
             </li>
           </ul>
           {/* Col #4 */}
           <ul className="list-none flex flex-col gap-[2px]">
-            <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-[12px] before:h-[1px]">
+            <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-3 before:h-px">
               <p className="text-middleMenuTextBlack text-xs font-medium hover:translate-x-4 cursor-pointer">Pafia 2</p>
             </li>
-            <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-[12px] before:h-[1px]">
+            <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-3 before:h-px">
               <p className="text-middleMenuTextBlack text-xs font-medium hover:translate-x-4 cursor-pointer">Pafilia Gardens</p>
             </li>
-            <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-[12px] before:h-[1px]">
+            <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-3 before:h-px">
               <p className="text-middleMenuTextBlack text-xs font-medium hover:translate-x-4 cursor-pointer">Polis Gardens</p>
             </li>
-            <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-[12px] before:h-[1px]">
+            <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-3 before:h-px">
               <p className="text-middleMenuTextBlack text-xs font-medium hover:translate-x-4 cursor-pointer">Peyia Chorio</p>
             </li>
-            <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-[12px] before:h-[1px]">
+            <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-3 before:h-px">
               <p className="text-middleMenuTextBlack text-xs font-medium hover:translate-x-4 cursor-pointer">Oasis Park</p>
             </li>
-            <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-[12px] before:h-[1px]">
+            <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-3 before:h-px">
               <p className="text-middleMenuTextBlack text-xs font-medium hover:translate-x-4 cursor-pointer">Iliso Suites </p>
             </li>
           </ul>
@@ -171,7 +171,7 @@ export default DiscoverProjects;
               <div className="w-[20px]">
                 <img className="w-full" src={blackSearchIcon} alt="blackSearchIcon" />
               </div>
-              <p className="text-middleMenuTextBlack font-medium text-xs relative before:bg-black before:w-[26px] before:absolute before:left-[50%] before:bottom-[-5px] before:h-[1px] before:translate-x-[-50%] ">Discover Projects</p>
+              <p className="text-middleMenuTextBlack font-medium text-xs relative before:bg-black before:w-[26px] before:absolute before:left-[50%] before:bottom-[-5px] before:h-px before:translate-x-[-50%] ">Discover Projects</p>
             </div>
 
             <div className="flex justify-start items-center gap-2">
@@ -265,28 +265,28 @@ export default DiscoverProjects;
                   <div>
                     <h3 className="text-middleMenuTextBlack text-opacity-55 font-medium text-xs mb-3">Project</h3>
                     <ul className="list-none flex flex-col gap-[2px]">
-                      <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-[12px] before:h-[1px]">
+                      <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-3 before:h-px">
                         <p className="text-middleMenuTextBlack text-xs font-medium hover:translate-x-4 cursor-pointer">Ava Plaza</p>
                       </li>
-                      <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-[12px] before:h-[1px]">
+                      <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-3 before:h-px">
                         <p className="text-middleMenuTextBlack text-xs font-medium hover:translate-x-4 cursor-pointer">Beachside</p>
                       </li>
-                      <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-[12px] before:h-[1px]">
+                      <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-3 before:h-px">
                         <p className="text-middleMenuTextBlack text-xs font-medium hover:translate-x-4 cursor-pointer">Coral Vista</p>
                       </li>
-                      <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-[12px] before:h-[1px]">
+                      <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-3 before:h-px">
                         <p className="text-middleMenuTextBlack text-xs font-medium hover:translate-x-4 cursor-pointer">Domus</p>
                       </li>
-                      <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-[12px] before:h-[1px]">
+                      <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-3 before:h-px">
                         <p className="text-middleMenuTextBlack text-xs font-medium hover:translate-x-4 cursor-pointer">Enscape</p>
                       </li>
-                      <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-[12px] before:h-[1px]">
+                      <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-3 before:h-px">
                         <p className="text-middleMenuTextBlack text-xs font-medium hover:translate-x-4 cursor-pointer">Konia Green</p>
                       </li>
-                      <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-[12px] before:h-[1px]">
+                      <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-3 before:h-px">
                         <p className="text-middleMenuTextBlack text-xs font-medium hover:translate-x-4 cursor-pointer">Konia Park 3</p>
                       </li>
-                      <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-[12px] before:h-[1px]">
+                      <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-3 before:h-px">
                         <p className="text-middleMenuTextBlack text-xs font-medium hover:translate-x-4 cursor-pointer">One</p>
                       </li>
                     </ul>
@@ -294,76 +294,76 @@ export default DiscoverProjects;
 
            
                   <ul className="list-none flex flex-col gap-[2px]">
-                    <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-[12px] before:h-[1px]">
+                    <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-3 before:h-px">
                       <p className="text-middleMenuTextBlack text-xs font-medium hover:translate-x-4 cursor-pointer">Minthis</p>
                     </li>
-                    <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-[12px] before:h-[1px]">
+                    <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-3 before:h-px">
                       <p className="text-middleMenuTextBlack text-xs font-medium hover:translate-x-4 cursor-pointer">Pafilia Plaza</p>
                     </li>
-                    <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-[12px] before:h-[1px]">
+                    <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-3 before:h-px">
                       <p className="text-middleMenuTextBlack text-xs font-medium hover:translate-x-4 cursor-pointer">Vida Suites</p>
                     </li>
-                    <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-[12px] before:h-[1px]">
+                    <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-3 before:h-px">
                       <p className="text-middleMenuTextBlack text-xs font-medium hover:translate-x-4 cursor-pointer">The Grove</p>
                     </li>
-                    <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-[12px] before:h-[1px]">
+                    <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-3 before:h-px">
                       <p className="text-middleMenuTextBlack text-xs font-medium hover:translate-x-4 cursor-pointer">Elysia Park</p>
                     </li>
-                    <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-[12px] before:h-[1px]">
+                    <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-3 before:h-px">
                       <p className="text-middleMenuTextBlack text-xs font-medium hover:translate-x-4 cursor-pointer">Aria Residences</p>
                     </li>
-                    <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-[12px] before:h-[1px]">
+                    <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-3 before:h-px">
                       <p className="text-middleMenuTextBlack text-xs font-medium hover:translate-x-4 cursor-pointer">Lana Villas</p>
                     </li>
-                    <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-[12px] before:h-[1px]">
+                    <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-3 before:h-px">
                       <p className="text-middleMenuTextBlack text-xs font-medium hover:translate-x-4 cursor-pointer">Olea Residences</p>
                     </li>
                   </ul>
              
                   <ul className="list-none flex flex-col gap-[2px]">
-                    <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-[12px] before:h-[1px]">
+                    <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-3 before:h-px">
                       <p className="text-middleMenuTextBlack text-xs font-medium hover:translate-x-4 cursor-pointer">Aurai Residences</p>
                     </li>
-                    <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-[12px] before:h-[1px]">
+                    <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-3 before:h-px">
                       <p className="text-middleMenuTextBlack text-xs font-medium hover:translate-x-4 cursor-pointer">Anarita Valley</p>
                     </li>
-                    <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-[12px] before:h-[1px]">
+                    <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-3 before:h-px">
                       <p className="text-middleMenuTextBlack text-xs font-medium hover:translate-x-4 cursor-pointer">Amathos</p>
                     </li>
-                    <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-[12px] before:h-[1px]">
+                    <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-3 before:h-px">
                       <p className="text-middleMenuTextBlack text-xs font-medium hover:translate-x-4 cursor-pointer">Amaya</p>
                     </li>
-                    <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-[12px] before:h-[1px]">
+                    <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-3 before:h-px">
                       <p className="text-middleMenuTextBlack text-xs font-medium hover:translate-x-4 cursor-pointer">Amarosa</p>
                     </li>
-                    <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-[12px] before:h-[1px]">
+                    <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-3 before:h-px">
                       <p className="text-middleMenuTextBlack text-xs font-medium hover:translate-x-4 cursor-pointer">Hesperides Gardens</p>
                     </li>
-                    <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-[12px] before:h-[1px]">
+                    <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-3 before:h-px">
                       <p className="text-middleMenuTextBlack text-xs font-medium hover:translate-x-4 cursor-pointer">Nerina</p>
                     </li>
-                    <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-[12px] before:h-[1px]">
+                    <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-3 before:h-px">
                       <p className="text-middleMenuTextBlack text-xs font-medium hover:translate-x-4 cursor-pointer">Pafia Gardens</p>
                     </li>
                   </ul>
         
                   <ul className="list-none flex flex-col gap-[2px]">
-                    <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-[12px] before:h-[1px]">
+                    <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-3 before:h-px">
                       <p className="text-middleMenuTextBlack text-xs font-medium hover:translate-x-4 cursor-pointer">Pafia 2</p>
                     </li>
-                    <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-[12px] before:h-[1px]">
+                    <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-3 before:h-px">
                       <p className="text-middleMenuTextBlack text-xs font-medium hover:translate-x-4 cursor-pointer">Pafilia Gardens</p>
                     </li>
-                    <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-[12px] before:h-[1px]">
+                    <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-3 before:h-px">
                       <p className="text-middleMenuTextBlack text-xs font-medium hover:translate-x-4 cursor-pointer">Polis Gardens</p>
                     </li>
-                    <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-[12px] before:h-[1px]">
+                    <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-3 before:h-px">
                       <p className="text-middleMenuTextBlack text-xs font-medium hover:translate-x-4 cursor-pointer">Peyia Chorio</p>
                     </li>
-                    <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-[12px] before:h-[1px]">
+                    <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-3 before:h-px">
                       <p className="text-middleMenuTextBlack text-xs font-medium hover:translate-x-4 cursor-pointer">Oasis Park</p>
                     </li>
-                    <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-[12px] before:h-[1px]">
+                    <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-3 before:h-px">
                       <p className="text-middleMenuTextBlack text-xs font-medium hover:translate-x-4 cursor-pointer">Iliso Suites </p>
                     </li>
                   </ul>

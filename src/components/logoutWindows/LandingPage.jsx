@@ -58,13 +58,24 @@ function LandingPage() {
           )}
 
           {/* Menu Side */}
-          <div className="border border-gray-200 flex justify-between items-center rounded-full shadow-xl py-2 pl-4 pr-2 w-fit">
+          <div className="border border-gray-200 flex justify-between items-center rounded-full shadow-xl py-1 pl-1 pr-1 w-fit">
             <div className="flex justify-center items-center">
               {/* Location Button */}
-              <div onClick={() => setShowUpperOptions(!showUpperOptions)} className="flex justify-start items-center gap-2 border-r border-gray-300 px-4 h-full min-h-6 cursor-pointer">
-                <img src={locationIcon} alt="location" />
+              <div
+                onClick={() => setShowUpperOptions(!showUpperOptions)}
+                className={`flex justify-start items-center gap-2 border-r border-gray-300 px-4 pl-6 py-1 h-full min-h-6 cursor-pointer ${showUpperOptions && `bg-middleMenuTextBlack bg-opacity-5 py-3 rounded-full border-r-0`}`}
+              >
+                <div className="relative">
+                  <img src={locationIcon} alt="location" />
+                  <span className="flex justify-center items-center absolute top-[-5px] right-[-5px] bg-[#FF0004] border border-[#F8F8F8] p-1 rounded-full w-[15px] h-[15px]">
+                    <p className="text-white font-medium text-[10px]">2</p>
+                  </span>
+                </div>
                 <div className="flex justify-start items-center">
-                  <p className="text-xs font-inter text-middleMenuTextBlack">Location</p>
+                  <div className="flex flex-col">
+                    <p className="text-xs text-middleMenuTextBlack leading-tight">Location</p>
+                    {showUpperOptions && <p className="text-middleMenuTextBlack text-[8px]">Ava Plaza, Coral Vis..</p>}
+                  </div>
                 </div>
               </div>
               {/* Number of Bedrooms Button */}
@@ -95,9 +106,9 @@ function LandingPage() {
                 </div>
               </div>
             </div>
-
-            <div className="bg-buttonOrange p-3 rounded-full">
-              <img src={searchIcon} alt="search" />
+            <div className={`bg-buttonOrange p-3 rounded-full ${showUpperOptions && `p-5 py-4 flex justify-start items-center gap-2`}`}>
+              <img className="w-4" src={searchIcon} alt="search" />
+              {showUpperOptions && <p className="text-white font-semibold text-xs">Search</p>}
             </div>
           </div>
         </div>
