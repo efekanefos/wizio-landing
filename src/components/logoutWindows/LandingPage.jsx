@@ -58,7 +58,7 @@ function LandingPage() {
           )}
 
           {/* Menu Side */}
-          <div className="border border-gray-200 flex justify-between items-center rounded-full shadow-xl py-1 pl-1 pr-1 w-fit">
+          <div className={`border border-gray-200 flex justify-between items-center rounded-full shadow-xl py-2 ${showUpperOptions && `!py-1`} pl-1 pr-2 w-fit`}>
             <div className="flex justify-center items-center">
               {/* Location Button */}
               <div
