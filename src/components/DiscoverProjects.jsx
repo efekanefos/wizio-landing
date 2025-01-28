@@ -124,7 +124,7 @@ function DiscoverProjects() {
             </li>
           </ul>
           {/* Col #4 */}
-          <ul className="list-none flex flex-col gap-[2px]">
+          <ul className="list-none flex flex-col gap-3">
             <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2 before:left-0 before:w-3 before:h-px">
               <p className="text-middleMenuTextBlack text-xs font-medium hover:translate-x-4 cursor-pointer">Pafia 2</p>
             </li>
