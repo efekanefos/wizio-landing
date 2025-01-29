@@ -18,6 +18,8 @@ import DiscoverProjects from "../DiscoverProjects";
 
 function LandingPage() {
   const [showUpperOptions, setShowUpperOptions] = useState(false);
+  const [showProjectList, setShowProjectList] = useState(false);
+  const [showLocationDevelopments, setShowLocationDevelopments] = useState(false);
 
   return (
     <div className="overflow-y-hidden max-h-screen">
@@ -36,75 +38,128 @@ function LandingPage() {
           {showUpperOptions && (
             <div className="flex justify-center items-center gap-11">
               {/* Discover Projects */}
-              <div className="flex justify-start items-center gap-2">
+              <div
+                onClick={() => {
+                  setShowProjectList(true);
+                  setShowLocationDevelopments(false);
+                }}
+                className={`${!showProjectList && `opacity-30`} flex justify-start items-center gap-2 cursor-pointer`}
+              >
                 <div className="w-5">
                   <img className="w-full" src={blackSearchIcon} alt="blackSearchIcon" />
                 </div>
                 <p
-                  className="text-middleMenuTextBlack font-medium text-xs relative before:bg-black before:w-7 
-                before:absolute before:left-1/2 before:bottom-[-5px] before:h-px before:translate-x-[-50%]"
+                  className={`text-middleMenuTextBlack font-medium text-xs ${
+                    showProjectList &&
+                    `relative before:bg-black before:w-7 before:absolute before:left-1/2 
+                    before:bottom-[-5px] before:h-px before:translate-x-[-50%]`
+                  }`}
                 >
                   Discover Projects
                 </p>
               </div>
               {/* Local Amenities */}
-              <div className="flex justify-start items-center gap-2 opacity-30">
+              <div
+                onClick={() => {
+                  setShowProjectList(false);
+                  setShowLocationDevelopments(true);
+                }}
+                className={`${!showLocationDevelopments && `opacity-30`} flex justify-start items-center gap-2 cursor-pointer`}
+              >
                 <div className="w-5">
                   <img className="w-full" src={localAmenitiesIcon} alt="localAmenitiesIcon" />
                 </div>
-                <p className="text-middleMenuTextBlack font-medium text-xs">Local Amenities</p>
+                <p
+                  className={`text-middleMenuTextBlack font-medium text-xs ${
+                    showLocationDevelopments &&
+                    `relative before:bg-black before:w-7 before:absolute before:left-1/2 
+                    before:bottom-[-5px] before:h-px before:translate-x-[-50%]`
+                  }`}
+                >
+                  Local Amenities
+                </p>
               </div>
             </div>
           )}
 
           {/* Menu Side */}
+
           <div className={`border border-gray-200 flex justify-between items-center rounded-full shadow-xl py-2 ${showUpperOptions && `!py-1`} pl-1 pr-2 w-fit`}>
             <div className="flex justify-center items-center">
               {/* Location Button */}
               <div
-                onClick={() => setShowUpperOptions(!showUpperOptions)}
-                className={`flex justify-start items-center gap-2 border-r border-gray-300 px-4 pl-6 py-1 h-full min-h-6 cursor-pointer ${showUpperOptions && `bg-middleMenuTextBlack bg-opacity-5 py-3 rounded-full border-r-0`}`}
+                onClick={() => {
+                  setShowProjectList(!showProjectList);
+                  setShowUpperOptions(!showUpperOptions);
+                }}
+                className={`flex justify-start items-center gap-2 border-r border-gray-300 px-4 pl-6 py-1 h-full min-h-6 cursor-pointer ${
+                  showProjectList && !showLocationDevelopments
+                    ? `bg-middleMenuTextBlack bg-opacity-5 py-3 rounded-full border-r-0`
+                    : !showProjectList && !showLocationDevelopments
+                    ? `border-r border-gray-300`
+                    : !showProjectList && showLocationDevelopments
+                    ? `border-r-0`
+                    : ``
+                }`}
               >
                 <div className="relative">
                   <img src={locationIcon} alt="location" />
-                  <span className="flex justify-center items-center absolute top-[-5px] right-[-5px] bg-[#FF0004] border border-[#F8F8F8] p-1 rounded-full w-[15px] h-[15px]">
-                    <p className="text-white font-medium text-[10px]">2</p>
-                  </span>
+                  {showProjectList && !showLocationDevelopments ? (
+                    <span className="flex justify-center items-center absolute top-[-5px] right-[-5px] bg-[#FF0004] border border-[#F8F8F8] p-1 rounded-full w-[15px] h-[15px]">
+                      <p className="text-white font-medium text-[10px]">2</p>
+                    </span>
+                  ) : (
+                    ""
+                  )}
                 </div>
                 <div className="flex justify-start items-center">
                   <div className="flex flex-col">
-                    <p className="text-xs text-middleMenuTextBlack leading-tight">Location</p>
-                    {showUpperOptions && <p className="text-middleMenuTextBlack text-[8px]">Ava Plaza, Coral Vis..</p>}
+                    <p className="text-xs text-middleMenuTextBlack leading-tight">{showLocationDevelopments && showUpperOptions ? "Location & By Developments" : "Location"}</p>
+                    {showProjectList && !showLocationDevelopments ? <p className="text-middleMenuTextBlack text-[8px]">Ava Plaza, Coral Vis..</p> : ""}
                   </div>
                 </div>
               </div>
               {/* Number of Bedrooms Button */}
-              <div className="flex justify-start items-center gap-2 border-r border-gray-300 px-4 h-full min-h-6">
-                <img src={bedroomIcon} alt="bedroomIcon" />
-                <div className="flex justify-start items-center">
-                  <a className="text-xs font-inter text-middleMenuTextBlack" href="/">
-                    Number Of Bedrooms
-                  </a>
+              {!showLocationDevelopments || !showUpperOptions ? (
+                <div className="flex justify-start items-center gap-2 border-r border-gray-300 px-4 h-full min-h-6">
+                  <img src={bedroomIcon} alt="bedroomIcon" />
+                  <div className="flex justify-start items-center">
+                    <a className="text-xs font-inter text-middleMenuTextBlack" href="/">
+                      Number Of Bedrooms
+                    </a>
+                  </div>
                 </div>
-              </div>
+              ) : (
+                ""
+              )}
+
               {/* Price Range Button */}
-              <div className="flex justify-start items-center gap-2 border-r border-gray-300 px-4 h-full min-h-6">
-                <img src={priceRangeIcon} alt="priceRangeIcon" />
-                <div className="flex justify-start items-center">
-                  <a className="text-xs font-inter text-middleMenuTextBlack" href="/">
-                    Price Range
-                  </a>
+              {!showLocationDevelopments || !showUpperOptions ? (
+                <div className="flex justify-start items-center gap-2 border-r border-gray-300 px-4 h-full min-h-6">
+                  <img src={priceRangeIcon} alt="priceRangeIcon" />
+                  <div className="flex justify-start items-center">
+                    <a className="text-xs font-inter text-middleMenuTextBlack" href="/">
+                      Price Range
+                    </a>
+                  </div>
                 </div>
-              </div>
+              ) : (
+                ""
+              )}
+
               {/* Property Details Button */}
-              <div className="flex justify-start items-center gap-2 px-4 h-full min-h-6">
-                <img src={priceRangeIcon} alt="priceRangeIcon" />
-                <div className="flex justify-start items-center">
-                  <a className="text-xs font-inter text-middleMenuTextBlack" href="/">
-                    More Details
-                  </a>
+              {!showLocationDevelopments || !showUpperOptions ? (
+                <div className="flex justify-start items-center gap-2 px-4 h-full min-h-6">
+                  <img src={priceRangeIcon} alt="priceRangeIcon" />
+                  <div className="flex justify-start items-center">
+                    <a className="text-xs font-inter text-middleMenuTextBlack" href="/">
+                      More Details
+                    </a>
+                  </div>
                 </div>
-              </div>
+              ) : (
+                ""
+              )}
             </div>
             <div className={`bg-buttonOrange p-3 rounded-full ${showUpperOptions && `p-5 py-4 flex justify-start items-center gap-2`}`}>
               <img className="w-4" src={searchIcon} alt="search" />
@@ -134,7 +189,7 @@ function LandingPage() {
             </div>
           </div>
         </div>
-        {showUpperOptions && <DiscoverProjects />}
+        {showProjectList && !showLocationDevelopments ? <DiscoverProjects /> : ""}
       </nav>
 
       <img className="z-0 w-full h-screen object-cover" src={earthBackground} alt="earthBackground" />
