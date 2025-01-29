@@ -7,6 +7,7 @@ import bedroomIcon from "../../assets/images/header/bedroom_number_icon.svg";
 import priceRangeIcon from "../../assets/images/header/price_range_icon.svg";
 import searchIcon from "../../assets/images/header/search_icon.svg";
 import callIcon from "../../assets/images/header/call_icon.svg";
+import WhiteCallIcon from "../../assets/images/header/white_call_icon.svg";
 import globalIcon from "../../assets/images/header/global.svg";
 import lightModeIcon from "../../assets/images/header/light_mode_icon.svg";
 import octagonProfileIcon from "../../assets/images/header/octagon_profile_icon.svg";
@@ -15,11 +16,14 @@ import blackSearchIcon from "../../assets/images/header/black_search_icon.svg";
 import localAmenitiesIcon from "../../assets/images/header/local_amenities_icon.svg";
 /* Windows */
 import DiscoverProjects from "../DiscoverProjects";
+import Contact from "./Contact";
 
 function LandingPage() {
   const [showUpperOptions, setShowUpperOptions] = useState(false);
   const [showProjectList, setShowProjectList] = useState(false);
   const [showLocationDevelopments, setShowLocationDevelopments] = useState(false);
+  //* Windows
+  const [showContactWindow, setShowContactWindow] = useState(false);
 
   return (
     <div className="overflow-y-hidden max-h-screen">
@@ -170,9 +174,13 @@ function LandingPage() {
 
         {/* Profile Side */}
         <div className="flex justify-start items-center gap-3">
-          <div className="w-full flex justify-start items-center gap-5">
-            <div className="w-5">
-              <img className="w-full" src={callIcon} alt="callIcon" />
+          <div className={`w-full flex justify-start items-center ${showContactWindow ? `gap-3` : `gap-6`}`}>
+            <div
+              onClick={() => setShowContactWindow(!showContactWindow)}
+              className={`${showContactWindow ? `bg-middleMenuTextBlack p-3 rounded-full box-content` : ""} 
+            w-5 cursor-pointer`}
+            >
+              <img className="w-full" src={showContactWindow ? WhiteCallIcon : callIcon} alt="callIcon" />
             </div>
             <div className="w-5">
               <img className="w-full" src={globalIcon} alt="globalIcon" />
@@ -193,6 +201,12 @@ function LandingPage() {
       </nav>
 
       <img className="z-0 w-full h-screen object-cover" src={earthBackground} alt="earthBackground" />
+
+      {
+        //* Windows
+        showContactWindow && <Contact />
+      }
+
       <div className="font-inter text-white absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
         <h1 className="text-7xl">
           World of <span className="font-bold">Pafilia</span>
