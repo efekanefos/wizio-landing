@@ -36,23 +36,23 @@ function LandingPage() {
           {showUpperOptions && (
             <div className="flex justify-center items-center gap-11">
               {/* Discover Projects */}
-              <div className="flex justify-start items-center gap-3">
+              <div className="flex justify-start items-center gap-2">
                 <div className="w-5">
-                  <img className="w-full opacity-30" src={blackSearchIcon} alt="blackSearchIcon" />
-                </div>
-                <p className="text-middleMenuTextBlack font-medium text-xs text-opacity-30">Discover Projects</p>
-              </div>
-              {/* Local Amenities */}
-              <div className="flex justify-start items-center gap-3">
-                <div className="w-5">
-                  <img className="w-full" src={localAmenitiesIcon} alt="localAmenitiesIcon" />
+                  <img className="w-full" src={blackSearchIcon} alt="blackSearchIcon" />
                 </div>
                 <p
                   className="text-middleMenuTextBlack font-medium text-xs relative before:bg-black before:w-7 
                 before:absolute before:left-1/2 before:bottom-[-5px] before:h-px before:translate-x-[-50%]"
                 >
-                  Local Amenities
+                  Discover Projects
                 </p>
+              </div>
+              {/* Local Amenities */}
+              <div className="flex justify-start items-center gap-2 opacity-30">
+                <div className="w-5">
+                  <img className="w-full" src={localAmenitiesIcon} alt="localAmenitiesIcon" />
+                </div>
+                <p className="text-middleMenuTextBlack font-medium text-xs">Local Amenities</p>
               </div>
             </div>
           )}
