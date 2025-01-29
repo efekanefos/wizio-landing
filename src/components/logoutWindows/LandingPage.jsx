@@ -16,6 +16,7 @@ import blackSearchIcon from "../../assets/images/header/black_search_icon.svg";
 import localAmenitiesIcon from "../../assets/images/header/local_amenities_icon.svg";
 /* Windows */
 import DiscoverProjects from "../DiscoverProjects";
+import NumberOfBedrooms from "../NumberOfBedrooms";
 import Contact from "./Contact";
 import Calendar from "../Calendar";
 
@@ -23,6 +24,7 @@ function LandingPage() {
   const [showUpperOptions, setShowUpperOptions] = useState(false);
   const [showProjectList, setShowProjectList] = useState(false);
   const [showLocationDevelopments, setShowLocationDevelopments] = useState(false);
+  const [showBedroomSlider, setShowBedroomSlider] = useState(false);
   //* Windows
   const [showContactWindow, setShowContactWindow] = useState(false);
   const [showCalendarWindow, setShowCalendarWindow] = useState(false);
@@ -127,12 +129,16 @@ function LandingPage() {
               </div>
               {/* Number of Bedrooms Button */}
               {!showLocationDevelopments || !showUpperOptions ? (
-                <div className="flex justify-start items-center gap-2 border-r border-gray-300 px-4 h-full min-h-6">
+                <div
+                  onClick={() => {
+                    setShowBedroomSlider(!showBedroomSlider);
+                    setShowUpperOptions(!showUpperOptions);
+                  }}
+                  className="flex justify-start items-center gap-2 border-r border-gray-300 px-4 h-full min-h-6 cursor-pointer"
+                >
                   <img src={bedroomIcon} alt="bedroomIcon" />
                   <div className="flex justify-start items-center">
-                    <a className="text-xs font-inter text-middleMenuTextBlack" href="/">
-                      Number Of Bedrooms
-                    </a>
+                    <p className="text-xs text-middleMenuTextBlack">Number Of Bedrooms</p>
                   </div>
                 </div>
               ) : (
@@ -200,6 +206,7 @@ function LandingPage() {
           </div>
         </div>
         {showProjectList && !showLocationDevelopments ? <DiscoverProjects /> : ""}
+        {showBedroomSlider && <NumberOfBedrooms />}
       </nav>
 
       <img className="z-0 w-full h-screen object-cover" src={earthBackground} alt="earthBackground" />
@@ -210,7 +217,7 @@ function LandingPage() {
       }
       {
         //* Calendar Window
-        showCalendarWindow && <Calendar showCalendarWindow={showCalendarWindow} setShowCalendarWindow={setShowCalendarWindow} />
+        showCalendarWindow && <Calendar />
       }
 
       <div className="font-inter text-white absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
