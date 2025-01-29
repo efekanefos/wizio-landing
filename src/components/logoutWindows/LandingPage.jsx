@@ -17,6 +17,7 @@ import localAmenitiesIcon from "../../assets/images/header/local_amenities_icon.
 /* Windows */
 import DiscoverProjects from "../DiscoverProjects";
 import Contact from "./Contact";
+import Calendar from "../Calendar";
 
 function LandingPage() {
   const [showUpperOptions, setShowUpperOptions] = useState(false);
@@ -24,6 +25,7 @@ function LandingPage() {
   const [showLocationDevelopments, setShowLocationDevelopments] = useState(false);
   //* Windows
   const [showContactWindow, setShowContactWindow] = useState(false);
+  const [showCalendarWindow, setShowCalendarWindow] = useState(false);
 
   return (
     <div className="overflow-y-hidden max-h-screen">
@@ -203,8 +205,12 @@ function LandingPage() {
       <img className="z-0 w-full h-screen object-cover" src={earthBackground} alt="earthBackground" />
 
       {
-        //* Windows
-        showContactWindow && <Contact />
+        //* Contact Window
+        showContactWindow && <Contact showCalendarWindow={showCalendarWindow} setShowCalendarWindow={setShowCalendarWindow} />
+      }
+      {
+        //* Calendar Window
+        showCalendarWindow && <Calendar showCalendarWindow={showCalendarWindow} setShowCalendarWindow={setShowCalendarWindow} />
       }
 
       <div className="font-inter text-white absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">

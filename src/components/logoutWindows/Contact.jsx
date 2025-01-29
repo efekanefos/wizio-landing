@@ -23,7 +23,7 @@ import blackTwitter from "../../assets/images/logoutWindows/black_twitter.svg";
 import blackYoutube from "../../assets/images/logoutWindows/black_youtube.svg";
 import moonBackground from "../../assets/images/homepage/moon_background.png";
 
-function Contact() {
+function Contact({ showCalendarWindow, setShowCalendarWindow }) {
   return (
     <div className="absolute top-[110px] right-[30px] bg-white rounded-[21px] max-w-[360px] w-full">
       {/* Window Header */}
@@ -49,7 +49,7 @@ function Contact() {
           <p className="text-white text-[14px] font-regular">WhatsApp</p>
         </button>
         {/* Book Now Button */}
-        <button className="bg-middleMenuTextBlack bg-opacity-5 w-full py-[18.5px] px-7 flex justify-start items-center gap-3 rounded-[30px]">
+        <button onClick={() => setShowCalendarWindow(!showCalendarWindow)} className="bg-middleMenuTextBlack bg-opacity-5 w-full py-[18.5px] px-7 flex justify-start items-center gap-3 rounded-[30px]">
           <div>
             <img src={blackBookNowIcon} alt="blackBookNowIcon" />
           </div>
