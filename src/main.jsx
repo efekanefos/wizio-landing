@@ -4,19 +4,8 @@ import "./index.css";
 import App from "./App.jsx";
 
 const links = [
-  { href: "/status", label: "Logged In Status" },
-  { href: "/profile-setting", label: "Profile Setting" },
-  { href: "/last-visits", label: "Last Visits" },
-  { href: "/notifications", label: "Notifications" },
   { href: "/landing-page", label: "Landing Page" },
-  { href: "/discover-projects", label: "Discover Projects" },
-  { href: "/local-amenities", label: "Local Amenities" },
-  { href: "/contact", label: "Contact Page" },
-  { href: "/index-page", label: "Index Page" },
-  { href: "/number-of-bedrooms", label: "Number Of Bedrooms" },
-  { href: "/local-amenities-list", label: "Local Amenities List" },
-  { href: "/calendar", label: "Book Now" },
-  { href: "/homepage", label: "Home Page" },
+  { href: "/logged-in-landing-page", label: "Logged In Landing Page" },
   { href: "/price-range", label: "Price Range" },
   { href: "/local-amenities-gps", label: "Local Amenities GPS" },
 ];

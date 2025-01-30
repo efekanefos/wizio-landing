@@ -18,6 +18,7 @@ import PriceRange from "./components/PriceRange";
 import LocalAmenitiesGPS from "./components/LocalAmenitiesGPS";
 import LogoutNavbar from "./components/LogoutNavbar";
 import Navbar from "./components/Navbar";
+import LoggedInLandingPage from "./components/loggedInWindows/LoggedInLandingPage";
 //? Images
 import moonBackground from "./assets/images/homepage/moon_background.png";
 import grayLocationMap from "./assets/images/homepage/gray_location_map.svg";
@@ -37,6 +38,7 @@ function App() {
           }
         />
         {/* 1-4 */}
+        <Route path="/logged-in-landing-page" element={<LoggedInLandingPage />} />
         <Route path="/status" element={<Status />} />
         <Route path="/profile-setting" element={<ProfileSetting />} />
         <Route path="/notifications" element={<Notifications />} />
