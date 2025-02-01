@@ -17,8 +17,14 @@ import blackRightArrow from "../assets/images/loggedInWindows/black_right_arrow.
 import education from "../assets/images/logoutWindows/education.svg";
 import health from "../assets/images/logoutWindows/health.svg";
 import whiteHospitality from "../assets/images/logoutWindows/white_hospitality.svg";
+import hospitality from "../assets/images/logoutWindows/hospitality.svg";
 import entertainment from "../assets/images/logoutWindows/entertainment.svg";
 import blackTick from "../assets/images/logoutWindows/black_tick.svg";
+import whiteTick from "../assets/images/logoutWindows/white_tick.svg";
+import whiteCar from "../assets/images/logoutWindows/white_car.svg";
+import bycycle from "../assets/images/logoutWindows/bycycle.svg";
+import walk from "../assets/images/logoutWindows/walk.svg";
+import buildingCircle from "../assets/images/homepage/building_circle.svg";
 import LocalAmenitiesBackground from "../assets/images/homepage/local_amenities_background.svg";
 
 function LocalAmenitiesGPS() {
@@ -140,7 +146,108 @@ function LocalAmenitiesGPS() {
           </div>
         </div>
       </div>
-      <img className="z-0 mt-[-88px] w-full h-screen object-cover" src={LocalAmenitiesBackground} alt="LocalAmenitiesBackground" />
+
+      {/* Hospitality Column */}
+
+      <div className="absolute left-5 top-72 bg-white rounded-3xl min-w-72">
+        {/* First Column */}
+        <div className="flex justify-start items-center gap-2 pt-6 pb-5 pl-7 pr-7 border-b border-gray-100">
+          <div className="max-w-5 max-h-5">
+            <img className="w-full h-full" src={hospitality} alt="Hospitality" />
+          </div>
+          <p className="text-xs text-middleMenuTextBlack">Hospitality</p>
+        </div>
+        <ul>
+          <li className="py-5 pl-7 pr-5 border-b border-gray-100">
+            <p className="text-xs text-middleMenuTextBlack">Konia Tavern</p>
+          </li>
+          <li className="py-5 pl-7 pr-5 border-b border-gray-100">
+            <p className="text-xs text-middleMenuTextBlack">McDonald</p>
+          </li>
+          <li className="flex justify-between items-center py-5 pl-7 pr-5 border-b border-l-2 border-gray-100 bg-gray-50 border-l-middleMenuTextBlack">
+            <p className="text-xs text-middleMenuTextBlack">The Arch3s</p>
+            <div className="flex justify-center items-center bg-orange-500 w-[18px] h-[18px] rounded-full ml-[2px]">
+              <img src={whiteTick} alt="whiteTick" />
+            </div>
+          </li>
+          <li className="py-5 pl-7 pr-5 border-b border-gray-100">
+            <p className="text-xs text-middleMenuTextBlack">Anavargos Taverna</p>
+          </li>
+          <li className="py-5 pl-7 pr-5 border-b border-gray-100">
+            <p className="text-xs text-middleMenuTextBlack">BUR-GER</p>
+          </li>
+          <li className="py-5 pl-7 pr-5 border-b border-gray-100">
+            <p className="text-xs text-middleMenuTextBlack">Mother's Restaurant</p>
+          </li>
+          <li className="py-5 pl-7 pr-5 border-b border-gray-100">
+            <p className="text-xs text-middleMenuTextBlack">Billy's Restaurant</p>
+          </li>
+          <li className="py-5 pl-7 pr-5 border-b border-gray-100">
+            <p className="text-xs text-middleMenuTextBlack">Zephyrus Bar & Restaurant</p>
+          </li>
+
+          <li className="py-5 pl-7 pr-5 border-b border-gray-100">
+            <p className="text-xs text-middleMenuTextBlack">Riganato - Greek Grill</p>
+          </li>
+        </ul>
+      </div>
+
+      {/* Distance Bar */}
+
+      <div className="absolute bottom-3 left-[50%] translate-x-[-50%] flex justify-center items-center bg-white rounded-full w-fit">
+        {/* Distance Side */}
+        <div className="flex flex-col justify-center items-start pl-8 pr-5 border-r border-gray-200 min-h-16">
+          <p className="text-xs leading-4">Distance</p>
+          <p className="text-xl font-semibold leading-5">8.19 mi</p>
+        </div>
+        {/* Vehicle Type Side */}
+        <div className="flex justify-start items-center gap-1 py-3 pr-4 pl-4">
+          <div className="relative flex flex-col justify-center items-center bg-middleMenuTextBlack rounded-full p-2 w-14 h-14">
+            <div className="max-w-14 max-h-14">
+              <img className="w-full h-full" src={whiteCar} alt="car" />
+            </div>
+            <p className="text-white font-medium text-xs w-max">32 min</p>
+            <span className="absolute -top-0.5 right-0 w-4 h-4 bg-orange-500 rounded-full border border-white"></span>
+          </div>
+
+          <div className="flex flex-col justify-center items-center bg-gray-200 rounded-full p-2 w-14 h-14">
+            <div className="max-w-14 max-h-14">
+              <img className="w-full h-full" src={bycycle} alt="cycle" />
+            </div>
+            <p className="text-middleMenuTextBlack font-medium text-xs w-max">83 min</p>
+          </div>
+
+          <div className="flex flex-col justify-center items-center bg-gray-200 rounded-full p-2 w-14 h-14">
+            <div className="max-w-14 max-h-14">
+              <img className="w-full h-full" src={walk} alt="walk" />
+            </div>
+            <p className="text-middleMenuTextBlack font-medium text-xs w-max">188 min</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Location Info Box */}
+      <div>
+        <img className="absolute top-[50%] left-[75%] w-[68px] h-[68px] shadow-2xl rounded-full" src={buildingCircle} alt="buildingCircle" />
+        <div>
+          {/* Location Name Row */}
+          <div>
+            <p>Pafilia Plaza</p>
+            <p>2 Bedrooms</p>
+          </div>
+          {/* Location Price Row */}
+          <div>
+            <div>
+              <div>
+                <img src="" alt="price" />
+              </div>
+            </div>
+          </div>
+          {/* Location Button Row */}
+        </div>
+      </div>
+
+      <img className="z-0 w-full h-screen object-cover" src={LocalAmenitiesBackground} alt="LocalAmenitiesBackground" />
     </div>
   );
 }
