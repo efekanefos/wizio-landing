@@ -19,15 +19,19 @@ import DiscoverProjects from "../DiscoverProjects";
 import NumberOfBedrooms from "../NumberOfBedrooms";
 import Contact from "./Contact";
 import Calendar from "../Calendar";
+import Login from "./Login";
+import PropertyDetails from "../PropertyDetails";
 
 function LandingPage() {
   const [showUpperOptions, setShowUpperOptions] = useState(false);
   const [showProjectList, setShowProjectList] = useState(false);
   const [showLocationDevelopments, setShowLocationDevelopments] = useState(false);
   const [showBedroomSlider, setShowBedroomSlider] = useState(false);
+  const [showPropertyDetails, setShowPropertyDetails] = useState(false);
   //* Windows
   const [showContactWindow, setShowContactWindow] = useState(false);
   const [showCalendarWindow, setShowCalendarWindow] = useState(false);
+  const [showLoginWindow, setShowLoginWindow] = useState(false);
 
   return (
     <div className="overflow-y-hidden max-h-screen">
@@ -92,7 +96,7 @@ function LandingPage() {
 
           {/* Menu Side */}
 
-          <div className={`border border-gray-200 flex justify-between items-center rounded-full shadow-xl py-2 ${showUpperOptions && `!py-1`} pl-1 pr-2 w-fit`}>
+          <div className={`border border-gray-200 flex justify-between items-center rounded-full shadow-xl py-2 relative ${showUpperOptions && `!py-1`} pl-1 pr-2 w-fit`}>
             <div className="flex justify-center items-center">
               {/* Location Button */}
               <div
@@ -147,7 +151,7 @@ function LandingPage() {
 
               {/* Price Range Button */}
               {!showLocationDevelopments || !showUpperOptions ? (
-                <div className="flex justify-start items-center gap-2 border-r border-gray-300 px-4 h-full min-h-6">
+                <div className={`flex justify-start items-center gap-2 border-r border-gray-300 px-4 h-full min-h-6 ${showPropertyDetails && `border-r-0`}`}>
                   <img src={priceRangeIcon} alt="priceRangeIcon" />
                   <div className="flex justify-start items-center">
                     <a className="text-xs font-inter text-middleMenuTextBlack" href="/">
@@ -161,12 +165,26 @@ function LandingPage() {
 
               {/* Property Details Button */}
               {!showLocationDevelopments || !showUpperOptions ? (
-                <div className="flex justify-start items-center gap-2 px-4 h-full min-h-6">
-                  <img src={priceRangeIcon} alt="priceRangeIcon" />
+                <div
+                  onClick={() => {
+                    setShowPropertyDetails(!showPropertyDetails);
+                    setShowUpperOptions(!showUpperOptions);
+                  }}
+                  className={`flex justify-start items-center gap-2 px-4 h-full min-h-6 cursor-pointer ${showPropertyDetails && `bg-middleMenuTextBlack bg-opacity-5 py-3 rounded-full mr-3`}`}
+                >
+                  <div className="relative">
+                    <img src={priceRangeIcon} alt="priceRangeIcon" />
+                    {showPropertyDetails && (
+                      <span className="flex justify-center items-center absolute top-[-5px] right-[-5px] bg-[#FF0004] border border-[#F8F8F8] p-1 rounded-full w-[15px] h-[15px]">
+                        <p className="text-white font-medium text-[10px]">2</p>
+                      </span>
+                    )}
+                  </div>
                   <div className="flex justify-start items-center">
-                    <a className="text-xs font-inter text-middleMenuTextBlack" href="/">
-                      More Details
-                    </a>
+                    <div className="flex flex-col">
+                      <p className="text-xs font-inter text-middleMenuTextBlack leading-tight">More Details</p>
+                      {showPropertyDetails && <p className="text-middleMenuTextBlack text-[8px]">Apartments</p>}
+                    </div>
                   </div>
                 </div>
               ) : (
@@ -177,6 +195,8 @@ function LandingPage() {
               <img className="w-4" src={searchIcon} alt="search" />
               {showUpperOptions && <p className="text-white font-semibold text-xs">Search</p>}
             </div>
+
+            {showPropertyDetails && <PropertyDetails />}
           </div>
         </div>
 
@@ -197,10 +217,11 @@ function LandingPage() {
               <img className="w-full" src={lightModeIcon} alt="lightModeIcon" />
             </div>
           </div>
-          <div className="flex justify-start items-center gap-3 bg-middleMenuTextBlack w-full h-full p-3 rounded-full">
+          <div onClick={() => setShowLoginWindow(!showLoginWindow)} className="flex justify-start items-center gap-3 bg-middleMenuTextBlack w-full h-full p-3 rounded-full cursor-pointer">
             <div className="w-full flex justify-between items-center">
-              <div className="flex w-full gap-3">
+              <div className="flex justify-start items-center w-full gap-2">
                 <img className="w-full max-w-6" src={octagonProfileIcon} alt="octagonProfileIcon" />
+                {showLoginWindow && <p className="text-xs text-white font-medium">Login</p>}
               </div>
             </div>
           </div>
@@ -218,6 +239,10 @@ function LandingPage() {
       {
         //* Calendar Window
         showCalendarWindow && <Calendar />
+      }
+      {
+        //* Login Window
+        showLoginWindow && <Login setShowLoginWindow={setShowLoginWindow} />
       }
 
       <div className="font-inter text-white absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
