@@ -24,6 +24,9 @@ import whiteTick from "../assets/images/logoutWindows/white_tick.svg";
 import whiteCar from "../assets/images/logoutWindows/white_car.svg";
 import bycycle from "../assets/images/logoutWindows/bycycle.svg";
 import walk from "../assets/images/logoutWindows/walk.svg";
+import blackDollar from "../assets/images/logoutWindows/black_dollar.svg";
+import blackSizeArrow from "../assets/images/logoutWindows/black_size_arrow.svg";
+import whiteBox from "../assets/images/logoutWindows/white_box.svg";
 import buildingCircle from "../assets/images/homepage/building_circle.svg";
 import LocalAmenitiesBackground from "../assets/images/homepage/local_amenities_background.svg";
 
@@ -149,7 +152,7 @@ function LocalAmenitiesGPS() {
 
       {/* Hospitality Column */}
 
-      <div className="absolute left-5 top-72 bg-white rounded-3xl min-w-72">
+      <div className="absolute left-5 top-72 bg-white rounded-3xl min-w-72 shadow-lg">
         {/* First Column */}
         <div className="flex justify-start items-center gap-2 pt-6 pb-5 pl-7 pr-7 border-b border-gray-100">
           <div className="max-w-5 max-h-5">
@@ -186,7 +189,7 @@ function LocalAmenitiesGPS() {
             <p className="text-xs text-middleMenuTextBlack">Zephyrus Bar & Restaurant</p>
           </li>
 
-          <li className="py-5 pl-7 pr-5 border-b border-gray-100">
+          <li className="py-5 pl-7 pr-5">
             <p className="text-xs text-middleMenuTextBlack">Riganato - Greek Grill</p>
           </li>
         </ul>
@@ -194,7 +197,7 @@ function LocalAmenitiesGPS() {
 
       {/* Distance Bar */}
 
-      <div className="absolute bottom-3 left-[50%] translate-x-[-50%] flex justify-center items-center bg-white rounded-full w-fit">
+      <div className="absolute bottom-3 left-[50%] translate-x-[-50%] flex justify-center items-center bg-white rounded-full w-fit shadow-lg">
         {/* Distance Side */}
         <div className="flex flex-col justify-center items-start pl-8 pr-5 border-r border-gray-200 min-h-16">
           <p className="text-xs leading-4">Distance</p>
@@ -227,23 +230,52 @@ function LocalAmenitiesGPS() {
       </div>
 
       {/* Location Info Box */}
-      <div>
-        <img className="absolute top-[50%] left-[75%] w-[68px] h-[68px] shadow-2xl rounded-full" src={buildingCircle} alt="buildingCircle" />
-        <div>
-          {/* Location Name Row */}
-          <div>
-            <p>Pafilia Plaza</p>
-            <p>2 Bedrooms</p>
-          </div>
-          {/* Location Price Row */}
-          <div>
-            <div>
-              <div>
-                <img src="" alt="price" />
+      <div className="absolute top-[50%] left-[75%]">
+        <img className="absolute -top-8 -left-16 w-[68px] h-[68px] shadow-2xl rounded-full" src={buildingCircle} alt="buildingCircle" />
+        <div className="bg-middleMenuTextBlack p-2 rounded-full border-2 border-white w-fit absolute -top-12">
+          <img className="w-5 h-5" src={whiteHospitality} alt="hospitality" />
+        </div>
+        <div className="relative">
+          <div
+            className="bg-white w-fit rounded-3xl rounded-tl-none min-w-52 shadow-lg before:bg-white before:w-4 before:h-4 before:absolute
+        before:top-0 before:-left-4 before:windowArrow before:rounded-tl-md
+        "
+          >
+            {/* Location Name Row */}
+            <div className="flex flex-col items-start justify-start py-4 px-6 border-b border-gray-300">
+              <p className="text-xl font-semibold text-middleMenuTextBlack">Pafilia Plaza</p>
+              <p className="text-xs font-medium text-middleMenuTextBlack">2 Bedrooms</p>
+            </div>
+            {/* Location Price Row */}
+            <div className="flex items-center justify-center gap-3 py-4 px-6 border-b border-gray-300">
+              <div className="flex justify-center items-center gap-1">
+                <div className="max-w-5 max-h-5 mt-1">
+                  <img className="w-full h-full" src={blackDollar} alt="price" />
+                </div>
+                <div className="flex flex-col">
+                  <p className="text-[8px] text-middleMenuTextBlack font-medium leading-3">From</p>
+                  <p className="text-sm text-middleMenuTextBlack font-semibold leading-3">$25000</p>
+                </div>
+              </div>
+
+              <div className="flex justify-start items-center gap-1">
+                <div className="max-w-5 max-h-5 mt-1">
+                  <img className="w-full h-full" src={blackSizeArrow} alt="sqm" />
+                </div>
+                <div>
+                  <p className="text-[8px] text-middleMenuTextBlack font-medium leading-3">Sqm</p>
+                  <p className="text-sm text-middleMenuTextBlack font-semibold leading-3">150-225</p>
+                </div>
               </div>
             </div>
+            {/* Location Button Row */}
+            <div className="py-4 px-5">
+              <button className="flex justify-center items-center gap-1 py-2 px-14 bg-middleMenuTextBlack rounded-2xl">
+                <img src={whiteBox} alt="whiteBox" />
+                <p className="text-xs text-white font-medium">Portal</p>
+              </button>
+            </div>
           </div>
-          {/* Location Button Row */}
         </div>
       </div>
 
