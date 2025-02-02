@@ -4,7 +4,7 @@ import close from "../../assets/images/loggedInWindows/close.svg";
 import mailInput from "../../assets/images/loggedInWindows/mail_input.svg";
 import loginPasswordIcon from "../../assets/images/logoutWindows/login_password_icon.svg";
 
-function Login({ setShowLoginWindow }) {
+function Login({ setShowLoginWindow, setShowRegisterWindow }) {
   return (
     <div className="absolute top-28 right-8 bg-white rounded-3xl max-w-[360px] w-full">
       {/* Window Header */}
@@ -58,7 +58,14 @@ function Login({ setShowLoginWindow }) {
             Login
           </button>
 
-          <button className="bg-gray-100 text-xs text-middleMenuTextBlack text-center w-full p-4 rounded-3xl" type="submit">
+          <button
+            onClick={() => {
+              setShowLoginWindow(false);
+              setShowRegisterWindow(true);
+            }}
+            className="bg-gray-100 text-xs text-middleMenuTextBlack text-center w-full p-4 rounded-3xl"
+            type="submit"
+          >
             Do you want to register?
           </button>
         </div>

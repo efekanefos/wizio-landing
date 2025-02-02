@@ -20,6 +20,7 @@ import NumberOfBedrooms from "../NumberOfBedrooms";
 import Contact from "./Contact";
 import Calendar from "../Calendar";
 import Login from "./Login";
+import Register from "./Register";
 import PropertyDetails from "../PropertyDetails";
 
 function LandingPage() {
@@ -32,6 +33,7 @@ function LandingPage() {
   const [showContactWindow, setShowContactWindow] = useState(false);
   const [showCalendarWindow, setShowCalendarWindow] = useState(false);
   const [showLoginWindow, setShowLoginWindow] = useState(false);
+  const [showRegisterWindow, setShowRegisterWindow] = useState(false);
 
   return (
     <div className="overflow-y-hidden max-h-screen">
@@ -242,7 +244,11 @@ function LandingPage() {
       }
       {
         //* Login Window
-        showLoginWindow && <Login setShowLoginWindow={setShowLoginWindow} />
+        showLoginWindow && <Login setShowLoginWindow={setShowLoginWindow} setShowRegisterWindow={setShowRegisterWindow} />
+      }
+      {
+        //* Register Window
+        showRegisterWindow && <Register setShowRegisterWindow={setShowRegisterWindow} />
       }
 
       <div className="font-inter text-white absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
