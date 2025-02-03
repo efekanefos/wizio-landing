@@ -21,6 +21,7 @@ import Contact from "./Contact";
 import Calendar from "../Calendar";
 import Login from "./Login";
 import Register from "./Register";
+import Language from "./Language";
 import PropertyDetails from "../PropertyDetails";
 
 function LandingPage() {
@@ -34,6 +35,7 @@ function LandingPage() {
   const [showCalendarWindow, setShowCalendarWindow] = useState(false);
   const [showLoginWindow, setShowLoginWindow] = useState(false);
   const [showRegisterWindow, setShowRegisterWindow] = useState(false);
+  const [showLanguageWindow, setShowLanguageWindow] = useState(false);
 
   return (
     <div className="overflow-y-hidden max-h-screen">
@@ -212,7 +214,7 @@ function LandingPage() {
             >
               <img className="w-full" src={showContactWindow ? WhiteCallIcon : callIcon} alt="callIcon" />
             </div>
-            <div className="w-5">
+            <div onClick={() => setShowLanguageWindow(!showLanguageWindow)} className="w-5 cursor-pointer">
               <img className="w-full" src={globalIcon} alt="globalIcon" />
             </div>
             <div className="w-5">
@@ -249,6 +251,10 @@ function LandingPage() {
       {
         //* Register Window
         showRegisterWindow && <Register setShowRegisterWindow={setShowRegisterWindow} />
+      }
+      {
+        //* Language Window
+        showLanguageWindow && <Language />
       }
 
       <div className="font-inter text-white absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
