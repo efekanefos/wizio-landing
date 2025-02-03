@@ -60,13 +60,13 @@ function PropertySidebar() {
 
               {/* Buttons */}
               <div className="flex flex-col gap-1 mt-6">
-                <button className="flex justify-center items-center gap-1 w-full px-3 py-1 bg-gray-200 rounded-full">
+                <button className="flex justify-center items-center gap-1 w-full px-3 py-1 bg-gray-100 rounded-full">
                   <div className="flex justify-center items-center max-w-4 max-h-4">
                     <img className="w-full h-full translate-y-[1px]" src={mailIcon} alt="mailIcon" />
                   </div>
                   <p className="text-xs font-medium">Contact Now</p>
                 </button>
-                <button className="flex justify-center items-center gap-1 w-full px-3 py-1 bg-gray-200 rounded-full">
+                <button className="flex justify-center items-center gap-1 w-full px-3 py-1 bg-gray-100 rounded-full">
                   <div className="flex justify-center items-center max-w-4 max-h-4">
                     <img className="w-full h-full" src={localAmenities} alt="localAmenities" />
                   </div>
@@ -133,13 +133,13 @@ function PropertySidebar() {
 
               {/* Buttons */}
               <div className="flex flex-col gap-1 mt-6">
-                <button className="flex justify-center items-center gap-1 w-full px-3 py-1 bg-gray-200 rounded-full">
+                <button className="flex justify-center items-center gap-1 w-full px-3 py-1 bg-gray-100 rounded-full">
                   <div className="flex justify-center items-center max-w-4 max-h-4">
                     <img className="w-full h-full translate-y-[1px]" src={mailIcon} alt="mailIcon" />
                   </div>
                   <p className="text-xs font-medium">Contact Now</p>
                 </button>
-                <button className="flex justify-center items-center gap-1 w-full px-3 py-1 bg-gray-200 rounded-full">
+                <button className="flex justify-center items-center gap-1 w-full px-3 py-1 bg-gray-100 rounded-full">
                   <div className="flex justify-center items-center max-w-4 max-h-4">
                     <img className="w-full h-full" src={localAmenities} alt="localAmenities" />
                   </div>
