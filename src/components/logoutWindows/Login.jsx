@@ -1,10 +1,13 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import blackOctagonProfile from "../../assets/images/header/black_octagon_profile_icon.svg";
 import close from "../../assets/images/loggedInWindows/close.svg";
 import mailInput from "../../assets/images/loggedInWindows/mail_input.svg";
 import loginPasswordIcon from "../../assets/images/logoutWindows/login_password_icon.svg";
 
 function Login({ setShowLoginWindow, setShowRegisterWindow }) {
+  const navigate = useNavigate();
+
   return (
     <div className="absolute top-28 right-8 bg-white rounded-3xl max-w-[360px] w-full">
       {/* Window Header */}
@@ -54,7 +57,7 @@ function Login({ setShowLoginWindow, setShowRegisterWindow }) {
 
         {/* Buttons */}
         <div className="w-full flex flex-col gap-3 mt-7">
-          <button className="bg-buttonOrange text-xs text-white font-semibold text-center w-full p-4 rounded-3xl " type="submit">
+          <button onClick={() => navigate("/logged-in-landing-page")} className="bg-buttonOrange text-xs text-white font-semibold text-center w-full p-4 rounded-3xl " type="submit">
             Login
           </button>
 

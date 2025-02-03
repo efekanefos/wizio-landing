@@ -14,7 +14,7 @@ function PropertySidebar() {
         <div className="flex rounded-3xl bg-white shadow-md max-w-[450px]">
           <div className="p-1 pr-0 relative">
             <img src={cardImage} alt="cardImage" />
-            <span className="absolute top-8 right-0 bg-middleMenuTextBlack text-white text-center p-1 rounded-tl-xl rounded-bl-xl">
+            <span className="absolute top-8 right-0 bg-middleMenuTextBlack text-white text-center p-1 pt-2 rounded-tl-xl rounded-bl-xl">
               <p className="font-semibold text-2xl leading-5">2</p>
               <p className="text-xs leading-5">Available</p>
             </span>
@@ -87,7 +87,7 @@ function PropertySidebar() {
         <div className="flex rounded-3xl bg-white shadow-md max-w-[450px] mt-20">
           <div className="p-1 pr-0 relative">
             <img className="grayscale opacity-55" src={cardImage} alt="cardImage" />
-            <span className="absolute top-8 right-0 bg-middleMenuTextBlack text-white text-center p-1 rounded-tl-xl rounded-bl-xl">
+            <span className="absolute top-8 right-0 bg-middleMenuTextBlack text-white text-center p-1 pt-2 rounded-tl-xl rounded-bl-xl">
               <p className="font-semibold text-2xl leading-5">2</p>
               <p className="text-xs leading-5">Available</p>
             </span>
