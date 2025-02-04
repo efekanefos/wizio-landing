@@ -8,10 +8,10 @@ import black_size_arrow from "../../assets/images/logoutWindows/black_size_arrow
 
 function PropertySidebar() {
   return (
-    <div className="bg-white bg-opacity-90 h-fit absolute left-0 p-3 font-inter">
+    <div className="bg-white bg-opacity-90 h-fill absolute left-0 p-3 font-inter z-50">
       <div>
         {/* Card #1 */}
-        <div className="flex rounded-3xl bg-white shadow-md max-w-[450px]">
+        <div className="flex rounded-3xl bg-white drop-shadow-lg max-w-[450px]">
           <div className="p-1 pr-0 relative">
             <img src={cardImage} alt="cardImage" />
             <span className="absolute top-8 right-0 bg-middleMenuTextBlack text-white text-center p-1 pt-2 rounded-tl-xl rounded-bl-xl">
@@ -84,7 +84,7 @@ function PropertySidebar() {
         </div>
 
         {/* Card #2 */}
-        <div className="flex rounded-3xl bg-white shadow-md max-w-[450px] mt-20">
+        <div className="flex rounded-3xl bg-white drop-shadow-lg max-w-[450px] mt-20">
           <div className="p-1 pr-0 relative">
             <img className="grayscale opacity-55" src={cardImage} alt="cardImage" />
             <span className="absolute top-8 right-0 bg-middleMenuTextBlack text-white text-center p-1 pt-2 rounded-tl-xl rounded-bl-xl">
@@ -92,7 +92,7 @@ function PropertySidebar() {
               <p className="text-xs leading-5">Available</p>
             </span>
           </div>
-          <div className="p-3 pl-5 pr-3">
+          <div className="p-3 pl-5">
             {/* Title */}
             <div className="max-w-16">
               <p className="font-semibold text-middleMenuTextBlack leading-4">Limassol Marina</p>

@@ -11,6 +11,12 @@ export default {
         darkBlue: "#0069FF",
         textDarkBlue: "#0060E6",
       },
+      width: {
+        fill: "stretch",
+      },
+      height: {
+        fill: "stretch",
+      },
       fontSize: {
         base: ["14px", "1.5"],
       },
