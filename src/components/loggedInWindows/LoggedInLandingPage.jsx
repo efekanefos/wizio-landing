@@ -35,7 +35,7 @@ function LoggedInLandingPage() {
   const [showProfileWindow, setShowProfileWindow] = useState(false);
   const [showVisitWindow, setShowVisitWindow] = useState(false);
   const [showNotificationWindow, setShowNotificationWindow] = useState(false);
-  const [showSearchResult, setShowSearchResult] = useState(false);
+  const [showSearchResult, setShowSearchResult] = useState(true);
 
   return (
     <div className="overflow-y-hidden max-h-screen font-inter">

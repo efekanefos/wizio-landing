@@ -63,33 +63,3 @@ function App() {
 }
 
 export default App;
-
-/* 
-
- <Navbar /> 
-       <LogoutNavbar/> 
-       <DiscoverProjects /> 
-       <LocalAmenities />
-       <Contact /> 
-       <IndexPage /> 
-       <NumberOfBedrooms /> 
-       <LocalAmenitiesList /> 
-       <Calender /> 
-       <Homepage /> 
-       <PriceRange /> 
-       <LocalAmenitiesGPS /> 
-       <img className="z-0 mt-[-88px] w-full h-screen object-cover" src={moonBackground} alt="moonBackground" /> 
-       <img className="z-0 mt-[-88px] w-full h-screen object-cover" src={grayLocationMap} alt="grayLocationMap" /> 
-
-       <img className="z-0 mt-[-88px] w-full h-screen object-cover" src={LocalAmenitiesBackground} alt="LocalAmenitiesBackground" /> 
-       Location Map Numbered Circle 
-      
-      <span className="absolute top-[50%] left-[50%] z-10 flex justify-center items-center w-[34px] h-[34px] rounded-full border-[3px] border-white bg-buttonOrange shadow-2xl">
-        <p className="text-white font-bold text-[15px]">125</p>
-      </span>
-      
-       Local Amenities Circled Building Image 
-       <img className="absolute top-[50%] left-[75%] w-[68px] h-[68px] shadow-2xl rounded-full" src={buildingCircle} alt="buildingCircle" /> 
-
-
-*/
