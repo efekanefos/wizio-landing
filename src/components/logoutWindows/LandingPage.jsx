@@ -179,7 +179,7 @@ function LandingPage() {
                   <div className="relative">
                     <img src={priceRangeIcon} alt="priceRangeIcon" />
                     {showPropertyDetails && (
-                      <span className="flex justify-center items-center absolute top-[-5px] right-[-5px] bg-[#FF0004] border border-[#F8F8F8] p-1 rounded-full w-[15px] h-[15px]">
+                      <span className="flex justify-center items-center absolute -top-1.5 -right-1.5 bg-[#FF0004] border border-[#F8F8F8] p-1 rounded-full w-[15px] h-[15px]">
                         <p className="text-white font-medium text-[10px]">2</p>
                       </span>
                     )}

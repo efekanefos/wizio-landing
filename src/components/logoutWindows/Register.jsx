@@ -9,14 +9,14 @@ import blackOctagonProfile from "../../assets/images/header/black_octagon_profil
 
 function Register({ setShowRegisterWindow }) {
   return (
-    <div className="absolute top-[110px] right-[30px] bg-white rounded-[21px] max-w-[360px] w-full">
+    <div className="absolute top-[110px] right-7 bg-white rounded-3xl max-w-[360px] w-full">
       {/* Window Header */}
-      <div className="flex justify-start items-center gap-5 p-7 border-b border-[#D2D3D7] border-opacity-50">
+      <div className="flex justify-start items-center gap-5 p-7 border-b border-gray-300 first-line:border-opacity-50">
         <div className="flex justify-start items-center gap-2 w-full">
-          <div className="max-w-[26px] max-h-[26px] w-full h-full">
+          <div className="max-w-7 max-h-7 w-full h-full">
             <img className="w-full h-full" src={blackOctagonProfile} alt="blackOctagonProfile" />
           </div>
-          <p className="text-[18px] text-middleMenuTextBlack font-medium mb-[-2px]">Register</p>
+          <p className="text-lg text-middleMenuTextBlack font-medium">Register</p>
         </div>
         {/* Close Button */}
         <div onClick={() => setShowRegisterWindow(false)} className="rounded-full p-3 bg-gray-100 absolute top-6 right-5 cursor-pointer">

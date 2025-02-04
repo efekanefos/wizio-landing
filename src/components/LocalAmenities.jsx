@@ -27,32 +27,32 @@ function LocalAmenities() {
           </div>
         </div>
         {/* Middle Two Row Part */}
-        <div className="flex flex-col gap-[30px]">
+        <div className="flex flex-col gap-8">
           <div className="flex justify-center items-center gap-5">
             {/* Discover Projects */}
             <div className="flex justify-start items-center gap-2">
-              <div className="w-[20px]">
+              <div className="w-5">
                 <img className="w-full opacity-30" src={blackSearchIcon} alt="blackSearchIcon" />
               </div>
-              <p className="opacity-30 text-middleMenuTextBlack font-medium text-[12px]">Discover Projects</p>
+              <p className="opacity-30 text-middleMenuTextBlack font-medium text-xs">Discover Projects</p>
             </div>
             {/* Local Amenities */}
             <div className="flex justify-start items-center gap-2">
-              <div className="w-[20px]">
+              <div className="w-5">
                 <img className="w-full" src={localAmenitiesIcon} alt="localAmenitiesIcon" />
               </div>
-              <p className="text-middleMenuTextBlack font-medium text-[12px] relative before:bg-black before:w-[26px] before:absolute before:left-[50%] before:bottom-[-5px] before:h-[1px] before:translate-x-[-50%]">Local Amenities</p>
+              <p className="text-middleMenuTextBlack font-medium text-xs relative before:bg-black before:w-7 before:absolute before:left-[50%] before:bottom-[-5px] before:h-[1px] before:translate-x-[-50%]">Local Amenities</p>
             </div>
           </div>
           {/* Menu Side */}
           <div className="border border-[#DEDEDE] flex justify-between items-center rounded-full shadow-xl py-1 px-1 max-w-[900px] w-full relative">
             <div className="flex justify-center items-center gap-0">
               {/* Location Button */}
-              <div className="flex justify-start items-center p-3 px-5 gap-2 h-full min-h-[53px] w-fit rounded-[27px]">
+              <div className="flex justify-start items-center p-3 px-5 gap-2 h-full min-h-14 w-fit rounded-3xl">
                 {/* Location Icon */}
-                <img className="min-w-[18px]" src={locationIcon} alt="location" />
+                <img className="min-w-4" src={locationIcon} alt="location" />
                 <div className="flex justify-start items-center">
-                  <a className="text-[12px] font-inter text-middleMenuTextBlack mr-6" href="/">
+                  <a className="text-xs font-inter text-middleMenuTextBlack mr-6" href="/">
                     Location & By Developments
                   </a>
 
@@ -63,7 +63,7 @@ function LocalAmenities() {
 
             <div className="flex justify-start items-center gap-2 bg-buttonOrange p-4 rounded-full ml-2">
               <img src={searchIcon} alt="search" />
-              <p className="text-white font-semibold text-[12px]">Search</p>
+              <p className="text-white font-semibold text-xs">Search</p>
             </div>
           </div>
         </div>
@@ -71,26 +71,26 @@ function LocalAmenities() {
         {/* Profile Side */}
         <div className="flex justify-start items-center gap-3">
           <div className="w-full flex justify-start items-center gap-5">
-            <div className="w-[21px]">
+            <div className="w-5">
               <img className="w-full" src={callIcon} alt="callIcon" />
             </div>
-            <div className="w-[21px]">
+            <div className="w-5">
               <img className="w-full" src={globalIcon} alt="globalIcon" />
             </div>
-            <div className="w-[21px]">
+            <div className="w-5">
               <img className="w-full" src={lightModeIcon} alt="lightModeIcon" />
             </div>
           </div>
           <div className="flex justify-start items-center gap-3  w-full h-full p-3 rounded-full">
             <div className="w-full flex justify-between items-center">
               <div className="flex w-full gap-3">
-                <img className="w-full max-w-[22px]" src={blackOctagonProfileIcon} alt="blackOctagonProfileIcon" />
+                <img className="w-full max-w-6" src={blackOctagonProfileIcon} alt="blackOctagonProfileIcon" />
               </div>
             </div>
           </div>
         </div>
       </nav>
-      <img className="z-0 mt-[-88px] w-full h-screen object-cover" src={LocalAmenitiesBackground} alt="LocalAmenitiesBackground" />
+      <img className="z-0 -mt-20 w-full h-screen object-cover" src={LocalAmenitiesBackground} alt="LocalAmenitiesBackground" />
     </div>
   );
 }

@@ -1,17 +1,8 @@
 import React from "react";
-import logo from "../assets/images/header/logo.svg";
-import whiteHomeIcon from "../assets/images/header/white_home_icon.svg";
 import locationIcon from "../assets/images/header/location_icon.svg";
 import bedroomIcon from "../assets/images/header/bedroom_number_icon.svg";
 import priceRangeIcon from "../assets/images/header/price_range_icon.svg";
 import searchIcon from "../assets/images/header/search_icon.svg";
-import callIcon from "../assets/images/header/call_icon.svg";
-import globalIcon from "../assets/images/header/global.svg";
-import lightModeIcon from "../assets/images/header/light_mode_icon.svg";
-import octagonProfileIcon from "../assets/images/header/octagon_profile_icon.svg";
-import earthBackground from "../assets/images/homepage/planet_earth_background.png";
-import blackSearchIcon from "../assets/images/header/black_search_icon.svg";
-import localAmenitiesIcon from "../assets/images/header/local_amenities_icon.svg";
 
 function LandingPageNavbar() {
   return (

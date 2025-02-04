@@ -35,11 +35,11 @@ function LoggedInLandingPage() {
   const [showProfileWindow, setShowProfileWindow] = useState(false);
   const [showVisitWindow, setShowVisitWindow] = useState(false);
   const [showNotificationWindow, setShowNotificationWindow] = useState(false);
-  const [showSearchResult, setShowSearchResult] = useState(true);
+  const [showSearchResult, setShowSearchResult] = useState(false);
 
   return (
     <div className="overflow-y-hidden max-h-screen font-inter">
-      <nav className="flex justify-between items-center mt-0 py-3 px-7 z-10 relative bg-white font-inter border-b border-[#D2D3D7]">
+      <nav className="flex justify-between items-center mt-0 py-3 px-7 z-10 relative bg-white font-inter border-b border-gray-300">
         {/* Logo Side */}
         <div className="flex justify-start items-center gap-5">
           <div>
@@ -50,10 +50,10 @@ function LoggedInLandingPage() {
           </div>
         </div>
         {/* Menu Side */}
-        <div className="border border-[#DEDEDE] flex justify-between items-center rounded-full shadow-md py-1 pl-10 pr-1 max-w-[900px] w-full">
+        <div className="border border-gray-300 flex justify-between items-center rounded-full shadow-md py-1 pl-10 pr-1 max-w-[900px] w-full">
           <div className="flex justify-center items-center gap-5 ">
             {/* Location Button */}
-            <div className="flex justify-start items-center gap-3 border-r border-[#D7D7D7] pr-5 h-full min-h-[47px]">
+            <div className="flex justify-start items-center gap-3 border-r border-gray-300 pr-5 h-full min-h-12">
               <img src={locationIcon} alt="location" />
               <div className="flex justify-start items-center">
                 <a className="text-xs font-inter text-middleMenuTextBlack mr-9" href="/">
@@ -63,7 +63,7 @@ function LoggedInLandingPage() {
               </div>
             </div>
             {/* Number of Bedrooms Button */}
-            <div className="flex justify-start items-center gap-3 border-r border-[#D7D7D7] pr-5 h-full min-h-[47px]">
+            <div className="flex justify-start items-center gap-3 border-r border-gray-300 pr-5 h-full min-h-12">
               <img src={bedroomIcon} alt="bedroomIcon" />
               <div className="flex justify-start items-center">
                 <a className="text-xs font-inter text-middleMenuTextBlack mr-9" href="/">
@@ -73,7 +73,7 @@ function LoggedInLandingPage() {
               </div>
             </div>
             {/* Price Range Button */}
-            <div className="flex justify-start items-center gap-3 border-r border-[#D7D7D7] pr-5 h-full min-h-[47px]">
+            <div className="flex justify-start items-center gap-3 border-r border-gray-300 pr-5 h-full min-h-12">
               <img src={priceRangeIcon} alt="priceRangeIcon" />
               <div className="flex justify-start items-center">
                 <a className="text-xs font-inter text-middleMenuTextBlack mr-9" href="/">
@@ -83,7 +83,7 @@ function LoggedInLandingPage() {
               </div>
             </div>
             {/* Property Details Button */}
-            <div className="flex justify-start items-center gap-3 h-full min-h-[47px]">
+            <div className="flex justify-start items-center gap-3 h-full min-h-12">
               <img src={priceRangeIcon} alt="priceRangeIcon" />
               <div className="flex justify-start items-center">
                 <p className="text-xs font-inter text-middleMenuTextBlack mr-9">Property Details</p>
@@ -114,12 +114,12 @@ function LoggedInLandingPage() {
               <img className="w-full" src={blackOctagonProfileIcon} alt="blackOctagonProfileIcon" />
             </div>
           ) : (
-            <div onClick={() => setShowStatusWindow(!showStatusWindow)} className="flex justify-start items-center gap-3 bg-middleMenuTextBlack min-h-[64px] min-w-[210px] w-full h-full p-3 rounded-full cursor-pointer">
+            <div onClick={() => setShowStatusWindow(!showStatusWindow)} className="flex justify-start items-center gap-3 bg-middleMenuTextBlack min-h-16 min-w-[210px] w-full h-full p-3 rounded-full cursor-pointer">
               <div className="w-full flex justify-between items-center">
                 <div className="flex w-full gap-3">
-                  <img className="w-full max-w-[22px] ml-2" src={octagonProfileIcon} alt="octagonProfileIcon" />
-                  <div className="border-l border-[#D7D7D7] border-opacity-20 pl-4">
-                    <p className="text-[14px] text-white font-medium">B.Douglas</p>
+                  <img className="w-full max-w-6 ml-2" src={octagonProfileIcon} alt="octagonProfileIcon" />
+                  <div className="border-l border-gray-300 border-opacity-20 pl-4">
+                    <p className="text-base text-white font-medium">B.Douglas</p>
                     <p className="text-xs text-white font-regular">Customer</p>
                   </div>
                 </div>

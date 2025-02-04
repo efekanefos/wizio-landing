@@ -9,14 +9,14 @@ import profileSetting from "../../assets/images/loggedInWindows/profile_setting.
 
 function ProfileSetting({ setShowStatusWindow, setShowProfileWindow }) {
   return (
-    <div className="absolute top-[110px] right-[30px] bg-white rounded-[21px] max-w-[360px] w-full">
+    <div className="absolute top-[110px] right-7 bg-white rounded-3xl max-w-[360px] w-full">
       {/* Window Header */}
-      <div className="flex justify-start items-center gap-5 p-7 border-b border-[#D2D3D7] border-opacity-50">
+      <div className="flex justify-start items-center gap-5 p-7 border-b border-gray-300 border-opacity-50">
         <div className="flex justify-start items-center gap-2 w-full">
-          <div className="max-w-[26px] max-h-[26px] w-full h-full">
+          <div className="max-w-7 max-h-7 w-full h-full">
             <img className="w-full h-full" src={profileSetting} alt="profileSetting" />
           </div>
-          <p className="text-[18px] text-middleMenuTextBlack font-medium mb-[-2px]">Profile Setting</p>
+          <p className="text-lg text-middleMenuTextBlack font-medium">Profile Setting</p>
         </div>
         {/* Back Button */}
         <div
@@ -24,7 +24,7 @@ function ProfileSetting({ setShowStatusWindow, setShowProfileWindow }) {
             setShowStatusWindow(true);
             setShowProfileWindow(false);
           }}
-          className="rounded-full p-3 bg-[#F2F2F2] cursor-pointer"
+          className="rounded-full p-3 bg-gray-100 cursor-pointer"
         >
           <img className="w-full h-full" src={backBlackArrow} alt="backBlackArrow" />
         </div>
@@ -34,8 +34,8 @@ function ProfileSetting({ setShowStatusWindow, setShowProfileWindow }) {
         {/* Username Input */}
         <div className="w-full flex justify-between items-center relative">
           <div className="flex flex-col w-full">
-            <label className="text-[10px] text-[#171717] text-opacity-80">Username</label>
-            <input readOnly value="Bendy Douglas" className="pb-2 w-full text-[14px] font-medium text-[#171717] border-b border-[#171717] outline-none" type="text" />
+            <label className="text-xs text-middleMenuTextBlack text-opacity-80">Username</label>
+            <input readOnly value="Bendy Douglas" className="pb-2 w-full text-base font-medium text-middleMenuTextBlack border-b border-middleMenuTextBlack outline-none" type="text" />
           </div>
 
           <div className="absolute right-0 top-5">
@@ -46,8 +46,8 @@ function ProfileSetting({ setShowStatusWindow, setShowProfileWindow }) {
         {/* Phone Input */}
         <div className="w-full flex justify-between items-center relative mt-3">
           <div className="flex flex-col w-full">
-            <label className="text-[10px] text-[#171717] text-opacity-80">Phone</label>
-            <input readOnly value="+44 117 2345678" className="pb-2 w-full text-[14px] font-medium text-[#171717] border-b border-[#171717] outline-none" type="tel" />
+            <label className="text-xs text-middleMenuTextBlack text-opacity-80">Phone</label>
+            <input readOnly value="+44 117 2345678" className="pb-2 w-full text-base font-medium text-middleMenuTextBlack border-b border-middleMenuTextBlack outline-none" type="tel" />
           </div>
 
           <div className="absolute right-0 top-5">
@@ -58,8 +58,8 @@ function ProfileSetting({ setShowStatusWindow, setShowProfileWindow }) {
         {/* Mail Input */}
         <div className="w-full flex justify-between items-center relative mt-3">
           <div className="flex flex-col w-full">
-            <label className="text-[10px] text-[#171717] text-opacity-80">Mail</label>
-            <input readOnly value="bendy_douglas@gmail.com" className="pb-2 w-full text-[14px] font-medium text-[#171717] border-b border-[#171717] outline-none" type="email" />
+            <label className="text-xs text-middleMenuTextBlack text-opacity-80">Mail</label>
+            <input readOnly value="bendy_douglas@gmail.com" className="pb-2 w-full text-base font-medium text-middleMenuTextBlack border-b border-middleMenuTextBlack outline-none" type="email" />
           </div>
 
           <div className="absolute right-0 top-5">
@@ -70,8 +70,8 @@ function ProfileSetting({ setShowStatusWindow, setShowProfileWindow }) {
         {/* Password Hidden Input */}
         <div className="w-full flex justify-between items-center relative mt-3">
           <div className="flex flex-col w-full">
-            <label className="text-[10px] text-[#171717] text-opacity-80">Password</label>
-            <input readOnly value="Bendy887**" className="pb-2 w-full text-[14px] font-medium text-[#171717] border-b border-[#171717] outline-none" type="text" />
+            <label className="text-xs text-middleMenuTextBlack text-opacity-80">Password</label>
+            <input readOnly value="Bendy887**" className="pb-2 w-full text-base font-medium text-middleMenuTextBlack border-b border-middleMenuTextBlack outline-none" type="text" />
           </div>
 
           <div className="absolute right-0 top-5">
@@ -82,8 +82,8 @@ function ProfileSetting({ setShowStatusWindow, setShowProfileWindow }) {
         {/* Password Visible Input */}
         <div className="w-full flex justify-between items-center relative mt-3">
           <div className="flex flex-col w-full">
-            <label className="text-[10px] text-[#171717] text-opacity-80">Password</label>
-            <input readOnly value="************" className="pb-2 w-full text-[14px] font-medium text-[#171717] border-b border-[#171717] outline-none" type="password" />
+            <label className="text-xs text-middleMenuTextBlack text-opacity-80">Password</label>
+            <input readOnly value="************" className="pb-2 w-full text-base font-medium text-middleMenuTextBlack border-b border-middleMenuTextBlack outline-none" type="password" />
           </div>
 
           <div className="absolute right-0 top-5">
@@ -92,7 +92,7 @@ function ProfileSetting({ setShowStatusWindow, setShowProfileWindow }) {
         </div>
 
         {/* Save Button */}
-        <button className="bg-buttonOrange text-[12px] text-white font-medium text-center w-full p-3 rounded-[25px] mt-[77px]" type="submit">
+        <button className="bg-buttonOrange text-[12px] text-white font-medium text-center w-full p-3 rounded-3xl mt-20" type="submit">
           Save
         </button>
       </div>

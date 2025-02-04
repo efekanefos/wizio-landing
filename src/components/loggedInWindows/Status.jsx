@@ -1,6 +1,4 @@
 import React from "react";
-import Navbar from "../Navbar";
-import moonBackground from "../../assets/images/homepage/moon_background.png";
 import user from "../../assets/images/loggedInWindows/user.svg";
 import close from "../../assets/images/loggedInWindows/close.svg";
 import blackRightArrow from "../../assets/images/loggedInWindows/black_right_arrow.svg";
@@ -11,9 +9,9 @@ import logout from "../../assets/images/loggedInWindows/logout.svg";
 
 function Status({ setShowStatusWindow, setShowProfileWindow, setShowVisitWindow, setShowNotificationWindow }) {
   return (
-    <div className="absolute top-[110px] right-[30px] bg-white rounded-[21px] max-w-[360px] w-full">
+    <div className="absolute top-[110px] right-7 bg-white rounded-3xl  max-w-[360px] w-full">
       {/* Close Button */}
-      <div onClick={() => setShowStatusWindow(false)} className="rounded-full p-3 bg-[#F2F2F2] absolute top-6 right-5 cursor-pointer">
+      <div onClick={() => setShowStatusWindow(false)} className="rounded-full p-3 border-gray-300 absolute top-6 right-5 cursor-pointer">
         <img src={close} alt="close button" />
       </div>
       {/* Profile Img,Name,Role */}
@@ -22,8 +20,8 @@ function Status({ setShowStatusWindow, setShowProfileWindow, setShowVisitWindow,
           <img src={user} alt="user" />
         </div>
         <div className="flex flex-col">
-          <p className="text-[18px] text-middleMenuTextBlack font-medium mb-[-2px]">B.Douglas</p>
-          <p className="text-[14px] text-middleMenuTextBlack font-regular">Customer</p>
+          <p className="text-lg text-middleMenuTextBlack font-medium ">B.Douglas</p>
+          <p className="text-base text-middleMenuTextBlack font-regular">Customer</p>
         </div>
       </div>
       {/* Profile Setting */}
@@ -32,15 +30,15 @@ function Status({ setShowStatusWindow, setShowProfileWindow, setShowVisitWindow,
           setShowStatusWindow(false);
           setShowProfileWindow(true);
         }}
-        className="flex justify-between items-center py-7 px-9 border border-[#D2D3D7] border-r-0 border-l-0 border-opacity-50 cursor-pointer"
+        className="flex justify-between items-center py-7 px-9 border border-gray-300 border-r-0 border-l-0 border-opacity-50 cursor-pointer"
       >
         <div className="flex justify-start items-center gap-3">
-          <div className="max-w-[24px] max-h-[24px]">
+          <div className="max-w-6 max-h-6">
             <img className="w-full h-full" src={profileSetting} alt="profileSetting" />
           </div>
-          <p className="text-[14px]">Profile Setting</p>
+          <p className="text-base">Profile Setting</p>
         </div>
-        <div className="max-w-[24px] max-h-[24px]">
+        <div className="max-w-6 max-h-6">
           <img className="w-full h-full" src={blackRightArrow} alt="blackRightArrow" />
         </div>
       </div>
@@ -50,15 +48,15 @@ function Status({ setShowStatusWindow, setShowProfileWindow, setShowVisitWindow,
           setShowStatusWindow(false);
           setShowVisitWindow(true);
         }}
-        className="flex justify-between items-center py-7 px-9 border-b border-[#D2D3D7] border-opacity-50 cursor-pointer"
+        className="flex justify-between items-center py-7 px-9 border-b border-gray-300 border-opacity-50 cursor-pointer"
       >
         <div className="flex justify-start items-center gap-3">
-          <div className="max-w-[24px] max-h-[24px]">
+          <div className="max-w-6 max-h-6">
             <img className="w-full h-full" src={lastVisits} alt="lastVisits" />
           </div>
-          <p className="text-[14px]">Last visits</p>
+          <p className="text-base">Last visits</p>
         </div>
-        <div className="max-w-[24px] max-h-[24px]">
+        <div className="max-w-6 max-h-6">
           <img className="w-full h-full" src={blackRightArrow} alt="blackRightArrow" />
         </div>
       </div>
@@ -68,19 +66,19 @@ function Status({ setShowStatusWindow, setShowProfileWindow, setShowVisitWindow,
           setShowStatusWindow(false);
           setShowNotificationWindow(true);
         }}
-        className="flex justify-between items-center py-7 px-9  border-b border-[#D2D3D7] border-r-0 border-l-0 border-opacity-50 cursor-pointer"
+        className="flex justify-between items-center py-7 px-9  border-b border-gray-300 border-r-0 border-l-0 border-opacity-50 cursor-pointer"
       >
         <div className="flex justify-start items-center gap-3">
-          <div className="max-w-[24px] max-h-[24px]">
+          <div className="max-w-6 max-h-6">
             <img className="w-full h-full" src={notifications} alt="notifications" />
           </div>
-          <p className="text-[14px]">Notifications</p>
+          <p className="text-base">Notifications</p>
         </div>
         <div className="flex justify-start items-center gap-3">
-          <span className="flex justify-center items-center bg-[#FF0004] p-1 rounded-full w-[25px] h-[25px]">
-            <p className="text-white font-medium text-[14px]">5</p>
+          <span className="flex justify-center items-center bg-red-500 p-1 rounded-full w-6 h-6">
+            <p className="text-white font-medium text-base">5</p>
           </span>
-          <div className="max-w-[24px] max-h-[24px]">
+          <div className="max-w-6 max-h-6">
             <img className="w-full h-full" src={blackRightArrow} alt="blackRightArrow" />
           </div>
         </div>
@@ -88,12 +86,12 @@ function Status({ setShowStatusWindow, setShowProfileWindow, setShowVisitWindow,
       {/* Logout */}
       <div className="flex justify-between items-center py-7 px-9">
         <div className="flex justify-start items-center gap-3">
-          <div className="max-w-[24px] max-h-[24px]">
+          <div className="max-w-6 max-h-6">
             <img className="w-full h-full" src={logout} alt="logout" />
           </div>
-          <p className="text-[14px]">Log out</p>
+          <p className="text-base">Log out</p>
         </div>
-        <div className="max-w-[24px] max-h-[24px]">
+        <div className="max-w-6 max-h-6">
           <img className="w-full h-full" src={blackRightArrow} alt="blackRightArrow" />
         </div>
       </div>

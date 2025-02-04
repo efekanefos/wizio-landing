@@ -152,13 +152,13 @@ function PriceRange() {
         {/* Profile Side */}
         <div className="flex justify-start items-center gap-3">
           <div className="w-full flex justify-start items-center gap-5">
-            <div className="w-[21px]">
+            <div className="w-5">
               <img className="w-full" src={callIcon} alt="callIcon" />
             </div>
-            <div className="w-[21px]">
+            <div className="w-5">
               <img className="w-full" src={globalIcon} alt="globalIcon" />
             </div>
-            <div className="w-[21px]">
+            <div className="w-5">
               <img className="w-full" src={lightModeIcon} alt="lightModeIcon" />
             </div>
           </div>

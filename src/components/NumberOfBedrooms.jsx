@@ -54,21 +54,3 @@ function NumberOfBedrooms() {
 }
 
 export default NumberOfBedrooms;
-
-/* 
-import logo from "../assets/images/header/logo.svg";
-import homeIcon from "../assets/images/header/home_icon.svg";
-import locationIcon from "../assets/images/header/location_icon.svg";
-import bedroomIcon from "../assets/images/header/bedroom_number_icon.svg";
-import priceRangeIcon from "../assets/images/header/price_range_icon.svg";
-import dropDownArrowIcon from "../assets/images/header/dropdown_arrow_icon.svg";
-import searchIcon from "../assets/images/header/search_icon.svg";
-import callIcon from "../assets/images/header/call_icon.svg";
-import globalIcon from "../assets/images/header/global.svg";
-import lightModeIcon from "../assets/images/header/light_mode_icon.svg";
-import blackOctagonProfileIcon from "../assets/images/header/black_octagon_profile_icon.svg";
-import blackSearchIcon from "../assets/images/header/black_search_icon.svg";
-import lowOpacityLocalAmenitiesIcon from "../assets/images/header/low_opacity_local_amenities_icon.svg";
-import blackRightArrow from "../assets/images/loggedInWindows/black_right_arrow.svg";
-import grayLocationMap from "../assets/images/homepage/gray_location_map.svg";
-*/

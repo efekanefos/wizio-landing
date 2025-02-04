@@ -29,7 +29,7 @@ function Login({ setShowLoginWindow, setShowRegisterWindow }) {
         <div className="w-full flex justify-between items-center relative mt-3 mb-5">
           <div className="flex flex-col w-full">
             <label className="text-xs text-[#171717] absolute">Mail</label>
-            <input readOnly className="pb-2 w-full text-[14px] font-medium text-[#171717] border-b border-[#171717] outline-none" type="email" />
+            <input readOnly className="pb-2 w-full text-base font-medium text-[#171717] border-b border-[#171717] outline-none" type="email" />
           </div>
 
           <div className="absolute right-0 top-0">
@@ -41,7 +41,7 @@ function Login({ setShowLoginWindow, setShowRegisterWindow }) {
         <div className="w-full flex justify-between items-center relative mt-3">
           <div className="flex flex-col w-full">
             <label className="text-xs text-[#171717] absolute">Password</label>
-            <input readOnly className="pb-2 w-full text-[14px] font-medium text-[#171717] border-b border-[#171717] outline-none" type="text" />
+            <input readOnly className="pb-2 w-full text-base font-medium text-[#171717] border-b border-[#171717] outline-none" type="text" />
           </div>
 
           <div className="absolute right-0 top-0">
