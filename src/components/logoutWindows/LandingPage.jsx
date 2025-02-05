@@ -24,7 +24,7 @@ import Register from "./Register";
 import Language from "./Language";
 import PropertyDetails from "../PropertyDetails";
 
-function LandingPage() {
+function LandingPage({ theme, setTheme }) {
   const [showUpperOptions, setShowUpperOptions] = useState(false);
   const [showProjectList, setShowProjectList] = useState(false);
   const [showLocationDevelopments, setShowLocationDevelopments] = useState(false);
@@ -207,20 +207,24 @@ function LandingPage() {
         {/* Profile Side */}
         <div className="flex justify-start items-center gap-3">
           <div className={`w-full flex justify-start items-center ${showContactWindow ? `gap-3` : `gap-6`}`}>
+            {/* Contact Button */}
             <div
               onClick={() => setShowContactWindow(!showContactWindow)}
               className={`${showContactWindow ? `bg-middleMenuTextBlack p-3 rounded-full box-content` : ""} 
-            w-5 cursor-pointer`}
+              w-5 cursor-pointer`}
             >
               <img className="w-full" src={showContactWindow ? WhiteCallIcon : callIcon} alt="callIcon" />
             </div>
+            {/* Language Button */}
             <div onClick={() => setShowLanguageWindow(!showLanguageWindow)} className="w-5 cursor-pointer">
               <img className="w-full" src={globalIcon} alt="globalIcon" />
             </div>
-            <div className="w-5">
+            {/* Dark-Light Theme Button */}
+            <div onClick={() => setTheme(theme === "dark" ? "light" : "dark")} className="w-5">
               <img className="w-full" src={lightModeIcon} alt="lightModeIcon" />
             </div>
           </div>
+          {/* Login Button */}
           <div onClick={() => setShowLoginWindow(!showLoginWindow)} className="flex justify-start items-center gap-3 bg-middleMenuTextBlack w-full h-full p-3 rounded-full cursor-pointer">
             <div className="w-full flex justify-between items-center">
               <div className="flex justify-start items-center w-full gap-2">

@@ -1,4 +1,5 @@
 //! React Libraries
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 //* Components
 import Status from "./components/loggedInWindows/Status";
@@ -19,13 +20,19 @@ import LocalAmenitiesGPS from "./components/LocalAmenitiesGPS";
 import LogoutNavbar from "./components/LogoutNavbar";
 import Navbar from "./components/Navbar";
 import LoggedInLandingPage from "./components/loggedInWindows/LoggedInLandingPage";
-//? Images
-import moonBackground from "./assets/images/homepage/moon_background.png";
-import grayLocationMap from "./assets/images/homepage/gray_location_map.svg";
-import LocalAmenitiesBackground from "./assets/images/homepage/local_amenities_background.svg";
-import buildingCircle from "./assets/images/homepage/building_circle.svg";
 
 function App() {
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+
+  useEffect(() => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
   return (
     <Router>
       <Routes>
@@ -33,7 +40,7 @@ function App() {
           path="/"
           element={
             <div className="overflow-y-hidden h-screen relative">
-              <LandingPage />
+              <LandingPage theme={theme} setTheme={setTheme} />
             </div>
           }
         />

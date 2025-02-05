@@ -29,13 +29,14 @@ import ProfileSetting from "./ProfileSetting";
 import LastVisits from "./LastVisits";
 import Notifications from "./Notifications";
 import PropertySidebar from "./PropertySidebar";
+import HomeIcon from "../icons/HomeIcon";
 
 function LoggedInLandingPage() {
   const [showStatusWindow, setShowStatusWindow] = useState(false);
   const [showProfileWindow, setShowProfileWindow] = useState(false);
   const [showVisitWindow, setShowVisitWindow] = useState(false);
   const [showNotificationWindow, setShowNotificationWindow] = useState(false);
-  const [showSearchResult, setShowSearchResult] = useState(true);
+  const [showSearchResult, setShowSearchResult] = useState(false);
 
   return (
     <div className="overflow-y-hidden max-h-screen font-inter">
@@ -47,6 +48,7 @@ function LoggedInLandingPage() {
           </div>
           <div className="bg-grayIconBg p-3 rounded-full w-fit">
             <img src={homeIcon} alt="homeIcon" />
+            <HomeIcon />
           </div>
         </div>
         {/* Menu Side */}

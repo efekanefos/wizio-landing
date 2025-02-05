@@ -1,0 +1,22 @@
+import React from "react";
+
+function PasswordInputIcon() {
+  return (
+    <svg className="w-5 h-5 fill-current" viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M11.036 8.50068C11.036 9.90318 9.90269 11.0365 8.50019 11.0365C7.09769 11.0365 5.96436 9.90318 5.96436 8.50068C5.96436 7.09818 7.09769 5.96484 8.50019 5.96484C9.90269 5.96484 11.036 7.09818 11.036 8.50068Z"
+        stroke="#292D32"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M8.49989 14.3577C11.0003 14.3577 13.3307 12.8843 14.9528 10.3343C15.5903 9.3356 15.5903 7.65685 14.9528 6.6581C13.3307 4.1081 11.0003 2.63477 8.49989 2.63477C5.99947 2.63477 3.66906 4.1081 2.04697 6.6581C1.40947 7.65685 1.40947 9.3356 2.04697 10.3343C3.66906 12.8843 5.99947 14.3577 8.49989 14.3577Z"
+        stroke="#292D32"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  );
+}
+
+export default PasswordInputIcon;
