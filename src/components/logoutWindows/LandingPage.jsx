@@ -110,6 +110,7 @@ function LandingPage({ theme, setTheme }) {
                   setShowProjectList(!showProjectList);
                   setShowBedroomSlider(false);
                   setShowPriceRange(false);
+                  setShowPropertyDetails(false);
                   setShowUpperOptions(showProjectList ? false : true);
                 }}
                 className={`flex justify-start items-center gap-2 border-r border-gray-300 px-4 pl-6 py-1 h-full min-h-6 cursor-pointer ${
@@ -145,6 +146,7 @@ function LandingPage({ theme, setTheme }) {
                   onClick={() => {
                     setShowProjectList(false);
                     setShowPriceRange(false);
+                    setShowPropertyDetails(false);
                     setShowBedroomSlider(!showBedroomSlider);
                     setShowUpperOptions(showBedroomSlider ? false : true);
                   }}
@@ -165,6 +167,7 @@ function LandingPage({ theme, setTheme }) {
                   onClick={() => {
                     setShowProjectList(false);
                     setShowBedroomSlider(false);
+                    setShowPropertyDetails(false);
                     setShowPriceRange(!showPriceRange);
                     setShowUpperOptions(showPriceRange ? false : true);
                   }}
@@ -183,8 +186,11 @@ function LandingPage({ theme, setTheme }) {
               {!showLocationDevelopments || !showUpperOptions ? (
                 <div
                   onClick={() => {
+                    setShowProjectList(false);
+                    setShowBedroomSlider(false);
+                    setShowPriceRange(false);
                     setShowPropertyDetails(!showPropertyDetails);
-                    setShowUpperOptions(!showUpperOptions);
+                    setShowUpperOptions(showPropertyDetails ? false : true);
                   }}
                   className={`flex justify-start items-center gap-2 px-4 h-full min-h-6 cursor-pointer ${showPropertyDetails && `bg-middleMenuTextBlack bg-opacity-5 py-3 rounded-full mr-3`}`}
                 >
