@@ -6,7 +6,6 @@ import App from "./App.jsx";
 const links = [
   { href: "/landing-page", label: "Landing Page" },
   { href: "/logged-in-landing-page", label: "Logged In Landing Page" },
-  { href: "/price-range", label: "Price Range" },
   { href: "/local-amenities-gps", label: "Local Amenities GPS" },
 ];
 

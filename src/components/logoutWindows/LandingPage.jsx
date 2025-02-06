@@ -23,6 +23,7 @@ import Login from "./Login";
 import Register from "./Register";
 import Language from "./Language";
 import PropertyDetails from "../PropertyDetails";
+import PriceRange from "../PriceRange";
 
 function LandingPage({ theme, setTheme }) {
   const [showUpperOptions, setShowUpperOptions] = useState(false);
@@ -30,6 +31,7 @@ function LandingPage({ theme, setTheme }) {
   const [showLocationDevelopments, setShowLocationDevelopments] = useState(false);
   const [showBedroomSlider, setShowBedroomSlider] = useState(false);
   const [showPropertyDetails, setShowPropertyDetails] = useState(false);
+  const [showPriceRange, setShowPriceRange] = useState(false);
   //* Windows
   const [showContactWindow, setShowContactWindow] = useState(false);
   const [showCalendarWindow, setShowCalendarWindow] = useState(false);
@@ -107,6 +109,7 @@ function LandingPage({ theme, setTheme }) {
                 onClick={() => {
                   setShowProjectList(!showProjectList);
                   setShowBedroomSlider(false);
+                  setShowPriceRange(false);
                   setShowUpperOptions(showProjectList ? false : true);
                 }}
                 className={`flex justify-start items-center gap-2 border-r border-gray-300 px-4 pl-6 py-1 h-full min-h-6 cursor-pointer ${
@@ -141,6 +144,7 @@ function LandingPage({ theme, setTheme }) {
                 <div
                   onClick={() => {
                     setShowProjectList(false);
+                    setShowPriceRange(false);
                     setShowBedroomSlider(!showBedroomSlider);
                     setShowUpperOptions(showBedroomSlider ? false : true);
                   }}
@@ -157,12 +161,18 @@ function LandingPage({ theme, setTheme }) {
 
               {/* Price Range Button */}
               {!showLocationDevelopments || !showUpperOptions ? (
-                <div className={`flex justify-start items-center gap-2 border-r border-gray-300 px-4 h-full min-h-6 ${showPropertyDetails && `border-r-0`}`}>
+                <div
+                  onClick={() => {
+                    setShowProjectList(false);
+                    setShowBedroomSlider(false);
+                    setShowPriceRange(!showPriceRange);
+                    setShowUpperOptions(showPriceRange ? false : true);
+                  }}
+                  className={`flex justify-start items-center gap-2 border-r border-gray-300 px-4 h-full min-h-6 cursor-pointer ${showPropertyDetails && `border-r-0`}`}
+                >
                   <img src={priceRangeIcon} alt="priceRangeIcon" />
                   <div className="flex justify-start items-center">
-                    <a className="text-xs font-inter text-middleMenuTextBlack" href="/">
-                      Price Range
-                    </a>
+                    <p className="text-xs font-inter text-middleMenuTextBlack">Price Range</p>
                   </div>
                 </div>
               ) : (
@@ -238,6 +248,7 @@ function LandingPage({ theme, setTheme }) {
         </div>
         {showProjectList && !showLocationDevelopments ? <DiscoverProjects /> : ""}
         {showBedroomSlider && <NumberOfBedrooms />}
+        {showPriceRange && <PriceRange />}
       </nav>
 
       <img className="z-0 w-full h-screen object-cover" src={earthBackground} alt="earthBackground" />
