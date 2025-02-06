@@ -106,7 +106,8 @@ function LandingPage({ theme, setTheme }) {
               <div
                 onClick={() => {
                   setShowProjectList(!showProjectList);
-                  setShowUpperOptions(!showUpperOptions);
+                  setShowBedroomSlider(false);
+                  setShowUpperOptions(showProjectList ? false : true);
                 }}
                 className={`flex justify-start items-center gap-2 border-r border-gray-300 px-4 pl-6 py-1 h-full min-h-6 cursor-pointer ${
                   showProjectList && !showLocationDevelopments
@@ -139,8 +140,9 @@ function LandingPage({ theme, setTheme }) {
               {!showLocationDevelopments || !showUpperOptions ? (
                 <div
                   onClick={() => {
+                    setShowProjectList(false);
                     setShowBedroomSlider(!showBedroomSlider);
-                    setShowUpperOptions(!showUpperOptions);
+                    setShowUpperOptions(showBedroomSlider ? false : true);
                   }}
                   className="flex justify-start items-center gap-2 border-r border-gray-300 px-4 h-full min-h-6 cursor-pointer"
                 >
