@@ -1,8 +1,8 @@
 import React from "react";
 
-function CarIcon() {
+function CarIcon({ className }) {
   return (
-    <svg viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+    <svg className={className} viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M14.2175 2.59375H7.78246C5.49996 2.59375 4.99579 3.73042 4.70246 5.12375L3.66663 10.0829H18.3333L17.2975 5.12375C17.0041 3.73042 16.5 2.59375 14.2175 2.59375Z"
         stroke="white"

@@ -1,8 +1,8 @@
 import React from "react";
 
-function GlobalIcon() {
+function GlobalIcon({ className }) {
   return (
-    <svg viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+    <svg className={className} viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M10.9997 20.1673C16.0623 20.1673 20.1663 16.0633 20.1663 11.0007C20.1663 5.93804 16.0623 1.83398 10.9997 1.83398C5.93706 1.83398 1.83301 5.93804 1.83301 11.0007C1.83301 16.0633 5.93706 20.1673 10.9997 20.1673Z"
         stroke="#171717"

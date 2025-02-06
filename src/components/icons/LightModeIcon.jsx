@@ -1,8 +1,8 @@
 import React from "react";
 
-function LightModeIcon() {
+function LightModeIcon({ className }) {
   return (
-    <svg viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+    <svg className={className} viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M10.9997 17.6673C14.6816 17.6673 17.6663 14.6826 17.6663 11.0007C17.6663 7.31875 14.6816 4.33398 10.9997 4.33398C7.31778 4.33398 4.33301 7.31875 4.33301 11.0007C4.33301 14.6826 7.31778 17.6673 10.9997 17.6673Z"
         stroke="#171717"

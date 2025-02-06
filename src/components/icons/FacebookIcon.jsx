@@ -1,8 +1,8 @@
 import React from "react";
 
-function FacebookIcon() {
+function FacebookIcon({ className }) {
   return (
-    <svg viewBox="0 0 7 13" xmlns="http://www.w3.org/2000/svg">
+    <svg className={className} viewBox="0 0 7 13" xmlns="http://www.w3.org/2000/svg">
       <g clip-path="url(#clip0_190_605)">
         <path
           d="M5.84167 0L6.93365 0.0764583L6.99891 0.114164V2.15864H5.53822C5.35332 2.15864 5.03139 2.25395 4.8802 2.36183C4.71924 2.47704 4.55174 2.79439 4.55174 2.98397V4.74879H6.88036L6.6041 7.0593H4.55174V13.001H2.07846L2.03931 7.0593H0V4.74879H2.07846C2.1285 3.70037 1.91423 2.58806 2.35581 1.60143C2.73975 0.743635 3.49891 0.224138 4.4408 0.0576055L4.81495 0H5.84167Z"

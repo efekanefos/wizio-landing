@@ -1,8 +1,8 @@
 import React from "react";
 
-function NextCalendarArrowIcon() {
+function NextCalendarArrowIcon({ className }) {
   return (
-    <svg viewBox="0 0 8 14" xmlns="http://www.w3.org/2000/svg">
+    <svg className={className} viewBox="0 0 8 14" xmlns="http://www.w3.org/2000/svg">
       <path
         fill-rule="evenodd"
         clip-rule="evenodd"

@@ -1,8 +1,8 @@
 import React from "react";
 
-function PasswordVisibleInputIcon() {
+function PasswordVisibleInputIcon({ className }) {
   return (
-    <svg viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg">
+    <svg className={className} viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M10.2923 6.70859L6.70811 10.2928C6.24769 9.83234 5.96436 9.20193 5.96436 8.50068C5.96436 7.09818 7.09769 5.96484 8.50019 5.96484C9.20144 5.96484 9.83186 6.24818 10.2923 6.70859Z"
         stroke="#292D32"

@@ -1,8 +1,8 @@
 import React from "react";
 
-function DollarIcon() {
+function DollarIcon({ className }) {
   return (
-    <svg viewBox="0 0 19 19" xmlns="http://www.w3.org/2000/svg">
+    <svg className={className} viewBox="0 0 19 19" xmlns="http://www.w3.org/2000/svg">
       <path d="M8.78928 5.77441V8.49141L7.82978 8.15891C7.34528 7.98791 7.05078 7.82641 7.05078 6.99991C7.05078 6.32541 7.55428 5.77441 8.17178 5.77441H8.78928Z" fill="#171717" />
       <path d="M11.9511 11.9974C11.9511 12.6719 11.4476 13.2229 10.8301 13.2229H10.2126V10.5059L11.1721 10.8384C11.6566 11.0094 11.9511 11.1709 11.9511 11.9974Z" fill="#171717" />
       <path

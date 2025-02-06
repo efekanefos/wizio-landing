@@ -1,8 +1,8 @@
 import React from "react";
 
-function TwitterIcon() {
+function TwitterIcon({ className }) {
   return (
-    <svg viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <svg className={className} viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <rect width="15" height="15" fill="url(#pattern0_190_612)" />
       <defs>
         <pattern id="pattern0_190_612" patternContentUnits="objectBoundingBox" width="1" height="1">

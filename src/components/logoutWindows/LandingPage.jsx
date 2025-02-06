@@ -1,19 +1,20 @@
 import React, { useState } from "react";
-/* Images */
-import logo from "../../assets/images/header/logo.svg";
-import whiteHomeIcon from "../../assets/images/header/white_home_icon.svg";
-import locationIcon from "../../assets/images/header/location_icon.svg";
-import bedroomIcon from "../../assets/images/header/bedroom_number_icon.svg";
-import priceRangeIcon from "../../assets/images/header/price_range_icon.svg";
+/* SVG Components */
+import LogoIcon from "../icons/LogoIcon";
+import HomeIcon from "../icons/HomeIcon";
+import SearchIcon from "../icons/SearchIcon";
+import LocalAmenitiesIcon from "../icons/LocalAmenitiesIcon";
+import LocationIcon from "../icons/LocationIcon";
+import BedroomNumbersIcon from "../icons/BedroomNumbersIcon";
+import PriceRangeIcon from "../icons/PriceRangeIcon";
+import GlobalIcon from "../icons/GlobalIcon";
+import LightModeIcon from "../icons/LightModeIcon";
+import OctagonProfileIcon from "../icons/OctagonProfileIcon";
+/* SVG Images */
 import searchIcon from "../../assets/images/header/search_icon.svg";
 import callIcon from "../../assets/images/header/call_icon.svg";
 import WhiteCallIcon from "../../assets/images/header/white_call_icon.svg";
-import globalIcon from "../../assets/images/header/global.svg";
-import lightModeIcon from "../../assets/images/header/light_mode_icon.svg";
-import octagonProfileIcon from "../../assets/images/header/octagon_profile_icon.svg";
 import earthBackground from "../../assets/images/homepage/planet_earth_background.png";
-import blackSearchIcon from "../../assets/images/header/black_search_icon.svg";
-import localAmenitiesIcon from "../../assets/images/header/local_amenities_icon.svg";
 /* Windows */
 import DiscoverProjects from "../DiscoverProjects";
 import NumberOfBedrooms from "../NumberOfBedrooms";
@@ -45,10 +46,10 @@ function LandingPage({ theme, setTheme }) {
         {/* Logo Side */}
         <div className="flex justify-start items-center gap-5">
           <div>
-            <img src={logo} alt="logo" />
+            <LogoIcon className={"w-20 h-7 fill-current"} />
           </div>
           <div className="bg-middleMenuTextBlack p-3 rounded-full w-fit">
-            <img src={whiteHomeIcon} alt="whiteHomeIcon" />
+            <HomeIcon className={"w-5 h-5 fill-white"} />
           </div>
         </div>
         {/* Middle Two Row Part */}
@@ -64,7 +65,7 @@ function LandingPage({ theme, setTheme }) {
                 className={`${!showProjectList && `opacity-30`} flex justify-start items-center gap-2 cursor-pointer`}
               >
                 <div className="w-5">
-                  <img className="w-full" src={blackSearchIcon} alt="blackSearchIcon" />
+                  <SearchIcon className={"w-5 h-5 fill-white"} />
                 </div>
                 <p
                   className={`text-middleMenuTextBlack font-medium text-xs ${
@@ -85,7 +86,7 @@ function LandingPage({ theme, setTheme }) {
                 className={`${!showLocationDevelopments && `opacity-30`} flex justify-start items-center gap-2 cursor-pointer`}
               >
                 <div className="w-5">
-                  <img className="w-full" src={localAmenitiesIcon} alt="localAmenitiesIcon" />
+                  <LocalAmenitiesIcon className={"w-5 h-5 fill-white"} />
                 </div>
                 <p
                   className={`text-middleMenuTextBlack font-medium text-xs ${
@@ -124,7 +125,7 @@ function LandingPage({ theme, setTheme }) {
                 }`}
               >
                 <div className="relative">
-                  <img src={locationIcon} alt="location" />
+                  <LocationIcon className={"w-5 h-5 fill-white"} />
                   {showProjectList && !showLocationDevelopments ? (
                     <span className="flex justify-center items-center absolute top-[-5px] right-[-5px] bg-[#FF0004] border border-[#F8F8F8] p-1 rounded-full w-[15px] h-[15px]">
                       <p className="text-white font-medium text-[10px]">2</p>
@@ -152,7 +153,7 @@ function LandingPage({ theme, setTheme }) {
                   }}
                   className="flex justify-start items-center gap-2 border-r border-gray-300 px-4 h-full min-h-6 cursor-pointer"
                 >
-                  <img src={bedroomIcon} alt="bedroomIcon" />
+                  <BedroomNumbersIcon className={"w-5 h-5 fill-white"} />
                   <div className="flex justify-start items-center">
                     <p className="text-xs text-middleMenuTextBlack">Number Of Bedrooms</p>
                   </div>
@@ -173,7 +174,7 @@ function LandingPage({ theme, setTheme }) {
                   }}
                   className={`flex justify-start items-center gap-2 border-r border-gray-300 px-4 h-full min-h-6 cursor-pointer ${showPropertyDetails && `border-r-0`}`}
                 >
-                  <img src={priceRangeIcon} alt="priceRangeIcon" />
+                  <PriceRangeIcon className={"w-5 h-5 fill-white"} />
                   <div className="flex justify-start items-center">
                     <p className="text-xs font-inter text-middleMenuTextBlack">Price Range</p>
                   </div>
@@ -195,7 +196,7 @@ function LandingPage({ theme, setTheme }) {
                   className={`flex justify-start items-center gap-2 px-4 h-full min-h-6 cursor-pointer ${showPropertyDetails && `bg-middleMenuTextBlack bg-opacity-5 py-3 rounded-full mr-3`}`}
                 >
                   <div className="relative">
-                    <img src={priceRangeIcon} alt="priceRangeIcon" />
+                    <PriceRangeIcon className={"w-5 h-5 fill-white"} />
                     {showPropertyDetails && (
                       <span className="flex justify-center items-center absolute -top-1.5 -right-1.5 bg-[#FF0004] border border-[#F8F8F8] p-1 rounded-full w-[15px] h-[15px]">
                         <p className="text-white font-medium text-[10px]">2</p>
@@ -235,18 +236,18 @@ function LandingPage({ theme, setTheme }) {
             </div>
             {/* Language Button */}
             <div onClick={() => setShowLanguageWindow(!showLanguageWindow)} className="w-5 cursor-pointer">
-              <img className="w-full" src={globalIcon} alt="globalIcon" />
+              <GlobalIcon className={"w-5 h-5 fill-white"} />
             </div>
             {/* Dark-Light Theme Button */}
             <div onClick={() => setTheme(theme === "dark" ? "light" : "dark")} className="w-5">
-              <img className="w-full" src={lightModeIcon} alt="lightModeIcon" />
+              <LightModeIcon className={"w-5 h-5 fill-white"} />
             </div>
           </div>
           {/* Login Button */}
           <div onClick={() => setShowLoginWindow(!showLoginWindow)} className="flex justify-start items-center gap-3 bg-middleMenuTextBlack w-full h-full p-3 rounded-full cursor-pointer">
             <div className="w-full flex justify-between items-center">
               <div className="flex justify-start items-center w-full gap-2">
-                <img className="w-full max-w-6" src={octagonProfileIcon} alt="octagonProfileIcon" />
+                <OctagonProfileIcon className={"w-6 h-6 fill-current"} />
                 {showLoginWindow && <p className="text-xs text-white font-medium">Login</p>}
               </div>
             </div>

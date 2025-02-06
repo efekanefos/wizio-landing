@@ -1,8 +1,8 @@
 import React from "react";
 
-function BookNowIcon() {
+function BookNowIcon({ className }) {
   return (
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <svg className={className} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M18.0001 7.16C17.9401 7.15 17.8701 7.15 17.8101 7.16C16.4301 7.11 15.3301 5.98 15.3301 4.58C15.3301 3.15 16.4801 2 17.9101 2C19.3401 2 20.4901 3.16 20.4901 4.58C20.4801 5.98 19.3801 7.11 18.0001 7.16Z"
         stroke="#171717"

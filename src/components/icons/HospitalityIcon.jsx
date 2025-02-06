@@ -1,8 +1,8 @@
 import React from "react";
 
-function HospitalityIcon() {
+function HospitalityIcon({ className }) {
   return (
-    <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+    <svg className={className} viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M15.8084 18.3337H4.14172C1.64172 18.3337 1.64172 17.2087 1.64172 15.8337V15.0003C1.64172 14.542 2.01672 14.167 2.47506 14.167H17.4751C17.9334 14.167 18.3084 14.542 18.3084 15.0003V15.8337C18.3084 17.2087 18.3084 18.3337 15.8084 18.3337Z"
         stroke="#171717"

@@ -1,8 +1,8 @@
 import React from "react";
 
-function SearchIcon() {
+function SearchIcon({ className }) {
   return (
-    <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+    <svg className={className} viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M9.58317 17.4993C13.9554 17.4993 17.4998 13.9549 17.4998 9.58268C17.4998 5.21043 13.9554 1.66602 9.58317 1.66602C5.21092 1.66602 1.6665 5.21043 1.6665 9.58268C1.6665 13.9549 5.21092 17.4993 9.58317 17.4993Z"
         stroke="#171717"

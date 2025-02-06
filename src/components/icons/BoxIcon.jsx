@@ -1,8 +1,8 @@
 import React from "react";
 
-function BoxIcon() {
+function BoxIcon({ className }) {
   return (
-    <svg viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
+    <svg className={className} viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
       <path d="M1.9812 4.65039L7.49995 7.84414L12.9812 4.66914" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
       <path d="M7.5 13.5066V7.83789" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
       <path

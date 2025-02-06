@@ -1,8 +1,8 @@
 import React from "react";
 
-function TownhousesIcon() {
+function TownhousesIcon({ className }) {
   return (
-    <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+    <svg className={className} viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
       <path d="M9.75 16.5H3.75C2.25 16.5 1.5 15.75 1.5 14.25V8.25C1.5 6.75 2.25 6 3.75 6H7.5V14.25C7.5 15.75 8.25 16.5 9.75 16.5Z" stroke="#171717" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
       <path d="M7.58249 3C7.52249 3.225 7.5 3.4725 7.5 3.75V6H3.75V4.5C3.75 3.675 4.425 3 5.25 3H7.58249Z" stroke="#171717" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
       <path d="M10.5 6V9.75" stroke="#171717" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />

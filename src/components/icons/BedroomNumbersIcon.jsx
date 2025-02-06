@@ -1,8 +1,8 @@
 import React from "react";
 
-function BedroomNumbersIcon() {
+function BedroomNumbersIcon({ className }) {
   return (
-    <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+    <svg className={className} viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M5.58367 14.9993H3.45868C2.26701 14.9993 1.66699 14.3993 1.66699 13.2077V3.4577C1.66699 2.26604 2.26701 1.66602 3.45868 1.66602H7.042C8.23367 1.66602 8.83364 2.26604 8.83364 3.4577V4.99935"
         stroke="#171717"

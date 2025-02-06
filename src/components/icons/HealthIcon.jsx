@@ -1,8 +1,8 @@
 import React from "react";
 
-function HealthIcon() {
+function HealthIcon({ className }) {
   return (
-    <svg viewBox="0 0 25 20" xmlns="http://www.w3.org/2000/svg">
+    <svg className={className} viewBox="0 0 25 20" xmlns="http://www.w3.org/2000/svg">
       <g clip-path="url(#clip0_190_2499)">
         <path d="M1.75 18.25H19.25" stroke="#171717" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
         <path d="M14.875 0.75H6.125C3.5 0.75 2.625 2.31625 2.625 4.25V18.25H18.375V4.25C18.375 2.31625 17.5 0.75 14.875 0.75Z" stroke="#171717" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />

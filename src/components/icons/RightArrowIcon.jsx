@@ -1,8 +1,8 @@
 import React from "react";
 
-function RightArrowIcon() {
+function RightArrowIcon({ className }) {
   return (
-    <svg viewBox="0 0 6 10" xmlns="http://www.w3.org/2000/svg">
+    <svg className={className} viewBox="0 0 6 10" xmlns="http://www.w3.org/2000/svg">
       <path d="M1 1L5 5L1 9" stroke="#171717" stroke-linecap="round" />
     </svg>
   );

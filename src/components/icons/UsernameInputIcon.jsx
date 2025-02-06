@@ -1,8 +1,8 @@
 import React from "react";
 
-function UsernameInputIcon() {
+function UsernameInputIcon({ className }) {
   return (
-    <svg viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg">
+    <svg className={className} viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M8.50016 8.49935C10.4562 8.49935 12.0418 6.91369 12.0418 4.95768C12.0418 3.00167 10.4562 1.41602 8.50016 1.41602C6.54415 1.41602 4.9585 3.00167 4.9585 4.95768C4.9585 6.91369 6.54415 8.49935 8.50016 8.49935Z"
         stroke="#171717"
