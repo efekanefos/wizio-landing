@@ -2,7 +2,7 @@ import React from "react";
 
 function PasswordInputIcon() {
   return (
-    <svg className="w-5 h-5 fill-current" viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M11.036 8.50068C11.036 9.90318 9.90269 11.0365 8.50019 11.0365C7.09769 11.0365 5.96436 9.90318 5.96436 8.50068C5.96436 7.09818 7.09769 5.96484 8.50019 5.96484C9.90269 5.96484 11.036 7.09818 11.036 8.50068Z"
         stroke="#292D32"

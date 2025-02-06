@@ -2,7 +2,7 @@ import React from "react";
 
 function LocationIcon() {
   return (
-    <svg className="w-5 h-5 fill-current" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M12 6.74265V15.2627C12 16.3502 11.22 16.8076 10.2675 16.2826L7.32001 14.6401C7.00501 14.4676 6.49499 14.4676 6.17999 14.6401L3.2325 16.2826C2.28 16.8076 1.5 16.3502 1.5 15.2627V6.74265C1.5 5.46015 2.54999 4.41016 3.83249 4.41016H9.66751C10.95 4.41016 12 5.46015 12 6.74265Z"
         stroke="#171717"

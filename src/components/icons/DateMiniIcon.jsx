@@ -2,7 +2,7 @@ import React from "react";
 
 function DateMiniIcon() {
   return (
-    <svg className="w-5 h-5 fill-current" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
       <path d="M4.3335 1.08301V2.70801" stroke="#171717" stroke-width="0.7" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
       <path d="M8.6665 1.08301V2.70801" stroke="#171717" stroke-width="0.7" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
       <path

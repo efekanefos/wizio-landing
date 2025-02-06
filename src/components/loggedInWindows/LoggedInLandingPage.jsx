@@ -46,7 +46,7 @@ function LoggedInLandingPage() {
             <img src={logo} alt="logo" />
           </div>
           <div className="bg-grayIconBg p-3 rounded-full w-fit">
-            <HomeIcon />
+            <HomeIcon className={`w-5 h-5 fill-current`} />
           </div>
         </div>
         {/* Menu Side */}
