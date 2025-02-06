@@ -39,6 +39,7 @@ function LandingPage({ theme, setTheme }) {
   const [showLoginWindow, setShowLoginWindow] = useState(false);
   const [showRegisterWindow, setShowRegisterWindow] = useState(false);
   const [showLanguageWindow, setShowLanguageWindow] = useState(false);
+  const [showLocalAmenitiesCards, setShowLocalAmenitiesCards] = useState(false);
 
   return (
     <div className="overflow-y-hidden max-h-screen">
@@ -81,6 +82,10 @@ function LandingPage({ theme, setTheme }) {
               <div
                 onClick={() => {
                   setShowProjectList(false);
+                  setShowBedroomSlider(false);
+                  setShowPriceRange(false);
+                  setShowPropertyDetails(false);
+                  setShowLocalAmenitiesCards(true);
                   setShowLocationDevelopments(true);
                 }}
                 className={`${!showLocationDevelopments && `opacity-30`} flex justify-start items-center gap-2 cursor-pointer`}

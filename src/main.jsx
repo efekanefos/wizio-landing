@@ -3,11 +3,7 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
 
-const links = [
-  { href: "/landing-page", label: "Landing Page" },
-  { href: "/logged-in-landing-page", label: "Logged In Landing Page" },
-  { href: "/local-amenities-gps", label: "Local Amenities GPS" },
-];
+const links = [{ href: "/local-amenities-gps", label: "Local Amenities GPS" }];
 
 function DropdownMenu() {
   const [selectedValue, setSelectedValue] = useState("");
