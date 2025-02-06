@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import user from "../../assets/images/loggedInWindows/user.svg";
 import close from "../../assets/images/loggedInWindows/close.svg";
 import blackRightArrow from "../../assets/images/loggedInWindows/black_right_arrow.svg";
@@ -8,6 +9,8 @@ import notifications from "../../assets/images/loggedInWindows/notifications.svg
 import logout from "../../assets/images/loggedInWindows/logout.svg";
 
 function Status({ setShowStatusWindow, setShowProfileWindow, setShowVisitWindow, setShowNotificationWindow }) {
+  const navigate = useNavigate();
+
   return (
     <div className="absolute top-[110px] right-7 bg-white rounded-3xl  max-w-[360px] w-full">
       {/* Close Button */}
@@ -84,7 +87,7 @@ function Status({ setShowStatusWindow, setShowProfileWindow, setShowVisitWindow,
         </div>
       </div>
       {/* Logout */}
-      <div className="flex justify-between items-center py-7 px-9">
+      <div onClick={() => navigate("/landing-page")} className="flex justify-between items-center py-7 px-9 cursor-pointer">
         <div className="flex justify-start items-center gap-3">
           <div className="max-w-6 max-h-6">
             <img className="w-full h-full" src={logout} alt="logout" />
