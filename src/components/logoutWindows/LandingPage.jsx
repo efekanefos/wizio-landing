@@ -15,6 +15,7 @@ import searchIcon from "../../assets/images/header/search_icon.svg";
 import callIcon from "../../assets/images/header/call_icon.svg";
 import WhiteCallIcon from "../../assets/images/header/white_call_icon.svg";
 import earthBackground from "../../assets/images/homepage/planet_earth_background.png";
+import LocalAmenitiesBackground from "../../assets/images/homepage/local_amenities_background.svg";
 /* Windows */
 import DiscoverProjects from "../DiscoverProjects";
 import NumberOfBedrooms from "../NumberOfBedrooms";
@@ -25,6 +26,7 @@ import Register from "./Register";
 import Language from "./Language";
 import PropertyDetails from "../PropertyDetails";
 import PriceRange from "../PriceRange";
+import LocalAmenitiesGPS from "../LocalAmenitiesGPS";
 
 function LandingPage({ theme, setTheme }) {
   const [showUpperOptions, setShowUpperOptions] = useState(false);
@@ -39,7 +41,7 @@ function LandingPage({ theme, setTheme }) {
   const [showLoginWindow, setShowLoginWindow] = useState(false);
   const [showRegisterWindow, setShowRegisterWindow] = useState(false);
   const [showLanguageWindow, setShowLanguageWindow] = useState(false);
-  const [showLocalAmenitiesCards, setShowLocalAmenitiesCards] = useState(false);
+  const [showLocalAmenitiesGPS, setShowLocalAmenitiesGPS] = useState(false);
 
   return (
     <div className="overflow-y-hidden max-h-screen">
@@ -85,7 +87,7 @@ function LandingPage({ theme, setTheme }) {
                   setShowBedroomSlider(false);
                   setShowPriceRange(false);
                   setShowPropertyDetails(false);
-                  setShowLocalAmenitiesCards(true);
+                  setShowLocalAmenitiesGPS(!showLocalAmenitiesGPS);
                   setShowLocationDevelopments(true);
                 }}
                 className={`${!showLocationDevelopments && `opacity-30`} flex justify-start items-center gap-2 cursor-pointer`}
@@ -141,8 +143,10 @@ function LandingPage({ theme, setTheme }) {
                 </div>
                 <div className="flex justify-start items-center">
                   <div className="flex flex-col">
-                    <p className="text-xs text-middleMenuTextBlack leading-tight">{showLocationDevelopments && showUpperOptions ? "Location & By Developments" : "Location"}</p>
-                    {showProjectList && !showLocationDevelopments ? <p className="text-middleMenuTextBlack text-[8px]">Ava Plaza, Coral Vis..</p> : ""}
+                    <p className="text-xs text-middleMenuTextBlack leading-tight">
+                      {showLocationDevelopments && showUpperOptions && !showLocalAmenitiesGPS ? "Location & By Developments" : showLocationDevelopments && showUpperOptions && showLocalAmenitiesGPS ? "Pafilia Plaza" : "Location"}
+                    </p>
+                    {showProjectList && !showLocationDevelopments ? <p className="text-middleMenuTextBlack text-[8px]">Ava Plaza, Coral Vis..</p> : showLocalAmenitiesGPS ? <p className="text-middleMenuTextBlack text-[8px] text-left">Paphos</p> : ""}
                   </div>
                 </div>
               </div>
@@ -262,8 +266,9 @@ function LandingPage({ theme, setTheme }) {
         {showBedroomSlider && <NumberOfBedrooms />}
         {showPriceRange && <PriceRange />}
       </nav>
+      {showLocalAmenitiesGPS && <LocalAmenitiesGPS />}
 
-      <img className="z-0 w-full h-screen object-cover" src={earthBackground} alt="earthBackground" />
+      <img className="z-0 w-full h-screen object-cover" src={showLocalAmenitiesGPS ? LocalAmenitiesBackground : earthBackground} alt="earthBackground" />
 
       {
         //* Contact Window
@@ -286,12 +291,14 @@ function LandingPage({ theme, setTheme }) {
         showLanguageWindow && <Language />
       }
 
-      <div className="font-inter text-white absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
-        <h1 className="text-7xl">
-          World of <span className="font-bold">Pafilia</span>
-        </h1>
-        <button className="block text-center border border-white py-4 px-14 rounded-full mt-10 mx-auto">Discover</button>
-      </div>
+      {!showLocalAmenitiesGPS && (
+        <div className="font-inter text-white absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
+          <h1 className="text-7xl">
+            World of <span className="font-bold">Pafilia</span>
+          </h1>
+          <button className="block text-center border border-white py-4 px-14 rounded-full mt-10 mx-auto">Discover</button>
+        </div>
+      )}
     </div>
   );
 }
