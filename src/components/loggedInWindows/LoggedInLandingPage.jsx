@@ -55,7 +55,7 @@ function LoggedInLandingPage() {
     <div className="overflow-y-hidden max-h-screen font-inter">
       <nav className="flex justify-between items-center mt-0 py-3 px-7 z-10 relative bg-white font-inter border-b border-gray-300">
         {/* Logo Side */}
-        <div className="flex justify-start items-center gap-5">
+        <div className="flex justify-start items-center gap-5 min-w-80">
           <div>
             <img src={logo} alt="logo" />
           </div>
@@ -225,7 +225,15 @@ function LoggedInLandingPage() {
                 ""
               )}
             </div>
-            <div className={`bg-buttonOrange p-3 rounded-full ${showUpperOptions && `p-5 py-4 flex justify-start items-center gap-2`}`}>
+
+            {/* Search Button */}
+
+            <div
+              onClick={() => {
+                setShowSearchResult(!showSearchResult);
+              }}
+              className={`bg-buttonOrange p-3 rounded-full cursor-pointer ${showUpperOptions && `p-5 py-4 flex justify-start items-center gap-2`}`}
+            >
               <img className="w-4" src={searchIcon} alt="search" />
               {showUpperOptions && <p className="text-white font-semibold text-xs">Search</p>}
             </div>
@@ -234,8 +242,8 @@ function LoggedInLandingPage() {
           </div>
         </div>
         {/* Profile Side */}
-        <div className="flex justify-start items-center gap-6">
-          <div className="w-full flex justify-start items-center gap-6">
+        <div className="flex justify-start items-center gap-6 min-w-80">
+          <div className="w-full flex justify-end items-center gap-6">
             <div className="w-full max-w-5">
               <img className="w-full" src={callIcon} alt="callIcon" />
             </div>
