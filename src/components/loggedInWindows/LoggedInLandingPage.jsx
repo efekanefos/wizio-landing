@@ -1,29 +1,29 @@
 import React, { useState } from "react";
+/* SVG Components */
+import LogoIcon from "../icons/LogoIcon";
+import LocationIcon from "../icons/LocationIcon";
+import BedroomNumbersIcon from "../icons/BedroomNumbersIcon";
+import PriceRangeIcon from "../icons/PriceRangeIcon";
+import SearchIcon from "../icons/SearchIcon";
+import CallIcon from "../icons/CallIcon";
+import GlobalIcon from "../icons/GlobalIcon";
+import LightModeIcon from "../icons/LightModeIcon";
+import OctagonProfileIcon from "../icons/OctagonProfileIcon";
+import CircleCloseIcon from "../icons/CircleCloseIcon";
+import DollarIcon from "../icons/DollarIcon";
+import SizeArrowIcon from "../icons/SizeArrowIcon";
+import BoxIcon from "../icons/BoxIcon";
+import LocalAmenitiesIcon from "../icons/LocalAmenitiesIcon";
 /* Images */
-import logo from "../../assets/images/header/logo.svg";
-import locationIcon from "../../assets/images/header/location_icon.svg";
-import bedroomIcon from "../../assets/images/header/bedroom_number_icon.svg";
-import priceRangeIcon from "../../assets/images/header/price_range_icon.svg";
-import dropDownArrowIcon from "../../assets/images/header/dropdown_arrow_icon.svg";
 import whiteDropDownArrowIcon from "../../assets/images/header/white_dropdown_arrow_icon.svg";
 import searchIcon from "../../assets/images/header/search_icon.svg";
-import callIcon from "../../assets/images/header/call_icon.svg";
-import globalIcon from "../../assets/images/header/global.svg";
-import lightModeIcon from "../../assets/images/header/light_mode_icon.svg";
-import octagonProfileIcon from "../../assets/images/header/octagon_profile_icon.svg";
 import blackOctagonProfileIcon from "../../assets/images/header/black_octagon_profile_icon.svg";
 import moonBackground from "../../assets/images/homepage/moon_background.png";
 import buildingMap from "../../assets/images/homepage/building_map_background.png";
-import blackCircleClose from "../../assets/images/loggedInWindows/black_circle_close_icon.svg";
 import miniCardImage from "../../assets/images/loggedInWindows/mini_card_image.png";
-import blackDollar from "../../assets/images/logoutWindows/black_dollar.svg";
-import black_size_arrow from "../../assets/images/logoutWindows/black_size_arrow.svg";
 import whiteBox from "../../assets/images/logoutWindows/white_box.svg";
-import localAmenities from "../../assets/images/header/local_amenities_icon.svg";
 import cardImage_2 from "../../assets/images/loggedInWindows/card_image_2.png";
 import miniCircleImage from "../../assets/images/loggedInWindows/mini_circle_image.png";
-import blackSearchIcon from "../../assets/images/header/black_search_icon.svg";
-import localAmenitiesIcon from "../../assets/images/header/local_amenities_icon.svg";
 /* Windows */
 import Status from "./Status";
 import ProfileSetting from "./ProfileSetting";
@@ -41,7 +41,7 @@ function LoggedInLandingPage() {
   const [showProfileWindow, setShowProfileWindow] = useState(false);
   const [showVisitWindow, setShowVisitWindow] = useState(false);
   const [showNotificationWindow, setShowNotificationWindow] = useState(false);
-  const [showSearchResult, setShowSearchResult] = useState(false);
+  const [showSearchResult, setShowSearchResult] = useState(true);
 
   // Other States
   const [showUpperOptions, setShowUpperOptions] = useState(false);
@@ -57,7 +57,7 @@ function LoggedInLandingPage() {
         {/* Logo Side */}
         <div className="flex justify-start items-center gap-5 min-w-80">
           <div>
-            <img src={logo} alt="logo" />
+            <LogoIcon className={"w-20 h-7 fill-current"} />
           </div>
           <div className="bg-grayIconBg p-3 rounded-full w-fit">
             <HomeIcon className={`w-5 h-5 fill-current`} />
@@ -76,7 +76,7 @@ function LoggedInLandingPage() {
                 className={`${!showProjectList && `opacity-30`} flex justify-start items-center gap-2 cursor-pointer`}
               >
                 <div className="w-5">
-                  <img className="w-full" src={blackSearchIcon} alt="blackSearchIcon" />
+                  <SearchIcon className={"w-5 h-5 fill-white"} />
                 </div>
                 <p
                   className={`text-middleMenuTextBlack font-medium text-xs ${
@@ -97,7 +97,7 @@ function LoggedInLandingPage() {
                 className={`${!showLocationDevelopments && `opacity-30`} flex justify-start items-center gap-2 cursor-pointer`}
               >
                 <div className="w-5">
-                  <img className="w-full" src={localAmenitiesIcon} alt="localAmenitiesIcon" />
+                  <LocalAmenitiesIcon className={"w-5 h-5 fill-white"} />
                 </div>
                 <p
                   className={`text-middleMenuTextBlack font-medium text-xs ${
@@ -136,7 +136,7 @@ function LoggedInLandingPage() {
                 }`}
               >
                 <div className="relative">
-                  <img src={locationIcon} alt="location" />
+                  <LocationIcon className={"w-5 h-5 fill-white"} />
                   {showProjectList && !showLocationDevelopments ? (
                     <span className="flex justify-center items-center absolute top-[-5px] right-[-5px] bg-[#FF0004] border border-[#F8F8F8] p-1 rounded-full w-[15px] h-[15px]">
                       <p className="text-white font-medium text-[10px]">2</p>
@@ -164,7 +164,7 @@ function LoggedInLandingPage() {
                   }}
                   className="flex justify-start items-center gap-2 border-r border-gray-300 px-4 h-full min-h-6 cursor-pointer"
                 >
-                  <img src={bedroomIcon} alt="bedroomIcon" />
+                  <BedroomNumbersIcon className={"w-5 h-5 fill-white"} />
                   <div className="flex justify-start items-center">
                     <p className="text-xs text-middleMenuTextBlack">Number Of Bedrooms</p>
                   </div>
@@ -185,7 +185,7 @@ function LoggedInLandingPage() {
                   }}
                   className={`flex justify-start items-center gap-2 border-r border-gray-300 px-4 h-full min-h-6 cursor-pointer ${showPropertyDetails && `border-r-0`}`}
                 >
-                  <img src={priceRangeIcon} alt="priceRangeIcon" />
+                  <PriceRangeIcon className={"w-5 h-5 fill-white"} />
                   <div className="flex justify-start items-center">
                     <p className="text-xs font-inter text-middleMenuTextBlack">Price Range</p>
                   </div>
@@ -207,7 +207,7 @@ function LoggedInLandingPage() {
                   className={`flex justify-start items-center gap-2 px-4 h-full min-h-6 cursor-pointer ${showPropertyDetails && `bg-middleMenuTextBlack bg-opacity-5 py-3 rounded-full mr-3`}`}
                 >
                   <div className="relative">
-                    <img src={priceRangeIcon} alt="priceRangeIcon" />
+                    <PriceRangeIcon className={"w-5 h-5 fill-white"} />
                     {showPropertyDetails && (
                       <span className="flex justify-center items-center absolute -top-1.5 -right-1.5 bg-[#FF0004] border border-[#F8F8F8] p-1 rounded-full w-[15px] h-[15px]">
                         <p className="text-white font-medium text-[10px]">2</p>
@@ -245,13 +245,13 @@ function LoggedInLandingPage() {
         <div className="flex justify-start items-center gap-6 min-w-80">
           <div className="w-full flex justify-end items-center gap-6">
             <div className="w-full max-w-5">
-              <img className="w-full" src={callIcon} alt="callIcon" />
+              <CallIcon className={"w-5 h-5 fill-white"} />
             </div>
             <div className="w-full max-w-5">
-              <img className="w-full" src={globalIcon} alt="globalIcon" />
+              <GlobalIcon className={"w-5 h-5 fill-white"} />
             </div>
             <div className="w-full max-w-5">
-              <img className="w-full" src={lightModeIcon} alt="lightModeIcon" />
+              <LightModeIcon className={"w-5 h-5 fill-white"} />
             </div>
           </div>
           {showSearchResult ? (
@@ -262,13 +262,14 @@ function LoggedInLandingPage() {
             <div onClick={() => setShowStatusWindow(!showStatusWindow)} className="flex justify-start items-center gap-3 bg-middleMenuTextBlack min-h-16 min-w-[210px] w-full h-full p-3 rounded-full cursor-pointer">
               <div className="w-full flex justify-between items-center">
                 <div className="flex w-full gap-3">
-                  <img className="w-full max-w-6 ml-2" src={octagonProfileIcon} alt="octagonProfileIcon" />
+                  <OctagonProfileIcon className={"w-full max-w-6 ml-2 fill-current"} />
                   <div className="border-l border-gray-300 border-opacity-20 pl-4">
                     <p className="text-base text-white font-medium">B.Douglas</p>
                     <p className="text-xs text-white font-regular">Customer</p>
                   </div>
                 </div>
                 <img src={whiteDropDownArrowIcon} alt="dropDownArrowIcon" />
+                {/* <DropdownArrowIcon className={"w-5 h-5 fill-white"} /> */}
               </div>
             </div>
           )}
@@ -285,7 +286,7 @@ function LoggedInLandingPage() {
             <div className="pt-3 pb-3 px-6 flex justify-center items-center gap-4 rounded-3xl bg-middleMenuTextBlack bg-opacity-5 ">
               <p className="text-xs text-middleMenuTextBlack">Limassol Marina</p>
               <div>
-                <img src={blackCircleClose} alt="blackCircleClose" />
+                <CircleCloseIcon className={"w-4 h-4 fill-current"} />
               </div>
             </div>
 
@@ -293,7 +294,7 @@ function LoggedInLandingPage() {
             <div className="pt-3 pb-3 px-6 flex justify-center items-center gap-4 rounded-3xl bg-middleMenuTextBlack bg-opacity-5 ">
               <p className="text-xs text-middleMenuTextBlack">Limassol</p>
               <div>
-                <img src={blackCircleClose} alt="blackCircleClose" />
+                <CircleCloseIcon className={"w-4 h-4 fill-current"} />
               </div>
             </div>
 
@@ -301,7 +302,7 @@ function LoggedInLandingPage() {
             <div className="pt-3 pb-3 px-6 flex justify-center items-center gap-4 rounded-3xl bg-middleMenuTextBlack bg-opacity-5 ">
               <p className="text-xs text-middleMenuTextBlack">Villas</p>
               <div>
-                <img src={blackCircleClose} alt="blackCircleClose" />
+                <CircleCloseIcon className={"w-4 h-4 fill-current"} />
               </div>
             </div>
 
@@ -309,7 +310,7 @@ function LoggedInLandingPage() {
             <div className="pt-3 pb-3 px-6 flex justify-center items-center gap-4 rounded-3xl bg-middleMenuTextBlack bg-opacity-5 ">
               <p className="text-xs text-middleMenuTextBlack">Bedrooms 1-3</p>
               <div>
-                <img src={blackCircleClose} alt="blackCircleClose" />
+                <CircleCloseIcon className={"w-4 h-4 fill-current"} />
               </div>
             </div>
 
@@ -317,7 +318,7 @@ function LoggedInLandingPage() {
             <div className="pt-3 pb-3 px-6 flex justify-center items-center gap-4 rounded-3xl bg-middleMenuTextBlack bg-opacity-5 ">
               <p className="text-xs text-middleMenuTextBlack">£750 - £3500</p>
               <div>
-                <img src={blackCircleClose} alt="blackCircleClose" />
+                <CircleCloseIcon className={"w-4 h-4 fill-current"} />
               </div>
             </div>
           </div>
@@ -396,7 +397,7 @@ function LoggedInLandingPage() {
             <div className="p-3 py-4 pt-3 px-5 flex justify-between items-center border-b border-gray-200">
               <div className="flex justify-start items-end gap-1.5">
                 <div className="max-w-5 max-h-5">
-                  <img className="w-full h-full" src={blackDollar} alt="blackDollar" />
+                  <DollarIcon className={"w-5 h-5 fill-current"} />
                 </div>
                 <div>
                   <p className="text-[8px] font-medium leading-3">From</p>
@@ -406,7 +407,7 @@ function LoggedInLandingPage() {
 
               <div className="flex justify-start items-end gap-1.5">
                 <div className="max-w-5 max-h-5">
-                  <img className="w-full h-full" src={black_size_arrow} alt="black_size_arrow" />
+                  <SizeArrowIcon className={"w-5 h-5 fill-current"} />
                 </div>
                 <div>
                   <p className="text-[8px] font-medium leading-3">Sqm</p>
@@ -418,13 +419,14 @@ function LoggedInLandingPage() {
             <div className="flex flex-col gap-1.5 pb-4 px-5 pt-4">
               <button className="flex justify-center items-center gap-1 w-full px-3 py-2 bg-gray-100 rounded-full">
                 <div className="flex justify-center items-center max-w-4 max-h-4">
-                  <img className="w-full h-full" src={localAmenities} alt="localAmenities" />
+                  <LocalAmenitiesIcon className={"w-5 h-5 fill-current"} />
                 </div>
                 <p className="text-xs font-medium">Local Amenities</p>
               </button>
               <button className="bg-orange-400 flex justify-center items-center gap-1 w-full px-3 py-2 rounded-full">
                 <div className="flex justify-center items-center max-w-4 max-h-4">
                   <img className="w-full h-full" src={whiteBox} alt="whiteBox" />
+                  {/* <BoxIcon className={"w-5 h-5 fill-current"} /> */}
                 </div>
                 <p className="text-xs text-white font-medium">Portal</p>
               </button>
@@ -463,13 +465,14 @@ function LoggedInLandingPage() {
               <div className="flex flex-col gap-2 mt-4 ">
                 <button className="flex justify-center items-center gap-1 w-full px-3 py-1.5 bg-gray-100 rounded-full">
                   <div className="flex justify-center items-center max-w-4 max-h-4">
-                    <img className="w-full h-full" src={localAmenities} alt="localAmenities" />
+                    <LocalAmenitiesIcon className={"w-5 h-5 fill-current"} />
                   </div>
                   <p className="text-xs font-light">Local Amenities</p>
                 </button>
                 <button className="bg-orange-400 flex justify-center items-center gap-1 w-full px-3 py-1.5 rounded-full">
                   <div className="flex justify-center items-center max-w-4 max-h-4">
                     <img className="w-full h-full" src={whiteBox} alt="whiteBox" />
+                    {/* <BoxIcon className={"w-5 h-5 fill-current"} /> */}
                   </div>
                   <p className="text-xs text-white font-light">Portal</p>
                 </button>
