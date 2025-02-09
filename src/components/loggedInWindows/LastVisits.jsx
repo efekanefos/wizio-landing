@@ -1,7 +1,10 @@
 import React from "react";
+/* SVG Components */
+import LastVisitsIcon from "../icons/LastVisitsIcon";
+import BackArrowIcon from "../icons/BackArrowIcon";
+import RightArrowIcon from "../icons/RightArrowIcon";
+/* Images */
 import lastVisitsIcon from "../../assets/images/loggedInWindows/last_visits.svg";
-import backBlackArrow from "../../assets/images/loggedInWindows/black_back_arrow.svg";
-import blackRightArrow from "../../assets/images/loggedInWindows/black_right_arrow.svg";
 import limassolMarinaIcon from "../../assets/images/loggedInWindows/limassol_marina_square.svg";
 import beachsideIcon from "../../assets/images/loggedInWindows/beachside_square.svg";
 import coralVistaIcon from "../../assets/images/loggedInWindows/coral_vista_square.svg";
@@ -26,7 +29,7 @@ function LastVisits({ setShowStatusWindow, setShowVisitWindow }) {
           }}
           className="rounded-full p-3 bg-gray-100 cursor-pointer"
         >
-          <img className="w-full h-full" src={backBlackArrow} alt="backBlackArrow" />
+          <BackArrowIcon className={"w-3 h-3 fill-white"} />
         </div>
       </div>
       {/* Limassol Marina Row */}
@@ -41,7 +44,7 @@ function LastVisits({ setShowStatusWindow, setShowVisitWindow }) {
           </div>
         </div>
         <div>
-          <img src={blackRightArrow} alt="blackRightArrow" />
+          <RightArrowIcon className={"w-3 h-3 translate-x-1 fill-white"} />
         </div>
       </div>
       {/* Beachside Row */}
@@ -56,7 +59,7 @@ function LastVisits({ setShowStatusWindow, setShowVisitWindow }) {
           </div>
         </div>
         <div>
-          <img src={blackRightArrow} alt="blackRightArrow" />
+          <RightArrowIcon className={"w-3 h-3 translate-x-1 fill-white"} />
         </div>
       </div>
       {/* Coral Vista Row */}
@@ -71,7 +74,7 @@ function LastVisits({ setShowStatusWindow, setShowVisitWindow }) {
           </div>
         </div>
         <div>
-          <img src={blackRightArrow} alt="blackRightArrow" />
+          <RightArrowIcon className={"w-3 h-3 translate-x-1 fill-white"} />
         </div>
       </div>
       {/* Konia Green Row */}
@@ -86,7 +89,7 @@ function LastVisits({ setShowStatusWindow, setShowVisitWindow }) {
           </div>
         </div>
         <div>
-          <img src={blackRightArrow} alt="blackRightArrow" />
+          <RightArrowIcon className={"w-3 h-3 translate-x-1 fill-white"} />
         </div>
       </div>
     </div>

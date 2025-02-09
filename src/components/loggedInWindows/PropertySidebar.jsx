@@ -1,10 +1,13 @@
 import React from "react";
+/* SVG Components */
+import DollarIcon from "../icons/DollarIcon";
+import SizeArrowIcon from "../icons/SizeArrowIcon";
+import BoxIcon from "../icons/BoxIcon";
+import LocalAmenitiesIcon from "../icons/LocalAmenitiesIcon";
+import MailInput from "../icons/MailInput";
+/* Images */
 import cardImage from "../../assets/images/loggedInWindows/card_image.png";
-import localAmenities from "../../assets/images/header/local_amenities_icon.svg";
-import mailIcon from "../../assets/images/loggedInWindows/mail_input.svg";
 import whiteBox from "../../assets/images/logoutWindows/white_box.svg";
-import blackDollar from "../../assets/images/logoutWindows/black_dollar.svg";
-import black_size_arrow from "../../assets/images/logoutWindows/black_size_arrow.svg";
 
 function PropertySidebar() {
   return (
@@ -32,7 +35,7 @@ function PropertySidebar() {
               <div>
                 <div className="flex justify-start items-center gap-1 mt-4">
                   <div className="max-w-3 max-h-3">
-                    <img className="w-full h-full" src={blackDollar} alt="dollar" />
+                    <DollarIcon className={"w-3 h-3 fill-current"} />
                   </div>
                   <div className="bg-black h-0.5 w-16"></div>
                 </div>
@@ -47,7 +50,7 @@ function PropertySidebar() {
               <div>
                 <div className="flex justify-start items-center gap-1 mt-4">
                   <div className="max-w-3 max-h-3">
-                    <img className="w-full h-full" src={black_size_arrow} alt="size" />
+                    <SizeArrowIcon className={"w-3 h-3 fill-current"} />
                   </div>
                   <div className="bg-black h-0.5 w-16"></div>
                 </div>
@@ -62,19 +65,20 @@ function PropertySidebar() {
               <div className="flex flex-col gap-1 mt-6">
                 <button className="flex justify-center items-center gap-1 w-full px-3 py-1 bg-gray-100 rounded-full">
                   <div className="flex justify-center items-center max-w-4 max-h-4">
-                    <img className="w-full h-full translate-y-[1px]" src={mailIcon} alt="mailIcon" />
+                    <MailInput className={"w-4 h-4 fill-white"} />
                   </div>
                   <p className="text-xs font-medium">Contact Now</p>
                 </button>
                 <button className="flex justify-center items-center gap-1 w-full px-3 py-1 bg-gray-100 rounded-full">
                   <div className="flex justify-center items-center max-w-4 max-h-4">
-                    <img className="w-full h-full" src={localAmenities} alt="localAmenities" />
+                    <LocalAmenitiesIcon className={"w-4 h-4 fill-current"} />
                   </div>
                   <p className="text-xs font-medium">Local Amenities</p>
                 </button>
                 <button className="bg-orange-400 flex justify-center items-center gap-1 w-full px-3 py-1 rounded-full">
                   <div className="flex justify-center items-center max-w-4 max-h-4">
                     <img className="w-full h-full" src={whiteBox} alt="whiteBox" />
+                    {/* <BoxIcon className={"w-5 h-5 fill-current"} /> */}
                   </div>
                   <p className="text-xs text-white font-medium">Portal</p>
                 </button>
@@ -105,7 +109,7 @@ function PropertySidebar() {
               <div>
                 <div className="flex justify-start items-center gap-1 mt-4">
                   <div className="max-w-3 max-h-3">
-                    <img className="w-full h-full" src={blackDollar} alt="dollar" />
+                    <DollarIcon className={"w-3 h-3 fill-current"} />
                   </div>
                   <div className="bg-black h-0.5 w-16"></div>
                 </div>
@@ -120,7 +124,7 @@ function PropertySidebar() {
               <div>
                 <div className="flex justify-start items-center gap-1 mt-4">
                   <div className="max-w-3 max-h-3">
-                    <img className="w-full h-full" src={black_size_arrow} alt="size" />
+                    <SizeArrowIcon className={"w-3 h-3 fill-current"} />
                   </div>
                   <div className="bg-black h-0.5 w-16"></div>
                 </div>
@@ -135,19 +139,20 @@ function PropertySidebar() {
               <div className="flex flex-col gap-1 mt-6">
                 <button className="flex justify-center items-center gap-1 w-full px-3 py-1 bg-gray-100 rounded-full">
                   <div className="flex justify-center items-center max-w-4 max-h-4">
-                    <img className="w-full h-full translate-y-[1px]" src={mailIcon} alt="mailIcon" />
+                    <MailInput className={"w-4 h-4 fill-white"} />
                   </div>
                   <p className="text-xs font-medium">Contact Now</p>
                 </button>
                 <button className="flex justify-center items-center gap-1 w-full px-3 py-1 bg-gray-100 rounded-full">
                   <div className="flex justify-center items-center max-w-4 max-h-4">
-                    <img className="w-full h-full" src={localAmenities} alt="localAmenities" />
+                    <LocalAmenitiesIcon className={"w-4 h-4 fill-current"} />
                   </div>
                   <p className="text-xs font-medium">Local Amenities</p>
                 </button>
                 <button className="bg-orange-400 flex justify-center items-center gap-1 w-full px-3 py-1 rounded-full">
                   <div className="flex justify-center items-center max-w-4 max-h-4">
                     <img className="w-full h-full" src={whiteBox} alt="whiteBox" />
+                    {/* <BoxIcon className={"w-5 h-5 fill-current"} /> */}
                   </div>
                   <p className="text-xs text-white font-medium">Portal</p>
                 </button>

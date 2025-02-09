@@ -41,7 +41,7 @@ function LoggedInLandingPage() {
   const [showProfileWindow, setShowProfileWindow] = useState(false);
   const [showVisitWindow, setShowVisitWindow] = useState(false);
   const [showNotificationWindow, setShowNotificationWindow] = useState(false);
-  const [showSearchResult, setShowSearchResult] = useState(true);
+  const [showSearchResult, setShowSearchResult] = useState(false);
 
   // Other States
   const [showUpperOptions, setShowUpperOptions] = useState(false);

@@ -1,4 +1,11 @@
 import React from "react";
+import UsernameInputIcon from "../icons/UsernameInputIcon";
+import PhoneInputIcon from "../icons/PhoneInputIcon";
+import MailInput from "../icons/MailInput";
+import PasswordInputIcon from "../icons/PasswordInputIcon";
+import PasswordVisibleInputIcon from "../icons/PasswordVisibleInputIcon";
+import BackArrowIcon from "../icons/BackArrowIcon";
+import ProfileSettingIcon from "../icons/ProfileSettingIcon";
 import usernameInput from "../../assets/images/loggedInWindows/username_input.svg";
 import phoneInput from "../../assets/images/loggedInWindows/phone_input.svg";
 import mailInput from "../../assets/images/loggedInWindows/mail_input.svg";
@@ -26,7 +33,7 @@ function ProfileSetting({ setShowStatusWindow, setShowProfileWindow }) {
           }}
           className="rounded-full p-3 bg-gray-100 cursor-pointer"
         >
-          <img className="w-full h-full" src={backBlackArrow} alt="backBlackArrow" />
+          <BackArrowIcon className={"w-3 h-3 fill-white"} />
         </div>
       </div>
       {/* User Form */}
@@ -39,7 +46,7 @@ function ProfileSetting({ setShowStatusWindow, setShowProfileWindow }) {
           </div>
 
           <div className="absolute right-0 top-5">
-            <img src={usernameInput} alt="usernameInput" />
+            <UsernameInputIcon className={"w-4 h-4 fill-white"} />
           </div>
         </div>
 
@@ -51,7 +58,7 @@ function ProfileSetting({ setShowStatusWindow, setShowProfileWindow }) {
           </div>
 
           <div className="absolute right-0 top-5">
-            <img src={phoneInput} alt="phoneInput" />
+            <PhoneInputIcon className={"w-5 h-5 fill-white"} />
           </div>
         </div>
 
@@ -63,7 +70,7 @@ function ProfileSetting({ setShowStatusWindow, setShowProfileWindow }) {
           </div>
 
           <div className="absolute right-0 top-5">
-            <img src={mailInput} alt="mailInput" />
+            <MailInput className={"w-4 h-4 fill-white"} />
           </div>
         </div>
 
@@ -76,6 +83,7 @@ function ProfileSetting({ setShowStatusWindow, setShowProfileWindow }) {
 
           <div className="absolute right-0 top-5">
             <img src={passwordInput} alt="passwordInput" />
+            {/* <PasswordInputIcon className={"w-4 h-4 fill-white"} /> */}
           </div>
         </div>
 
@@ -88,6 +96,7 @@ function ProfileSetting({ setShowStatusWindow, setShowProfileWindow }) {
 
           <div className="absolute right-0 top-5">
             <img src={passwordVisibleInput} alt="passwordVisibleInput" />
+            {/* <PasswordVisibleInputIcon className={"w-4 h-4 fill-white"} /> */}
           </div>
         </div>
 

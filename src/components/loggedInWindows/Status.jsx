@@ -1,12 +1,15 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import user from "../../assets/images/loggedInWindows/user.svg";
-import close from "../../assets/images/loggedInWindows/close.svg";
-import blackRightArrow from "../../assets/images/loggedInWindows/black_right_arrow.svg";
-import profileSetting from "../../assets/images/loggedInWindows/profile_setting.svg";
-import lastVisits from "../../assets/images/loggedInWindows/last_visits.svg";
+/* SVG Components */
+import UserIcon from "../icons/UserIcon";
+import CloseIcon from "../icons/CloseIcon";
+import RightArrowIcon from "../icons/RightArrowIcon";
+import ProfileSettingIcon from "../icons/ProfileSettingIcon";
+import LastVisitsIcon from "../icons/LastVisitsIcon";
+import NotificationsIcon from "../icons/NotificationsIcon";
+import LogoutIcon from "../icons/LogoutIcon";
+/* Images */
 import notifications from "../../assets/images/loggedInWindows/notifications.svg";
-import logout from "../../assets/images/loggedInWindows/logout.svg";
 
 function Status({ setShowStatusWindow, setShowProfileWindow, setShowVisitWindow, setShowNotificationWindow }) {
   const navigate = useNavigate();
@@ -15,12 +18,12 @@ function Status({ setShowStatusWindow, setShowProfileWindow, setShowVisitWindow,
     <div className="absolute top-[110px] right-7 bg-white rounded-3xl  max-w-[360px] w-full">
       {/* Close Button */}
       <div onClick={() => setShowStatusWindow(false)} className="rounded-full p-3 border-gray-300 absolute top-6 right-5 cursor-pointer">
-        <img src={close} alt="close button" />
+        <CloseIcon className={"w-3 h-3 fill-current"} />
       </div>
       {/* Profile Img,Name,Role */}
       <div className="flex justify-start items-center gap-5 p-8 pb-2 mb-5">
         <div className="bg-grayIconBg p-5 rounded-full">
-          <img src={user} alt="user" />
+          <UserIcon className={"w-8 h-8 fill-current"} />
         </div>
         <div className="flex flex-col">
           <p className="text-lg text-middleMenuTextBlack font-medium ">B.Douglas</p>
@@ -37,12 +40,12 @@ function Status({ setShowStatusWindow, setShowProfileWindow, setShowVisitWindow,
       >
         <div className="flex justify-start items-center gap-3">
           <div className="max-w-6 max-h-6">
-            <img className="w-full h-full" src={profileSetting} alt="profileSetting" />
+            <ProfileSettingIcon className={"w-6 h-6 fill-white"} />
           </div>
           <p className="text-base">Profile Setting</p>
         </div>
         <div className="max-w-6 max-h-6">
-          <img className="w-full h-full" src={blackRightArrow} alt="blackRightArrow" />
+          <RightArrowIcon className={"w-3 h-3 translate-x-1 fill-white"} />
         </div>
       </div>
       {/* Last Visits */}
@@ -55,12 +58,12 @@ function Status({ setShowStatusWindow, setShowProfileWindow, setShowVisitWindow,
       >
         <div className="flex justify-start items-center gap-3">
           <div className="max-w-6 max-h-6">
-            <img className="w-full h-full" src={lastVisits} alt="lastVisits" />
+            <LastVisitsIcon className={"w-6 h-6 fill-white"} />
           </div>
           <p className="text-base">Last visits</p>
         </div>
         <div className="max-w-6 max-h-6">
-          <img className="w-full h-full" src={blackRightArrow} alt="blackRightArrow" />
+          <RightArrowIcon className={"w-3 h-3 translate-x-1 fill-white"} />
         </div>
       </div>
       {/* Notifications */}
@@ -74,6 +77,7 @@ function Status({ setShowStatusWindow, setShowProfileWindow, setShowVisitWindow,
         <div className="flex justify-start items-center gap-3">
           <div className="max-w-6 max-h-6">
             <img className="w-full h-full" src={notifications} alt="notifications" />
+            {/* <NotificationsIcon className={"w-6 h-6 fill-white"} /> */}
           </div>
           <p className="text-base">Notifications</p>
         </div>
@@ -82,7 +86,7 @@ function Status({ setShowStatusWindow, setShowProfileWindow, setShowVisitWindow,
             <p className="text-white font-medium text-base">5</p>
           </span>
           <div className="max-w-6 max-h-6">
-            <img className="w-full h-full" src={blackRightArrow} alt="blackRightArrow" />
+            <RightArrowIcon className={"w-3 h-3 translate-x-1 fill-white"} />
           </div>
         </div>
       </div>
@@ -90,12 +94,12 @@ function Status({ setShowStatusWindow, setShowProfileWindow, setShowVisitWindow,
       <div onClick={() => navigate("/landing-page")} className="flex justify-between items-center py-7 px-9 cursor-pointer">
         <div className="flex justify-start items-center gap-3">
           <div className="max-w-6 max-h-6">
-            <img className="w-full h-full" src={logout} alt="logout" />
+            <LogoutIcon className={"w-6 h-6 fill-white"} />
           </div>
           <p className="text-base">Log out</p>
         </div>
         <div className="max-w-6 max-h-6">
-          <img className="w-full h-full" src={blackRightArrow} alt="blackRightArrow" />
+          <RightArrowIcon className={"w-3 h-3 translate-x-1 fill-white"} />
         </div>
       </div>
     </div>

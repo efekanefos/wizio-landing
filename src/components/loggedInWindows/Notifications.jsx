@@ -1,9 +1,11 @@
 import React from "react";
+import NotificationsIcon from "../icons/NotificationsIcon";
+import BackArrowIcon from "../icons/BackArrowIcon";
+import DateMiniIcon from "../icons/DateMiniIcon";
+import NotificationCloseIcon from "../icons/NotificationCloseIcon";
+/* Images */
 import notifications from "../../assets/images/loggedInWindows/notifications.svg";
-import backBlackArrow from "../../assets/images/loggedInWindows/black_back_arrow.svg";
-import dateMiniIcon from "../../assets/images/loggedInWindows/date_mini_icon.svg";
 import whiteDateMiniIcon from "../../assets/images/loggedInWindows/white_date_mini_icon.svg";
-import blackNotificationCloseButton from "../../assets/images/loggedInWindows/black_notification_close_button.svg";
 import whiteNotificationCloseButton from "../../assets/images/loggedInWindows/white_notification_close_button.svg";
 
 function Notifications({ setShowStatusWindow, setShowNotificationWindow }) {
@@ -14,6 +16,7 @@ function Notifications({ setShowStatusWindow, setShowNotificationWindow }) {
         <div className="flex justify-start items-center gap-2 w-full">
           <div className="max-w-7 max-h-7 w-full h-full">
             <img className="w-full h-full" src={notifications} alt="notifications" />
+            {/* <NotificationsIcon className={"w-8 h-8 fill-current"} />*/}
           </div>
           <p className="text-lg text-middleMenuTextBlack font-medium">Notifications</p>
         </div>
@@ -25,7 +28,7 @@ function Notifications({ setShowStatusWindow, setShowNotificationWindow }) {
           }}
           className="rounded-full p-3 bg-gray-100 cursor-pointer"
         >
-          <img className="w-full h-full" src={backBlackArrow} alt="backBlackArrow" />
+          <BackArrowIcon className={`w-3 h-3 fill-current`} />
         </div>
       </div>
       {/* Notification Rows */}
@@ -38,14 +41,14 @@ function Notifications({ setShowStatusWindow, setShowNotificationWindow }) {
               <div className="bg-orange-500 w-3 h-3 rounded-full"></div>
               <div className="flex justify-start items-center gap-1">
                 <div>
-                  <img className="block group-hover:hidden" src={dateMiniIcon} alt="dateMiniIcon" />
+                  <DateMiniIcon className={`w-4 h-4 fill-white block group-hover:hidden`} />
                   <img className="hidden group-hover:block" src={whiteDateMiniIcon} alt="whiteDateMiniIcon" />
                 </div>
                 <p className="text-[8px] text-black group-hover:text-white font-regular">11.2024</p>
               </div>
 
               <div>
-                <img className="block group-hover:hidden" src={blackNotificationCloseButton} alt="blackNotificationCloseButton" />
+                <NotificationCloseIcon className={`w-3.5 h-3.5 fill-white block group-hover:hidden`} />
                 <img className="hidden group-hover:block" src={whiteNotificationCloseButton} alt="whiteNotificationCloseButton" />
               </div>
             </div>
@@ -60,14 +63,14 @@ function Notifications({ setShowStatusWindow, setShowNotificationWindow }) {
               <div className="bg-orange-500 w-3 h-3 rounded-full"></div>
               <div className="flex justify-start items-center gap-1">
                 <div>
-                  <img className="block group-hover:hidden" src={dateMiniIcon} alt="dateMiniIcon" />
+                  <DateMiniIcon className={`w-4 h-4 fill-white block group-hover:hidden`} />
                   <img className="hidden group-hover:block" src={whiteDateMiniIcon} alt="whiteDateMiniIcon" />
                 </div>
                 <p className="text-[8px] text-black group-hover:text-white font-regular">11.2024</p>
               </div>
 
               <div>
-                <img className="block group-hover:hidden" src={blackNotificationCloseButton} alt="blackNotificationCloseButton" />
+                <NotificationCloseIcon className={`w-3.5 h-3.5 fill-white block group-hover:hidden`} />
                 <img className="hidden group-hover:block" src={whiteNotificationCloseButton} alt="whiteNotificationCloseButton" />
               </div>
             </div>
@@ -82,14 +85,14 @@ function Notifications({ setShowStatusWindow, setShowNotificationWindow }) {
               <div className="bg-orange-500 w-3 h-3 rounded-full"></div>
               <div className="flex justify-start items-center gap-1">
                 <div>
-                  <img className="block group-hover:hidden" src={dateMiniIcon} alt="dateMiniIcon" />
+                  <DateMiniIcon className={`w-4 h-4 fill-white block group-hover:hidden`} />
                   <img className="hidden group-hover:block" src={whiteDateMiniIcon} alt="whiteDateMiniIcon" />
                 </div>
                 <p className="text-[8px] text-black group-hover:text-white font-regular">11.2024</p>
               </div>
 
               <div>
-                <img className="block group-hover:hidden" src={blackNotificationCloseButton} alt="blackNotificationCloseButton" />
+                <NotificationCloseIcon className={`w-3.5 h-3.5 fill-white block group-hover:hidden`} />
                 <img className="hidden group-hover:block" src={whiteNotificationCloseButton} alt="whiteNotificationCloseButton" />
               </div>
             </div>
@@ -104,14 +107,14 @@ function Notifications({ setShowStatusWindow, setShowNotificationWindow }) {
               <div className="bg-orange-500 w-3 h-3 rounded-full"></div>
               <div className="flex justify-start items-center gap-1">
                 <div>
-                  <img className="block group-hover:hidden" src={dateMiniIcon} alt="dateMiniIcon" />
+                  <DateMiniIcon className={`w-4 h-4 fill-white block group-hover:hidden`} />
                   <img className="hidden group-hover:block" src={whiteDateMiniIcon} alt="whiteDateMiniIcon" />
                 </div>
                 <p className="text-[8px] text-black group-hover:text-white font-regular">11.2024</p>
               </div>
 
               <div>
-                <img className="block group-hover:hidden" src={blackNotificationCloseButton} alt="blackNotificationCloseButton" />
+                <NotificationCloseIcon className={`w-3.5 h-3.5 fill-white block group-hover:hidden`} />
                 <img className="hidden group-hover:block" src={whiteNotificationCloseButton} alt="whiteNotificationCloseButton" />
               </div>
             </div>
@@ -126,14 +129,14 @@ function Notifications({ setShowStatusWindow, setShowNotificationWindow }) {
               <div className="bg-orange-500 w-3 h-3 rounded-full"></div>
               <div className="flex justify-start items-center gap-1">
                 <div>
-                  <img className="block group-hover:hidden" src={dateMiniIcon} alt="dateMiniIcon" />
+                  <DateMiniIcon className={`w-4 h-4 fill-white block group-hover:hidden`} />
                   <img className="hidden group-hover:block" src={whiteDateMiniIcon} alt="whiteDateMiniIcon" />
                 </div>
                 <p className="text-[8px] text-black group-hover:text-white font-regular">11.2024</p>
               </div>
 
               <div>
-                <img className="block group-hover:hidden" src={blackNotificationCloseButton} alt="blackNotificationCloseButton" />
+                <NotificationCloseIcon className={`w-3.5 h-3.5 fill-white block group-hover:hidden`} />
                 <img className="hidden group-hover:block" src={whiteNotificationCloseButton} alt="whiteNotificationCloseButton" />
               </div>
             </div>
