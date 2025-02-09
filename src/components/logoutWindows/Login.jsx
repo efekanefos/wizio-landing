@@ -1,8 +1,12 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+/* SCG Components */
+import OctagonProfileIcon from "../icons/OctagonProfileIcon";
+import CloseIcon from "../icons/CloseIcon";
+import MailInput from "../icons/MailInput";
+import LoginPasswordIcon from "../icons/LoginPasswordIcon";
+/* Images */
 import blackOctagonProfile from "../../assets/images/header/black_octagon_profile_icon.svg";
-import close from "../../assets/images/loggedInWindows/close.svg";
-import mailInput from "../../assets/images/loggedInWindows/mail_input.svg";
 import loginPasswordIcon from "../../assets/images/logoutWindows/login_password_icon.svg";
 
 function Login({ setShowLoginWindow, setShowRegisterWindow }) {
@@ -15,12 +19,13 @@ function Login({ setShowLoginWindow, setShowRegisterWindow }) {
         <div className="flex justify-start items-center gap-2 w-full">
           <div className="max-w-6 max-h-6 w-full h-full">
             <img className="w-full h-full" src={blackOctagonProfile} alt="blackOctagonProfile" />
+            {/* <OctagonProfileIcon className={"w-4 h-4 fill-white"} /> */}
           </div>
           <p className="text-lg text-middleMenuTextBlack font-medium">Login</p>
         </div>
         {/* Close Button */}
         <div onClick={() => setShowLoginWindow(false)} className="rounded-full p-3 bg-gray-100 absolute top-6 right-5 cursor-pointer">
-          <img src={close} alt="close button" />
+          <CloseIcon className={"w-3 h-3 fill-white"} />
         </div>
       </div>
       {/* User Form */}
@@ -33,7 +38,7 @@ function Login({ setShowLoginWindow, setShowRegisterWindow }) {
           </div>
 
           <div className="absolute right-0 top-0">
-            <img src={mailInput} alt="mailInput" />
+            <MailInput className={"w-4 h-4 fill-white"} />
           </div>
         </div>
 
@@ -46,6 +51,7 @@ function Login({ setShowLoginWindow, setShowRegisterWindow }) {
 
           <div className="absolute right-0 top-0">
             <img src={loginPasswordIcon} alt="passwordInput" />
+            {/* <LoginPasswordIcon className={"w-4 h-4 fill-white"} /> */}
           </div>
         </div>
 

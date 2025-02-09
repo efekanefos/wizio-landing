@@ -1,4 +1,13 @@
 import React from "react";
+/* SVG Components */
+import UsernameInputIcon from "../icons/UsernameInputIcon";
+import PhoneInputIcon from "../icons/PhoneInputIcon";
+import MailInput from "../icons/MailInput";
+import ProfileSettingIcon from "../icons/ProfileSettingIcon";
+import LoginPasswordIcon from "../icons/LoginPasswordIcon";
+import CloseIcon from "../icons/CloseIcon";
+import OctagonProfileIcon from "../icons/OctagonProfileIcon";
+/* Images */
 import usernameInput from "../../assets/images/loggedInWindows/username_input.svg";
 import phoneInput from "../../assets/images/loggedInWindows/phone_input.svg";
 import mailInput from "../../assets/images/loggedInWindows/mail_input.svg";
@@ -15,12 +24,13 @@ function Register({ setShowRegisterWindow }) {
         <div className="flex justify-start items-center gap-2 w-full">
           <div className="max-w-7 max-h-7 w-full h-full">
             <img className="w-full h-full" src={blackOctagonProfile} alt="blackOctagonProfile" />
+            {/* <OctagonProfileIcon className={"w-7 h-7 fill-current"} /> */}
           </div>
           <p className="text-lg text-middleMenuTextBlack font-medium">Register</p>
         </div>
         {/* Close Button */}
         <div onClick={() => setShowRegisterWindow(false)} className="rounded-full p-3 bg-gray-100 absolute top-6 right-5 cursor-pointer">
-          <img src={close} alt="close button" />
+          <CloseIcon className={"w-3 h-3 fill-current"} />
         </div>
       </div>
       {/* User Form */}
@@ -35,7 +45,7 @@ function Register({ setShowRegisterWindow }) {
           </div>
 
           <div className="absolute right-0 top-0">
-            <img src={usernameInput} alt="usernameInput" />
+            <UsernameInputIcon className={"w-5 h-5 fill-white"} />
           </div>
         </div>
 
@@ -49,7 +59,7 @@ function Register({ setShowRegisterWindow }) {
           </div>
 
           <div className="absolute right-0 top-0">
-            <img src={phoneInput} alt="phoneInput" />
+            <PhoneInputIcon className={"w-5 h-5 fill-white"} />
           </div>
         </div>
 
@@ -61,7 +71,7 @@ function Register({ setShowRegisterWindow }) {
           </div>
 
           <div className="absolute right-0 top-0">
-            <img src={mailInput} alt="mailInput" />
+            <MailInput className={"w-5 h-5 fill-white"} />
           </div>
         </div>
 
@@ -76,6 +86,7 @@ function Register({ setShowRegisterWindow }) {
 
           <div className="absolute right-0 top-0">
             <img src={loginPasswordIcon} alt="loginPasswordIcon" />
+            {/* <LoginPasswordIcon className={"w-5 h-5 fill-white"} /> */}
           </div>
         </div>
 
@@ -90,6 +101,7 @@ function Register({ setShowRegisterWindow }) {
 
           <div className="absolute right-0 top-0">
             <img src={loginPasswordIcon} alt="loginPasswordIcon" />
+            {/* <LoginPasswordIcon className={"w-5 h-5 fill-white"} /> */}
           </div>
         </div>
 

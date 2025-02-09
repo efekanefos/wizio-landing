@@ -1,4 +1,15 @@
 import React from "react";
+/* SVG Components */
+import CallIcon from "../icons/CallIcon";
+import CloseIcon from "../icons/CloseIcon";
+import WhatsappIcon from "../icons/WhatsappIcon";
+import BookNowIcon from "../icons/BookNowIcon";
+import ContactCallIcon from "../icons/ContactCallIcon";
+import LinkedInIcon from "../icons/LinkedInIcon";
+import FacebookIcon from "../icons/FacebookIcon";
+import InstagramIcon from "../icons/InstagramIcon";
+import TwitterIcon from "../icons/TwitterIcon";
+import YoutubeIcon from "../icons/YoutubeIcon";
 //* Images
 import callIcon from "../../assets/images/header/call_icon.svg";
 import close from "../../assets/images/loggedInWindows/close.svg";
@@ -18,13 +29,13 @@ function Contact({ showCalendarWindow, setShowCalendarWindow }) {
       <div className="flex justify-start items-center gap-5 p-7 border-b border-gray-300 border-opacity-50">
         <div className="flex justify-start items-center gap-2 w-full">
           <div className="max-w-6 max-h-6 w-full h-full">
-            <img className="w-full h-full" src={callIcon} alt="callIcon" />
+            <CallIcon className={"w-6 h-6 fill-white"} />
           </div>
           <p className="text-lg text-middleMenuTextBlack font-medium">Contact</p>
         </div>
         {/* Back Button */}
         <div className="rounded-full p-3 bg-gray-100">
-          <img className="w-full h-full" src={close} alt="close" />
+          <CloseIcon className={"w-2.5 h-2.5 fill-white"} />
         </div>
       </div>
       {/* Contact Rows */}
@@ -32,21 +43,21 @@ function Contact({ showCalendarWindow, setShowCalendarWindow }) {
         {/* WhatsApp Button */}
         <button className="bg-buttonOrange w-full py-4 px-7 flex justify-start items-center gap-3 rounded-full">
           <div>
-            <img src={whiteWhatsApp} alt="whiteWhatsApp" />
+            <WhatsappIcon className={"w-5.5 h-5.5 fill-white"} />
           </div>
           <p className="text-white text-sm">WhatsApp</p>
         </button>
         {/* Book Now Button */}
         <button onClick={() => setShowCalendarWindow(!showCalendarWindow)} className="bg-middleMenuTextBlack bg-opacity-5 w-full py-4 px-7 flex justify-start items-center gap-3 rounded-full">
           <div>
-            <img src={blackBookNowIcon} alt="blackBookNowIcon" />
+            <BookNowIcon className={"w-5 h-5 fill-white"} />
           </div>
           <p className="text-black text-sm">Book Now</p>
         </button>
         {/* Call Button */}
         <button className="bg-middleMenuTextBlack bg-opacity-5 w-full py-4 px-7 flex justify-start items-center gap-3 rounded-full">
           <div>
-            <img src={blackContactCallIcon} alt="blackContactCallIcon" />
+            <ContactCallIcon className={"w-5 h-5 fill-white"} />
           </div>
           <p className="text-black text-sm">Let us call you</p>
         </button>
@@ -69,23 +80,24 @@ function Contact({ showCalendarWindow, setShowCalendarWindow }) {
         <div className="w-full flex justify-between items-center mt-5">
           {/* LinkkedIn */}
           <div className="flex justify-center items-center bg-gray-100 p-4 rounded-full w-12 h-12">
-            <img src={blackLinkedin} alt="blackLinkedin" />
+            <LinkedInIcon className={"w-4 h-4 fill-white"} />
           </div>
           {/* Facebook */}
           <div className="flex justify-center items-center bg-gray-100 p-4 rounded-full w-12 h-12">
-            <img src={blackFacebook} alt="blackFacebook" />
+            <FacebookIcon className={"w-4 h-4 fill-white"} />
           </div>
           {/* Instagram */}
           <div className="flex justify-center items-center bg-gray-100 p-4 rounded-full w-12 h-12">
-            <img src={blackInstagram} alt="blackInstagram" />
+            <InstagramIcon className={"w-4 h-4 fill-white"} />
           </div>
           {/* Twitter */}
           <div className="flex justify-center items-center bg-gray-100 p-4 rounded-full w-12 h-12">
             <img src={blackTwitter} alt="blackTwitter" />
+            {/* <TwitterIcon className={"w-4 h-4 fill-white"} /> */}
           </div>
           {/* Youtube */}
           <div className="flex justify-center items-center bg-gray-100 p-4 rounded-full w-12 h-12">
-            <img className="w-full" src={blackYoutube} alt="blackYoutube" />
+            <YoutubeIcon className={"w-4 h-4 fill-white"} />
           </div>
         </div>
       </div>
