@@ -1,4 +1,5 @@
 import React from "react";
+/* SVG Components */
 import LogoIcon from "./icons/LogoIcon";
 import CalendarCallIcon from "./icons/CalendarCallIcon";
 import ClockIcon from "./icons/ClockIcon";
@@ -6,11 +7,6 @@ import NextCalendarArrowIcon from "./icons/NextCalendarArrowIcon";
 import PrevCalendarArrowIcon from "./icons/PrevCalendarArrowIcon";
 import TimezoneIcon from "./icons/TimezoneIcon";
 import TimezoneDownArrowIcon from "./icons/TimezoneDownArrowIcon";
-/* Images */
-import prevCalendarArrow from "../assets/images/logoutWindows/prev_calendar_arrow.svg";
-import nextCalendarArrow from "../assets/images/logoutWindows/next_calendar_arrow.svg";
-import timeZoneIcon from "../assets/images/logoutWindows/time_zone_icon.svg";
-import timeZoneDownArrowIcon from "../assets/images/logoutWindows/time_zone_down_arrow_icon.svg";
 
 function Calendar() {
   return (

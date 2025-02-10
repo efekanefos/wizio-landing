@@ -1,4 +1,8 @@
 import React from "react";
+/* SVG Components */
+import ApartmentIcon from "./icons/ApartmentIcon";
+import TownhousesIcon from "./icons/TownhousesIcon";
+import VillasIcon from "./icons/VillasIcon";
 import whiteApartment from "../assets/images/logoutWindows/white_apartment.svg";
 import townhouses from "../assets/images/logoutWindows/townhouses.svg";
 import villas from "../assets/images/logoutWindows/villas.svg";
@@ -11,21 +15,16 @@ function PropertyDetails() {
 
         <ul className="list-none">
           <li className="flex justify-start items-center gap-1.5 bg-middleMenuTextBlack p-4 rounded-full">
-            <div>
-              <img src={whiteApartment} alt="Apartments" />
-            </div>
+            <ApartmentIcon className={"w-4 h-4 fill-current"} />
             <p className="text-xs text-white">Apartments</p>
           </li>
           <li className="flex justify-start items-center gap-1.5 p-4 rounded-full">
-            <div>
-              <img src={townhouses} alt="Townhouses" />
-            </div>
+            <TownhousesIcon className={"w-4 h-4 fill-white"} />
+            {/* <img src={townhouses} alt="Townhouses" /> */}
             <p className="text-xs">Townhouses</p>
           </li>
           <li className="flex justify-start items-center gap-1.5 p-4 rounded-full">
-            <div>
-              <img src={villas} alt="Villas" />
-            </div>
+            <VillasIcon className={"w-4 h-4 fill-white"} />
             <p className="text-xs">Villas</p>
           </li>
         </ul>

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 /* SVG Components */
 import LogoIcon from "../icons/LogoIcon";
+import HomeIcon from "../icons/HomeIcon";
 import LocationIcon from "../icons/LocationIcon";
 import BedroomNumbersIcon from "../icons/BedroomNumbersIcon";
 import PriceRangeIcon from "../icons/PriceRangeIcon";
@@ -30,7 +31,6 @@ import ProfileSetting from "./ProfileSetting";
 import LastVisits from "./LastVisits";
 import Notifications from "./Notifications";
 import PropertySidebar from "./PropertySidebar";
-import HomeIcon from "../icons/HomeIcon";
 import DiscoverProjects from "../DiscoverProjects";
 import NumberOfBedrooms from "../NumberOfBedrooms";
 import PropertyDetails from "../PropertyDetails";

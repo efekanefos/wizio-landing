@@ -1,17 +1,21 @@
 import React from "react";
+/* SVG Components */
+import EducationIcon from "./icons/EducationIcon";
+import HealthIcon from "./icons/HealthIcon";
+import HospitalityIcon from "./icons/HospitalityIcon";
+import EntertainmentIcon from "./icons/EntertainmentIcon";
+import TickIcon from "./icons/TickIcon";
+import CarIcon from "./icons/CarIcon";
+import BycycleIcon from "./icons/BycycleIcon";
+import WalkIcon from "./icons/WalkIcon";
+import DollarIcon from "./icons/DollarIcon";
+import SizeArrowIcon from "./icons/SizeArrowIcon";
+import BoxIcon from "./icons/BoxIcon";
 /* Images */
-import education from "../assets/images/logoutWindows/education.svg";
-import health from "../assets/images/logoutWindows/health.svg";
 import whiteHospitality from "../assets/images/logoutWindows/white_hospitality.svg";
 import hospitality from "../assets/images/logoutWindows/hospitality.svg";
-import entertainment from "../assets/images/logoutWindows/entertainment.svg";
 import blackTick from "../assets/images/logoutWindows/black_tick.svg";
 import whiteTick from "../assets/images/logoutWindows/white_tick.svg";
-import whiteCar from "../assets/images/logoutWindows/white_car.svg";
-import bycycle from "../assets/images/logoutWindows/bycycle.svg";
-import walk from "../assets/images/logoutWindows/walk.svg";
-import blackDollar from "../assets/images/logoutWindows/black_dollar.svg";
-import blackSizeArrow from "../assets/images/logoutWindows/black_size_arrow.svg";
 import whiteBox from "../assets/images/logoutWindows/white_box.svg";
 import buildingCircle from "../assets/images/homepage/building_circle.svg";
 
@@ -23,25 +27,19 @@ function LocalAmenitiesGPS() {
         <div className="flex justify-center items-center gap-2">
           {/* Education Button */}
           <div className="pt-3 pb-3 px-6 flex justify-center items-center gap-2 rounded-3xl bg-middleMenuTextBlack bg-opacity-5 ">
-            <div>
-              <img src={education} alt="Education" />
-            </div>
+            <EducationIcon className={"w-6 h-5 fill-current"} />
             <p className="text-xs text-middleMenuTextBlack">Education</p>
           </div>
 
           {/* Health Button */}
           <div className="pt-3 pb-3 px-6 flex justify-center items-center gap-2 rounded-3xl bg-middleMenuTextBlack bg-opacity-5 ">
-            <div>
-              <img src={health} alt="Health" />
-            </div>
+            <HealthIcon className={"w-6 h-5 fill-white"} />
             <p className="text-xs text-middleMenuTextBlack">Health</p>
           </div>
 
           {/* Hospitality Button */}
           <div className="pt-3 pb-3 px-6 flex justify-center items-center gap-2 rounded-3xl bg-middleMenuTextBlack">
-            <div>
-              <img src={whiteHospitality} alt="Hospitality" />
-            </div>
+            <HospitalityIcon className={"w-6 h-5 fill-white"} />
             <p className="text-xs text-white">Hospitality</p>
             <div className="flex justify-center items-center bg-white w-4 h-4 rounded-full ml-[2px]">
               <img className=" translate-y-px" src={blackTick} alt="blackTick" />
@@ -50,9 +48,7 @@ function LocalAmenitiesGPS() {
 
           {/* Entertainment Button */}
           <div className="pt-3 pb-3 px-6 flex justify-center items-center gap-2 rounded-3xl bg-middleMenuTextBlack bg-opacity-5 ">
-            <div>
-              <img src={entertainment} alt="Entertainment" />
-            </div>
+            <EntertainmentIcon className={"w-6 h-5 fill-current"} />
             <p className="text-xs text-middleMenuTextBlack">Entertainment</p>
           </div>
         </div>
@@ -65,6 +61,7 @@ function LocalAmenitiesGPS() {
         <div className="flex justify-start items-center gap-2 pt-6 pb-5 pl-7 pr-7 border-b border-gray-100">
           <div className="max-w-5 max-h-5">
             <img className="w-full h-full" src={hospitality} alt="Hospitality" />
+            {/* <HospitalityIcon className={"w-6 h-5 fill-current"} /> */}
           </div>
           <p className="text-xs text-middleMenuTextBlack">Hospitality</p>
         </div>
@@ -79,6 +76,7 @@ function LocalAmenitiesGPS() {
             <p className="text-xs text-middleMenuTextBlack">The Arch3s</p>
             <div className="flex justify-center items-center bg-orange-500 w-4 h-4 rounded-full ml-[2px]">
               <img src={whiteTick} alt="whiteTick" />
+              {/* <TickIcon className={"w-2 h-2 fill-white"} /> */}
             </div>
           </li>
           <li className="py-5 pl-7 pr-5 border-b border-gray-100">
@@ -115,7 +113,7 @@ function LocalAmenitiesGPS() {
         <div className="flex justify-start items-center gap-1 py-3 pr-4 pl-4">
           <div className="relative flex flex-col justify-center items-center bg-middleMenuTextBlack rounded-full p-2 w-14 h-14">
             <div className="max-w-14 max-h-14">
-              <img className="w-full h-full" src={whiteCar} alt="car" />
+              <CarIcon className={"w-5 h-5 fill-current"} />
             </div>
             <p className="text-white font-medium text-xs w-max">32 min</p>
             <span className="absolute -top-0.5 right-0 w-4 h-4 bg-orange-500 rounded-full border border-white"></span>
@@ -123,14 +121,14 @@ function LocalAmenitiesGPS() {
 
           <div className="flex flex-col justify-center items-center bg-gray-200 rounded-full p-2 w-14 h-14">
             <div className="max-w-14 max-h-14">
-              <img className="w-full h-full" src={bycycle} alt="cycle" />
+              <BycycleIcon className={"w-7 h-5 fill-current"} />
             </div>
             <p className="text-middleMenuTextBlack font-medium text-xs w-max">83 min</p>
           </div>
 
           <div className="flex flex-col justify-center items-center bg-gray-200 rounded-full p-2 w-14 h-14">
             <div className="max-w-14 max-h-14">
-              <img className="w-full h-full" src={walk} alt="walk" />
+              <WalkIcon className={"w-4 h-5 fill-current"} />
             </div>
             <p className="text-middleMenuTextBlack font-medium text-xs w-max">188 min</p>
           </div>
@@ -142,6 +140,7 @@ function LocalAmenitiesGPS() {
         <img className="absolute -top-8 -left-16 w-16 h-16 shadow-2xl rounded-full" src={buildingCircle} alt="buildingCircle" />
         <div className="bg-middleMenuTextBlack p-2 rounded-full border-2 border-white w-fit absolute -top-12">
           <img className="w-5 h-5" src={whiteHospitality} alt="hospitality" />
+          {/* <HospitalityIcon className={"w-5 h-5 fill-white"} /> */}
         </div>
         <div className="relative">
           <div
@@ -157,9 +156,7 @@ function LocalAmenitiesGPS() {
             {/* Location Price Row */}
             <div className="flex items-center justify-center gap-3 py-4 px-6 border-b border-gray-300">
               <div className="flex justify-center items-center gap-1">
-                <div className="max-w-5 max-h-5 mt-1">
-                  <img className="w-full h-full" src={blackDollar} alt="price" />
-                </div>
+                <DollarIcon className={"w-5 h-5 fill-current mt-1"} />
                 <div className="flex flex-col">
                   <p className="text-[8px] text-middleMenuTextBlack font-medium leading-3">From</p>
                   <p className="text-sm text-middleMenuTextBlack font-semibold leading-3">$25000</p>
@@ -167,9 +164,7 @@ function LocalAmenitiesGPS() {
               </div>
 
               <div className="flex justify-start items-center gap-1">
-                <div className="max-w-5 max-h-5 mt-1">
-                  <img className="w-full h-full" src={blackSizeArrow} alt="sqm" />
-                </div>
+                <SizeArrowIcon className={"w-5 h-5 fill-current mt-1"} />
                 <div>
                   <p className="text-[8px] text-middleMenuTextBlack font-medium leading-3">Sqm</p>
                   <p className="text-sm text-middleMenuTextBlack font-semibold leading-3">150-225</p>
@@ -180,6 +175,7 @@ function LocalAmenitiesGPS() {
             <div className="py-4 px-5">
               <button className="flex justify-center items-center gap-1 py-2 px-14 bg-middleMenuTextBlack rounded-2xl">
                 <img src={whiteBox} alt="whiteBox" />
+                {/* <BoxIcon className={"w-5 h-5 fill-current mt-1"} /> */}
                 <p className="text-xs text-white font-medium">Portal</p>
               </button>
             </div>
