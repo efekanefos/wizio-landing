@@ -1,8 +1,12 @@
 import React from "react";
+import LogoIcon from "./icons/LogoIcon";
+import CalendarCallIcon from "./icons/CalendarCallIcon";
+import ClockIcon from "./icons/ClockIcon";
+import NextCalendarArrowIcon from "./icons/NextCalendarArrowIcon";
+import PrevCalendarArrowIcon from "./icons/PrevCalendarArrowIcon";
+import TimezoneIcon from "./icons/TimezoneIcon";
+import TimezoneDownArrowIcon from "./icons/TimezoneDownArrowIcon";
 /* Images */
-import logo from "../assets/images/header/logo.svg";
-import lowOpacityClockIcon from "../assets/images/logoutWindows/low_opacity_clock_icon.svg";
-import lowOpacityCallIcon from "../assets/images/logoutWindows/low_opacity_call_icon.svg";
 import prevCalendarArrow from "../assets/images/logoutWindows/prev_calendar_arrow.svg";
 import nextCalendarArrow from "../assets/images/logoutWindows/next_calendar_arrow.svg";
 import timeZoneIcon from "../assets/images/logoutWindows/time_zone_icon.svg";
@@ -19,8 +23,8 @@ function Calendar() {
         {/* Appointment Information UpSide */}
         <div>
           <div className="mb-6">
-            <div className="max-w-28 max-h-9 mb-2">
-              <img className="w-full h-full" src={logo} alt="Logo" />
+            <div className="max-w-28 max-h-9 mb-2 -ml-2">
+              <LogoIcon className={"w-28 h-9 fill-current"} />
             </div>
             <p className="font-bold text-blackContentColor text-opacity-60">ACME Inc.</p>
             <p className="font-bold text-2xl text-blackContentColor">Pafilia</p>
@@ -30,14 +34,14 @@ function Calendar() {
             {/* Clock Row */}
             <div className="flex justify-start items-center gap-2">
               <div className="max-w-5 max-h-5">
-                <img className="w-full h-full" src={lowOpacityClockIcon} alt="clock" />
+                <ClockIcon className={"w-5 h-5 fill-white opacity-60"} />
               </div>
               <p className="font-bold text-blackContentColor text-opacity-60">30 min</p>
             </div>
             {/* Call Row */}
             <div className="flex justify-start items-center gap-[8px]">
               <div className="max-w-5 max-h-5">
-                <img className="w-full h-full" src={lowOpacityCallIcon} alt="phone" />
+                <CalendarCallIcon className={"w-5 h-5 fill-white opacity-60"} />
               </div>
               <p className="font-bold text-blackContentColor text-opacity-60">Phone call</p>
             </div>
@@ -61,13 +65,13 @@ function Calendar() {
           {/* Months */}
           <div className="w-full flex justify-between items-center">
             <div className="flex justify-center items-center w-10 h-10">
-              <img className="w-full h-full max-w-2 max-h-3" src={prevCalendarArrow} alt="left arrow" />
+              <PrevCalendarArrowIcon className={"w-2 h-3 fill-current"} />
             </div>
 
             <p className="font-regular text-blackContentColor">April 2024</p>
 
             <div className="flex justify-center items-center w-10 h-10 bg-darkBlue bg-opacity-10 rounded-full">
-              <img className="w-full h-full max-w-2 max-h-3" src={nextCalendarArrow} alt="right arrow" />
+              <NextCalendarArrowIcon className={"w-2 h-3 fill-current"} />
             </div>
           </div>
           {/* Days by Names */}
@@ -183,11 +187,11 @@ function Calendar() {
           <h4 className="font-bold text-blackContentColor mb-3">Time zone</h4>
           <div className="flex justify-start items-center">
             <div className="mr-3">
-              <img className="w-full h-full max-w-4 max-h-4" src={timeZoneIcon} alt="earth" />
+              <TimezoneIcon className={"w-4 h-4 fill-current"} />
             </div>
             <p className="font-regular text-base text-blackContentColor">Central European Time (8:11pm)</p>
             <div className="ml-1">
-              <img className="w-full h-full max-w-2 max-h-2" src={timeZoneDownArrowIcon} alt="down arrow" />
+              <TimezoneDownArrowIcon className={"w-2 h-2 fill-current"} />
             </div>
           </div>
         </div>
