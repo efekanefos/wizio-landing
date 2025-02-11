@@ -227,7 +227,7 @@ function LandingPage({ theme, setTheme }) {
             </div>
             {/* Search Input */}
             <div className="hidden max-sm:block w-full">
-              <input className="outline-none px-6 text-middleMenuTextBlack text-base font-light" type="text" name="searchInput" id="searchInput" placeholder="Search" />
+              <input className="w-full outline-none px-6 text-middleMenuTextBlack text-base font-light" type="text" name="searchInput" id="searchInput" placeholder="Search" />
             </div>
             <div className={`bg-buttonOrange p-2 rounded-full ${showUpperOptions && `p-5 py-4 flex justify-start items-center gap-2`}`}>
               <img className="w-4" src={searchIcon} alt="search" />
