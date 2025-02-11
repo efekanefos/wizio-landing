@@ -5,6 +5,7 @@ import GuestIcon from "../newIcons/GuestIcon";
 import NavbarCallIcon from "../newIcons/NavbarCallIcon";
 import NavbarGlobalIcon from "../newIcons/NavbarGlobalIcon";
 import NavbarLightModeIcon from "../newIcons/NavbarLightModeIcon";
+import MobileHamburgerIcon from "../newIcons/MobileHamburgerIcon";
 /* SVG Components */
 import LogoIcon from "../icons/LogoIcon";
 //import HomeIcon from "../icons/HomeIcon";
@@ -51,17 +52,17 @@ function LandingPage({ theme, setTheme }) {
 
   return (
     <div className="overflow-y-hidden max-h-screen">
-      <nav className="flex justify-between items-center py-3 px-9 z-10 relative bg-white font-inter">
+      <nav className="flex justify-between items-center py-3 px-9 z-10 relative bg-white font-inter max-lg:px-5 max-md:px-4 max-sm:gap-4">
         {/* Logo Side */}
         <div className="flex justify-start items-center gap-5">
           <div>
             <LogoIcon className={"w-20 h-7 fill-[#F78E2F]"} />
           </div>
           {/* Sorulacak */}
-          <HomeIcon className={"w-5 h-5 fill-white"} />
+          <HomeIcon className={"w-5 h-5 fill-white max-lg:hidden"} />
         </div>
         {/* Middle Two Row Part */}
-        <div className={`flex flex-col gap-7 ${showUpperOptions && `mt-4`}`}>
+        <div className={`flex flex-col gap-7 ${showUpperOptions && `mt-4`} max-sm:w-full`}>
           {showUpperOptions && (
             <div className="flex justify-center items-center gap-11">
               {/* Discover Projects */}
@@ -115,8 +116,8 @@ function LandingPage({ theme, setTheme }) {
 
           {/* Menu Side */}
 
-          <div className={`border border-gray-200 flex justify-between items-center rounded-full shadow-xl py-1.5 relative ${showUpperOptions && `!py-1`} pl-1 pr-2 w-fit`}>
-            <div className="flex justify-center items-center">
+          <div className={`border border-gray-200 flex justify-between items-center rounded-full shadow-xl py-1.5 relative ${showUpperOptions && `!py-1`} pl-1 pr-2 w-fit max-sm:w-full`}>
+            <div className="flex justify-center items-center max-sm:hidden">
               {/* Location Button */}
               <div
                 onClick={() => {
@@ -126,7 +127,7 @@ function LandingPage({ theme, setTheme }) {
                   setShowPropertyDetails(false);
                   setShowUpperOptions(showProjectList ? false : true);
                 }}
-                className={`flex justify-start items-center gap-2 border-r border-gray-300 px-4 pl-3  h-full min-h-8 cursor-pointer ${
+                className={`flex justify-start items-center gap-2 border-r border-gray-300 px-4 pl-3 h-full min-h-8 cursor-pointer ${
                   showProjectList && !showLocationDevelopments
                     ? `bg-middleMenuTextBlack bg-opacity-5 py-3 rounded-full border-r-0`
                     : !showProjectList && !showLocationDevelopments
@@ -224,6 +225,10 @@ function LandingPage({ theme, setTheme }) {
                 ""
               )}
             </div>
+            {/* Search Input */}
+            <div className="hidden max-sm:block w-full">
+              <input className="outline-none px-6 text-middleMenuTextBlack text-base font-light" type="text" name="searchInput" id="searchInput" placeholder="Search" />
+            </div>
             <div className={`bg-buttonOrange p-2 rounded-full ${showUpperOptions && `p-5 py-4 flex justify-start items-center gap-2`}`}>
               <img className="w-4" src={searchIcon} alt="search" />
               {showUpperOptions && <p className="text-white font-semibold text-xs">Search</p>}
@@ -234,32 +239,35 @@ function LandingPage({ theme, setTheme }) {
         </div>
 
         {/* Profile Side */}
-        <div className="flex justify-start items-center gap-3">
+        <div className="flex justify-start items-center gap-6 max-md:gap-0">
           <div className={`w-full flex justify-start items-center ${showContactWindow ? `gap-3` : `gap-6`}`}>
             {/* Contact Button */}
             <div
               onClick={() => setShowContactWindow(!showContactWindow)}
               className={`${showContactWindow ? `bg-middleMenuTextBlack p-3 rounded-full box-content` : ""} 
-              w-5 cursor-pointer`}
+              w-5 cursor-pointer max-md:hidden`}
             >
               {/* <img className="w-full" src={showContactWindow ? WhiteCallIcon : callIcon} alt="callIcon" /> */}
               <NavbarCallIcon className={"w-6 h-6 fill-white"} />
             </div>
             {/* Language Button */}
-            <div onClick={() => setShowLanguageWindow(!showLanguageWindow)} className="w-5 cursor-pointer">
+            <div onClick={() => setShowLanguageWindow(!showLanguageWindow)} className="w-5 cursor-pointer max-md:hidden">
               <NavbarGlobalIcon className={"w-6 h-6 fill-white"} />
             </div>
             {/* Dark-Light Theme Button */}
-            <div onClick={() => setTheme(theme === "dark" ? "light" : "dark")} className="w-5">
+            <div onClick={() => setTheme(theme === "dark" ? "light" : "dark")} className="w-5 max-md:hidden">
               <NavbarLightModeIcon className={"w-6 h-6 fill-white"} />
             </div>
           </div>
           {/* Login Button */}
-          <div onClick={() => setShowLoginWindow(!showLoginWindow)} className="flex justify-start items-center gap-3 w-full h-full p-3 cursor-pointer">
+          <div onClick={() => setShowLoginWindow(!showLoginWindow)} className="flex justify-start items-center gap-3 w-full h-full cursor-pointer">
             <div className="w-full flex justify-between items-center">
-              <div className="flex justify-start items-center w-full gap-2">
-                <GuestIcon className={"w-6 h-6 fill-current"} />
+              <div className="flex justify-start items-center w-full gap-2 max-md:border max-md:border-gray-200 max-md:rounded-full max-md:p-1">
+                <GuestIcon className={"w-6 h-6 fill-current max-md:w-5 max-md:h-5"} />
                 {/* {showLoginWindow && <p className="text-xs text-white font-medium">Login</p>} */}
+                <div className="hidden max-md:block px-1 py-1.5 pl-0 ">
+                  <MobileHamburgerIcon className={"w-4 h-3 fill-current"} />
+                </div>
               </div>
             </div>
           </div>
