@@ -14,7 +14,6 @@ import LocalAmenitiesIcon from "../icons/LocalAmenitiesIcon";
 import LocationIcon from "../icons/LocationIcon";
 import BedroomNumbersIcon from "../icons/BedroomNumbersIcon";
 import PriceRangeIcon from "../icons/PriceRangeIcon";
-import GlobalIcon from "../icons/GlobalIcon";
 import LightModeIcon from "../icons/LightModeIcon";
 import OctagonProfileIcon from "../icons/OctagonProfileIcon";
 /* SVG Images */
@@ -240,19 +239,15 @@ function LandingPage({ theme, setTheme }) {
 
         {/* Profile Side */}
         <div className="flex justify-start items-center gap-6 max-md:gap-0">
-          <div className={`w-full flex justify-start items-center ${showContactWindow ? `gap-3` : `gap-6`}`}>
+          <div className={`w-full flex justify-start items-center gap-6`}>
             {/* Contact Button */}
-            <div
-              onClick={() => setShowContactWindow(!showContactWindow)}
-              className={`${showContactWindow ? `bg-middleMenuTextBlack p-3 rounded-full box-content` : ""} 
-              w-5 cursor-pointer max-md:hidden`}
-            >
+            <div onClick={() => setShowContactWindow(!showContactWindow)} className={`w-5 cursor-pointer max-md:hidden`}>
               {/* <img className="w-full" src={showContactWindow ? WhiteCallIcon : callIcon} alt="callIcon" /> */}
               <NavbarCallIcon className={"w-6 h-6 fill-white"} />
             </div>
             {/* Language Button */}
             <div onClick={() => setShowLanguageWindow(!showLanguageWindow)} className="w-5 cursor-pointer max-md:hidden">
-              <NavbarGlobalIcon className={"w-6 h-6 fill-white"} />
+              <NavbarGlobalIcon className={`w-6 h-6 fill-white`} />
             </div>
             {/* Dark-Light Theme Button */}
             <div onClick={() => setTheme(theme === "dark" ? "light" : "dark")} className="w-5 max-md:hidden">
@@ -282,7 +277,7 @@ function LandingPage({ theme, setTheme }) {
 
       {
         //* Contact Window
-        showContactWindow && <Contact showCalendarWindow={showCalendarWindow} setShowCalendarWindow={setShowCalendarWindow} />
+        showContactWindow && <Contact showCalendarWindow={showCalendarWindow} setShowCalendarWindow={setShowCalendarWindow} setShowContactWindow={setShowContactWindow} />
       }
       {
         //* Calendar Window
