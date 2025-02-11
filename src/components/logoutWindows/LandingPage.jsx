@@ -303,7 +303,7 @@ function LandingPage({ theme, setTheme }) {
 
       {!showLocalAmenitiesGPS && (
         <div className="font-inter text-white absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
-          <h1 className="text-7xl">
+          <h1 className="text-7xl text-center">
             World of <span className="font-bold">Pafilia</span>
           </h1>
           <button className="block text-center border border-white py-4 px-14 rounded-full mt-10 mx-auto">Discover</button>

@@ -18,7 +18,7 @@ import blackOctagonProfile from "../../assets/images/header/black_octagon_profil
 
 function Register({ setShowRegisterWindow }) {
   return (
-    <div className="absolute top-[110px] right-7 bg-white rounded-3xl max-w-[360px] w-full">
+    <div className="absolute top-[110px] right-7 bg-white rounded-3xl max-w-[360px] w-full z-10">
       {/* Window Header */}
       <div className="flex justify-start items-center gap-5 p-7 border-b border-gray-300 first-line:border-opacity-50">
         <div className="flex justify-start items-center gap-2 w-full">

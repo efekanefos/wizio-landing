@@ -15,7 +15,7 @@ function Status({ setShowStatusWindow, setShowProfileWindow, setShowVisitWindow,
   const navigate = useNavigate();
 
   return (
-    <div className="absolute top-[110px] right-7 bg-white rounded-3xl  max-w-[360px] w-full">
+    <div className="absolute top-[110px] right-7 bg-white rounded-3xl  max-w-[360px] w-full z-10">
       {/* Close Button */}
       <div onClick={() => setShowStatusWindow(false)} className="rounded-full p-3 border-gray-300 absolute top-6 right-5 cursor-pointer">
         <CloseIcon className={"w-3 h-3 fill-current"} />
