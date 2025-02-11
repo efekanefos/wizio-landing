@@ -20,7 +20,7 @@ function Calendar() {
         <div>
           <div className="mb-6">
             <div className="max-w-28 max-h-9 mb-2 -ml-2">
-              <LogoIcon className={"w-28 h-9 fill-current"} />
+              <LogoIcon className={"w-28 h-9 fill-[#F78E2F]"} />
             </div>
             <p className="font-bold text-blackContentColor text-opacity-60">ACME Inc.</p>
             <p className="font-bold text-2xl text-blackContentColor">Pafilia</p>

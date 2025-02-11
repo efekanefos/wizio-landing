@@ -15,7 +15,7 @@ function PropertyDetails() {
 
         <ul className="list-none">
           <li className="flex justify-start items-center gap-1.5 bg-middleMenuTextBlack p-4 rounded-full">
-            <ApartmentIcon className={"w-4 h-4 fill-current"} />
+            <ApartmentIcon className={"w-4 h-4 fill-white"} />
             <p className="text-xs text-white">Apartments</p>
           </li>
           <li className="flex justify-start items-center gap-1.5 p-4 rounded-full">

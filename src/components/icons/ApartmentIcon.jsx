@@ -3,14 +3,8 @@ import React from "react";
 function ApartmentIcon({ className }) {
   return (
     <svg className={className} viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-      <path d="M1.5 16.5H16.5" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-      <path d="M12.75 1.5H5.25C3 1.5 2.25 2.8425 2.25 4.5V16.5H15.75V4.5C15.75 2.8425 15 1.5 12.75 1.5Z" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-      <path d="M5.25 12.375H7.5" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-      <path d="M10.5 12.375H12.75" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-      <path d="M5.25 9H7.5" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-      <path d="M10.5 9H12.75" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-      <path d="M5.25 5.625H7.5" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-      <path d="M10.5 5.625H12.75" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M1.5,16.5h15" />
+      <path d="M12.8,1.5h-7.5c-2.2,0-3,1.3-3,3v12h13.5V4.5c0-1.7-.8-3-3-3ZM7.5,12.9h-2.2c-.3,0-.5-.2-.5-.5s.2-.5.5-.5h2.2c.3,0,.5.2.5.5s-.2.5-.5.5ZM7.5,9.5h-2.2c-.3,0-.5-.2-.5-.5s.2-.5.5-.5h2.2c.3,0,.5.2.5.5s-.2.5-.5.5ZM7.5,6.1h-2.2c-.3,0-.5-.2-.5-.5s.2-.5.5-.5h2.2c.3,0,.5.2.5.5s-.2.5-.5.5ZM12.8,12.9h-2.2c-.3,0-.5-.2-.5-.5s.2-.5.5-.5h2.2c.3,0,.5.2.5.5s-.2.5-.5.5ZM12.8,9.5h-2.2c-.3,0-.5-.2-.5-.5s.2-.5.5-.5h2.2c.3,0,.5.2.5.5s-.2.5-.5.5ZM12.8,6.1h-2.2c-.3,0-.5-.2-.5-.5s.2-.5.5-.5h2.2c.3,0,.5.2.5.5s-.2.5-.5.5Z" />
     </svg>
   );
 }

@@ -33,7 +33,7 @@ function ProfileSetting({ setShowStatusWindow, setShowProfileWindow }) {
           }}
           className="rounded-full p-3 bg-gray-100 cursor-pointer"
         >
-          <BackArrowIcon className={"w-3 h-3 fill-white"} />
+          <BackArrowIcon className={"w-3 h-3 fill-current"} />
         </div>
       </div>
       {/* User Form */}

@@ -1,13 +1,7 @@
 import React, { useState } from "react";
-/* New SVG Components */
-import HomeIcon from "../newIcons/HomeIcon";
-import GuestIcon from "../newIcons/GuestIcon";
-import NavbarCallIcon from "../newIcons/NavbarCallIcon";
-import NavbarGlobalIcon from "../newIcons/NavbarGlobalIcon";
-import NavbarLightModeIcon from "../newIcons/NavbarLightModeIcon";
 /* SVG Components */
 import LogoIcon from "../icons/LogoIcon";
-//import HomeIcon from "../icons/HomeIcon";
+import HomeIcon from "../icons/HomeIcon";
 import SearchIcon from "../icons/SearchIcon";
 import LocalAmenitiesIcon from "../icons/LocalAmenitiesIcon";
 import LocationIcon from "../icons/LocationIcon";
@@ -57,8 +51,9 @@ function LandingPage({ theme, setTheme }) {
           <div>
             <LogoIcon className={"w-20 h-7 fill-[#F78E2F]"} />
           </div>
-          {/* Sorulacak */}
-          <HomeIcon className={"w-5 h-5 fill-white"} />
+          <div className="bg-middleMenuTextBlack p-3 rounded-full w-fit">
+            <HomeIcon className={"w-5 h-5 fill-white"} />
+          </div>
         </div>
         {/* Middle Two Row Part */}
         <div className={`flex flex-col gap-7 ${showUpperOptions && `mt-4`}`}>
@@ -115,7 +110,7 @@ function LandingPage({ theme, setTheme }) {
 
           {/* Menu Side */}
 
-          <div className={`border border-gray-200 flex justify-between items-center rounded-full shadow-xl py-1.5 relative ${showUpperOptions && `!py-1`} pl-1 pr-2 w-fit`}>
+          <div className={`border border-gray-200 flex justify-between items-center rounded-full shadow-xl py-2 relative ${showUpperOptions && `!py-1`} pl-1 pr-2 w-fit`}>
             <div className="flex justify-center items-center">
               {/* Location Button */}
               <div
@@ -126,7 +121,7 @@ function LandingPage({ theme, setTheme }) {
                   setShowPropertyDetails(false);
                   setShowUpperOptions(showProjectList ? false : true);
                 }}
-                className={`flex justify-start items-center gap-2 border-r border-gray-300 px-4 pl-3  h-full min-h-8 cursor-pointer ${
+                className={`flex justify-start items-center gap-2 border-r border-gray-300 px-4 pl-6 py-1 h-full min-h-6 cursor-pointer ${
                   showProjectList && !showLocationDevelopments
                     ? `bg-middleMenuTextBlack bg-opacity-5 py-3 rounded-full border-r-0`
                     : !showProjectList && !showLocationDevelopments
@@ -137,6 +132,7 @@ function LandingPage({ theme, setTheme }) {
                 }`}
               >
                 <div className="relative">
+                  <LocationIcon className={"w-5 h-5 fill-white"} />
                   {showProjectList && !showLocationDevelopments ? (
                     <span className="flex justify-center items-center absolute top-[-5px] right-[-5px] bg-[#FF0004] border border-[#F8F8F8] p-1 rounded-full w-[15px] h-[15px]">
                       <p className="text-white font-medium text-[10px]">2</p>
@@ -147,10 +143,10 @@ function LandingPage({ theme, setTheme }) {
                 </div>
                 <div className="flex justify-start items-center">
                   <div className="flex flex-col">
-                    <p className="text-sm text-middleMenuTextBlack leading-tight font-light">
-                      {showLocationDevelopments && showUpperOptions && !showLocalAmenitiesGPS ? "Location & By Developments" : showLocationDevelopments && showUpperOptions && showLocalAmenitiesGPS ? "Pafilia Plaza" : "Limassol"}
+                    <p className="text-xs text-middleMenuTextBlack leading-tight">
+                      {showLocationDevelopments && showUpperOptions && !showLocalAmenitiesGPS ? "Location & By Developments" : showLocationDevelopments && showUpperOptions && showLocalAmenitiesGPS ? "Pafilia Plaza" : "Location"}
                     </p>
-                    {showProjectList && !showLocationDevelopments ? <p className="text-middleMenuTextBlack text-sm">Ava Plaza, Coral Vis..</p> : showLocalAmenitiesGPS ? <p className="text-middleMenuTextBlack text-sm text-left">Paphos</p> : ""}
+                    {showProjectList && !showLocationDevelopments ? <p className="text-middleMenuTextBlack text-[8px]">Ava Plaza, Coral Vis..</p> : showLocalAmenitiesGPS ? <p className="text-middleMenuTextBlack text-[8px] text-left">Paphos</p> : ""}
                   </div>
                 </div>
               </div>
@@ -164,10 +160,11 @@ function LandingPage({ theme, setTheme }) {
                     setShowBedroomSlider(!showBedroomSlider);
                     setShowUpperOptions(showBedroomSlider ? false : true);
                   }}
-                  className="flex justify-start items-center gap-2 border-r border-gray-300 px-4 h-full min-h-8 cursor-pointer"
+                  className="flex justify-start items-center gap-2 border-r border-gray-300 px-4 h-full min-h-6 cursor-pointer"
                 >
+                  <BedroomNumbersIcon className={"w-5 h-5 fill-white"} />
                   <div className="flex justify-start items-center">
-                    <p className="text-sm text-middleMenuTextBlack font-light">2-3 Bed...</p>
+                    <p className="text-xs text-middleMenuTextBlack">Number Of Bedrooms</p>
                   </div>
                 </div>
               ) : (
@@ -184,10 +181,11 @@ function LandingPage({ theme, setTheme }) {
                     setShowPriceRange(!showPriceRange);
                     setShowUpperOptions(showPriceRange ? false : true);
                   }}
-                  className={`flex justify-start items-center gap-2 border-r border-gray-300 px-4 h-full min-h-8 cursor-pointer ${showPropertyDetails && `border-r-0`}`}
+                  className={`flex justify-start items-center gap-2 border-r border-gray-300 px-4 h-full min-h-6 cursor-pointer ${showPropertyDetails && `border-r-0`}`}
                 >
+                  <PriceRangeIcon className={"w-5 h-5 fill-white"} />
                   <div className="flex justify-start items-center">
-                    <p className="text-sm font-inter text-middleMenuTextBlack font-light">€350,00...</p>
+                    <p className="text-xs font-inter text-middleMenuTextBlack">Price Range</p>
                   </div>
                 </div>
               ) : (
@@ -204,19 +202,20 @@ function LandingPage({ theme, setTheme }) {
                     setShowPropertyDetails(!showPropertyDetails);
                     setShowUpperOptions(showPropertyDetails ? false : true);
                   }}
-                  className={`flex justify-start items-center gap-2 px-4 h-full min-h-8 cursor-pointer ${showPropertyDetails && `bg-middleMenuTextBlack bg-opacity-5 py-3 rounded-full mr-3`}`}
+                  className={`flex justify-start items-center gap-2 px-4 h-full min-h-6 cursor-pointer ${showPropertyDetails && `bg-middleMenuTextBlack bg-opacity-5 py-3 rounded-full mr-3`}`}
                 >
-                  {showPropertyDetails && (
-                    <div className="relative">
+                  <div className="relative">
+                    <PriceRangeIcon className={"w-5 h-5 fill-white"} />
+                    {showPropertyDetails && (
                       <span className="flex justify-center items-center absolute -top-1.5 -right-1.5 bg-[#FF0004] border border-[#F8F8F8] p-1 rounded-full w-[15px] h-[15px]">
                         <p className="text-white font-medium text-[10px]">2</p>
                       </span>
-                    </div>
-                  )}
+                    )}
+                  </div>
                   <div className="flex justify-start items-center">
                     <div className="flex flex-col">
-                      <p className="text-sm font-inter text-middleMenuTextBlack font-light">Apartme...</p>
-                      {showPropertyDetails && <p className="text-middleMenuTextBlack text-sm">Apartments</p>}
+                      <p className="text-xs font-inter text-middleMenuTextBlack leading-tight">More Details</p>
+                      {showPropertyDetails && <p className="text-middleMenuTextBlack text-[8px]">Apartments</p>}
                     </div>
                   </div>
                 </div>
@@ -224,7 +223,7 @@ function LandingPage({ theme, setTheme }) {
                 ""
               )}
             </div>
-            <div className={`bg-buttonOrange p-2 rounded-full ${showUpperOptions && `p-5 py-4 flex justify-start items-center gap-2`}`}>
+            <div className={`bg-buttonOrange p-3 rounded-full ${showUpperOptions && `p-5 py-4 flex justify-start items-center gap-2`}`}>
               <img className="w-4" src={searchIcon} alt="search" />
               {showUpperOptions && <p className="text-white font-semibold text-xs">Search</p>}
             </div>
@@ -242,24 +241,23 @@ function LandingPage({ theme, setTheme }) {
               className={`${showContactWindow ? `bg-middleMenuTextBlack p-3 rounded-full box-content` : ""} 
               w-5 cursor-pointer`}
             >
-              {/* <img className="w-full" src={showContactWindow ? WhiteCallIcon : callIcon} alt="callIcon" /> */}
-              <NavbarCallIcon className={"w-6 h-6 fill-white"} />
+              <img className="w-full" src={showContactWindow ? WhiteCallIcon : callIcon} alt="callIcon" />
             </div>
             {/* Language Button */}
             <div onClick={() => setShowLanguageWindow(!showLanguageWindow)} className="w-5 cursor-pointer">
-              <NavbarGlobalIcon className={"w-6 h-6 fill-white"} />
+              <GlobalIcon className={"w-5 h-5 fill-white"} />
             </div>
             {/* Dark-Light Theme Button */}
             <div onClick={() => setTheme(theme === "dark" ? "light" : "dark")} className="w-5">
-              <NavbarLightModeIcon className={"w-6 h-6 fill-white"} />
+              <LightModeIcon className={"w-5 h-5 fill-white"} />
             </div>
           </div>
           {/* Login Button */}
-          <div onClick={() => setShowLoginWindow(!showLoginWindow)} className="flex justify-start items-center gap-3 w-full h-full p-3 cursor-pointer">
+          <div onClick={() => setShowLoginWindow(!showLoginWindow)} className="flex justify-start items-center gap-3 bg-middleMenuTextBlack w-full h-full p-3 rounded-full cursor-pointer">
             <div className="w-full flex justify-between items-center">
               <div className="flex justify-start items-center w-full gap-2">
-                <GuestIcon className={"w-6 h-6 fill-current"} />
-                {/* {showLoginWindow && <p className="text-xs text-white font-medium">Login</p>} */}
+                <OctagonProfileIcon className={"w-6 h-6 fill-current"} />
+                {showLoginWindow && <p className="text-xs text-white font-medium">Login</p>}
               </div>
             </div>
           </div>

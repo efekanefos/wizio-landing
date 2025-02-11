@@ -17,9 +17,8 @@ import Calendar from "./components/Calendar";
 import Homepage from "./components/Homepage";
 import PriceRange from "./components/PriceRange";
 import LocalAmenitiesGPS from "./components/LocalAmenitiesGPS";
-import LogoutNavbar from "./components/LogoutNavbar";
-import Navbar from "./components/Navbar";
 import LoggedInLandingPage from "./components/loggedInWindows/LoggedInLandingPage";
+import Lofos from "./components/lofos/Lofos";
 
 function App() {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
@@ -64,6 +63,7 @@ function App() {
         <Route path="/homepage" element={<Homepage />} />
         <Route path="/price-range" element={<PriceRange />} />
         <Route path="/local-amenities-gps" element={<LocalAmenitiesGPS />} />
+        <Route path="/lofos" element={<Lofos />} />
       </Routes>
     </Router>
   );

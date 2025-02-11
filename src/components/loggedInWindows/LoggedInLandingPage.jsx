@@ -57,7 +57,7 @@ function LoggedInLandingPage() {
         {/* Logo Side */}
         <div className="flex justify-start items-center gap-5 min-w-80">
           <div>
-            <LogoIcon className={"w-20 h-7 fill-current"} />
+            <LogoIcon className={"w-20 h-7 fill-[#F78E2F]"} />
           </div>
           <div className="bg-grayIconBg p-3 rounded-full w-fit">
             <HomeIcon className={`w-5 h-5 fill-current`} />
