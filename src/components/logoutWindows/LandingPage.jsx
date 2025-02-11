@@ -298,7 +298,7 @@ function LandingPage({ theme, setTheme }) {
       }
       {
         //* Language Window
-        showLanguageWindow && <Language />
+        showLanguageWindow && <Language setShowLanguageWindow={setShowLanguageWindow} />
       }
 
       {!showLocalAmenitiesGPS && (
