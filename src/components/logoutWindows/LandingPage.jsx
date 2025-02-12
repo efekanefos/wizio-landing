@@ -126,12 +126,20 @@ function LandingPage({ theme, setTheme }) {
                   setShowPropertyDetails(false);
                   setShowUpperOptions(showProjectList ? false : true);
                 }}
-                className={`flex justify-start items-center gap-2 border-r border-gray-300 px-4 pl-3 h-full min-h-8 cursor-pointer ${
-                  showProjectList ? `bg-gray-200 py-3 !px-6 rounded-full border-r-0` : !showProjectList && !showLocationDevelopments ? `border-r border-gray-300` : !showProjectList && showLocationDevelopments ? `border-r-0` : ``
+                className={`flex justify-start items-center gap-2 border-r border-gray-300 px-4 pl-6 h-full min-h-8 cursor-pointer ${
+                  showProjectList
+                    ? `bg-gray-300 py-3.5 pl-6 pr-4 rounded-full border-r-0`
+                    : showBedroomSlider
+                    ? `border-r-0`
+                    : !showProjectList && !showLocationDevelopments
+                    ? `border-r border-gray-300`
+                    : !showProjectList && showLocationDevelopments
+                    ? `border-r-0`
+                    : ``
                 }`}
               >
                 <div className="flex justify-start items-center">
-                  <div className="flex flex-col">
+                  <div className={`flex flex-col ${showProjectList && `min-w-36`}`}>
                     <p className={`text-sm text-middleMenuTextBlack leading-tight font-light ${showUpperOptions ? "font-semibold text-xs" : ""}`}>{showUpperOptions ? "Location" : "Limassol"}</p>
                     {showUpperOptions ? <p className="text-sm font-light leading-4 text-gray-400">Search destination</p> : ""}
                   </div>
@@ -148,10 +156,15 @@ function LandingPage({ theme, setTheme }) {
                     setShowBedroomSlider(!showBedroomSlider);
                     setShowUpperOptions(showBedroomSlider ? false : true);
                   }}
-                  className="flex justify-start items-center gap-2 border-r border-gray-300 px-4 h-full min-h-8 cursor-pointer"
+                  className={`flex justify-start items-center gap-2 border-r border-gray-300 px-4 h-full min-h-8 cursor-pointer
+                    ${showBedroomSlider && `bg-gray-300 py-3.5 pl-6 pr-4 rounded-full border-r-0`}
+                    `}
                 >
                   <div className="flex justify-start items-center">
-                    <p className="text-sm text-middleMenuTextBlack font-light">2-3 Bed...</p>
+                    <div className={`flex flex-col ${showBedroomSlider && `min-w-36`}`}>
+                      <p className={`text-sm text-middleMenuTextBlack leading-tight font-light ${showUpperOptions ? "font-semibold text-xs" : ""}`}>{showUpperOptions ? "Bedrooms" : "2-3 Bed..."}</p>
+                      {showUpperOptions ? <p className="text-sm font-light leading-4 text-gray-400">Add bedrooms</p> : ""}
+                    </div>
                   </div>
                 </div>
               ) : (
@@ -171,7 +184,10 @@ function LandingPage({ theme, setTheme }) {
                   className={`flex justify-start items-center gap-2 border-r border-gray-300 px-4 h-full min-h-8 cursor-pointer ${showPropertyDetails && `border-r-0`}`}
                 >
                   <div className="flex justify-start items-center">
-                    <p className="text-sm font-inter text-middleMenuTextBlack font-light">€350,00...</p>
+                    <div className="flex flex-col">
+                      <p className={`text-sm text-middleMenuTextBlack leading-tight font-light ${showUpperOptions ? "font-semibold text-xs" : ""}`}>{showUpperOptions ? "Price" : "€350,00..."}</p>
+                      {showUpperOptions ? <p className="text-sm font-light leading-4 text-gray-400">Add price range</p> : ""}
+                    </div>
                   </div>
                 </div>
               ) : (
@@ -192,8 +208,8 @@ function LandingPage({ theme, setTheme }) {
                 >
                   <div className="flex justify-start items-center">
                     <div className="flex flex-col">
-                      <p className="text-sm font-inter text-middleMenuTextBlack font-light">Apartme...</p>
-                      {showPropertyDetails && <p className="text-middleMenuTextBlack text-sm">Apartments</p>}
+                      <p className={`text-sm text-middleMenuTextBlack leading-tight font-light ${showUpperOptions ? "font-semibold text-xs" : ""}`}>{showUpperOptions ? "More" : "Apartme..."}</p>
+                      {showUpperOptions ? <p className="text-sm font-light leading-4 text-gray-400">Details</p> : ""}
                     </div>
                   </div>
                 </div>
