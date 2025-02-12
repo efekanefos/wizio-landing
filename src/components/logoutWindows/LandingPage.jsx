@@ -115,7 +115,11 @@ function LandingPage({ theme, setTheme }) {
 
           {/* Menu Side */}
 
-          <div className={`border border-gray-200 flex justify-between items-center rounded-full shadow-xl py-1.5 relative ${showUpperOptions && `!py-0 !pl-0`} pl-1 pr-2 w-fit max-sm:w-full`}>
+          <div
+            className={`border border-gray-200 flex justify-between items-center rounded-full shadow-xl py-1.5 relative 
+            ${showPropertyDetails && "!pr-0"}
+            ${showUpperOptions && `!py-0 !pl-0`} pl-1 pr-2 w-fit max-sm:w-full `}
+          >
             <div className="flex justify-center items-center max-sm:hidden">
               {/* Location Button */}
               <div
@@ -126,17 +130,19 @@ function LandingPage({ theme, setTheme }) {
                   setShowPropertyDetails(false);
                   setShowUpperOptions(showProjectList ? false : true);
                 }}
-                className={`flex justify-start items-center gap-2 border-r border-gray-300 px-4 pl-6 h-full min-h-8 cursor-pointer ${
-                  showProjectList
-                    ? `bg-gray-300 py-3.5 pl-6 pr-4 rounded-full border-r-0`
-                    : showBedroomSlider
-                    ? `border-r-0`
-                    : !showProjectList && !showLocationDevelopments
-                    ? `border-r border-gray-300`
-                    : !showProjectList && showLocationDevelopments
-                    ? `border-r-0`
-                    : ``
-                }`}
+                className={`flex justify-start items-center gap-2 border-r border-gray-300 px-4 pl-6 h-full cursor-pointer 
+                  ${showUpperOptions ? `min-h-12` : `min-h-6`}
+                  ${
+                    showProjectList
+                      ? `bg-gray-300 py-3.5 pl-6 pr-4 rounded-full border-r-0`
+                      : showBedroomSlider
+                      ? `border-r-0`
+                      : !showProjectList && !showLocationDevelopments
+                      ? `border-r border-gray-300`
+                      : !showProjectList && showLocationDevelopments
+                      ? `border-r-0`
+                      : ``
+                  }`}
               >
                 <div className="flex justify-start items-center">
                   <div className={`flex flex-col ${showProjectList && `min-w-36`}`}>
@@ -156,8 +162,10 @@ function LandingPage({ theme, setTheme }) {
                     setShowBedroomSlider(!showBedroomSlider);
                     setShowUpperOptions(showBedroomSlider ? false : true);
                   }}
-                  className={`flex justify-start items-center gap-2 border-r border-gray-300 px-4 h-full min-h-8 cursor-pointer
-                    ${showBedroomSlider && `bg-gray-300 py-3.5 pl-6 pr-4 rounded-full border-r-0`}
+                  className={`flex justify-start items-center gap-2 border-r border-gray-300 px-4 h-full cursor-pointer
+                    
+                    ${showUpperOptions ? `min-h-12` : `min-h-6`}
+                    ${showBedroomSlider ? `bg-gray-300 py-3.5 pl-6 pr-4 rounded-full border-r-0` : showPriceRange ? `border-r-0` : ""}
                     `}
                 >
                   <div className="flex justify-start items-center">
@@ -181,10 +189,14 @@ function LandingPage({ theme, setTheme }) {
                     setShowPriceRange(!showPriceRange);
                     setShowUpperOptions(showPriceRange ? false : true);
                   }}
-                  className={`flex justify-start items-center gap-2 border-r border-gray-300 px-4 h-full min-h-8 cursor-pointer ${showPropertyDetails && `border-r-0`}`}
+                  className={`flex justify-start items-center gap-2 border-r border-gray-300 px-4 h-full cursor-pointer 
+                    
+                    ${showPriceRange ? `bg-gray-300 py-3.5 pl-6 pr-4 rounded-full border-r-0` : showPropertyDetails ? `border-r-0` : ""}
+                    ${showUpperOptions ? `min-h-12` : `min-h-6`}
+                    `}
                 >
                   <div className="flex justify-start items-center">
-                    <div className="flex flex-col">
+                    <div className={`flex flex-col ${showPriceRange && `min-w-36`}`}>
                       <p className={`text-sm text-middleMenuTextBlack leading-tight font-light ${showUpperOptions ? "font-semibold text-xs" : ""}`}>{showUpperOptions ? "Price" : "€350,00..."}</p>
                       {showUpperOptions ? <p className="text-sm font-light leading-4 text-gray-400">Add price range</p> : ""}
                     </div>
@@ -194,36 +206,43 @@ function LandingPage({ theme, setTheme }) {
                 ""
               )}
 
-              {/* Property Details Button */}
-              {!showLocationDevelopments || !showUpperOptions ? (
-                <div
-                  onClick={() => {
-                    setShowProjectList(false);
-                    setShowBedroomSlider(false);
-                    setShowPriceRange(false);
-                    setShowPropertyDetails(!showPropertyDetails);
-                    setShowUpperOptions(showPropertyDetails ? false : true);
-                  }}
-                  className={`flex justify-start items-center gap-2 px-4 h-full min-h-8 cursor-pointer ${showPropertyDetails && `bg-middleMenuTextBlack bg-opacity-5 py-3 rounded-full mr-3`}`}
-                >
-                  <div className="flex justify-start items-center">
-                    <div className="flex flex-col">
-                      <p className={`text-sm text-middleMenuTextBlack leading-tight font-light ${showUpperOptions ? "font-semibold text-xs" : ""}`}>{showUpperOptions ? "More" : "Apartme..."}</p>
-                      {showUpperOptions ? <p className="text-sm font-light leading-4 text-gray-400">Details</p> : ""}
+              {/* Property Details and Search Container */}
+              <div className={`flex items-center ${showPropertyDetails && `bg-gray-300 rounded-full pr-2`}`}>
+                {!showLocationDevelopments || !showUpperOptions ? (
+                  <div
+                    onClick={() => {
+                      setShowProjectList(false);
+                      setShowBedroomSlider(false);
+                      setShowPriceRange(false);
+                      setShowPropertyDetails(!showPropertyDetails);
+                      setShowUpperOptions(showPropertyDetails ? false : true);
+                    }}
+                    className={`flex justify-start items-center gap-2 px-4 h-full min-h-8 cursor-pointer 
+                    ${showPropertyDetails && `bg-gray-300 py-3.5 pl-6 pr-4 rounded-full border-r-0`}`}
+                  >
+                    <div className="flex justify-start items-center">
+                      <div className={`flex flex-col ${showPropertyDetails && `min-w-36`}`}>
+                        <p className={`text-sm text-middleMenuTextBlack leading-tight font-light ${showUpperOptions ? "font-semibold text-xs" : ""}`}>{showUpperOptions ? "More" : "Apartme..."}</p>
+                        {showUpperOptions ? <p className="text-sm font-light leading-4 text-gray-400">Details</p> : ""}
+                      </div>
                     </div>
                   </div>
+                ) : (
+                  ""
+                )}
+
+                <div
+                  className={`bg-buttonOrange p-2 rounded-full 
+              ${showUpperOptions && `p-5 py-4 flex justify-start items-center gap-2`}`}
+                >
+                  <img className="w-4" src={searchIcon} alt="search" />
+                  {showUpperOptions && <p className="text-white font-semibold text-xs">Search</p>}
                 </div>
-              ) : (
-                ""
-              )}
+              </div>
             </div>
-            {/* Search Input */}
-            <div className="hidden max-sm:block w-full">
+            {/* Mobile Search Input */}
+            <div className={`hidden max-sm:block w-full`}>
               <input className="w-full outline-none px-6 text-middleMenuTextBlack text-base font-light" type="text" name="searchInput" id="searchInput" placeholder="Search" />
-            </div>
-            <div className={`bg-buttonOrange p-2 rounded-full ${showUpperOptions && `p-5 py-4 flex justify-start items-center gap-2`}`}>
-              <img className="w-4" src={searchIcon} alt="search" />
-              {showUpperOptions && <p className="text-white font-semibold text-xs">Search</p>}
             </div>
 
             {showPropertyDetails && <PropertyDetails />}
