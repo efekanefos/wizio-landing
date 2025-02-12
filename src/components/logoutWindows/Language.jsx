@@ -9,9 +9,8 @@ function Language({ setShowLanguageWindow }) {
       <div className="flex justify-between items-center border-b border-gray-200 p-2.5">
         {/* Icon and Title */}
         <div className="flex justify-start items-center gap-2 w-full">
-          <div className="p-1">
-            <GlobalIcon className={"w-5 h-5 fill-white"} />
-          </div>
+          <GlobalIcon className={"w-6 h-6 fill-white"} />
+
           <p className="text-[16px] text-black font-semibold">Language</p>
         </div>
         {/* Close Button */}
