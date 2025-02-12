@@ -1,8 +1,11 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-/* SCG Components */
+/* New SVG Components */
+import GuestIcon from "../newIcons/GuestIcon";
+import CloseIcon from "../newIcons/CloseIcon";
+import VisiblePasswordIcon from "../newIcons/VisiblePasswordIcon";
+/* SVG Components */
 import OctagonProfileIcon from "../icons/OctagonProfileIcon";
-import CloseIcon from "../icons/CloseIcon";
 import MailInput from "../icons/MailInput";
 import LoginPasswordIcon from "../icons/LoginPasswordIcon";
 /* Images */
@@ -13,61 +16,91 @@ function Login({ setShowLoginWindow, setShowRegisterWindow }) {
   const navigate = useNavigate();
 
   return (
-    <div className="absolute top-28 right-8 bg-white rounded-3xl max-w-[360px] w-full z-10">
-      {/* Window Header */}
-      <div className="flex justify-start items-center gap-5 p-7 border-b border-gray-300 border-opacity-50">
+    <div className="absolute top-20 right-8 bg-white rounded-3xl p-3 min-w-72 w-fit z-10">
+      {/* Header Row */}
+      <div className="flex justify-between items-center border-b border-gray-200 p-2.5">
+        {/* Icon and Title */}
         <div className="flex justify-start items-center gap-2 w-full">
-          <div className="max-w-6 max-h-6 w-full h-full">
-            <img className="w-full h-full" src={blackOctagonProfile} alt="blackOctagonProfile" />
-            {/* <OctagonProfileIcon className={"w-4 h-4 fill-white"} /> */}
+          <div className="p-1">
+            <GuestIcon className={"w-5 h-5 fill-white"} />
           </div>
-          <p className="text-lg text-middleMenuTextBlack font-medium">Login</p>
+          <p className="text-[16px] text-black font-semibold">Login</p>
         </div>
         {/* Close Button */}
-        <div onClick={() => setShowLoginWindow(false)} className="rounded-full p-3 bg-gray-100 absolute top-6 right-5 cursor-pointer">
-          <CloseIcon className={"w-3 h-3 fill-white"} />
-        </div>
+        <button onClick={() => setShowLoginWindow(false)} className="p-2.5 bg-gray-200 rounded-full">
+          <CloseIcon className={"w-3 h-3"} />
+        </button>
       </div>
       {/* User Form */}
-      <div className="flex flex-col justify-center items-center py-7 px-8 pb-9">
-        {/* Mail Input */}
-        <div className="w-full flex justify-between items-center relative mt-3 mb-5">
+      <div className="flex flex-col justify-center items-center mt-5">
+        {/* Username Input */}
+        <div className="w-full flex justify-between items-center">
           <div className="flex flex-col w-full">
-            <label className="text-xs text-[#171717] absolute">Mail</label>
-            <input readOnly className="pb-2 w-full text-base font-medium text-[#171717] border-b border-[#171717] outline-none" type="email" />
-          </div>
-
-          <div className="absolute right-0 top-0">
-            <MailInput className={"w-4 h-4 fill-white"} />
+            <label className="px-3 pt-4 text-xs text-gray-300 font-light">Username</label>
+            <input readOnly value="William Douglas" className="px-3 pb-4 w-full text-base outline-none border-b border-gray-200" type="text" />
           </div>
         </div>
 
-        {/* Password Hidden Input */}
-        <div className="w-full flex justify-between items-center relative mt-3">
+        {/* Password Input */}
+        <div className="w-full flex justify-between items-center">
           <div className="flex flex-col w-full">
-            <label className="text-xs text-[#171717] absolute">Password</label>
-            <input readOnly className="pb-2 w-full text-base font-medium text-[#171717] border-b border-[#171717] outline-none" type="text" />
-          </div>
-
-          <div className="absolute right-0 top-0">
-            <img src={loginPasswordIcon} alt="passwordInput" />
-            {/* <LoginPasswordIcon className={"w-4 h-4 fill-white"} /> */}
+            <div className="pt-4 flex justify-between items-center">
+              <label className="px-3 text-xs text-gray-300 font-light">Password</label>
+              <VisiblePasswordIcon className={"w-4 h-4 fill-current"} />
+            </div>
+            <input readOnly value="William324221" className="px-3 pb-4 w-full text-base outline-none border-b border-gray-200" type="text" />
           </div>
         </div>
 
-        {/* Consent Checkbox */}
-        <div className="flex justify-start items-center gap-3 mt-12">
-          <input className="appearance-none min-w-5 min-h-5 border border-black rounded-sm" type="checkbox" />
-          <label className="text-xs text-middleMenuTextBlack leading-3">"I give my consent to the processing of personal data and agree to the terms and privacy policy.</label>
+        {/* Remember Me */}
+        <div className="w-full flex justify-between items-center my-5 px-3">
+          <label htmlFor="rememberme" className="flex justify-start items-center gap-3 cursor-pointer">
+            <input id="rememberme" type="checkbox" className="peer hidden" />
+            <div className="w-4 h-4 border border-gray-400 bg-transparent rounded-full flex items-center justify-center peer-checked:border-black">
+              {/* İç çember, başlangıçta gizli olacak */}
+              <div className="w-2 h-2 bg-black rounded-full transition-all duration-200 transform scale-0 opacity-0 peer-checked:scale-100 peer-checked:opacity-100"></div>
+            </div>
+            <span className="text-xs font-light text-gray-300">Remember me</span>
+          </label>
+          <p className="text-xs font-light text-gray-300 cursor-pointer">Forget Password?</p>
         </div>
 
         {/* Buttons */}
-        <div className="w-full flex flex-col gap-3 mt-7">
-          <button onClick={() => navigate("/logged-in-landing-page")} className="bg-buttonOrange text-xs text-white font-semibold text-center w-full p-4 rounded-3xl " type="submit">
+        <div className="w-full flex flex-col gap-3 p-3 pb-0">
+          <button onClick={() => navigate("/logged-in-landing-page")} className="bg-black text-sm text-white font-light text-center w-full py-3 rounded-full" type="submit">
             Login
           </button>
 
-          <button
+          <div className="flex flex-col justify-center items-center text-center">
+            <p className="text-xs font-light text-gray-300">Don't have an account?</p>
+            <button
+              className="text-xs font-light text-black"
+              onClick={() => {
+                setShowLoginWindow(false);
+                setShowRegisterWindow(true);
+              }}
+            >
+              Sign Up
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Login;
+
+/* 
+<div className="flex justify-start items-center gap-3 mt-12">
+<input className="appearance-none min-w-5 min-h-5 border border-black rounded-sm" type="checkbox" />
+<label className="text-xs text-middleMenuTextBlack leading-3 max-w-sm">"I give my consent to the processing of personal data and agree to the terms and privacy policy.</label>
+</div>
+
+
+
+
+<button
             onClick={() => {
               setShowLoginWindow(false);
               setShowRegisterWindow(true);
@@ -77,10 +110,4 @@ function Login({ setShowLoginWindow, setShowRegisterWindow }) {
           >
             Do you want to register?
           </button>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-export default Login;
+*/

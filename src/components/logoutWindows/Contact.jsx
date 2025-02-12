@@ -1,6 +1,7 @@
 import React from "react";
 /* New SVG Components */
 import NavbarCallIcon from "../newIcons/NavbarCallIcon";
+import CloseIcon from "../newIcons/CloseIcon";
 import WhatsappIcon from "../newIcons/WhatsappIcon";
 import CalendarIcon from "../newIcons/CalendarIcon";
 import LetUsCallYouIcon from "../newIcons/LetUsCallYouIcon";
@@ -10,26 +11,6 @@ import WindowsIcon from "../newIcons/WindowsIcon";
 import AppleIcon from "../newIcons/AppleIcon";
 import XIcon from "../newIcons/XIcon";
 import FacebookIcon from "../newIcons/FacebookIcon";
-/* SVG Components */
-import CallIcon from "../icons/CallIcon";
-import CloseIcon from "../icons/CloseIcon";
-import BookNowIcon from "../icons/BookNowIcon";
-import ContactCallIcon from "../icons/ContactCallIcon";
-import LinkedInIcon from "../icons/LinkedInIcon";
-import InstagramIcon from "../icons/InstagramIcon";
-import TwitterIcon from "../icons/TwitterIcon";
-import YoutubeIcon from "../icons/YoutubeIcon";
-//* Images
-import callIcon from "../../assets/images/header/call_icon.svg";
-import close from "../../assets/images/loggedInWindows/close.svg";
-import whiteWhatsApp from "../../assets/images/logoutWindows/white_whatsapp.svg";
-import blackBookNowIcon from "../../assets/images/logoutWindows/black_book_now_icon.svg";
-import blackContactCallIcon from "../../assets/images/logoutWindows/black_contact_call_icon.svg";
-import blackLinkedin from "../../assets/images/logoutWindows/black_linkedin.svg";
-import blackFacebook from "../../assets/images/logoutWindows/black_facebook.svg";
-import blackInstagram from "../../assets/images/logoutWindows/black_instagram.svg";
-import blackTwitter from "../../assets/images/logoutWindows/black_twitter.svg";
-import blackYoutube from "../../assets/images/logoutWindows/black_youtube.svg";
 
 function Contact({ setShowContactWindow, showCalendarWindow, setShowCalendarWindow }) {
   return (
@@ -97,6 +78,25 @@ function Contact({ setShowContactWindow, showCalendarWindow, setShowCalendarWind
 export default Contact;
 
 /* 
+
+import CallIcon from "../icons/CallIcon";
+import BookNowIcon from "../icons/BookNowIcon";
+import ContactCallIcon from "../icons/ContactCallIcon";
+import LinkedInIcon from "../icons/LinkedInIcon";
+import InstagramIcon from "../icons/InstagramIcon";
+import TwitterIcon from "../icons/TwitterIcon";
+import YoutubeIcon from "../icons/YoutubeIcon";
+
+import callIcon from "../../assets/images/header/call_icon.svg";
+import close from "../../assets/images/loggedInWindows/close.svg";
+import whiteWhatsApp from "../../assets/images/logoutWindows/white_whatsapp.svg";
+import blackBookNowIcon from "../../assets/images/logoutWindows/black_book_now_icon.svg";
+import blackContactCallIcon from "../../assets/images/logoutWindows/black_contact_call_icon.svg";
+import blackLinkedin from "../../assets/images/logoutWindows/black_linkedin.svg";
+import blackFacebook from "../../assets/images/logoutWindows/black_facebook.svg";
+import blackInstagram from "../../assets/images/logoutWindows/black_instagram.svg";
+import blackTwitter from "../../assets/images/logoutWindows/black_twitter.svg";
+import blackYoutube from "../../assets/images/logoutWindows/black_youtube.svg";
 
 <div className="flex flex-col gap-2 px-7 py-11">
 
