@@ -2,7 +2,7 @@ import React from "react";
 
 function NumberOfBedrooms() {
   return (
-    <div className="rangeSlider absolute left-[700px] bottom-[-75px] shadow-2xl shadow-[rgba(0,0,0,0.25)] w-fit bg-white p-5 py-5 pb-6 rounded-3xl">
+    <div className="rangeSlider absolute left-[595px] bottom-[-75px] shadow-2xl shadow-[rgba(0,0,0,0.25)] w-fit bg-white p-5 py-5 pb-6 rounded-3xl">
       <div className="w-full flex justify-between -mb-1 px-0">
         <span
           className="relative flex flex-col text-middleMenuTextBlack text-[9px] ml-2

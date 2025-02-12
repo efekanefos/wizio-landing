@@ -2,7 +2,7 @@ import React from "react";
 
 function PriceRange() {
   return (
-    <div className="rangeSlider absolute left-[850px] bottom-[-195px] shadow-2xl shadow-[rgba(0,0,0,0.25)] w-fit bg-white rounded-3xl">
+    <div className="rangeSlider absolute left-[770px] bottom-[-195px] shadow-2xl shadow-[rgba(0,0,0,0.25)] w-fit bg-white rounded-3xl">
       <div className="pt-9 pb-9 pl-7 pr-8 border-b border-gray-300">
         <input
           type="range"

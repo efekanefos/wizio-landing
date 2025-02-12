@@ -9,7 +9,7 @@ import villas from "../assets/images/logoutWindows/villas.svg";
 
 function PropertyDetails() {
   return (
-    <div className="absolute left-[406px] bottom-[-290px] shadow-lg w-fit bg-white pl-11 pr-8 py-11 rounded-3xl">
+    <div className="absolute left-[535px] bottom-[-290px] shadow-lg w-fit bg-white pl-11 pr-8 py-11 rounded-3xl">
       <div className="">
         <p className="text-xs text-middleMenuTextBlack text-center opacity-55 font-medium mb-7">Property Type</p>
 

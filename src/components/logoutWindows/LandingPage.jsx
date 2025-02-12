@@ -53,7 +53,7 @@ function LandingPage({ theme, setTheme }) {
     <div className="overflow-y-hidden max-h-screen">
       <nav className="flex justify-between items-center py-3 px-9 z-10 relative bg-white font-inter max-lg:px-5 max-md:px-4 max-sm:gap-4">
         {/* Logo Side */}
-        <div className="flex justify-start items-center gap-5">
+        <div className="flex justify-start items-center gap-5 min-w-40">
           <div>
             <LogoIcon className={"w-20 h-7 fill-[#F78E2F]"} />
           </div>
@@ -145,7 +145,7 @@ function LandingPage({ theme, setTheme }) {
                   }`}
               >
                 <div className="flex justify-start items-center">
-                  <div className={`flex flex-col ${showProjectList && `min-w-36`}`}>
+                  <div className={`flex flex-col ${showUpperOptions && `min-w-36`}`}>
                     <p className={`text-sm text-middleMenuTextBlack leading-tight font-light ${showUpperOptions ? "font-semibold text-xs" : ""}`}>{showUpperOptions ? "Location" : "Limassol"}</p>
                     {showUpperOptions ? <p className="text-sm font-light leading-4 text-gray-400">Search destination</p> : ""}
                   </div>
@@ -169,7 +169,7 @@ function LandingPage({ theme, setTheme }) {
                     `}
                 >
                   <div className="flex justify-start items-center">
-                    <div className={`flex flex-col ${showBedroomSlider && `min-w-36`}`}>
+                    <div className={`flex flex-col ${showUpperOptions && `min-w-36`}`}>
                       <p className={`text-sm text-middleMenuTextBlack leading-tight font-light ${showUpperOptions ? "font-semibold text-xs" : ""}`}>{showUpperOptions ? "Bedrooms" : "2-3 Bed..."}</p>
                       {showUpperOptions ? <p className="text-sm font-light leading-4 text-gray-400">Add bedrooms</p> : ""}
                     </div>
@@ -196,7 +196,7 @@ function LandingPage({ theme, setTheme }) {
                     `}
                 >
                   <div className="flex justify-start items-center">
-                    <div className={`flex flex-col ${showPriceRange && `min-w-36`}`}>
+                    <div className={`flex flex-col ${showUpperOptions && `min-w-36`}`}>
                       <p className={`text-sm text-middleMenuTextBlack leading-tight font-light ${showUpperOptions ? "font-semibold text-xs" : ""}`}>{showUpperOptions ? "Price" : "€350,00..."}</p>
                       {showUpperOptions ? <p className="text-sm font-light leading-4 text-gray-400">Add price range</p> : ""}
                     </div>
@@ -221,7 +221,7 @@ function LandingPage({ theme, setTheme }) {
                     ${showPropertyDetails && `bg-gray-300 py-3.5 pl-6 pr-4 rounded-full border-r-0`}`}
                   >
                     <div className="flex justify-start items-center">
-                      <div className={`flex flex-col ${showPropertyDetails && `min-w-36`}`}>
+                      <div className={`flex flex-col ${showUpperOptions && `min-w-36`}`}>
                         <p className={`text-sm text-middleMenuTextBlack leading-tight font-light ${showUpperOptions ? "font-semibold text-xs" : ""}`}>{showUpperOptions ? "More" : "Apartme..."}</p>
                         {showUpperOptions ? <p className="text-sm font-light leading-4 text-gray-400">Details</p> : ""}
                       </div>
@@ -232,11 +232,12 @@ function LandingPage({ theme, setTheme }) {
                 )}
 
                 <div
-                  className={`bg-buttonOrange p-2 rounded-full 
-              ${showUpperOptions && `p-5 py-4 flex justify-start items-center gap-2`}`}
+                  className={`p-2 rounded-full 
+                  ${showUpperOptions ? "bg-black" : "bg-buttonOrange"}   
+                  ${showUpperOptions && `p-7 py-3 flex justify-start items-center gap-2`}`}
                 >
                   <img className="w-4" src={searchIcon} alt="search" />
-                  {showUpperOptions && <p className="text-white font-semibold text-xs">Search</p>}
+                  {showUpperOptions && <p className="text-white font-light text-sm">Search</p>}
                 </div>
               </div>
             </div>
