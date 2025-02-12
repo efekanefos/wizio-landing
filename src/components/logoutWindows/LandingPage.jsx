@@ -115,7 +115,7 @@ function LandingPage({ theme, setTheme }) {
 
           {/* Menu Side */}
 
-          <div className={`border border-gray-200 flex justify-between items-center rounded-full shadow-xl py-1.5 relative ${showUpperOptions && `!py-1`} pl-1 pr-2 w-fit max-sm:w-full`}>
+          <div className={`border border-gray-200 flex justify-between items-center rounded-full shadow-xl py-1.5 relative ${showUpperOptions && `!py-0 !pl-0`} pl-1 pr-2 w-fit max-sm:w-full`}>
             <div className="flex justify-center items-center max-sm:hidden">
               {/* Location Button */}
               <div
@@ -127,33 +127,17 @@ function LandingPage({ theme, setTheme }) {
                   setShowUpperOptions(showProjectList ? false : true);
                 }}
                 className={`flex justify-start items-center gap-2 border-r border-gray-300 px-4 pl-3 h-full min-h-8 cursor-pointer ${
-                  showProjectList && !showLocationDevelopments
-                    ? `bg-middleMenuTextBlack bg-opacity-5 py-3 rounded-full border-r-0`
-                    : !showProjectList && !showLocationDevelopments
-                    ? `border-r border-gray-300`
-                    : !showProjectList && showLocationDevelopments
-                    ? `border-r-0`
-                    : ``
+                  showProjectList ? `bg-gray-200 py-3 !px-6 rounded-full border-r-0` : !showProjectList && !showLocationDevelopments ? `border-r border-gray-300` : !showProjectList && showLocationDevelopments ? `border-r-0` : ``
                 }`}
               >
-                <div className="relative">
-                  {showProjectList && !showLocationDevelopments ? (
-                    <span className="flex justify-center items-center absolute top-[-5px] right-[-5px] bg-[#FF0004] border border-[#F8F8F8] p-1 rounded-full w-[15px] h-[15px]">
-                      <p className="text-white font-medium text-[10px]">2</p>
-                    </span>
-                  ) : (
-                    ""
-                  )}
-                </div>
                 <div className="flex justify-start items-center">
                   <div className="flex flex-col">
-                    <p className="text-sm text-middleMenuTextBlack leading-tight font-light">
-                      {showLocationDevelopments && showUpperOptions && !showLocalAmenitiesGPS ? "Location & By Developments" : showLocationDevelopments && showUpperOptions && showLocalAmenitiesGPS ? "Pafilia Plaza" : "Limassol"}
-                    </p>
-                    {showProjectList && !showLocationDevelopments ? <p className="text-middleMenuTextBlack text-sm">Ava Plaza, Coral Vis..</p> : showLocalAmenitiesGPS ? <p className="text-middleMenuTextBlack text-sm text-left">Paphos</p> : ""}
+                    <p className={`text-sm text-middleMenuTextBlack leading-tight font-light ${showUpperOptions ? "font-semibold text-xs" : ""}`}>{showUpperOptions ? "Location" : "Limassol"}</p>
+                    {showUpperOptions ? <p className="text-sm font-light leading-4 text-gray-400">Search destination</p> : ""}
                   </div>
                 </div>
               </div>
+
               {/* Number of Bedrooms Button */}
               {!showLocationDevelopments || !showUpperOptions ? (
                 <div
@@ -206,13 +190,6 @@ function LandingPage({ theme, setTheme }) {
                   }}
                   className={`flex justify-start items-center gap-2 px-4 h-full min-h-8 cursor-pointer ${showPropertyDetails && `bg-middleMenuTextBlack bg-opacity-5 py-3 rounded-full mr-3`}`}
                 >
-                  {showPropertyDetails && (
-                    <div className="relative">
-                      <span className="flex justify-center items-center absolute -top-1.5 -right-1.5 bg-[#FF0004] border border-[#F8F8F8] p-1 rounded-full w-[15px] h-[15px]">
-                        <p className="text-white font-medium text-[10px]">2</p>
-                      </span>
-                    </div>
-                  )}
                   <div className="flex justify-start items-center">
                     <div className="flex flex-col">
                       <p className="text-sm font-inter text-middleMenuTextBlack font-light">Apartme...</p>
