@@ -1,33 +1,52 @@
 import React from "react";
-/* SVG Components */
-import ApartmentIcon from "./icons/ApartmentIcon";
-import TownhousesIcon from "./icons/TownhousesIcon";
-import VillasIcon from "./icons/VillasIcon";
-import whiteApartment from "../assets/images/logoutWindows/white_apartment.svg";
-import townhouses from "../assets/images/logoutWindows/townhouses.svg";
-import villas from "../assets/images/logoutWindows/villas.svg";
+/* New SVG Components */
+import ApartmentsIcon from "./newIcons/ApartmentsIcon";
+import VillasIcon from "./newIcons/VillasIcon";
+import TownhouseIcon from "./newIcons/TownhouseIcon";
+import GardenIcon from "./newIcons/GardenIcon";
+import TerraceIcon from "./newIcons/TerraceIcon";
+import BalconyIcon from "./newIcons/BalconyIcon";
 
 function PropertyDetails() {
   return (
-    <div className="absolute left-[535px] bottom-[-290px] shadow-lg w-fit bg-white pl-11 pr-8 py-11 rounded-3xl">
-      <div className="">
-        <p className="text-xs text-middleMenuTextBlack text-center opacity-55 font-medium mb-7">Property Type</p>
-
-        <ul className="list-none">
-          <li className="flex justify-start items-center gap-1.5 bg-middleMenuTextBlack p-4 rounded-full">
-            <ApartmentIcon className={"w-4 h-4 fill-white"} />
-            <p className="text-xs text-white">Apartments</p>
-          </li>
-          <li className="flex justify-start items-center gap-1.5 p-4 rounded-full">
-            <TownhousesIcon className={"w-4 h-4 fill-white"} />
-            {/* <img src={townhouses} alt="Townhouses" /> */}
-            <p className="text-xs">Townhouses</p>
-          </li>
-          <li className="flex justify-start items-center gap-1.5 p-4 rounded-full">
-            <VillasIcon className={"w-4 h-4 fill-white"} />
-            <p className="text-xs">Villas</p>
-          </li>
-        </ul>
+    <div className="absolute right-[0px] top-[70px] shadow-lg w-fit bg-white p-6 rounded-3xl">
+      <div className="flex justify-between items-start gap-3 w-fit">
+        {/* Property Types */}
+        <div>
+          <p className="text-xl text-black font-semibold mb-3">Types</p>
+          <ul className="list-none">
+            <li className="flex justify-start items-center gap-5 p-5 pl-1 min-w-60">
+              <ApartmentsIcon className={"w-6 h-6 fill-white"} />
+              <p className="text-[16px] text-gray-400">Apartments</p>
+            </li>
+            <li className="flex justify-start items-center gap-5 p-5 pl-1 min-w-60">
+              <VillasIcon className={"w-6 h-6 fill-white"} />
+              <p className="text-[16px] text-gray-400">Villas</p>
+            </li>
+            <li className="flex justify-start items-center gap-5 p-5 pl-1 min-w-60">
+              <TownhouseIcon className={"w-6 h-6 fill-white"} />
+              <p className="text-[16px] text-gray-400">Townhouse</p>
+            </li>
+          </ul>
+        </div>
+        {/* Outdoor Space */}
+        <div>
+          <p className="text-xl text-black font-semibold mb-3">Outdoor Space</p>
+          <ul className="list-none">
+            <li className="flex justify-start items-center gap-5 p-5 pl-1 min-w-60">
+              <GardenIcon className={"w-6 h-6 fill-white"} />
+              <p className="text-[16px] text-gray-400">Garden</p>
+            </li>
+            <li className="flex justify-start items-center gap-5 p-5 pl-1 min-w-60">
+              <TerraceIcon className={"w-6 h-6 fill-white"} />
+              <p className="text-[16px] text-gray-400">Terrace</p>
+            </li>
+            <li className="flex justify-start items-center gap-5 p-5 pl-1 min-w-60">
+              <BalconyIcon className={"w-6 h-6 fill-white"} />
+              <p className="text-[16px] text-gray-400">Balcony</p>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   );

@@ -1,0 +1,17 @@
+import React from "react";
+
+function VillasIcon({ className }) {
+  return (
+    <svg className={className} viewBox="0 0 28 27" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M1 11.5997L12.2375 2.60969C13.1755 1.85927 14.5085 1.85927 15.4465 2.60969L26.684 11.5997M3.5684 9.67343V23.1576C3.5684 24.5761 4.71832 25.726 6.13681 25.726H21.5472C22.9658 25.726 24.1156 24.5761 24.1156 23.1576V9.67343M13.842 19.305V25.0839"
+        stroke="#9CA3AF"
+        stroke-width="1.60525"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  );
+}
+
+export default VillasIcon;
