@@ -53,7 +53,7 @@ function LandingPage({ theme, setTheme }) {
     <div className="overflow-y-hidden max-h-screen">
       <nav className="flex justify-between items-center py-3 px-9 z-10 relative bg-white font-inter max-lg:px-5 max-md:px-4 max-sm:gap-4">
         {/* Logo Side */}
-        <div className="flex justify-start items-center gap-5 min-w-40">
+        <div className="flex justify-start items-center gap-5 lg:min-w-40">
           <div>
             <LogoIcon className={"w-20 h-7 fill-[#F78E2F]"} />
           </div>
