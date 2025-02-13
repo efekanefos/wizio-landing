@@ -1,46 +1,58 @@
-import React from "react";
+import React, { useState } from "react";
+import ReactSlider from "react-slider";
 
 function NumberOfBedrooms() {
+  const minVal = 1;
+  const maxVal = 5;
+  const [values, setValues] = useState([minVal, maxVal]);
   return (
-    <div className="rangeSlider absolute left-[595px] bottom-[-75px] shadow-2xl shadow-[rgba(0,0,0,0.25)] w-fit bg-white p-5 py-5 pb-6 rounded-3xl">
-      <div className="w-full flex justify-between -mb-1 px-0">
+    <div className="rangeSlider absolute left-[720px] top-[150px] shadow-2xl shadow-[rgba(0,0,0,0.25)] w-fit min-w-80 bg-white p-5 py-5 pb-10 rounded-3xl">
+      <div className="w-full flex justify-between mb-6">
         <span
-          className="relative flex flex-col text-middleMenuTextBlack text-[9px] ml-2
-      after:bg-gray-300 after:w-px after:h-1 after:absolute after:top-4 after:left-1
-      before:bg-gray-300 before:w-px before:h-1 before:absolute before:-bottom-5 before:left-1"
+          className="relative flex flex-col text-gray-400 text-xs font-semibold ml-1.5
+      after:bg-gray-300 after:w-px after:h-2.5 after:absolute after:top-5 after:left-0.5
+      before:bg-gray-300 before:w-px before:h-2.5 before:absolute before:-bottom-[50px] before:left-0.5"
         >
           1
         </span>
         <span
-          className="relative flex flex-col text-gray-300 text-[9px]
-    after:bg-gray-300 after:w-px after:h-1 after:absolute after:top-4 after:left-1
-    before:bg-gray-300 before:w-px before:h-1 before:absolute before:-bottom-5 before:left-1"
+          className="relative flex flex-col text-black text-xs font-semibold
+    after:bg-black after:w-px after:h-2.5 after:absolute after:top-5 after:left-1
+    before:bg-black before:w-px before:h-2.5 before:absolute before:-bottom-[50px] before:left-1"
         >
           2
         </span>
         <span
-          className="relative flex flex-col text-gray-300 text-[9px]
-    after:bg-gray-300 after:w-px after:h-1 after:absolute after:top-4 after:left-1
-    before:bg-gray-300 before:w-px before:h-1 before:absolute before:-bottom-5 before:left-1"
+          className="relative flex flex-col text-gray-400 text-xs font-semibold
+    after:bg-gray-300 after:w-px after:h-2.5 after:absolute after:top-5 after:left-0.5
+    before:bg-gray-300 before:w-px before:h-2.5 before:absolute before:-bottom-[50px] before:left-0.5"
         >
           3
         </span>
         <span
-          className="relative flex flex-col text-gray-300 text-[9px]
-    after:bg-gray-300 after:w-px after:h-1 after:absolute after:top-4 after:left-1
-    before:bg-gray-300 before:w-px before:h-1 before:absolute before:-bottom-5 before:left-1"
+          className="relative flex flex-col text-black text-xs font-semibold
+    after:bg-black after:w-px after:h-2.5 after:absolute after:top-5 after:left-1
+    before:bg-black before:w-px before:h-2.5 before:absolute before:-bottom-[50px] before:left-1"
         >
           4
         </span>
         <span
-          className="relative flex flex-col text-gray-300 text-[9px]
-    after:bg-gray-300 after:w-px after:h-1 after:absolute after:top-4 after:left-1
-    before:bg-gray-300 before:w-px before:h-1 before:absolute before:-bottom-5 before:left-1"
+          className="relative flex flex-col text-gray-400 text-xs font-semibold mr-1.5
+    after:bg-gray-300 after:w-px after:h-2.5 after:absolute after:top-5 after:left-0.5
+    before:bg-gray-300 before:w-px before:h-2.5 before:absolute before:-bottom-[50px] before:left-0.5"
         >
           5
         </span>
       </div>
-      <input
+      <ReactSlider className="horizontal-slider bedroomSlider" onChange={setValues} value={values} min={minVal} max={maxVal} />
+    </div>
+  );
+}
+
+export default NumberOfBedrooms;
+
+/* 
+<input
         type="range"
         min={1}
         max={5}
@@ -49,8 +61,4 @@ function NumberOfBedrooms() {
      [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-middleMenuTextBlack [&::-webkit-slider-thumb]:border
      [&::-webkit-slider-thumb]:border-gray-950 relative z-10"
       />
-    </div>
-  );
-}
-
-export default NumberOfBedrooms;
+*/

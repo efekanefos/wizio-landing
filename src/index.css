@@ -27,6 +27,10 @@ input[type="range"] {
   border-radius: 1rem;
   background-color: #e2e8f0;
 }
+.horizontal-slider.bedroomSlider {
+  max-width: 100%;
+}
+
 .horizontal-slider .thumb {
   width: 20px;
   height: 20px;
