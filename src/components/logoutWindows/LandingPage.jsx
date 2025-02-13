@@ -33,6 +33,7 @@ import Language from "./Language";
 import PropertyDetails from "../PropertyDetails";
 import PriceRange from "../PriceRange";
 import LocalAmenitiesGPS from "../LocalAmenitiesGPS";
+import MobileMenu from "../MobileMenu";
 
 function LandingPage({ theme, setTheme }) {
   const [showUpperOptions, setShowUpperOptions] = useState(false);
@@ -48,6 +49,8 @@ function LandingPage({ theme, setTheme }) {
   const [showRegisterWindow, setShowRegisterWindow] = useState(false);
   const [showLanguageWindow, setShowLanguageWindow] = useState(false);
   const [showLocalAmenitiesGPS, setShowLocalAmenitiesGPS] = useState(false);
+  //* Mobile Menu
+  const [openMobileMenu, setOpenMobileMenu] = useState(false);
 
   return (
     <div className="overflow-y-hidden max-h-screen">
@@ -116,9 +119,11 @@ function LandingPage({ theme, setTheme }) {
           {/* Menu Side */}
 
           <div
-            className={`border border-gray-200 flex justify-between items-center rounded-full shadow-xl py-1.5 relative 
+            className={` flex justify-between items-center rounded-full shadow-xl py-1.5 relative 
             ${showPropertyDetails && "!pr-0"}
-            ${showUpperOptions && `!py-0 !pl-0`} pl-1 pr-2 w-fit max-sm:w-full `}
+            ${showUpperOptions && `!py-0 !pl-0`} pl-1 pr-2 w-fit max-sm:w-full
+            ${openMobileMenu ? `border-0` : `border border-gray-200`}
+            `}
           >
             <div className="flex justify-center items-center max-sm:hidden">
               {/* Location Button */}
@@ -163,10 +168,7 @@ function LandingPage({ theme, setTheme }) {
                     setShowUpperOptions(showBedroomSlider ? false : true);
                   }}
                   className={`flex justify-start items-center gap-2 border-r border-gray-300 px-4 h-full cursor-pointer
-                    
-                    ${showUpperOptions ? `min-h-12` : `min-h-6`}
-                    ${showBedroomSlider ? `bg-gray-300 py-3.5 pl-6 pr-4 rounded-full border-r-0` : showPriceRange ? `border-r-0` : ""}
-                    `}
+                    ${showUpperOptions ? `min-h-12` : `min-h-6`} ${showBedroomSlider ? `bg-gray-300 py-3.5 pl-6 pr-4 rounded-full border-r-0` : showPriceRange ? `border-r-0` : ""}`}
                 >
                   <div className="flex justify-start items-center">
                     <div className={`flex flex-col ${showUpperOptions && `min-w-36`}`}>
@@ -190,10 +192,8 @@ function LandingPage({ theme, setTheme }) {
                     setShowUpperOptions(showPriceRange ? false : true);
                   }}
                   className={`flex justify-start items-center gap-2 border-r border-gray-300 px-4 h-full cursor-pointer 
-                    
-                    ${showPriceRange ? `bg-gray-300 py-3.5 pl-6 pr-4 rounded-full border-r-0` : showPropertyDetails ? `border-r-0` : ""}
-                    ${showUpperOptions ? `min-h-12` : `min-h-6`}
-                    `}
+                    ${showPriceRange ? `bg-gray-300 py-3.5 pl-6 pr-4 rounded-full border-r-0` : showPropertyDetails ? `border-r-0` : ""} 
+                    ${showUpperOptions ? `min-h-12` : `min-h-6`}`}
                 >
                   <div className="flex justify-start items-center">
                     <div className={`flex flex-col ${showUpperOptions && `min-w-36`}`}>
@@ -242,9 +242,18 @@ function LandingPage({ theme, setTheme }) {
               </div>
             </div>
             {/* Mobile Search Input */}
-            <div className={`hidden max-sm:block w-full`}>
-              <input className="w-full outline-none px-6 text-middleMenuTextBlack text-base font-light" type="text" name="searchInput" id="searchInput" placeholder="Search" />
-            </div>
+            {!openMobileMenu && (
+              <div className={`hidden max-sm:flex w-full rounded-full`}>
+                <input className="w-full outline-none px-6 text-middleMenuTextBlack text-base font-light rounded-full" type="text" name="searchInput" id="searchInput" placeholder="Search" />
+                <div
+                  className={`p-2 rounded-full w-fit
+                  ${showUpperOptions ? "bg-black" : "bg-buttonOrange"}   
+                  ${showUpperOptions && `p-7 py-3 flex justify-start items-center gap-2`}`}
+                >
+                  <img className="w-4" src={searchIcon} alt="search" />
+                </div>
+              </div>
+            )}
 
             {showPropertyDetails && <PropertyDetails />}
           </div>
@@ -268,12 +277,14 @@ function LandingPage({ theme, setTheme }) {
             </div>
           </div>
           {/* Login Button */}
-          <div onClick={() => setShowLoginWindow(!showLoginWindow)} className="flex justify-start items-center gap-3 w-full h-full cursor-pointer">
+          <div className="flex justify-start items-center gap-3 w-full h-full cursor-pointer">
             <div className="w-full flex justify-between items-center">
               <div className="flex justify-start items-center w-full gap-2 max-md:border max-md:border-gray-200 max-md:rounded-full max-md:p-1">
-                <GuestIcon className={"w-6 h-6 fill-current max-md:w-5 max-md:h-5"} />
+                <div onClick={() => setShowLoginWindow(!showLoginWindow)}>
+                  <GuestIcon className={"w-6 h-6 fill-current max-md:w-5 max-md:h-5"} />
+                </div>
                 {/* {showLoginWindow && <p className="text-xs text-white font-medium">Login</p>} */}
-                <div className="hidden max-md:block px-1 py-1.5 pl-0 ">
+                <div onClick={() => setOpenMobileMenu(!openMobileMenu)} className="hidden max-md:block px-1 py-1.5 pl-0 ">
                   <MobileHamburgerIcon className={"w-4 h-3 fill-current"} />
                 </div>
               </div>
@@ -284,6 +295,7 @@ function LandingPage({ theme, setTheme }) {
         {showBedroomSlider && <NumberOfBedrooms />}
         {showPriceRange && <PriceRange />}
       </nav>
+      {openMobileMenu && <MobileMenu />}
       {showLocalAmenitiesGPS && <LocalAmenitiesGPS />}
 
       <img className="z-0 w-full h-screen object-cover" src={showLocalAmenitiesGPS ? LocalAmenitiesBackground : earthBackground} alt="earthBackground" />
