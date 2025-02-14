@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import ReactSlider from "react-slider";
+/* SVG Components */
 import SearchIcon from "./icons/SearchIcon";
 import LocalAmenitiesIcon from "./icons/LocalAmenitiesIcon";
 import CloseIcon from "./newIcons/CloseIcon";
@@ -7,8 +9,14 @@ import WhiteSearchIcon from "./newIcons/WhiteSearchIcon";
 import MobileDownArrowIcon from "./newIcons/MobileDownArrowIcon";
 
 function MobileMenu() {
+  {
+    /* Upper Menu States */
+  }
   const [showProjectList, setShowProjectList] = useState(true);
   const [showLocationDevelopments, setShowLocationDevelopments] = useState(false);
+  {
+    /* Location States */
+  }
   const [locationStatus, setLocationStatus] = useState("closed");
   const leftLocationList = ["Minthis", "Vida Suites", "Elysia Park", "Ava Plaza", "Olea Residences", "Beachside", "Domus", "Konia Green", "One", "Iliso Suites", "Amathos", "Amarosa", "Nerina", "Pafilia Gardens", "Pafia 2"];
   const rightLocationList = [
@@ -28,6 +36,13 @@ function MobileMenu() {
     "Polis Gardens",
     "Peyia Chorio",
   ];
+  {
+    /* Bedroom States */
+  }
+  const minVal = 1;
+  const maxVal = 5;
+  const [values, setValues] = useState([minVal, maxVal]);
+  const [bedroomStatus, setBedroomStatus] = useState(false);
   return (
     <div className="bg-white relative z-50 h-screen">
       {/* Discover - Local */}
@@ -147,16 +162,67 @@ function MobileMenu() {
           ""
         )}
 
-        {/* Location Button */}
-        <div className="flex justify-between items-center p-5 border border-gray-200 rounded-full shadow-xl cursor-pointer">
-          <p className="text-sm font-semibold text-black">Bedrooms</p>
-          <div className="flex justify-start items-center gap-3">
-            <p className="text-sm font-light text-gray-400">Add bedrooms</p>
-            <MobileMenuCloseIcon className={"w-5 h-5 fill-white"} />
+        {/* Bedrooms Button */}
+        {!bedroomStatus ? (
+          <div onClick={() => setBedroomStatus(true)} className="flex justify-between items-center p-5 border border-gray-200 rounded-full shadow-xl cursor-pointer">
+            <p className="text-sm font-semibold text-black">Bedrooms</p>
+            <div className="flex justify-start items-center gap-3">
+              <p className="text-sm font-light text-gray-400">Add bedrooms</p>
+              <MobileMenuCloseIcon className={"w-5 h-5 fill-white"} />
+            </div>
           </div>
-        </div>
+        ) : (
+          <div className="flex flex-col border border-gray-200 rounded-[32px] shadow-xl p-5">
+            <div>
+              <div className="flex justify-between items-center mb-3">
+                <p className="text-2xl font-semibold text-black">Bedrooms</p>
+                <p onClick={() => setBedroomStatus(false)} className="text-sm text-black font-light py-2 px-4 underline cursor-pointer">
+                  Clear all
+                </p>
+              </div>
+            </div>
+            <div className="w-full flex justify-between mb-6">
+              <span
+                className="relative flex flex-col text-gray-400 text-xs font-semibold ml-1.5
+      after:bg-gray-300 after:w-px after:h-2.5 after:absolute after:top-5 after:left-0.5
+      before:bg-gray-300 before:w-px before:h-2.5 before:absolute before:-bottom-[50px] before:left-0.5"
+              >
+                1
+              </span>
+              <span
+                className="relative flex flex-col text-black text-xs font-semibold
+    after:bg-black after:w-px after:h-2.5 after:absolute after:top-5 after:left-1
+    before:bg-black before:w-px before:h-2.5 before:absolute before:-bottom-[50px] before:left-1"
+              >
+                2
+              </span>
+              <span
+                className="relative flex flex-col text-gray-400 text-xs font-semibold
+    after:bg-gray-300 after:w-px after:h-2.5 after:absolute after:top-5 after:left-0.5
+    before:bg-gray-300 before:w-px before:h-2.5 before:absolute before:-bottom-[50px] before:left-0.5"
+              >
+                3
+              </span>
+              <span
+                className="relative flex flex-col text-black text-xs font-semibold
+    after:bg-black after:w-px after:h-2.5 after:absolute after:top-5 after:left-1
+    before:bg-black before:w-px before:h-2.5 before:absolute before:-bottom-[50px] before:left-1"
+              >
+                4
+              </span>
+              <span
+                className="relative flex flex-col text-gray-400 text-xs font-semibold mr-1.5
+    after:bg-gray-300 after:w-px after:h-2.5 after:absolute after:top-5 after:left-0.5
+    before:bg-gray-300 before:w-px before:h-2.5 before:absolute before:-bottom-[50px] before:left-0.5"
+              >
+                5
+              </span>
+            </div>
+            <ReactSlider className="horizontal-slider bedroomSlider mb-8" onChange={setValues} value={values} min={minVal} max={maxVal} />
+          </div>
+        )}
 
-        {/* Location Button */}
+        {/* Price Button */}
         <div className="flex justify-between items-center p-5 border border-gray-200 rounded-full shadow-xl cursor-pointer">
           <p className="text-sm font-semibold text-black">Price</p>
           <div className="flex justify-start items-center gap-3">
@@ -165,7 +231,7 @@ function MobileMenu() {
           </div>
         </div>
 
-        {/* Location Button */}
+        {/* More Details Button */}
         <div className="flex justify-between items-center p-5 border border-gray-200 rounded-full shadow-xl cursor-pointer">
           <p className="text-sm font-semibold text-black">More</p>
           <div className="flex justify-start items-center gap-3">
@@ -177,7 +243,7 @@ function MobileMenu() {
 
       {/* Search & Clear */}
 
-      <div className="flex justify-between items-center mt-5">
+      <div className="flex justify-between items-center mt-5 px-5">
         <p className="text-sm text-black font-light py-2 px-4 underline">Clear all</p>
         <button className="flex items-center gap-2 w-fit px-5 py-3 bg-black rounded-full">
           <WhiteSearchIcon className={"w-4 h-4"} />
