@@ -39,10 +39,19 @@ function MobileMenu() {
   {
     /* Bedroom States */
   }
-  const minVal = 1;
-  const maxVal = 5;
-  const [values, setValues] = useState([minVal, maxVal]);
+  const bedroomMinVal = 1;
+  const bedroomMaxVal = 5;
+  const [bedroomValues, setBedroomValues] = useState([bedroomMinVal, bedroomMaxVal]);
   const [bedroomStatus, setBedroomStatus] = useState(false);
+  {
+    /* Price States */
+  }
+  const priceMinVal = 5000;
+  const priceMaxVal = 135555000;
+  const [priceValues, setPriceValues] = useState([priceMinVal, priceMaxVal]);
+  const formatCurrency = (value) => new Intl.NumberFormat("de-DE").format(value);
+  const [priceStatus, setPriceStatus] = useState(false);
+
   return (
     <div className="bg-white relative z-50 h-screen">
       {/* Discover - Local */}
@@ -218,18 +227,48 @@ function MobileMenu() {
                 5
               </span>
             </div>
-            <ReactSlider className="horizontal-slider bedroomSlider mb-8" onChange={setValues} value={values} min={minVal} max={maxVal} />
+            <ReactSlider className="horizontal-slider bedroomSlider mb-8" onChange={setBedroomValues} value={bedroomValues} min={bedroomMinVal} max={bedroomMaxVal} />
           </div>
         )}
 
         {/* Price Button */}
-        <div className="flex justify-between items-center p-5 border border-gray-200 rounded-full shadow-xl cursor-pointer">
-          <p className="text-sm font-semibold text-black">Price</p>
-          <div className="flex justify-start items-center gap-3">
-            <p className="text-sm font-light text-gray-400">Add price range</p>
-            <MobileMenuCloseIcon className={"w-5 h-5 fill-white"} />
+        {!priceStatus ? (
+          <div onClick={() => setPriceStatus(true)} className="flex justify-between items-center p-5 border border-gray-200 rounded-full shadow-xl cursor-pointer">
+            <p className="text-sm font-semibold text-black">Price</p>
+            <div className="flex justify-start items-center gap-3">
+              <p className="text-sm font-light text-gray-400">Add price range</p>
+              <MobileMenuCloseIcon className={"w-5 h-5 fill-white"} />
+            </div>
           </div>
-        </div>
+        ) : (
+          <div className="flex flex-col border border-gray-200 rounded-[32px] shadow-xl p-5">
+            <div className="flex justify-between items-center mb-3">
+              <p className="text-2xl font-semibold text-black">Price</p>
+              <p onClick={() => setPriceStatus(false)} className="text-sm text-black font-light py-2 px-4 underline cursor-pointer">
+                Clear
+              </p>
+            </div>
+            <div className="pt-6 px-0 pb-5">
+              <ReactSlider className="horizontal-slider !max-w-full" onChange={setPriceValues} value={priceValues} min={priceMinVal} max={priceMaxVal} />
+            </div>
+            {/* Min Max Values */}
+            <div className="px-0 pb-0 flex justify-between gap-5">
+              <div className="w-fit flex flex-col justify-center items-center gap-1">
+                <p className="text-sm text-gray-400 font-light">Min</p>
+                <div className="w-28 h-8 flex justify-center items-center border border-gray-300 rounded-2xl">
+                  <p className="text-sm text-middleMenuTextBlack font-medium">€{formatCurrency(priceValues[0])}</p>
+                </div>
+              </div>
+
+              <div className="w-fit flex flex-col justify-center items-center gap-1">
+                <p className="text-sm text-gray-400 font-light">Max</p>
+                <div className="w-28 h-8 flex justify-center items-center border border-gray-300 rounded-2xl">
+                  <p className="text-sm text-middleMenuTextBlack font-medium">€{formatCurrency(priceValues[1])}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* More Details Button */}
         <div className="flex justify-between items-center p-5 border border-gray-200 rounded-full shadow-xl cursor-pointer">
