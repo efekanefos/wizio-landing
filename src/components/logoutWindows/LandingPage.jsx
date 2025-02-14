@@ -6,6 +6,7 @@ import NavbarCallIcon from "../newIcons/NavbarCallIcon";
 import NavbarGlobalIcon from "../newIcons/NavbarGlobalIcon";
 import NavbarLightModeIcon from "../newIcons/NavbarLightModeIcon";
 import MobileHamburgerIcon from "../newIcons/MobileHamburgerIcon";
+import CloseIcon from "../newIcons/CloseIcon";
 /* SVG Components */
 import LogoIcon from "../icons/LogoIcon";
 //import HomeIcon from "../icons/HomeIcon";
@@ -279,15 +280,21 @@ function LandingPage({ theme, setTheme }) {
           {/* Login Button */}
           <div className="flex justify-start items-center gap-3 w-full h-full cursor-pointer">
             <div className="w-full flex justify-between items-center">
-              <div className="flex justify-start items-center w-full gap-2 max-md:border max-md:border-gray-200 max-md:rounded-full max-md:p-1">
-                <div onClick={() => setShowLoginWindow(!showLoginWindow)}>
-                  <GuestIcon className={"w-6 h-6 fill-current max-md:w-5 max-md:h-5"} />
+              {openMobileMenu ? (
+                <div onClick={() => setOpenMobileMenu(false)} className="border border-gray-200 rounded-full p-3 cursor-pointer">
+                  <CloseIcon className={"w-3 h-3 fill-white"} />
                 </div>
-                {/* {showLoginWindow && <p className="text-xs text-white font-medium">Login</p>} */}
-                <div onClick={() => setOpenMobileMenu(!openMobileMenu)} className="hidden max-md:block px-1 py-1.5 pl-0 ">
-                  <MobileHamburgerIcon className={"w-4 h-3 fill-current"} />
+              ) : (
+                <div className="flex justify-start items-center w-full gap-2 max-md:border max-md:border-gray-200 max-md:rounded-full max-md:p-1">
+                  <div onClick={() => setShowLoginWindow(!showLoginWindow)}>
+                    <GuestIcon className={"w-6 h-6 fill-current max-md:w-5 max-md:h-5"} />
+                  </div>
+                  {/* {showLoginWindow && <p className="text-xs text-white font-medium">Login</p>} */}
+                  <div onClick={() => setOpenMobileMenu(!openMobileMenu)} className="hidden max-md:block px-1 py-1.5 pl-0 ">
+                    <MobileHamburgerIcon className={"w-4 h-3 fill-current"} />
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
           </div>
         </div>
