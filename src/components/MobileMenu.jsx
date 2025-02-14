@@ -7,6 +7,12 @@ import CloseIcon from "./newIcons/CloseIcon";
 import MobileMenuCloseIcon from "./newIcons/MobileMenuCloseIcon";
 import WhiteSearchIcon from "./newIcons/WhiteSearchIcon";
 import MobileDownArrowIcon from "./newIcons/MobileDownArrowIcon";
+import ApartmentsIcon from "./newIcons/ApartmentsIcon";
+import VillasIcon from "./newIcons/VillasIcon";
+import TownhouseIcon from "./newIcons/TownhouseIcon";
+import GardenIcon from "./newIcons/GardenIcon";
+import TerraceIcon from "./newIcons/TerraceIcon";
+import BalconyIcon from "./newIcons/BalconyIcon";
 
 function MobileMenu() {
   {
@@ -51,7 +57,10 @@ function MobileMenu() {
   const [priceValues, setPriceValues] = useState([priceMinVal, priceMaxVal]);
   const formatCurrency = (value) => new Intl.NumberFormat("de-DE").format(value);
   const [priceStatus, setPriceStatus] = useState(false);
-
+  {
+    /* More Details States */
+  }
+  const [moreDetailsStatus, setMoreDetailsStatus] = useState(false);
   return (
     <div className="bg-white relative z-50 h-screen">
       {/* Discover - Local */}
@@ -271,13 +280,62 @@ function MobileMenu() {
         )}
 
         {/* More Details Button */}
-        <div className="flex justify-between items-center p-5 border border-gray-200 rounded-full shadow-xl cursor-pointer">
-          <p className="text-sm font-semibold text-black">More</p>
-          <div className="flex justify-start items-center gap-3">
-            <p className="text-sm font-light text-gray-400">Add details</p>
-            <MobileMenuCloseIcon className={"w-5 h-5 fill-white"} />
+        {!moreDetailsStatus ? (
+          <div onClick={() => setMoreDetailsStatus(true)} className="flex justify-between items-center p-5 border border-gray-200 rounded-full shadow-xl cursor-pointer">
+            <p className="text-sm font-semibold text-black">More</p>
+            <div className="flex justify-start items-center gap-3">
+              <p className="text-sm font-light text-gray-400">Add details</p>
+              <MobileMenuCloseIcon className={"w-5 h-5 fill-white"} />
+            </div>
           </div>
-        </div>
+        ) : (
+          <div className="flex flex-col border border-gray-200 rounded-[32px] shadow-xl p-5">
+            <div className="flex justify-between items-center mb-3">
+              <p className="text-2xl font-semibold text-black">More Details</p>
+              <p onClick={() => setMoreDetailsStatus(false)} className="text-sm text-black font-light py-2 px-4 underline cursor-pointer">
+                Clear
+              </p>
+            </div>
+            <div className="flex justify-between items-start gap-3 w-full">
+              {/* Property Types */}
+              <div className="pl-3">
+                <p className="text-xl text-gray-400 font-semibold mb-3">Types</p>
+                <ul className="list-none">
+                  <li className="flex justify-start items-center gap-5 p-5 pl-1">
+                    <ApartmentsIcon className={"w-6 h-6 fill-white"} />
+                    <p className="text-[16px] text-gray-400">Apartments</p>
+                  </li>
+                  <li className="flex justify-start items-center gap-5 p-5 pl-1">
+                    <VillasIcon className={"w-6 h-6 fill-white"} />
+                    <p className="text-[16px] text-gray-400">Villas</p>
+                  </li>
+                  <li className="flex justify-start items-center gap-5 p-5 pl-1">
+                    <TownhouseIcon className={"w-6 h-6 fill-white"} />
+                    <p className="text-[16px] text-gray-400">Townhouse</p>
+                  </li>
+                </ul>
+              </div>
+              {/* Outdoor Space */}
+              <div>
+                <p className="text-xl text-gray-400 font-semibold mb-3">Outdoor Space</p>
+                <ul className="list-none">
+                  <li className="flex justify-start items-center gap-5 p-5 pl-1">
+                    <GardenIcon className={"w-6 h-6 fill-white"} />
+                    <p className="text-[16px] text-gray-400">Garden</p>
+                  </li>
+                  <li className="flex justify-start items-center gap-5 p-5 pl-1">
+                    <TerraceIcon className={"w-6 h-6 fill-white"} />
+                    <p className="text-[16px] text-gray-400">Terrace</p>
+                  </li>
+                  <li className="flex justify-start items-center gap-5 p-5 pl-1">
+                    <BalconyIcon className={"w-6 h-6 fill-white"} />
+                    <p className="text-[16px] text-gray-400">Balcony</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Search & Clear */}
