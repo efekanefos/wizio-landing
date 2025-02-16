@@ -19,6 +19,13 @@ import UserEditIcon from "./newIcons/UserEditIcon";
 import HiddenPasswordIcon from "./newIcons/HiddenPasswordIcon";
 import ForgetPasswordIcon from "./newIcons/ForgetPasswordIcon";
 
+/*
+ * loginStatus === "button" -> Button styled
+ * loginStatus === "login" -> Login window
+ * loginStatus === "register" -> Register window
+ * loginStatus === "password" -> Forget Password Window
+ */
+
 function UserMobileMenu() {
   const [contactStatus, setContactStatus] = useState(false);
   const [languageStatus, setLanguageStatus] = useState(false);
@@ -183,7 +190,13 @@ function UserMobileMenu() {
 
               {/* Buttons */}
               <div className="w-full flex flex-col gap-3 p-3 pb-0">
-                <button className="bg-black text-sm text-white font-light text-center w-full py-3 rounded-full" type="submit">
+                <button
+                  onClick={() => {
+                    setLoginStatus("logged");
+                  }}
+                  className="bg-black text-sm text-white font-light text-center w-full py-3 rounded-full"
+                  type="submit"
+                >
                   Login
                 </button>
 
@@ -344,6 +357,10 @@ function UserMobileMenu() {
                 </div>
               </div>
             </div>
+          </div>
+        ) : loginStatus === "logged" ? (
+          <div>
+            <h1>Logged</h1>
           </div>
         ) : null}
       </div>
