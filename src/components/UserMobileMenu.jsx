@@ -31,7 +31,7 @@ function UserMobileMenu() {
         ) : (
           <div className="flex flex-col border border-gray-200 rounded-[32px] shadow-xl p-5">
             {/* Header Row */}
-            <div onClick={() => setContactStatus(false)} className="flex justify-between items-center border-b border-gray-200 p-2.5 cursor-pointer">
+            <div onClick={() => setContactStatus(false)} className="flex justify-between items-center border-b border-gray-200 p-3 cursor-pointer">
               {/* Icon and Title */}
               <div className="flex justify-start items-center gap-4 w-full">
                 <NavbarCallIcon className={"w-6 h-6 fill-white"} />
@@ -90,14 +90,32 @@ function UserMobileMenu() {
           </div>
         ) : (
           <div className="flex flex-col border border-gray-200 rounded-[32px] shadow-xl p-5">
-            <div>
-              <div className="flex justify-between items-center mb-3">
-                <p className="text-2xl font-semibold text-black">Bedrooms</p>
-                <p onClick={() => setLanguageStatus(false)} className="text-sm text-black font-light py-2 px-4 underline cursor-pointer">
-                  Clear all
-                </p>
+            {/* Header Row */}
+            <div onClick={() => setLanguageStatus(false)} className="flex justify-between items-center border-b border-gray-200 p-3 cursor-pointer">
+              {/* Icon and Title */}
+              <div className="flex justify-start items-center gap-4 w-full">
+                <GlobalIcon className={"w-6 h-6 fill-white"} />
+                <p className="text-2xl text-black font-semibold">Language</p>
               </div>
             </div>
+            {/* Language List */}
+            <ul className="mt-3">
+              <li className="py-3 px-6 hover:bg-gray-200 rounded-full">
+                <p className="text-sm font-light">English</p>
+              </li>
+              <li className="py-3 px-6 hover:bg-gray-200 rounded-full">
+                <p className="text-sm font-light">Spanish</p>
+              </li>
+              <li className="py-3 px-6 hover:bg-gray-200 rounded-full">
+                <p className="text-sm font-light">Russian</p>
+              </li>
+              <li className="py-3 px-6 hover:bg-gray-200 rounded-full">
+                <p className="text-sm font-light">Arabic</p>
+              </li>
+              <li className="py-3 px-6 hover:bg-gray-200 rounded-full">
+                <p className="text-sm font-light">Hebrew</p>
+              </li>
+            </ul>
           </div>
         )}
 
