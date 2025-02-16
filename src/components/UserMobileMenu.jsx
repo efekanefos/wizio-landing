@@ -17,6 +17,7 @@ import FacebookIcon from "./newIcons/FacebookIcon";
 import VisiblePasswordIcon from "./newIcons/VisiblePasswordIcon";
 import UserEditIcon from "./newIcons/UserEditIcon";
 import HiddenPasswordIcon from "./newIcons/HiddenPasswordIcon";
+import ForgetPasswordIcon from "./newIcons/ForgetPasswordIcon";
 
 function UserMobileMenu() {
   const [contactStatus, setContactStatus] = useState(false);
@@ -300,8 +301,47 @@ function UserMobileMenu() {
             <div className="flex justify-between items-center border-b border-gray-200 p-3 py-5">
               {/* Icon and Title */}
               <div className="flex justify-start items-center gap-4 w-full">
-                <UserEditIcon className={"w-6 h-6 fill-white"} />
+                <ForgetPasswordIcon className={"w-7 h-7 fill-white translate-y-0.5"} />
                 <p className="text-2xl text-black font-semibold">Forget Password</p>
+              </div>
+            </div>
+            {/* User Form */}
+            <div className="flex flex-col justify-center items-center mt-3">
+              {/* Email Input */}
+              <div className="w-full flex justify-between items-center">
+                <div className="flex flex-col w-full">
+                  <label className="px-3 pt-3 text-xs text-gray-300 font-light">E-mail*</label>
+                  <input readOnly value="william_douglas@gmail.com" className="px-3 pb-3 w-full text-base outline-none border-b border-gray-200" type="email" />
+                </div>
+              </div>
+              {/* Buttons */}
+              <div className="w-full flex flex-col mt-2.5 p-3">
+                <button className="bg-black text-sm text-white font-light text-center w-full py-3 rounded-full" type="submit">
+                  Send recovery email
+                </button>
+
+                <div className="flex justify-center items-center gap-1 text-center mt-2.5">
+                  <p className="text-xs font-light text-gray-300">Don't have an account?</p>
+                  <button
+                    className="text-xs font-light text-black"
+                    onClick={() => {
+                      setLoginStatus("register");
+                    }}
+                  >
+                    Sign Up
+                  </button>
+                </div>
+                <div className="flex justify-center items-center gap-1 text-center mt-2">
+                  <p className="text-xs font-light text-gray-300">or go back to</p>
+                  <button
+                    className="text-xs font-light text-black"
+                    onClick={() => {
+                      setLoginStatus("login");
+                    }}
+                  >
+                    Sign in
+                  </button>
+                </div>
               </div>
             </div>
           </div>
