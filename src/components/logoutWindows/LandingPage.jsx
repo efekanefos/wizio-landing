@@ -35,6 +35,7 @@ import PropertyDetails from "../PropertyDetails";
 import PriceRange from "../PriceRange";
 import LocalAmenitiesGPS from "../LocalAmenitiesGPS";
 import MobileMenu from "../MobileMenu";
+import UserMobileMenu from "../UserMobileMenu";
 
 function LandingPage({ theme, setTheme }) {
   const [showUpperOptions, setShowUpperOptions] = useState(false);
@@ -52,6 +53,15 @@ function LandingPage({ theme, setTheme }) {
   const [showLocalAmenitiesGPS, setShowLocalAmenitiesGPS] = useState(false);
   //* Mobile Menu
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
+  const [openUserMobileMenu, setOpenUserMobileMenu] = useState(false);
+
+  const handleUserMobileMenuToggle = () => {
+    if (window.innerWidth > 768) {
+      setShowLoginWindow((prev) => !prev);
+    } else {
+      setOpenUserMobileMenu((prev) => !prev);
+    }
+  };
 
   return (
     <div className="overflow-y-hidden max-h-screen">
@@ -123,7 +133,7 @@ function LandingPage({ theme, setTheme }) {
             className={` flex justify-between items-center rounded-full shadow-xl py-1.5 relative 
             ${showPropertyDetails && "!pr-0"}
             ${showUpperOptions && `!py-0 !pl-0`} pl-1 pr-2 w-fit max-sm:w-full
-            ${openMobileMenu ? `border-0` : `border border-gray-200`}
+            ${openMobileMenu || openUserMobileMenu ? `border-0` : `border border-gray-200`}
             `}
           >
             <div className="flex justify-center items-center max-sm:hidden">
@@ -243,7 +253,7 @@ function LandingPage({ theme, setTheme }) {
               </div>
             </div>
             {/* Mobile Search Input */}
-            {!openMobileMenu && (
+            {!(openMobileMenu || openUserMobileMenu) ? (
               <div className={`hidden max-sm:flex w-full rounded-full`}>
                 <input className="w-full outline-none px-6 text-middleMenuTextBlack text-base font-light rounded-full" type="text" name="searchInput" id="searchInput" placeholder="Search" />
                 <div
@@ -254,6 +264,8 @@ function LandingPage({ theme, setTheme }) {
                   <img className="w-4" src={searchIcon} alt="search" />
                 </div>
               </div>
+            ) : (
+              ""
             )}
 
             {showPropertyDetails && <PropertyDetails />}
@@ -280,13 +292,22 @@ function LandingPage({ theme, setTheme }) {
           {/* Login Button */}
           <div className="flex justify-start items-center gap-3 w-full h-full cursor-pointer">
             <div className="w-full flex justify-between items-center">
-              {openMobileMenu ? (
+              {openMobileMenu && !openUserMobileMenu ? (
                 <div onClick={() => setOpenMobileMenu(false)} className="border border-gray-200 rounded-full p-3 cursor-pointer">
                   <CloseIcon className={"w-3 h-3 fill-white"} />
                 </div>
+              ) : !openMobileMenu && openUserMobileMenu ? (
+                <div className="flex justify-start items-center gap-3">
+                  <div onClick={() => setTheme(theme === "dark" ? "light" : "dark")} className="flex justify-center items-center">
+                    <NavbarLightModeIcon className={"w-6 h-6 fill-white"} />
+                  </div>
+                  <div onClick={() => setOpenUserMobileMenu(false)} className="border border-gray-200 rounded-full p-3 cursor-pointer">
+                    <CloseIcon className={"w-3 h-3 fill-white"} />
+                  </div>
+                </div>
               ) : (
                 <div className="flex justify-start items-center w-full gap-2 max-md:border max-md:border-gray-200 max-md:rounded-full max-md:p-1">
-                  <div onClick={() => setShowLoginWindow(!showLoginWindow)}>
+                  <div onClick={handleUserMobileMenuToggle}>
                     <GuestIcon className={"w-6 h-6 fill-current max-md:w-5 max-md:h-5"} />
                   </div>
                   {/* {showLoginWindow && <p className="text-xs text-white font-medium">Login</p>} */}
@@ -303,6 +324,7 @@ function LandingPage({ theme, setTheme }) {
         {showPriceRange && <PriceRange />}
       </nav>
       {openMobileMenu && <MobileMenu />}
+      {openUserMobileMenu && <UserMobileMenu />}
       {showLocalAmenitiesGPS && <LocalAmenitiesGPS />}
 
       <img className="z-0 w-full h-screen object-cover" src={showLocalAmenitiesGPS ? LocalAmenitiesBackground : earthBackground} alt="earthBackground" />
