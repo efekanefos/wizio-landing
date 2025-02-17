@@ -18,6 +18,12 @@ import VisiblePasswordIcon from "./newIcons/VisiblePasswordIcon";
 import UserEditIcon from "./newIcons/UserEditIcon";
 import HiddenPasswordIcon from "./newIcons/HiddenPasswordIcon";
 import ForgetPasswordIcon from "./newIcons/ForgetPasswordIcon";
+/* Profile Window SVG Components */
+import FavouriteIcon from "./newIcons/FavouriteIcon";
+import RecentViewsIcon from "./newIcons/RecentViewsIcon";
+import NotificationsIcon from "./newIcons/NotificationsIcon";
+import LogOutIcon from "./newIcons/LogOutIcon";
+import RightArrowIcon from "./newIcons/RightArrowIcon";
 
 /*
  * loginStatus === "button" -> Button styled
@@ -359,8 +365,58 @@ function UserMobileMenu() {
             </div>
           </div>
         ) : loginStatus === "logged" ? (
-          <div>
-            <h1>Logged</h1>
+          <div className="flex flex-col border border-gray-200 rounded-[32px] shadow-xl p-3">
+            {/* User Info Row */}
+            <div className="py-5 px-3">
+              <h2 className="text-2xl font-semibold text-black">William Douglas</h2>
+              <p className="text-[16px] font-light text-black">Customer</p>
+            </div>
+            {/* Options List */}
+            <ul>
+              {/* Favourite Row */}
+              <li className="flex justify-between items-center gap-3 px-6 py-5 border-t border-gray-200">
+                <div className="flex justify-start items-center gap-3">
+                  <FavouriteIcon className={"w-6 h-6 fill-white"} />
+                  <p className="text-[16px] font-semibold text-black">Favourite</p>
+                </div>
+                <RightArrowIcon className={"w-2 h-3 fill-white"} />
+              </li>
+              {/* Recent Views Row */}
+              <li className="flex justify-between items-center gap-3 px-6 py-5 border-t border-gray-200">
+                <div className="flex justify-start items-center gap-3">
+                  <RecentViewsIcon className={"w-6 h-6 fill-white"} />
+                  <p className="text-[16px] font-semibold text-black">Recent Views</p>
+                </div>
+                <RightArrowIcon className={"w-2 h-3 fill-white"} />
+              </li>
+              {/* Notifications Row */}
+              <li className="flex justify-between items-center gap-3 px-6 py-5 border-t border-gray-200">
+                <div className="flex justify-start items-center gap-3">
+                  <div className="relative">
+                    <NotificationsIcon className={"w-6 h-6 fill-white"} />
+                    <span className="absolute -top-0.5 -right-0.5 flex justify-center items-center bg-red-600 text-white w-3.5 h-3.5 p-0.5 rounded-full text-[10px] font-light">5</span>
+                  </div>
+                  <p className="text-[16px] font-semibold text-black">Notifications</p>
+                </div>
+                <RightArrowIcon className={"w-2 h-3 fill-white"} />
+              </li>
+              {/* Settings Row */}
+              <li className="flex justify-between items-center gap-3 px-6 py-5 border-t border-gray-200">
+                <div className="flex justify-start items-center gap-3">
+                  <UserEditIcon className={"w-6 h-6 fill-white"} />
+                  <p className="text-[16px] font-semibold text-black">Settings</p>
+                </div>
+                <RightArrowIcon className={"w-2 h-3 fill-white"} />
+              </li>
+              {/* Log out Row */}
+              <li className="flex justify-between items-center gap-3 px-6 py-5 border-t border-gray-200">
+                <div className="flex justify-start items-center gap-3">
+                  <LogOutIcon className={"w-6 h-6 fill-current"} />
+                  <p className="text-[16px] font-semibold text-black">Log out</p>
+                </div>
+                <RightArrowIcon className={"w-2 h-3 fill-white"} />
+              </li>
+            </ul>
           </div>
         ) : null}
       </div>
