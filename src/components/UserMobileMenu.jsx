@@ -24,6 +24,12 @@ import RecentViewsIcon from "./newIcons/RecentViewsIcon";
 import NotificationsIcon from "./newIcons/NotificationsIcon";
 import LogOutIcon from "./newIcons/LogOutIcon";
 import RightArrowIcon from "./newIcons/RightArrowIcon";
+/* Favourites SVG Components */
+import BackArrowIcon from "./newIcons/BackArrowIcon";
+import UnFavouriteIcon from "./newIcons/UnFavouriteIcon";
+import RepeatIcon from "./newIcons/RepeatIcon";
+import CircledTickIcon from "./newIcons/CircledTickIcon";
+import MobileDownArrowIcon from "./newIcons/MobileDownArrowIcon";
 
 /*
  * loginStatus === "button" -> Button styled
@@ -374,7 +380,7 @@ function UserMobileMenu() {
             {/* Options List */}
             <ul>
               {/* Favourite Row */}
-              <li className="flex justify-between items-center gap-3 px-6 py-5 border-t border-gray-200">
+              <li onClick={() => setLoginStatus("favourites")} className="flex justify-between items-center gap-3 px-6 py-5 border-t border-gray-200 cursor-pointer">
                 <div className="flex justify-start items-center gap-3">
                   <FavouriteIcon className={"w-6 h-6 fill-white"} />
                   <p className="text-[16px] font-semibold text-black">Favourite</p>
@@ -417,6 +423,165 @@ function UserMobileMenu() {
                 <RightArrowIcon className={"w-2 h-3 fill-white"} />
               </li>
             </ul>
+          </div>
+        ) : loginStatus === "favourites" ? (
+          <div className="flex flex-col border border-gray-200 rounded-[32px] shadow-xl p-3">
+            {/* Head Row */}
+            <div className="flex justify-between items-center p-2.5 pl-0 border-b border-gray-200">
+              <div className="flex justify-start items-center gap-6">
+                <FavouriteIcon className={"w-6 h-6 fill-white translate-y-0.5"} />
+                <h2 className="text-2xl font-semibold text-black">Favourite</h2>
+              </div>
+              <div onClick={() => setLoginStatus("logged")} className="bg-gray-200 rounded-full p-1 flex justify-center items-center w-fit cursor-pointer">
+                <BackArrowIcon className={"w-5 h-5 fill-current"} />
+              </div>
+            </div>
+            {/* Favourites List */}
+            <ul className="max-h-[536px] overflow-y-hidden border-b border-gray-200">
+              <li className="flex justify-start items-stretch gap-3 py-2 px-3 h-full border-b border-gray-200 w-fit">
+                <div className="flex flex-col justify-center items-center">
+                  <CircledTickIcon className={"w-5 h-5 fill-white"} />
+                </div>
+                <div className="flex flex-col gap-1">
+                  <p className="text-sm font-semibold text-black">Unit A15</p>
+                  <p className="text-xs font-regular text-black">Limassol Marina</p>
+                  <div className="flex justify-start items-center gap-2">
+                    <p className="text-xs font-regular text-black">2 Bedrooms</p>
+                    <p className="text-xs font-regular text-black">235 sqm</p>
+                  </div>
+                  <p className="text-xs font-regular text-black">€170,555,000+VAT</p>
+                </div>
+                <div className="flex flex-col justify-between items-center">
+                  <div className="bg-gray-200 rounded-full p-2 flex justify-center items-center w-fit">
+                    <UnFavouriteIcon className={"w-4 h-4 fill-white"} />
+                  </div>
+                  <div className="bg-gray-200 rounded-full p-2 flex justify-center items-center w-fit">
+                    <RepeatIcon className={"w-4 h-4 fill-white"} />
+                  </div>
+                </div>
+              </li>
+
+              <li className="flex justify-start items-stretch gap-3 py-2 px-3 h-full border-b border-gray-200 w-fit">
+                <div className="flex flex-col justify-center items-center">
+                  <CircledTickIcon className={"w-5 h-5 fill-white"} />
+                </div>
+                <div className="flex flex-col gap-1">
+                  <p className="text-sm font-semibold text-black">Unit A15</p>
+                  <p className="text-xs font-regular text-black">Limassol Marina</p>
+                  <div className="flex justify-start items-center gap-2">
+                    <p className="text-xs font-regular text-black">2 Bedrooms</p>
+                    <p className="text-xs font-regular text-black">235 sqm</p>
+                  </div>
+                  <p className="text-xs font-regular text-black">€170,555,000+VAT</p>
+                </div>
+                <div className="flex flex-col justify-between items-center">
+                  <div className="bg-gray-200 rounded-full p-2 flex justify-center items-center w-fit">
+                    <UnFavouriteIcon className={"w-4 h-4 fill-white"} />
+                  </div>
+                  <div className="bg-gray-200 rounded-full p-2 flex justify-center items-center w-fit">
+                    <RepeatIcon className={"w-4 h-4 fill-white"} />
+                  </div>
+                </div>
+              </li>
+
+              <li className="flex justify-start items-stretch gap-3 py-2 px-3 h-full border-b border-gray-200 w-fit">
+                <div className="flex flex-col justify-center items-center">
+                  <CircledTickIcon className={"w-5 h-5 fill-white"} />
+                </div>
+                <div className="flex flex-col gap-1">
+                  <p className="text-sm font-semibold text-black">Unit A15</p>
+                  <p className="text-xs font-regular text-black">Limassol Marina</p>
+                  <div className="flex justify-start items-center gap-2">
+                    <p className="text-xs font-regular text-black">2 Bedrooms</p>
+                    <p className="text-xs font-regular text-black">235 sqm</p>
+                  </div>
+                  <p className="text-xs font-regular text-black">€170,555,000+VAT</p>
+                </div>
+                <div className="flex flex-col justify-between items-center">
+                  <div className="bg-gray-200 rounded-full p-2 flex justify-center items-center w-fit">
+                    <UnFavouriteIcon className={"w-4 h-4 fill-white"} />
+                  </div>
+                  <div className="bg-gray-200 rounded-full p-2 flex justify-center items-center w-fit">
+                    <RepeatIcon className={"w-4 h-4 fill-white"} />
+                  </div>
+                </div>
+              </li>
+
+              <li className="flex justify-start items-stretch gap-3 py-2 px-3 h-full border-b border-gray-200 w-fit">
+                <div className="flex flex-col justify-center items-center">
+                  <CircledTickIcon className={"w-5 h-5 fill-white"} />
+                </div>
+                <div className="flex flex-col gap-1">
+                  <p className="text-sm font-semibold text-black">Unit A15</p>
+                  <p className="text-xs font-regular text-black">Limassol Marina</p>
+                  <div className="flex justify-start items-center gap-2">
+                    <p className="text-xs font-regular text-black">2 Bedrooms</p>
+                    <p className="text-xs font-regular text-black">235 sqm</p>
+                  </div>
+                  <p className="text-xs font-regular text-black">€170,555,000+VAT</p>
+                </div>
+                <div className="flex flex-col justify-between items-center">
+                  <div className="bg-gray-200 rounded-full p-2 flex justify-center items-center w-fit">
+                    <UnFavouriteIcon className={"w-4 h-4 fill-white"} />
+                  </div>
+                  <div className="bg-gray-200 rounded-full p-2 flex justify-center items-center w-fit">
+                    <RepeatIcon className={"w-4 h-4 fill-white"} />
+                  </div>
+                </div>
+              </li>
+
+              <li className="flex justify-start items-stretch gap-3 py-2 px-3 h-full border-b border-gray-200 w-fit">
+                <div className="flex flex-col justify-center items-center">
+                  <CircledTickIcon className={"w-5 h-5 fill-white"} />
+                </div>
+                <div className="flex flex-col gap-1">
+                  <p className="text-sm font-semibold text-black">Unit A15</p>
+                  <p className="text-xs font-regular text-black">Limassol Marina</p>
+                  <div className="flex justify-start items-center gap-2">
+                    <p className="text-xs font-regular text-black">2 Bedrooms</p>
+                    <p className="text-xs font-regular text-black">235 sqm</p>
+                  </div>
+                  <p className="text-xs font-regular text-black">€170,555,000+VAT</p>
+                </div>
+                <div className="flex flex-col justify-between items-center">
+                  <div className="bg-gray-200 rounded-full p-2 flex justify-center items-center w-fit">
+                    <UnFavouriteIcon className={"w-4 h-4 fill-white"} />
+                  </div>
+                  <div className="bg-gray-200 rounded-full p-2 flex justify-center items-center w-fit">
+                    <RepeatIcon className={"w-4 h-4 fill-white"} />
+                  </div>
+                </div>
+              </li>
+
+              <li className="flex justify-start items-stretch gap-3 py-2 px-3 h-full border-b border-gray-200 w-fit">
+                <div className="flex flex-col justify-center items-center">
+                  <CircledTickIcon className={"w-5 h-5 fill-white"} />
+                </div>
+                <div className="flex flex-col gap-1">
+                  <p className="text-sm font-semibold text-black">Unit A15</p>
+                  <p className="text-xs font-regular text-black">Limassol Marina</p>
+                  <div className="flex justify-start items-center gap-2">
+                    <p className="text-xs font-regular text-black">2 Bedrooms</p>
+                    <p className="text-xs font-regular text-black">235 sqm</p>
+                  </div>
+                  <p className="text-xs font-regular text-black">€170,555,000+VAT</p>
+                </div>
+                <div className="flex flex-col justify-between items-center">
+                  <div className="bg-gray-200 rounded-full p-2 flex justify-center items-center w-fit">
+                    <UnFavouriteIcon className={"w-4 h-4 fill-white"} />
+                  </div>
+                  <div className="bg-gray-200 rounded-full p-2 flex justify-center items-center w-fit">
+                    <RepeatIcon className={"w-4 h-4 fill-white"} />
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <div className="flex justify-center items-center py-1">
+              <MobileDownArrowIcon className={"w-6 h-6 fill-white"} />
+            </div>
+            <div className="m-3">
+              <button className="bg-black w-full rounded-full text-white text-sm font-light text-center py-3">Share</button>
+            </div>
           </div>
         ) : null}
       </div>
