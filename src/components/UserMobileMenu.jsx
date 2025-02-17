@@ -47,7 +47,7 @@ function UserMobileMenu() {
   const [languageStatus, setLanguageStatus] = useState(false);
   const [loginStatus, setLoginStatus] = useState("button");
   return (
-    <div className="bg-white relative z-50 h-screen">
+    <div className="bg-white relative z-50 h-screen font-inter">
       {/* Menu List */}
       <div className={`flex flex-col gap-3 relative mx-5`}>
         {/* Contact Button */}
@@ -411,7 +411,7 @@ function UserMobileMenu() {
                 <RightArrowIcon className={"w-2 h-3 fill-white"} />
               </li>
               {/* Settings Row */}
-              <li className="flex justify-between items-center gap-3 px-6 py-5 border-t border-gray-200">
+              <li onClick={() => setLoginStatus("settings")} className="flex justify-between items-center gap-3 px-6 py-5 border-t border-gray-200 cursor-pointer">
                 <div className="flex justify-start items-center gap-3">
                   <UserEditIcon className={"w-6 h-6 fill-white"} />
                   <p className="text-[16px] font-semibold text-black">Settings</p>
@@ -419,7 +419,7 @@ function UserMobileMenu() {
                 <RightArrowIcon className={"w-2 h-3 fill-white"} />
               </li>
               {/* Log out Row */}
-              <li className="flex justify-between items-center gap-3 px-6 py-5 border-t border-gray-200">
+              <li onClick={() => setLoginStatus("button")} className="flex justify-between items-center gap-3 px-6 py-5 border-t border-gray-200 cursor-pointer">
                 <div className="flex justify-start items-center gap-3">
                   <LogOutIcon className={"w-6 h-6 fill-current"} />
                   <p className="text-[16px] font-semibold text-black">Log out</p>
@@ -433,7 +433,7 @@ function UserMobileMenu() {
             {/* Head Row */}
             <div className="flex justify-between items-center p-2.5 pl-0 border-b border-gray-200">
               <div className="flex justify-start items-center gap-6">
-                <FavouriteIcon className={"w-6 h-6 fill-white translate-y-0.5"} />
+                <FavouriteIcon className={"w-6 h-6 fill-white"} />
                 <h2 className="text-2xl font-semibold text-black">Favourite</h2>
               </div>
               <div onClick={() => setLoginStatus("logged")} className="bg-gray-200 rounded-full p-1 flex justify-center items-center w-fit cursor-pointer">
@@ -480,7 +480,7 @@ function UserMobileMenu() {
             {/* Head Row */}
             <div className="flex justify-between items-center p-2.5 border-b border-gray-200">
               <div className="flex justify-start items-center gap-6">
-                <RecentViewsIcon className={"w-6 h-6 fill-white translate-y-0.5"} />
+                <RecentViewsIcon className={"w-6 h-6 fill-white"} />
                 <h2 className="text-2xl font-semibold text-black">Recent Views</h2>
               </div>
               <div onClick={() => setLoginStatus("logged")} className="bg-gray-200 rounded-full p-1 flex justify-center items-center w-fit cursor-pointer">
@@ -492,7 +492,7 @@ function UserMobileMenu() {
               <li className="flex justify-between items-stretch p-3 border-b border-gray-200">
                 <div>
                   <p className="text-sm font-semibold text-black">Unit A15</p>
-                  <p className="text-xs font-light text-black -mt-0.5">Limassol Marina</p>
+                  <p className="text-xs font-light text-black">Limassol Marina</p>
                   <p className="text-xs font-regular text-black">1 Bed</p>
                   <p className="text-[10px] font-light text-gray-400">Last review date 12.2024</p>
                 </div>
@@ -509,7 +509,7 @@ function UserMobileMenu() {
                 <li key={index} className="flex justify-between items-stretch p-3 border-b border-gray-200">
                   <div>
                     <p className="text-sm font-semibold text-black">Unit A15</p>
-                    <p className="text-xs font-light text-black -mt-0.5">Limassol Marina</p>
+                    <p className="text-xs font-light text-black">Limassol Marina</p>
                     <p className="text-xs font-regular text-black">1 Bed</p>
                     <p className="text-[10px] font-light text-gray-400">Last review date 12.2024</p>
                   </div>
@@ -524,7 +524,7 @@ function UserMobileMenu() {
               <li className="flex justify-between items-stretch p-3 border-b border-gray-200">
                 <div>
                   <p className="text-sm font-semibold text-black">Unit A15</p>
-                  <p className="text-xs font-light text-black -mt-0.5">Limassol Marina</p>
+                  <p className="text-xs font-light text-black">Limassol Marina</p>
                   <p className="text-xs font-regular text-black">1 Bed</p>
                   <p className="text-[10px] font-light text-gray-400">Last review date 12.2024</p>
                 </div>
@@ -541,7 +541,7 @@ function UserMobileMenu() {
                 <li key={index} className="flex justify-between items-stretch p-3 border-b border-gray-200">
                   <div>
                     <p className="text-sm font-semibold text-black">Unit A15</p>
-                    <p className="text-xs font-light text-black -mt-0.5">Limassol Marina</p>
+                    <p className="text-xs font-light text-black">Limassol Marina</p>
                     <p className="text-xs font-regular text-black">1 Bed</p>
                     <p className="text-[10px] font-light text-gray-400">Last review date 12.2024</p>
                   </div>
@@ -563,7 +563,7 @@ function UserMobileMenu() {
             {/* Head Row */}
             <div className="flex justify-between items-center p-2.5 border-b border-gray-200">
               <div className="flex justify-start items-center gap-6">
-                <NotificationsIcon className={"w-6 h-6 fill-white translate-y-0.5"} />
+                <NotificationsIcon className={"w-6 h-6 fill-white"} />
                 <h2 className="text-2xl font-semibold text-black">Notifications</h2>
               </div>
               <div onClick={() => setLoginStatus("logged")} className="bg-gray-200 rounded-full p-1 flex justify-center items-center w-fit cursor-pointer">
@@ -587,6 +587,70 @@ function UserMobileMenu() {
             </ul>
             <div className="m-3">
               <button className="bg-black w-full rounded-full text-white text-sm font-light text-center py-3">Delete All</button>
+            </div>
+          </div>
+        ) : loginStatus === "settings" ? (
+          <div className="flex flex-col border border-gray-200 rounded-[32px] shadow-xl p-3">
+            {/* Head Row */}
+            <div className="flex justify-between items-center p-2.5 border-b border-gray-200">
+              <div className="flex justify-start items-center gap-6">
+                <UserEditIcon className={"w-6 h-6 fill-white"} />
+                <h2 className="text-2xl font-semibold text-black">Settings</h2>
+              </div>
+              <div onClick={() => setLoginStatus("logged")} className="bg-gray-200 rounded-full p-1 flex justify-center items-center w-fit cursor-pointer">
+                <BackArrowIcon className={"w-5 h-5 fill-current"} />
+              </div>
+            </div>
+            {/* User Form */}
+            <div className="flex flex-col justify-center items-center my-3">
+              {/* Username Input */}
+              <div className="w-full flex justify-between items-center">
+                <div className="flex flex-col w-full">
+                  <label className="px-3 pt-3 text-xs text-gray-400 font-light">Username</label>
+                  <input readOnly value="William Douglas" className="px-3 pb-3 w-full text-base outline-none border-b border-gray-200" type="text" />
+                </div>
+              </div>
+
+              {/* Phone Number Input */}
+              <div className="w-full flex justify-between items-center">
+                <div className="flex flex-col w-full">
+                  <label className="px-3 pt-3 text-xs text-gray-400 font-light">Phone</label>
+                  <input readOnly value="+44 1202 299 70" className="px-3 pb-3 w-full text-base outline-none border-b border-gray-200" type="tel" />
+                </div>
+              </div>
+
+              {/* Email Input */}
+              <div className="w-full flex justify-between items-center">
+                <div className="flex flex-col w-full">
+                  <label className="px-3 pt-3 text-xs text-gray-400 font-light">E-mail</label>
+                  <input readOnly value="william_douglas@gmail.com" className="px-3 pb-3 w-full text-base outline-none border-b border-gray-200" type="email" />
+                </div>
+              </div>
+
+              {/* Password Visible Input */}
+              <div className="w-full flex justify-between items-center">
+                <div className="flex flex-col w-full">
+                  <div className="pt-3 flex justify-between items-center">
+                    <label className="px-3 text-xs text-gray-400 font-light">Password</label>
+                    <VisiblePasswordIcon className={"w-4 h-4 fill-current mr-3"} />
+                  </div>
+                  <input readOnly value="William324221" className="px-3 pb-3 w-full text-base outline-none border-b border-gray-200" type="text" />
+                </div>
+              </div>
+
+              {/* Password Input */}
+              <div className="w-full flex justify-between items-center">
+                <div className="flex flex-col w-full">
+                  <div className="pt-3 flex justify-between items-center">
+                    <label className="px-3 text-xs text-gray-400 font-light">Password</label>
+                    <VisiblePasswordIcon className={"w-4 h-4 fill-current mr-3"} />
+                  </div>
+                  <input readOnly value="****************" className="px-3 pb-3 w-full text-base outline-none border-b border-gray-200" type="password" />
+                </div>
+              </div>
+            </div>
+            <div className="m-3 flex justify-center items-center">
+              <button className="bg-black w-full rounded-full text-white text-sm font-light text-center py-3">Save</button>
             </div>
           </div>
         ) : null}
