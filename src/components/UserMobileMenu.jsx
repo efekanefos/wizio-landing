@@ -32,6 +32,8 @@ import CircledTickIcon from "./newIcons/CircledTickIcon";
 import MobileDownArrowIcon from "./newIcons/MobileDownArrowIcon";
 /* Recent Views SVG Components */
 import RedFavouriteIcon from "./newIcons/RedFavouriteIcon";
+/* Notifications SVG Components */
+import MobileMenuCloseIcon from "./newIcons/MobileMenuCloseIcon";
 
 /*
  * loginStatus === "button" -> Button styled
@@ -398,7 +400,7 @@ function UserMobileMenu() {
                 <RightArrowIcon className={"w-2 h-3 fill-white"} />
               </li>
               {/* Notifications Row */}
-              <li className="flex justify-between items-center gap-3 px-6 py-5 border-t border-gray-200">
+              <li onClick={() => setLoginStatus("notifications")} className="flex justify-between items-center gap-3 px-6 py-5 border-t border-gray-200 cursor-pointer">
                 <div className="flex justify-start items-center gap-3">
                   <div className="relative">
                     <NotificationsIcon className={"w-6 h-6 fill-white"} />
@@ -476,7 +478,7 @@ function UserMobileMenu() {
         ) : loginStatus === "recentViews" ? (
           <div className="flex flex-col border border-gray-200 rounded-[32px] shadow-xl p-3">
             {/* Head Row */}
-            <div className="flex justify-between items-center p-2.5 pl-0 border-b border-gray-200">
+            <div className="flex justify-between items-center p-2.5 border-b border-gray-200">
               <div className="flex justify-start items-center gap-6">
                 <RecentViewsIcon className={"w-6 h-6 fill-white translate-y-0.5"} />
                 <h2 className="text-2xl font-semibold text-black">Recent Views</h2>
@@ -554,6 +556,37 @@ function UserMobileMenu() {
             </ul>
             <div className="flex justify-center items-center py-1 border-t border-gray-200">
               <MobileDownArrowIcon className={"w-6 h-6 fill-white"} />
+            </div>
+          </div>
+        ) : loginStatus === "notifications" ? (
+          <div className="flex flex-col border border-gray-200 rounded-[32px] shadow-xl p-3">
+            {/* Head Row */}
+            <div className="flex justify-between items-center p-2.5 border-b border-gray-200">
+              <div className="flex justify-start items-center gap-6">
+                <NotificationsIcon className={"w-6 h-6 fill-white translate-y-0.5"} />
+                <h2 className="text-2xl font-semibold text-black">Notifications</h2>
+              </div>
+              <div onClick={() => setLoginStatus("logged")} className="bg-gray-200 rounded-full p-1 flex justify-center items-center w-fit cursor-pointer">
+                <BackArrowIcon className={"w-5 h-5 fill-current"} />
+              </div>
+            </div>
+            {/* Notifications List */}
+            <ul className="mb-6 mt-3">
+              {Array.from({ length: 7 }).map((_, index) => (
+                <li key={index} className="p-3 border-b border-gray-200">
+                  <div className="flex justify-between items-start">
+                    <h4 className="text-sm font-semibold text-black">System Update</h4>
+                    <MobileMenuCloseIcon className={"w-4 h-4 fill-white"} />
+                  </div>
+                  <p className="text-xs font-light text-gray-400">
+                    <span>Unit 201</span> \ <span>2 Bedrooms</span>
+                  </p>
+                  <p className="text-xs font-regular text-black">Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et</p>
+                </li>
+              ))}
+            </ul>
+            <div className="m-3">
+              <button className="bg-black w-full rounded-full text-white text-sm font-light text-center py-3">Delete All</button>
             </div>
           </div>
         ) : null}
