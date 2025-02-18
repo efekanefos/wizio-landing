@@ -436,7 +436,7 @@ function UserMobileMenu() {
                 <FavouriteIcon className={"w-6 h-6 fill-white"} />
                 <h2 className="text-2xl font-semibold text-black">Favourite</h2>
               </div>
-              <div onClick={() => setLoginStatus("logged")} className="bg-gray-200 rounded-full p-1 flex justify-center items-center w-fit cursor-pointer">
+              <div onClick={() => setLoginStatus("logged")} className="bg-gray-200 rounded-full p-1.5 flex justify-center items-center w-fit cursor-pointer">
                 <BackArrowIcon className={"w-5 h-5 fill-current"} />
               </div>
             </div>
@@ -444,18 +444,23 @@ function UserMobileMenu() {
             <ul className="max-h-[536px] overflow-y-hidden border-b border-gray-200">
               {/* List Item wrote down 6 times */}
               {Array.from({ length: 6 }).map((_, index) => (
-                <li key={index} className="flex justify-start items-stretch gap-3 py-2 px-3 h-full border-b border-gray-200 w-fit">
-                  <div className="flex flex-col justify-center items-center">
-                    <CircledTickIcon className={"w-5 h-5 fill-white"} />
-                  </div>
-                  <div className="flex flex-col gap-1">
-                    <p className="text-sm font-semibold text-black">Unit A15</p>
-                    <p className="text-xs font-regular text-black">Limassol Marina</p>
-                    <div className="flex justify-start items-center gap-2">
-                      <p className="text-xs font-regular text-black">2 Bedrooms</p>
-                      <p className="text-xs font-regular text-black">235 sqm</p>
+                <li key={index} className="flex justify-between items-stretch gap-3 py-2 px-3 h-full border-b border-gray-200 w-full">
+                  <div className="flex gap-3">
+                    <div className="flex flex-col justify-center items-center">
+                      <CircledTickIcon className={"w-5 h-5 fill-white"} />
                     </div>
-                    <p className="text-xs font-regular text-black">€170,555,000+VAT</p>
+                    <div className="flex flex-col justify-center gap-1 w-fit">
+                      <p className="text-sm font-semibold text-black">Unit A15</p>
+                      <p className="text-xs font-regular text-black">Limassol Marina</p>
+                      <div className="flex justify-start items-center gap-2">
+                        <p className="text-xs font-regular text-black">2 Bedrooms</p>
+                      </div>
+                      <p className="text-xs font-regular text-black">€170,555,000+VAT</p>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-col justify-center items-start">
+                    <p className="text-xs font-regular text-black">235 sqm</p>
                   </div>
                   <div className="flex flex-col justify-between items-center">
                     <div className="bg-gray-200 rounded-full p-2 flex justify-center items-center w-fit">
@@ -483,7 +488,7 @@ function UserMobileMenu() {
                 <RecentViewsIcon className={"w-6 h-6 fill-white"} />
                 <h2 className="text-2xl font-semibold text-black">Recent Views</h2>
               </div>
-              <div onClick={() => setLoginStatus("logged")} className="bg-gray-200 rounded-full p-1 flex justify-center items-center w-fit cursor-pointer">
+              <div onClick={() => setLoginStatus("logged")} className="bg-gray-200 rounded-full p-1.5 flex justify-center items-center w-fit cursor-pointer">
                 <BackArrowIcon className={"w-5 h-5 fill-current"} />
               </div>
             </div>
@@ -566,7 +571,7 @@ function UserMobileMenu() {
                 <NotificationsIcon className={"w-6 h-6 fill-white"} />
                 <h2 className="text-2xl font-semibold text-black">Notifications</h2>
               </div>
-              <div onClick={() => setLoginStatus("logged")} className="bg-gray-200 rounded-full p-1 flex justify-center items-center w-fit cursor-pointer">
+              <div onClick={() => setLoginStatus("logged")} className="bg-gray-200 rounded-full p-1.5 flex justify-center items-center w-fit cursor-pointer">
                 <BackArrowIcon className={"w-5 h-5 fill-current"} />
               </div>
             </div>
@@ -597,7 +602,7 @@ function UserMobileMenu() {
                 <UserEditIcon className={"w-6 h-6 fill-white"} />
                 <h2 className="text-2xl font-semibold text-black">Settings</h2>
               </div>
-              <div onClick={() => setLoginStatus("logged")} className="bg-gray-200 rounded-full p-1 flex justify-center items-center w-fit cursor-pointer">
+              <div onClick={() => setLoginStatus("logged")} className="bg-gray-200 rounded-full p-1.5 flex justify-center items-center w-fit cursor-pointer">
                 <BackArrowIcon className={"w-5 h-5 fill-current"} />
               </div>
             </div>

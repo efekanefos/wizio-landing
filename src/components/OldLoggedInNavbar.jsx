@@ -63,14 +63,6 @@ function LoggedInLandingPage() {
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
   const [openUserMobileMenu, setOpenUserMobileMenu] = useState(false);
 
-  const handleUserMobileMenuToggle = () => {
-    if (window.innerWidth > 768) {
-      setShowLoginWindow((prev) => !prev);
-    } else {
-      setOpenUserMobileMenu((prev) => !prev);
-    }
-  };
-
   return (
     <div className="overflow-y-hidden max-h-screen font-inter">
       <nav className="flex justify-between items-center py-3 px-9 z-10 relative bg-white font-inter border-b border-gray-300 max-lg:px-5 max-md:px-5 max-sm:gap-4">
@@ -153,28 +145,33 @@ function LoggedInLandingPage() {
                   setShowPropertyDetails(false);
                   setShowUpperOptions(showProjectList ? false : true);
                 }}
-                className={`flex justify-start items-center gap-2 border-r border-gray-300 px-4 pl-6 h-full cursor-pointer 
-                  ${showUpperOptions ? `min-h-12` : `min-h-6`}
-                  ${
-                    showProjectList
-                      ? `bg-gray-300 py-3.5 pl-6 pr-4 rounded-full border-r-0`
-                      : showBedroomSlider
-                      ? `border-r-0`
-                      : !showProjectList && !showLocationDevelopments
-                      ? `border-r border-gray-300`
-                      : !showProjectList && showLocationDevelopments
-                      ? `border-r-0`
-                      : ``
-                  }`}
+                className={`flex justify-start items-center gap-2 border-r border-gray-300 px-4 pl-6 py-1 h-full min-h-6 cursor-pointer ${
+                  showProjectList && !showLocationDevelopments
+                    ? `bg-middleMenuTextBlack bg-opacity-5 py-3 rounded-full border-r-0`
+                    : !showProjectList && !showLocationDevelopments
+                    ? `border-r border-gray-300`
+                    : !showProjectList && showLocationDevelopments
+                    ? `border-r-0`
+                    : ``
+                }`}
               >
+                <div className="relative">
+                  <LocationIcon className={"w-5 h-5 fill-white"} />
+                  {showProjectList && !showLocationDevelopments ? (
+                    <span className="flex justify-center items-center absolute top-[-5px] right-[-5px] bg-[#FF0004] border border-[#F8F8F8] p-1 rounded-full w-[15px] h-[15px]">
+                      <p className="text-white font-medium text-[10px]">2</p>
+                    </span>
+                  ) : (
+                    ""
+                  )}
+                </div>
                 <div className="flex justify-start items-center">
-                  <div className={`flex flex-col ${showUpperOptions && `min-w-36`}`}>
-                    <p className={`text-sm text-middleMenuTextBlack leading-tight font-light ${showUpperOptions ? "font-semibold text-xs" : ""}`}>{showUpperOptions ? "Location" : "Limassol"}</p>
-                    {showUpperOptions ? <p className="text-sm font-light leading-4 text-gray-400">Search destination</p> : ""}
+                  <div className="flex flex-col">
+                    <p className="text-xs text-middleMenuTextBlack leading-tight">{showLocationDevelopments && showUpperOptions ? "Location & By Developments" : "Location"}</p>
+                    {showProjectList && !showLocationDevelopments ? <p className="text-middleMenuTextBlack text-[8px]">Ava Plaza, Coral Vis..</p> : ""}
                   </div>
                 </div>
               </div>
-
               {/* Number of Bedrooms Button */}
               {!showLocationDevelopments || !showUpperOptions ? (
                 <div
@@ -185,14 +182,11 @@ function LoggedInLandingPage() {
                     setShowBedroomSlider(!showBedroomSlider);
                     setShowUpperOptions(showBedroomSlider ? false : true);
                   }}
-                  className={`flex justify-start items-center gap-2 border-r border-gray-300 px-4 h-full cursor-pointer
-                    ${showUpperOptions ? `min-h-12` : `min-h-6`} ${showBedroomSlider ? `bg-gray-300 py-3.5 pl-6 pr-4 rounded-full border-r-0` : showPriceRange ? `border-r-0` : ""}`}
+                  className="flex justify-start items-center gap-2 border-r border-gray-300 px-4 h-full min-h-6 cursor-pointer"
                 >
+                  <BedroomNumbersIcon className={"w-5 h-5 fill-white"} />
                   <div className="flex justify-start items-center">
-                    <div className={`flex flex-col ${showUpperOptions && `min-w-36`}`}>
-                      <p className={`text-sm text-middleMenuTextBlack leading-tight font-light ${showUpperOptions ? "font-semibold text-xs" : ""}`}>{showUpperOptions ? "Bedrooms" : "2-3 Bed..."}</p>
-                      {showUpperOptions ? <p className="text-sm font-light leading-4 text-gray-400">Add bedrooms</p> : ""}
-                    </div>
+                    <p className="text-xs text-middleMenuTextBlack">Number Of Bedrooms</p>
                   </div>
                 </div>
               ) : (
@@ -209,121 +203,96 @@ function LoggedInLandingPage() {
                     setShowPriceRange(!showPriceRange);
                     setShowUpperOptions(showPriceRange ? false : true);
                   }}
-                  className={`flex justify-start items-center gap-2 border-r border-gray-300 px-4 h-full cursor-pointer 
-                    ${showPriceRange ? `bg-gray-300 py-3.5 pl-6 pr-4 rounded-full border-r-0` : showPropertyDetails ? `border-r-0` : ""} 
-                    ${showUpperOptions ? `min-h-12` : `min-h-6`}`}
+                  className={`flex justify-start items-center gap-2 border-r border-gray-300 px-4 h-full min-h-6 cursor-pointer ${showPropertyDetails && `border-r-0`}`}
                 >
+                  <PriceRangeIcon className={"w-5 h-5 fill-white"} />
                   <div className="flex justify-start items-center">
-                    <div className={`flex flex-col ${showUpperOptions && `min-w-36`}`}>
-                      <p className={`text-sm text-middleMenuTextBlack leading-tight font-light ${showUpperOptions ? "font-semibold text-xs" : ""}`}>{showUpperOptions ? "Price" : "€350,00..."}</p>
-                      {showUpperOptions ? <p className="text-sm font-light leading-4 text-gray-400">Add price range</p> : ""}
-                    </div>
+                    <p className="text-xs font-inter text-middleMenuTextBlack">Price Range</p>
                   </div>
                 </div>
               ) : (
                 ""
               )}
 
-              {/* Property Details and Search Container */}
-              <div className={`flex items-center ${showPropertyDetails && `bg-gray-300 rounded-full pr-2`}`}>
-                {!showLocationDevelopments || !showUpperOptions ? (
-                  <div
-                    onClick={() => {
-                      setShowProjectList(false);
-                      setShowBedroomSlider(false);
-                      setShowPriceRange(false);
-                      setShowPropertyDetails(!showPropertyDetails);
-                      setShowUpperOptions(showPropertyDetails ? false : true);
-                    }}
-                    className={`flex justify-start items-center gap-2 px-4 h-full min-h-8 cursor-pointer 
-                    ${showPropertyDetails && `bg-gray-300 py-3.5 pl-6 pr-4 rounded-full border-r-0`}`}
-                  >
-                    <div className="flex justify-start items-center">
-                      <div className={`flex flex-col ${showUpperOptions && `min-w-36`}`}>
-                        <p className={`text-sm text-middleMenuTextBlack leading-tight font-light ${showUpperOptions ? "font-semibold text-xs" : ""}`}>{showUpperOptions ? "More" : "Apartme..."}</p>
-                        {showUpperOptions ? <p className="text-sm font-light leading-4 text-gray-400">Details</p> : ""}
-                      </div>
+              {/* Property Details Button */}
+              {!showLocationDevelopments || !showUpperOptions ? (
+                <div
+                  onClick={() => {
+                    setShowProjectList(false);
+                    setShowBedroomSlider(false);
+                    setShowPriceRange(false);
+                    setShowPropertyDetails(!showPropertyDetails);
+                    setShowUpperOptions(showPropertyDetails ? false : true);
+                  }}
+                  className={`flex justify-start items-center gap-2 px-4 h-full min-h-6 cursor-pointer ${showPropertyDetails && `bg-middleMenuTextBlack bg-opacity-5 py-3 rounded-full mr-3`}`}
+                >
+                  <div className="relative">
+                    <PriceRangeIcon className={"w-5 h-5 fill-white"} />
+                    {showPropertyDetails && (
+                      <span className="flex justify-center items-center absolute -top-1.5 -right-1.5 bg-[#FF0004] border border-[#F8F8F8] p-1 rounded-full w-[15px] h-[15px]">
+                        <p className="text-white font-medium text-[10px]">2</p>
+                      </span>
+                    )}
+                  </div>
+                  <div className="flex justify-start items-center">
+                    <div className="flex flex-col">
+                      <p className="text-xs font-inter text-middleMenuTextBlack leading-tight">More Details</p>
+                      {showPropertyDetails && <p className="text-middleMenuTextBlack text-[8px]">Apartments</p>}
                     </div>
                   </div>
-                ) : (
-                  ""
-                )}
-
-                <div
-                  className={`p-2 rounded-full 
-                  ${showUpperOptions ? "bg-black" : "bg-buttonOrange"}   
-                  ${showUpperOptions && `p-7 py-3 flex justify-start items-center gap-2`}`}
-                >
-                  <img className="w-4" src={searchIcon} alt="search" />
-                  {showUpperOptions && <p className="text-white font-light text-sm">Search</p>}
                 </div>
-              </div>
+              ) : (
+                ""
+              )}
             </div>
-            {/* Mobile Search Input */}
-            {!(openMobileMenu || openUserMobileMenu) ? (
-              <div className={`hidden max-sm:flex w-full rounded-full`}>
-                <input className="w-full outline-none px-6 text-middleMenuTextBlack text-base font-light rounded-full" type="text" name="searchInput" id="searchInput" placeholder="Search" />
-                <div
-                  className={`p-2 rounded-full w-fit
-                  ${showUpperOptions ? "bg-black" : "bg-buttonOrange"}   
-                  ${showUpperOptions && `p-7 py-3 flex justify-start items-center gap-2`}`}
-                >
-                  <img className="w-4" src={searchIcon} alt="search" />
-                </div>
-              </div>
-            ) : (
-              ""
-            )}
+
+            {/* Search Button */}
+
+            <div
+              onClick={() => {
+                setShowSearchResult(!showSearchResult);
+              }}
+              className={`bg-buttonOrange p-3 rounded-full cursor-pointer ${showUpperOptions && `p-5 py-4 flex justify-start items-center gap-2`}`}
+            >
+              <img className="w-4" src={searchIcon} alt="search" />
+              {showUpperOptions && <p className="text-white font-semibold text-xs">Search</p>}
+            </div>
 
             {showPropertyDetails && <PropertyDetails />}
           </div>
         </div>
         {/* Profile Side */}
-        <div className="flex justify-start items-center gap-6 max-md:gap-0">
-          <div className={`w-full flex justify-start items-center gap-6`}>
-            {/* Contact Button */}
-            <div onClick={() => setShowContactWindow(!showContactWindow)} className={`w-5 cursor-pointer max-md:hidden`}>
-              {/* <img className="w-full" src={showContactWindow ? WhiteCallIcon : callIcon} alt="callIcon" /> */}
-              <NavbarCallIcon className={"w-6 h-6 fill-white"} />
+        <div className="flex justify-start items-center gap-6 min-w-80">
+          <div className="w-full flex justify-end items-center gap-6">
+            <div className="w-full max-w-5">
+              <CallIcon className={"w-5 h-5 fill-white"} />
             </div>
-            {/* Language Button */}
-            <div onClick={() => setShowLanguageWindow(!showLanguageWindow)} className="w-5 cursor-pointer max-md:hidden">
-              <NavbarGlobalIcon className={`w-6 h-6 fill-white`} />
+            <div className="w-full max-w-5">
+              <GlobalIcon className={"w-5 h-5 fill-white"} />
             </div>
-            {/* Dark-Light Theme Button */}
-            <div onClick={() => setTheme(theme === "dark" ? "light" : "dark")} className="w-5 max-md:hidden">
-              <NavbarLightModeIcon className={"w-6 h-6 fill-white"} />
+            <div className="w-full max-w-5">
+              <LightModeIcon className={"w-5 h-5 fill-white"} />
             </div>
           </div>
-          {/* Login Button */}
-          <div className="flex justify-start items-center gap-3 w-full h-full cursor-pointer">
-            <div className="w-full flex justify-between items-center">
-              {openMobileMenu && !openUserMobileMenu ? (
-                <div onClick={() => setOpenMobileMenu(false)} className="border border-gray-200 rounded-full p-3 cursor-pointer">
-                  <CloseIcon className={"w-3 h-3 fill-white"} />
-                </div>
-              ) : !openMobileMenu && openUserMobileMenu ? (
-                <div className="flex justify-start items-center gap-3">
-                  <div onClick={() => setTheme(theme === "dark" ? "light" : "dark")} className="flex justify-center items-center">
-                    <NavbarLightModeIcon className={"w-6 h-6 fill-white"} />
-                  </div>
-                  <div onClick={() => setOpenUserMobileMenu(false)} className="border border-gray-200 rounded-full p-3 cursor-pointer">
-                    <CloseIcon className={"w-3 h-3 fill-white"} />
-                  </div>
-                </div>
-              ) : (
-                <div className="flex justify-start items-center w-full gap-2 max-md:border max-md:border-gray-200 max-md:rounded-full max-md:p-1">
-                  <div onClick={() => setShowStatusWindow(!showStatusWindow)}>
-                    <GuestIcon className={"w-6 h-6 fill-current max-md:w-5 max-md:h-5"} />
-                  </div>
-                  {/* {showLoginWindow && <p className="text-xs text-white font-medium">Login</p>} */}
-                  <div onClick={() => setOpenMobileMenu(!openMobileMenu)} className="hidden max-md:block px-1 py-1.5 pl-0 ">
-                    <MobileHamburgerIcon className={"w-4 h-3 fill-current"} />
-                  </div>
-                </div>
-              )}
+          {showSearchResult ? (
+            <div className="w-full max-w-6">
+              <img className="w-full" src={blackOctagonProfileIcon} alt="blackOctagonProfileIcon" />
             </div>
-          </div>
+          ) : (
+            <div onClick={() => setShowStatusWindow(!showStatusWindow)} className="flex justify-start items-center gap-3 bg-middleMenuTextBlack min-h-16 min-w-[210px] w-full h-full p-3 rounded-full cursor-pointer">
+              <div className="w-full flex justify-between items-center">
+                <div className="flex w-full gap-3">
+                  <OctagonProfileIcon className={"w-full max-w-6 ml-2 fill-current"} />
+                  <div className="border-l border-gray-300 border-opacity-20 pl-4">
+                    <p className="text-base text-white font-medium">B.Douglas</p>
+                    <p className="text-xs text-white font-regular">Customer</p>
+                  </div>
+                </div>
+                <img src={whiteDropDownArrowIcon} alt="dropDownArrowIcon" />
+                {/* <DropdownArrowIcon className={"w-5 h-5 fill-white"} /> */}
+              </div>
+            </div>
+          )}
         </div>
         {showProjectList && !showLocationDevelopments ? <DiscoverProjects /> : ""}
         {showBedroomSlider && <NumberOfBedrooms />}
