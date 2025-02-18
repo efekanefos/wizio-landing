@@ -9,7 +9,7 @@ import RightArrowIcon from "../newIcons/RightArrowIcon";
 import UserEditIcon from "../newIcons/UserEditIcon";
 import CloseIcon from "../newIcons/CloseIcon";
 
-function Status({ setShowStatusWindow, setShowProfileWindow, setShowVisitWindow, setShowFavouritesWindow }) {
+function Status({ setShowStatusWindow, setShowProfileWindow, setShowRecentViewsWindow, setShowFavouritesWindow }) {
   const navigate = useNavigate();
 
   return (
@@ -45,7 +45,7 @@ function Status({ setShowStatusWindow, setShowProfileWindow, setShowVisitWindow,
           <li
             onClick={() => {
               setShowStatusWindow(false);
-              setShowVisitWindow(true);
+              setShowRecentViewsWindow(true);
             }}
             className="flex justify-between items-center gap-3 p-3 cursor-pointer hover:bg-gray-200 hover:rounded-full"
           >

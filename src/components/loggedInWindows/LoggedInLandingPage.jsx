@@ -36,6 +36,7 @@ import miniCircleImage from "../../assets/images/loggedInWindows/mini_circle_ima
 /* Windows */
 import Status from "./Status";
 import Favourites from "./Favourites";
+import RecentViews from "./RecentViews";
 import ProfileSetting from "./ProfileSetting";
 import LastVisits from "./LastVisits";
 import Notifications from "./Notifications";
@@ -48,6 +49,7 @@ import PriceRange from "../PriceRange";
 function LoggedInLandingPage() {
   const [showStatusWindow, setShowStatusWindow] = useState(false);
   const [showFavouritesWindow, setShowFavouritesWindow] = useState(false);
+  const [showRecentViewsWindow, setShowRecentViewsWindow] = useState(false);
   const [showProfileWindow, setShowProfileWindow] = useState(false);
   const [showVisitWindow, setShowVisitWindow] = useState(false);
   const [showNotificationWindow, setShowNotificationWindow] = useState(false);
@@ -540,14 +542,17 @@ function LoggedInLandingPage() {
         //* Background Image
         showSearchResult ? <img className="z-0 w-full h-screen object-cover" src={buildingMap} alt="buildingMap" /> : <img className="z-0 w-full h-screen object-cover" src={moonBackground} alt="moonBackground" />
       }
-
       {
         //* Status Window
-        showStatusWindow && <Status setShowStatusWindow={setShowStatusWindow} setShowProfileWindow={setShowProfileWindow} setShowVisitWindow={setShowVisitWindow} setShowFavouritesWindow={setShowFavouritesWindow} />
+        showStatusWindow && <Status setShowStatusWindow={setShowStatusWindow} setShowProfileWindow={setShowProfileWindow} setShowRecentViewsWindow={setShowRecentViewsWindow} setShowFavouritesWindow={setShowFavouritesWindow} />
       }
       {
         //* Favourites Window
         showFavouritesWindow && <Favourites setShowStatusWindow={setShowStatusWindow} setShowFavouritesWindow={setShowFavouritesWindow} />
+      }
+      {
+        //* Recent Views Window
+        showRecentViewsWindow && <RecentViews setShowStatusWindow={setShowStatusWindow} setShowRecentViewsWindow={setShowRecentViewsWindow} />
       }
       {
         //* Profile Window
