@@ -35,6 +35,7 @@ import cardImage_2 from "../../assets/images/loggedInWindows/card_image_2.png";
 import miniCircleImage from "../../assets/images/loggedInWindows/mini_circle_image.png";
 /* Windows */
 import Status from "./Status";
+import Favourites from "./Favourites";
 import ProfileSetting from "./ProfileSetting";
 import LastVisits from "./LastVisits";
 import Notifications from "./Notifications";
@@ -46,6 +47,7 @@ import PriceRange from "../PriceRange";
 
 function LoggedInLandingPage() {
   const [showStatusWindow, setShowStatusWindow] = useState(false);
+  const [showFavouritesWindow, setShowFavouritesWindow] = useState(false);
   const [showProfileWindow, setShowProfileWindow] = useState(false);
   const [showVisitWindow, setShowVisitWindow] = useState(false);
   const [showNotificationWindow, setShowNotificationWindow] = useState(false);
@@ -250,9 +252,10 @@ function LoggedInLandingPage() {
                 )}
 
                 <div
-                  className={`p-2 rounded-full 
+                  className={`p-2 rounded-full cursor-pointer 
                   ${showUpperOptions ? "bg-black" : "bg-buttonOrange"}   
                   ${showUpperOptions && `p-7 py-3 flex justify-start items-center gap-2`}`}
+                  onClick={() => setShowSearchResult(!showSearchResult)}
                 >
                   <img className="w-4" src={searchIcon} alt="search" />
                   {showUpperOptions && <p className="text-white font-light text-sm">Search</p>}
@@ -540,7 +543,11 @@ function LoggedInLandingPage() {
 
       {
         //* Status Window
-        showStatusWindow && <Status setShowStatusWindow={setShowStatusWindow} setShowProfileWindow={setShowProfileWindow} setShowVisitWindow={setShowVisitWindow} setShowNotificationWindow={setShowNotificationWindow} />
+        showStatusWindow && <Status setShowStatusWindow={setShowStatusWindow} setShowProfileWindow={setShowProfileWindow} setShowVisitWindow={setShowVisitWindow} setShowFavouritesWindow={setShowFavouritesWindow} />
+      }
+      {
+        //* Favourites Window
+        showFavouritesWindow && <Favourites setShowStatusWindow={setShowStatusWindow} setShowFavouritesWindow={setShowFavouritesWindow} />
       }
       {
         //* Profile Window
