@@ -4,23 +4,8 @@ import UserEditIcon from "../newIcons/UserEditIcon";
 import VisiblePasswordIcon from "../newIcons/VisiblePasswordIcon";
 import HiddenPasswordIcon from "../newIcons/HiddenPasswordIcon";
 import CloseIcon from "../newIcons/CloseIcon";
-/* SVG Components */
-import UsernameInputIcon from "../icons/UsernameInputIcon";
-import PhoneInputIcon from "../icons/PhoneInputIcon";
-import MailInput from "../icons/MailInput";
-import ProfileSettingIcon from "../icons/ProfileSettingIcon";
-import LoginPasswordIcon from "../icons/LoginPasswordIcon";
-import OctagonProfileIcon from "../icons/OctagonProfileIcon";
-/* Images */
-import usernameInput from "../../assets/images/loggedInWindows/username_input.svg";
-import phoneInput from "../../assets/images/loggedInWindows/phone_input.svg";
-import mailInput from "../../assets/images/loggedInWindows/mail_input.svg";
-import profileSetting from "../../assets/images/loggedInWindows/profile_setting.svg";
-import loginPasswordIcon from "../../assets/images/logoutWindows/login_password_icon.svg";
-import close from "../../assets/images/loggedInWindows/close.svg";
-import blackOctagonProfile from "../../assets/images/header/black_octagon_profile_icon.svg";
 
-function Register({ setShowRegisterWindow }) {
+function Register({ setShowRegisterWindow, setShowLoginWindow }) {
   return (
     <div className="absolute top-20 right-8 bg-white rounded-3xl p-3 min-w-72 w-fit z-10">
       {/* Header Row */}
@@ -102,7 +87,7 @@ function Register({ setShowRegisterWindow }) {
 
         {/* Buttons */}
         <div className="w-full flex flex-col gap-3 p-3">
-          <button onClick={() => navigate("/logged-in-landing-page")} className="bg-black text-sm text-white font-light text-center w-full py-3 rounded-full" type="submit">
+          <button className="bg-black text-sm text-white font-light text-center w-full py-3 rounded-full" type="submit">
             Sign Up
           </button>
 
@@ -111,8 +96,8 @@ function Register({ setShowRegisterWindow }) {
             <button
               className="text-xs font-light text-black"
               onClick={() => {
-                setShowLoginWindow(false);
-                setShowRegisterWindow(true);
+                setShowLoginWindow(true);
+                setShowRegisterWindow(false);
               }}
             >
               Sign in
@@ -127,6 +112,21 @@ function Register({ setShowRegisterWindow }) {
 export default Register;
 
 /* 
+
+import UsernameInputIcon from "../icons/UsernameInputIcon";
+import PhoneInputIcon from "../icons/PhoneInputIcon";
+import MailInput from "../icons/MailInput";
+import ProfileSettingIcon from "../icons/ProfileSettingIcon";
+import LoginPasswordIcon from "../icons/LoginPasswordIcon";
+import OctagonProfileIcon from "../icons/OctagonProfileIcon";
+
+import usernameInput from "../../assets/images/loggedInWindows/username_input.svg";
+import phoneInput from "../../assets/images/loggedInWindows/phone_input.svg";
+import mailInput from "../../assets/images/loggedInWindows/mail_input.svg";
+import profileSetting from "../../assets/images/loggedInWindows/profile_setting.svg";
+import loginPasswordIcon from "../../assets/images/logoutWindows/login_password_icon.svg";
+import close from "../../assets/images/loggedInWindows/close.svg";
+import blackOctagonProfile from "../../assets/images/header/black_octagon_profile_icon.svg";
 <div className="flex flex-col justify-center items-center py-7 px-8 pb-10">
 
         <div className="w-full flex justify-between items-center relative">

@@ -166,6 +166,7 @@ function LandingPage({ theme, setTheme }) {
                     {showUpperOptions ? <p className="text-sm font-light leading-4 text-gray-400">Search destination</p> : ""}
                   </div>
                 </div>
+                {showProjectList && !showLocationDevelopments ? <DiscoverProjects /> : ""}
               </div>
 
               {/* Number of Bedrooms Button */}
@@ -276,16 +277,30 @@ function LandingPage({ theme, setTheme }) {
         <div className="flex justify-start items-center gap-6 max-md:gap-0">
           <div className={`w-full flex justify-start items-center gap-6`}>
             {/* Contact Button */}
-            <div onClick={() => setShowContactWindow(!showContactWindow)} className={`w-5 cursor-pointer max-md:hidden`}>
+            <div
+              onClick={() => {
+                setShowContactWindow(true);
+                setShowLanguageWindow(false);
+                setShowLoginWindow(false);
+              }}
+              className={`w-5 cursor-pointer max-md:hidden`}
+            >
               {/* <img className="w-full" src={showContactWindow ? WhiteCallIcon : callIcon} alt="callIcon" /> */}
               <NavbarCallIcon className={"w-6 h-6 fill-white"} />
             </div>
             {/* Language Button */}
-            <div onClick={() => setShowLanguageWindow(!showLanguageWindow)} className="w-5 cursor-pointer max-md:hidden">
+            <div
+              onClick={() => {
+                setShowLanguageWindow(true);
+                setShowContactWindow(false);
+                setShowLoginWindow(false);
+              }}
+              className="w-5 cursor-pointer max-md:hidden"
+            >
               <NavbarGlobalIcon className={`w-6 h-6 fill-white`} />
             </div>
             {/* Dark-Light Theme Button */}
-            <div onClick={() => setTheme(theme === "dark" ? "light" : "dark")} className="w-5 max-md:hidden">
+            <div className="w-5 max-md:hidden">
               <NavbarLightModeIcon className={"w-6 h-6 fill-white"} />
             </div>
           </div>
@@ -298,7 +313,7 @@ function LandingPage({ theme, setTheme }) {
                 </div>
               ) : !openMobileMenu && openUserMobileMenu ? (
                 <div className="flex justify-start items-center gap-3">
-                  <div onClick={() => setTheme(theme === "dark" ? "light" : "dark")} className="flex justify-center items-center">
+                  <div className="flex justify-center items-center">
                     <NavbarLightModeIcon className={"w-6 h-6 fill-white"} />
                   </div>
                   <div onClick={() => setOpenUserMobileMenu(false)} className="border border-gray-200 rounded-full p-3 cursor-pointer">
@@ -307,7 +322,13 @@ function LandingPage({ theme, setTheme }) {
                 </div>
               ) : (
                 <div className="flex justify-start items-center w-full gap-2 max-md:border max-md:border-gray-200 max-md:rounded-full max-md:p-1">
-                  <div onClick={handleUserMobileMenuToggle}>
+                  <div
+                    onClick={() => {
+                      handleUserMobileMenuToggle();
+                      setShowLanguageWindow(false);
+                      setShowContactWindow(false);
+                    }}
+                  >
                     <GuestIcon className={"w-6 h-6 fill-current max-md:w-5 max-md:h-5"} />
                   </div>
                   {/* {showLoginWindow && <p className="text-xs text-white font-medium">Login</p>} */}
@@ -319,7 +340,7 @@ function LandingPage({ theme, setTheme }) {
             </div>
           </div>
         </div>
-        {showProjectList && !showLocationDevelopments ? <DiscoverProjects /> : ""}
+
         {showBedroomSlider && <NumberOfBedrooms />}
         {showPriceRange && <PriceRange />}
       </nav>
@@ -343,7 +364,7 @@ function LandingPage({ theme, setTheme }) {
       }
       {
         //* Register Window
-        showRegisterWindow && <Register setShowRegisterWindow={setShowRegisterWindow} />
+        showRegisterWindow && <Register setShowLoginWindow={setShowLoginWindow} setShowRegisterWindow={setShowRegisterWindow} />
       }
       {
         //* Language Window

@@ -2,7 +2,7 @@ import React from "react";
 
 function DiscoverProjects() {
   return (
-    <div className="grid grid-cols-5 justify-evenly items-start absolute w-fit top-[150px] left-1/2 translate-x-[-50%] py-12 px-12 bg-white shadow-2xl rounded-3xl">
+    <div className="grid grid-cols-5 justify-evenly items-start absolute w-full top-[70px] left-1/2 translate-x-[-50%] py-12 px-12 bg-white shadow-2xl rounded-3xl">
       <div className="col-span-1">
         {/* Location Side */}
         <h3 className="text-gray-400 font-semibold text-base mb-6">Location</h3>

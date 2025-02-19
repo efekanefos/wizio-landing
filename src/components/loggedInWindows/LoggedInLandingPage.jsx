@@ -296,7 +296,7 @@ function LoggedInLandingPage() {
               <NavbarGlobalIcon className={`w-6 h-6 fill-white`} />
             </div>
             {/* Dark-Light Theme Button */}
-            <div onClick={() => setTheme(theme === "dark" ? "light" : "dark")} className="w-5 max-md:hidden">
+            <div className="w-5 max-md:hidden">
               <NavbarLightModeIcon className={"w-6 h-6 fill-white"} />
             </div>
           </div>
@@ -309,7 +309,7 @@ function LoggedInLandingPage() {
                 </div>
               ) : !openMobileMenu && openUserMobileMenu ? (
                 <div className="flex justify-start items-center gap-3">
-                  <div onClick={() => setTheme(theme === "dark" ? "light" : "dark")} className="flex justify-center items-center">
+                  <div className="flex justify-center items-center">
                     <NavbarLightModeIcon className={"w-6 h-6 fill-white"} />
                   </div>
                   <div onClick={() => setOpenUserMobileMenu(false)} className="border border-gray-200 rounded-full p-3 cursor-pointer">
