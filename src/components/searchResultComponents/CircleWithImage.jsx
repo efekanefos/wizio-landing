@@ -3,7 +3,7 @@ import miniCircleImage from "../../assets/images/loggedInWindows/mini_circle_ima
 
 const CircleWithImage = () => {
   return (
-    <div className="flex justify-center items-center absolute bottom-5 right-72">
+    <div className="flex justify-center items-center absolute top-72 right-60">
       <div className="relative w-14 h-14">
         {/* Pasta Grafiği */}
         <div

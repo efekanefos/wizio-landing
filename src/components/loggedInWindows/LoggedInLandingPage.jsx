@@ -51,6 +51,7 @@ import BelowHeaderFilterMenu from "../searchResultComponents/BelowHeaderFilterMe
 import CircleWithNumber from "../searchResultComponents/CircleWithNumber";
 import CircleWithImage from "../searchResultComponents/CircleWithImage";
 import VerticalDetailCard from "../searchResultComponents/VerticalDetailCard";
+import MiniLocationCardSideBar from "../searchResultComponents/MiniLocationCardSideBar";
 
 function LoggedInLandingPage() {
   const [showStatusWindow, setShowStatusWindow] = useState(false);
@@ -345,10 +346,12 @@ function LoggedInLandingPage() {
       {showSearchResult && <BelowHeaderFilterMenu />}
       {/* Searched Location Card Sidebar */}
       {showSearchResult && <LocationCardSideBar />}
+      {/* Searched Location Card Sidebar (1024px Version) */}
+      {showSearchResult && <MiniLocationCardSideBar />}
       {/* Searched Location View Option Badge */}
       {showSearchResult && <LocationViewOptions />}
       {/* Property Circle with Number */}
-      {showSearchResult && <CircleWithNumber />}
+      {/* showSearchResult && <CircleWithNumber /> */}
       {/* Property Circle with Image */}
       {showSearchResult && <CircleWithImage />}
       {/* Vertical Detail Card */}

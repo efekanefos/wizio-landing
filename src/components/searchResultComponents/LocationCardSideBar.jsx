@@ -12,13 +12,16 @@ import locationCardImage from "../../assets/images/newIcons/locationCardImage.pn
 
 const LocationCardSideBar = () => {
   return (
-    <div className="bg-white bg-opacity-90 h-full max-h-[850px] overflow-y-hidden absolute left-12 translate-y-6 p-6 font-inter z-50 rounded-3xl">
+    <div
+      className="bg-white h-full max-h-[850px] overflow-y-hidden absolute left-12 translate-y-6 p-6 font-inter z-50 rounded-3xl 
+    max-xl:bg-transparent max-xl:left-0 max-xl:translate-y-0 max-lg:hidden"
+    >
       <div className="flex flex-col gap-3">
         {/* Card #1 */}
-        <div className="p-3 border border-gray-200 shadow-md rounded-2xl">
+        <div className="bg-white p-3 border border-gray-200 shadow-md rounded-2xl">
           <div className="relative w-fit mt-1.5">
             <img src={locationCardImage} alt="locationCardImage" />
-            <span className="w-9 h-9 text-white text-base font-medium bg-lime-500 rounded-full border-white border-4 flex justify-center items-center absolute top-1 right-1">999</span>
+            <span className="w-9 h-9 box-content text-white text-base font-medium bg-lime-500 rounded-full border-white border-4 flex justify-center items-center absolute top-1 right-1">999</span>
           </div>
           {/* Card Info */}
           <div className="mt-2 mb-3">
@@ -56,7 +59,7 @@ const LocationCardSideBar = () => {
           </div>
         </div>
         {/* Card #2 */}
-        <div className="p-3 border border-gray-200 shadow-md rounded-2xl opacity-50">
+        <div className="bg-white p-3 border border-gray-200 shadow-md rounded-2xl opacity-50">
           <div className="relative w-fit mt-1.5">
             <img src={locationCardImage} alt="locationCardImage" />
             <span className="w-9 h-9 text-white text-base font-medium bg-lime-500 rounded-full border-white border-4 flex justify-center items-center absolute top-1 right-1">999</span>
@@ -97,7 +100,7 @@ const LocationCardSideBar = () => {
           </div>
         </div>
         {/* Card #3 */}
-        <div className="p-3 border border-gray-200 shadow-md rounded-2xl opacity-50">
+        <div className="bg-white p-3 border border-gray-200 shadow-md rounded-2xl opacity-50">
           <div className="relative w-fit mt-1.5">
             <img src={locationCardImage} alt="locationCardImage" />
             <span className="w-9 h-9 text-white text-base font-medium bg-lime-500 rounded-full border-white border-4 flex justify-center items-center absolute top-1 right-1">999</span>
