@@ -1,12 +1,9 @@
 import React from "react";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import "@splidejs/react-splide/css";
 /* SVG Components */
-import DollarIcon from "../icons/DollarIcon";
-import SizeArrowIcon from "../icons/SizeArrowIcon";
-import BoxIcon from "../icons/BoxIcon";
 import LocalAmenitiesIcon from "../icons/LocalAmenitiesIcon";
-import MailInput from "../icons/MailInput";
 /* Images */
-import cardImage from "../../assets/images/loggedInWindows/card_image.png";
 import whiteBox from "../../assets/images/logoutWindows/white_box.svg";
 import locationCardImage from "../../assets/images/newIcons/locationCardImage.png";
 
@@ -19,8 +16,15 @@ const LocationCardSideBar = () => {
       <div className="flex flex-col gap-3">
         {/* Card #1 */}
         <div className="bg-white p-3 border border-gray-200 shadow-md rounded-2xl">
-          <div className="relative w-fit mt-1.5">
-            <img src={locationCardImage} alt="locationCardImage" />
+          <div className="locationCard max-w-[296px] relative w-full mt-1.5">
+            <Splide aria-label="Location Images">
+              <SplideSlide>
+                <img className="w-full h-full rounded-tl-xl rounded-tr-xl" src={locationCardImage} alt="locationCardImage" />
+              </SplideSlide>
+              <SplideSlide>
+                <img className="w-full h-full rounded-tl-xl rounded-tr-xl" src={locationCardImage} alt="locationCardImage" />
+              </SplideSlide>
+            </Splide>
             <span className="w-9 h-9 box-content text-white text-base font-medium bg-lime-500 rounded-full border-white border-4 flex justify-center items-center absolute top-1 right-1">999</span>
           </div>
           {/* Card Info */}
@@ -60,8 +64,15 @@ const LocationCardSideBar = () => {
         </div>
         {/* Card #2 */}
         <div className="bg-white p-3 border border-gray-200 shadow-md rounded-2xl opacity-50">
-          <div className="relative w-fit mt-1.5">
-            <img src={locationCardImage} alt="locationCardImage" />
+          <div className="locationCard max-w-[296px] relative w-fit mt-1.5">
+            <Splide aria-label="Location Images">
+              <SplideSlide>
+                <img className="w-full h-full rounded-tl-xl rounded-tr-xl" src={locationCardImage} alt="locationCardImage" />
+              </SplideSlide>
+              <SplideSlide>
+                <img className="w-full h-full rounded-tl-xl rounded-tr-xl" src={locationCardImage} alt="locationCardImage" />
+              </SplideSlide>
+            </Splide>
             <span className="w-9 h-9 text-white text-base font-medium bg-lime-500 rounded-full border-white border-4 flex justify-center items-center absolute top-1 right-1">999</span>
           </div>
           {/* Card Info */}
@@ -101,8 +112,15 @@ const LocationCardSideBar = () => {
         </div>
         {/* Card #3 */}
         <div className="bg-white p-3 border border-gray-200 shadow-md rounded-2xl opacity-50">
-          <div className="relative w-fit mt-1.5">
-            <img src={locationCardImage} alt="locationCardImage" />
+          <div className="locationCard max-w-[296px] relative w-fit mt-1.5">
+            <Splide aria-label="Location Images">
+              <SplideSlide>
+                <img className="w-full h-full rounded-tl-xl rounded-tr-xl" src={locationCardImage} alt="locationCardImage" />
+              </SplideSlide>
+              <SplideSlide>
+                <img className="w-full h-full rounded-tl-xl rounded-tr-xl" src={locationCardImage} alt="locationCardImage" />
+              </SplideSlide>
+            </Splide>
             <span className="w-9 h-9 text-white text-base font-medium bg-lime-500 rounded-full border-white border-4 flex justify-center items-center absolute top-1 right-1">999</span>
           </div>
           {/* Card Info */}

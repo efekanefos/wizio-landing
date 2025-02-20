@@ -18,6 +18,17 @@ input[type="range"] {
   padding: 0;
 }
   */
+.locationCard .splide__pagination {
+  display: none;
+}
+.locationCard .splide__arrow {
+  width: 20px;
+  height: 20px;
+}
+.locationCard .splide__arrow svg {
+  width: 12px;
+  height: 10px;
+}
 
 .horizontal-slider {
   width: 100%;
