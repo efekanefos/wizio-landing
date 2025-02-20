@@ -21,8 +21,8 @@ import OctagonProfileIcon from "../icons/OctagonProfileIcon";
 import CircleCloseIcon from "../icons/CircleCloseIcon";
 import DollarIcon from "../icons/DollarIcon";
 import SizeArrowIcon from "../icons/SizeArrowIcon";
-import BoxIcon from "../icons/BoxIcon";
 import LocalAmenitiesIcon from "../icons/LocalAmenitiesIcon";
+import BoxIcon from "../icons/BoxIcon";
 /* Images */
 import whiteDropDownArrowIcon from "../../assets/images/header/white_dropdown_arrow_icon.svg";
 import searchIcon from "../../assets/images/header/search_icon.svg";
@@ -45,6 +45,12 @@ import DiscoverProjects from "../DiscoverProjects";
 import NumberOfBedrooms from "../NumberOfBedrooms";
 import PropertyDetails from "../PropertyDetails";
 import PriceRange from "../PriceRange";
+import LocationCardSideBar from "../searchResultComponents/LocationCardSideBar";
+import LocationViewOptions from "../searchResultComponents/LocationViewOptions";
+import BelowHeaderFilterMenu from "../searchResultComponents/BelowHeaderFilterMenu";
+import CircleWithNumber from "../searchResultComponents/CircleWithNumber";
+import CircleWithImage from "../searchResultComponents/CircleWithImage";
+import VerticalDetailCard from "../searchResultComponents/VerticalDetailCard";
 
 function LoggedInLandingPage() {
   const [showStatusWindow, setShowStatusWindow] = useState(false);
@@ -335,208 +341,18 @@ function LoggedInLandingPage() {
         {showPriceRange && <PriceRange />}
       </nav>
 
-      {showSearchResult && (
-        <div className="w-full py-6 bg-white flex justify-center items-center z-10 border-b border-gray-300">
-          <div className="flex justify-center items-center gap-3">
-            {/* Limassol Marina Button */}
-            <div className="pt-3 pb-3 px-6 flex justify-center items-center gap-4 rounded-3xl bg-middleMenuTextBlack bg-opacity-5 ">
-              <p className="text-xs text-middleMenuTextBlack">Limassol Marina</p>
-              <div>
-                <CircleCloseIcon className={"w-4 h-4 fill-current"} />
-              </div>
-            </div>
-
-            {/* Limassol Button */}
-            <div className="pt-3 pb-3 px-6 flex justify-center items-center gap-4 rounded-3xl bg-middleMenuTextBlack bg-opacity-5 ">
-              <p className="text-xs text-middleMenuTextBlack">Limassol</p>
-              <div>
-                <CircleCloseIcon className={"w-4 h-4 fill-current"} />
-              </div>
-            </div>
-
-            {/* Villas Button */}
-            <div className="pt-3 pb-3 px-6 flex justify-center items-center gap-4 rounded-3xl bg-middleMenuTextBlack bg-opacity-5 ">
-              <p className="text-xs text-middleMenuTextBlack">Villas</p>
-              <div>
-                <CircleCloseIcon className={"w-4 h-4 fill-current"} />
-              </div>
-            </div>
-
-            {/* Bedrooms 1-3 Button */}
-            <div className="pt-3 pb-3 px-6 flex justify-center items-center gap-4 rounded-3xl bg-middleMenuTextBlack bg-opacity-5 ">
-              <p className="text-xs text-middleMenuTextBlack">Bedrooms 1-3</p>
-              <div>
-                <CircleCloseIcon className={"w-4 h-4 fill-current"} />
-              </div>
-            </div>
-
-            {/* £750 - £3500 Button */}
-            <div className="pt-3 pb-3 px-6 flex justify-center items-center gap-4 rounded-3xl bg-middleMenuTextBlack bg-opacity-5 ">
-              <p className="text-xs text-middleMenuTextBlack">£750 - £3500</p>
-              <div>
-                <CircleCloseIcon className={"w-4 h-4 fill-current"} />
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {
-        //* Property Detail Cards Sidebar
-        showSearchResult && <PropertySidebar />
-      }
-
-      {
-        //* Property Badge with Number
-        showSearchResult && (
-          <div className="flex justify-center items-center absolute bottom-5 right-96">
-            <div className="relative w-14 h-14">
-              {/* Pasta Grafiği */}
-              <div
-                className="w-full h-full rounded-full relative"
-                style={{
-                  background: "conic-gradient(#F78E2F 0deg 120deg, #36BB2A  120deg 240deg, #FF0004 240deg 360deg)",
-                }}
-              >
-                <div className="w-11 h-11 flex justify-center items-center text-xl font-semibold bg-white text-middleMenuTextBlack rounded-full absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]">
-                  <p>6</p>
-                </div>
-              </div>
-
-              {/* Bildirim Rozeti */}
-              <span className="absolute -top-1 -right-1 bg-green-500 text-white font-bold text-sm w-6 h-6 flex justify-center items-center rounded-full border-2 border-white">6</span>
-            </div>
-          </div>
-        )
-      }
-
-      {
-        //* Property Badge with Image
-        showSearchResult && (
-          <div className="flex justify-center items-center absolute bottom-5 right-72">
-            <div className="relative w-14 h-14">
-              {/* Pasta Grafiği */}
-              <div
-                className="w-full h-full rounded-full relative"
-                style={{
-                  background: "conic-gradient(#F78E2F 0deg 120deg, #36BB2A  120deg 240deg, #FF0004 240deg 360deg)",
-                }}
-              >
-                <div className="w-12 h-12 flex justify-center items-center text-xl font-semibold text-middleMenuTextBlack rounded-full absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]">
-                  <img src={miniCircleImage} alt="miniCircleImage" />
-                </div>
-              </div>
-
-              {/* Bildirim Rozeti */}
-              <span className="absolute -top-1 -right-1 bg-green-500 text-white shadow-lg font-bold text-xs w-7 h-7 flex justify-center items-center rounded-full border-2 border-white">42</span>
-            </div>
-          </div>
-        )
-      }
-
-      {
-        //* Property Detail Card
-        showSearchResult && (
-          <div
-            className="flex flex-col absolute top-72 right-[200px] shadow-lg bg-white rounded-xl font-inter before:bg-white before:w-10 before:h-10 before:absolute
-        before:top-0 before:-left-8 before:windowArrow before:rounded-tl-md"
-          >
-            <div className="p-2 pb-0">
-              <img src={miniCardImage} alt="miniCardImage" />
-            </div>
-
-            <div className="flex flex-col p-3 px-5 border-b border-gray-200">
-              <p className="text-xl font-semibold leading-5">Limassol Marina</p>
-              <p className="text-xs font-medium leading-5">2 Bedrooms</p>
-            </div>
-
-            <div className="p-3 py-4 pt-3 px-5 flex justify-between items-center border-b border-gray-200">
-              <div className="flex justify-start items-end gap-1.5">
-                <div className="max-w-5 max-h-5">
-                  <DollarIcon className={"w-5 h-5 fill-current"} />
-                </div>
-                <div>
-                  <p className="text-[8px] font-medium leading-3">From</p>
-                  <p className="text-xs font-semibold leading-3">$135,555,000</p>
-                </div>
-              </div>
-
-              <div className="flex justify-start items-end gap-1.5">
-                <div className="max-w-5 max-h-5">
-                  <SizeArrowIcon className={"w-5 h-5 fill-current"} />
-                </div>
-                <div>
-                  <p className="text-[8px] font-medium leading-3">Sqm</p>
-                  <p className="text-xs font-semibold leading-3">150-225</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex flex-col gap-1.5 pb-4 px-5 pt-4">
-              <button className="flex justify-center items-center gap-1 w-full px-3 py-2 bg-gray-100 rounded-full">
-                <div className="flex justify-center items-center max-w-4 max-h-4">
-                  <LocalAmenitiesIcon className={"w-5 h-5 fill-current"} />
-                </div>
-                <p className="text-xs font-medium">Local Amenities</p>
-              </button>
-              <button className="bg-orange-400 flex justify-center items-center gap-1 w-full px-3 py-2 rounded-full">
-                <div className="flex justify-center items-center max-w-4 max-h-4">
-                  <img className="w-full h-full" src={whiteBox} alt="whiteBox" />
-                  {/* <BoxIcon className={"w-5 h-5 fill-current"} /> */}
-                </div>
-                <p className="text-xs text-white font-medium">Portal</p>
-              </button>
-            </div>
-          </div>
-        )
-      }
-
-      {
-        //* Property Detail Card Second Design
-        showSearchResult && (
-          <div className="flex rounded-3xl absolute top-96 left-[500px] bg-white shadow-md max-w-[450px]">
-            <div>
-              <img className="rounded-tl-3xl rounded-bl-3xl" src={cardImage_2} alt="cardImage" />
-            </div>
-            <div className="p-3 pl-4 pr-3">
-              {/* Number */}
-              <div className="flex justify-end">
-                <span className="flex justify-center items-center bg-green-500 text-white p-3 w-8 h-8 rounded-full -mb-2">2</span>
-              </div>
-              {/* Price */}
-              <div>
-                <div className="mb-5">
-                  <p className="text-xs font-medium leading-5">From</p>
-                  <p className="text-base font-bold leading-3">€170,555,000+VAT</p>
-                </div>
-              </div>
-              {/* Title */}
-              <div>
-                <p className="text-2xl font-semibold text-middleMenuTextBlack leading-5">Aria Residences</p>
-                <p className="text-base font-light text-middleMenuTextBlack mt-2">2-3 Bedrooms</p>
-                <p className="text-base font-light text-middleMenuTextBlack mt-1">150-225 sqm</p>
-              </div>
-
-              {/* Buttons */}
-              <div className="flex flex-col gap-2 mt-4 ">
-                <button className="flex justify-center items-center gap-1 w-full px-3 py-1.5 bg-gray-100 rounded-full">
-                  <div className="flex justify-center items-center max-w-4 max-h-4">
-                    <LocalAmenitiesIcon className={"w-5 h-5 fill-current"} />
-                  </div>
-                  <p className="text-xs font-light">Local Amenities</p>
-                </button>
-                <button className="bg-orange-400 flex justify-center items-center gap-1 w-full px-3 py-1.5 rounded-full">
-                  <div className="flex justify-center items-center max-w-4 max-h-4">
-                    <img className="w-full h-full" src={whiteBox} alt="whiteBox" />
-                    {/* <BoxIcon className={"w-5 h-5 fill-current"} /> */}
-                  </div>
-                  <p className="text-xs text-white font-light">Portal</p>
-                </button>
-              </div>
-            </div>
-          </div>
-        )
-      }
+      {/* Search Filters Below Header */}
+      {showSearchResult && <BelowHeaderFilterMenu />}
+      {/* Searched Location Card Sidebar */}
+      {showSearchResult && <LocationCardSideBar />}
+      {/* Searched Location View Option Badge */}
+      {showSearchResult && <LocationViewOptions />}
+      {/* Property Circle with Number */}
+      {showSearchResult && <CircleWithNumber />}
+      {/* Property Circle with Image */}
+      {showSearchResult && <CircleWithImage />}
+      {/* Vertical Detail Card */}
+      {/* showSearchResult && <VerticalDetailCard /> */}
 
       {
         //* Background Image
