@@ -2,7 +2,7 @@ import React from "react";
 
 function DiscoverProjects() {
   return (
-    <div className="grid grid-cols-5 justify-evenly items-start absolute w-full top-[70px] left-1/2 translate-x-[-50%] py-12 px-12 bg-white shadow-2xl rounded-3xl">
+    <div className="grid grid-cols-5 justify-evenly items-start absolute w-full top-[70px] left-1/2 translate-x-[-50%] py-12 px-12 bg-white shadow-2xl rounded-3xl z-10">
       <div className="col-span-1">
         {/* Location Side */}
         <h3 className="text-gray-400 font-semibold text-base mb-6">Location</h3>
@@ -20,9 +20,9 @@ function DiscoverProjects() {
       </div>
       {/* Project Side */}
       <div className="col-span-4">
-        <div className="flex justify-evenly items-start gap-16 space-y-10">
+        <div className="flex justify-evenly items-start gap-6 space-y-10 max-md:gap-10">
           {/* Col #1 */}
-          <div>
+          <div className="">
             <h3 className="text-gray-400 font-semibold text-base mb-6">Project</h3>
             <ul className="list-none flex flex-col gap-3">
               <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2.5 before:left-0 before:w-3 before:h-px">
@@ -53,7 +53,7 @@ function DiscoverProjects() {
           </div>
 
           {/* Col #2 */}
-          <ul className="list-none flex flex-col gap-3">
+          <ul className="list-none flex flex-col gap-3 ">
             <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2.5 before:left-0 before:w-3 before:h-px">
               <p className="text-gray-400 text-sm font-light hover:text-black hover:font-semibold hover:translate-x-4 cursor-pointer">Minthis</p>
             </li>
@@ -80,7 +80,7 @@ function DiscoverProjects() {
             </li>
           </ul>
           {/* Col #3 */}
-          <ul className="list-none flex flex-col gap-3">
+          <ul className="list-none flex flex-col gap-3 ">
             <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2.5 before:left-0 before:w-3 before:h-px">
               <p className="text-gray-400 text-sm font-light hover:text-black hover:font-semibold hover:translate-x-4 cursor-pointer">Aurai Residences</p>
             </li>
@@ -107,7 +107,7 @@ function DiscoverProjects() {
             </li>
           </ul>
           {/* Col #4 */}
-          <ul className="list-none flex flex-col gap-3">
+          <ul className="list-none flex flex-col gap-3 ">
             <li className="relative before:hidden hover:before:block before:bg-black before:absolute before:top-2.5 before:left-0 before:w-3 before:h-px">
               <p className="text-gray-400 text-sm font-light hover:text-black hover:font-semibold hover:translate-x-4 cursor-pointer">Pafia 2</p>
             </li>

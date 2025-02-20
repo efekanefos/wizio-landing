@@ -13,17 +13,31 @@ import MobileHamburgerIcon from "../newIcons/MobileHamburgerIcon";
 import CloseIcon from "../newIcons/CloseIcon";
 /* SVG Components */
 import LogoIcon from "../icons/LogoIcon";
+//import HomeIcon from "../icons/HomeIcon";
+import SearchIcon from "../icons/SearchIcon";
+import LocalAmenitiesIcon from "../icons/LocalAmenitiesIcon";
+import LocationIcon from "../icons/LocationIcon";
+import BedroomNumbersIcon from "../icons/BedroomNumbersIcon";
+import PriceRangeIcon from "../icons/PriceRangeIcon";
+import LightModeIcon from "../icons/LightModeIcon";
+import OctagonProfileIcon from "../icons/OctagonProfileIcon";
 /* SVG Images */
+import searchIcon from "../../assets/images/header/search_icon.svg";
+import callIcon from "../../assets/images/header/call_icon.svg";
+import WhiteCallIcon from "../../assets/images/header/white_call_icon.svg";
 import earthBackground from "../../assets/images/homepage/planet_earth_background.png";
 import LocalAmenitiesBackground from "../../assets/images/homepage/local_amenities_background.svg";
 /* Windows */
+import DiscoverProjects from "../DiscoverProjects";
+import NumberOfBedrooms from "../NumberOfBedrooms";
 import Contact from "./Contact";
 import Calendar from "../Calendar";
 import Login from "./Login";
 import Register from "./Register";
 import Language from "./Language";
+import PropertyDetails from "../PropertyDetails";
+import PriceRange from "../PriceRange";
 import LocalAmenitiesGPS from "../LocalAmenitiesGPS";
-import LocalAmenitiesList from "../LocalAmenitiesList";
 import MobileMenu from "../MobileMenu";
 import UserMobileMenu from "../UserMobileMenu";
 
@@ -73,8 +87,9 @@ function TestPage({ theme, setTheme }) {
               setShowBedroomSlider={setShowBedroomSlider}
               setShowPriceRange={setShowPriceRange}
               setShowPropertyDetails={setShowPropertyDetails}
-              showLocalAmenitiesGPS={showLocalAmenitiesGPS}
               setShowLocalAmenitiesGPS={setShowLocalAmenitiesGPS}
+              showLocationDevelopments={showLocationDevelopments}
+              setShowLocationDevelopments={setShowLocationDevelopments}
             />
           ) : (
             <MiniMenu
@@ -82,6 +97,7 @@ function TestPage({ theme, setTheme }) {
               openUserMobileMenu={openUserMobileMenu}
               showUpperOptions={showUpperOptions}
               setShowUpperOptions={setShowUpperOptions}
+              showLocationDevelopments={showLocationDevelopments}
               showProjectList={showProjectList}
               setShowProjectList={setShowProjectList}
               showBedroomSlider={showBedroomSlider}
@@ -171,6 +187,7 @@ function TestPage({ theme, setTheme }) {
             openUserMobileMenu={openUserMobileMenu}
             showUpperOptions={showUpperOptions}
             setShowUpperOptions={setShowUpperOptions}
+            showLocationDevelopments={showLocationDevelopments}
             showProjectList={showProjectList}
             setShowProjectList={setShowProjectList}
             showBedroomSlider={showBedroomSlider}
@@ -186,7 +203,6 @@ function TestPage({ theme, setTheme }) {
       {openMobileMenu && <MobileMenu />}
       {openUserMobileMenu && <UserMobileMenu />}
       {showLocalAmenitiesGPS && <LocalAmenitiesGPS />}
-      {showLocationDevelopments && <LocalAmenitiesList />}
 
       <img className="z-0 w-full h-screen object-cover" src={showLocalAmenitiesGPS ? LocalAmenitiesBackground : earthBackground} alt="earthBackground" />
 
