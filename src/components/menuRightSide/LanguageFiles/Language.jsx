@@ -1,10 +1,10 @@
 import React from "react";
-import GlobalIcon from "../newIcons/GlobalIcon";
-import CloseIcon from "../newIcons/CloseIcon";
+import GlobalIcon from "../../newIcons/GlobalIcon";
+import CloseIcon from "../../newIcons/CloseIcon";
 
 function Language({ setShowLanguageWindow }) {
   return (
-    <div className="absolute top-20 right-28 bg-white rounded-3xl p-3 pb-0 max-w-60 w-full z-10">
+    <div className="absolute top-9 right-0 bg-white rounded-3xl p-3 pb-0 max-w-60 w-fit min-w-72 z-10 shadow-lg border border-gray-200">
       {/* Header Row */}
       <div className="flex justify-between items-center border-b border-gray-200 p-2.5">
         {/* Icon and Title */}

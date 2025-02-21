@@ -14,7 +14,7 @@ import FacebookIcon from "../newIcons/FacebookIcon";
 
 function Contact({ setShowContactWindow, showCalendarWindow, setShowCalendarWindow }) {
   return (
-    <div className="absolute top-20 right-36 bg-white rounded-3xl p-3 min-w-72 w-fit z-10">
+    <div className="absolute top-9 right-0 bg-white rounded-3xl p-3 min-w-72 w-fit z-10 shadow-lg border border-gray-200">
       {/* Header Row */}
       <div className="flex justify-between items-center border-b border-gray-200 p-2.5">
         {/* Icon and Title */}

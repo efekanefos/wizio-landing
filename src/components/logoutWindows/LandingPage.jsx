@@ -6,7 +6,6 @@ import LargeMenu from "../menuVersions/LargeMenu";
 /* New SVG Components */
 import GuestIcon from "../newIcons/GuestIcon";
 import NavbarCallIcon from "../newIcons/NavbarCallIcon";
-import NavbarGlobalIcon from "../newIcons/NavbarGlobalIcon";
 import NavbarLightModeIcon from "../newIcons/NavbarLightModeIcon";
 import MobileHamburgerIcon from "../newIcons/MobileHamburgerIcon";
 import CloseIcon from "../newIcons/CloseIcon";
@@ -21,7 +20,6 @@ import Contact from "./Contact";
 import Calendar from "../Calendar";
 import Login from "./Login";
 import Register from "./Register";
-import Language from "./Language";
 import LocalAmenitiesGPS from "../LocalAmenitiesGPS";
 import LocalAmenitiesList from "../LocalAmenitiesList";
 import MobileMenu from "../mobileMenus/MobileMenu";
@@ -31,6 +29,7 @@ import LocationViewOptions from "../searchResultComponents/LocationViewOptions";
 import BelowHeaderFilterMenu from "../searchResultComponents/BelowHeaderFilterMenu";
 import CircleWithImage from "../searchResultComponents/CircleWithImage";
 import MiniLocationCardSideBar from "../searchResultComponents/MiniLocationCardSideBar";
+import LanguageButton from "../menuRightSide/LanguageFiles/LanguageButton";
 
 function LandingPage() {
   const [showUpperOptions, setShowUpperOptions] = useState(false);
@@ -106,34 +105,27 @@ function LandingPage() {
         <div className="flex justify-start items-center gap-6 max-md:gap-0">
           <div className={`w-full flex justify-start items-center gap-6`}>
             {/* Contact Button */}
-            <div
-              onClick={() => {
-                setShowContactWindow(true);
-                setShowLanguageWindow(false);
-                setShowLoginWindow(false);
-              }}
-              className={`w-5 cursor-pointer max-md:hidden`}
-            >
-              <NavbarCallIcon className={"w-6 h-6 fill-white"} />
+            <div className={`w-5 cursor-pointer max-md:hidden relative`}>
+              <div
+                onClick={() => {
+                  setShowContactWindow(true);
+                  setShowLanguageWindow(false);
+                  setShowLoginWindow(false);
+                }}
+              >
+                <NavbarCallIcon className={"w-6 h-6 fill-white"} />
+              </div>
+              {showContactWindow && <Contact showCalendarWindow={showCalendarWindow} setShowCalendarWindow={setShowCalendarWindow} setShowContactWindow={setShowContactWindow} />}
             </div>
             {/* Language Button */}
-            <div
-              onClick={() => {
-                setShowLanguageWindow(true);
-                setShowContactWindow(false);
-                setShowLoginWindow(false);
-              }}
-              className="w-5 cursor-pointer max-md:hidden"
-            >
-              <NavbarGlobalIcon className={`w-6 h-6 fill-white`} />
-            </div>
+            <LanguageButton showLanguageWindow={showLanguageWindow} setShowLanguageWindow={setShowLanguageWindow} setShowContactWindow={setShowContactWindow} setShowLoginWindow={setShowLoginWindow} />
             {/* Dark-Light Theme Button */}
             <div className="w-5 max-md:hidden">
               <NavbarLightModeIcon className={"w-6 h-6 fill-white"} />
             </div>
           </div>
           {/* Login Button */}
-          <div className="flex justify-start items-center gap-3 w-full h-full cursor-pointer">
+          <div className="flex justify-start items-center gap-3 w-full h-full cursor-pointer relative">
             <div className="w-full flex justify-between items-center">
               {openMobileMenu && !openUserMobileMenu ? (
                 <div onClick={() => setOpenMobileMenu(false)} className="border border-gray-200 rounded-full p-3 cursor-pointer">
@@ -166,6 +158,8 @@ function LandingPage() {
                 </div>
               )}
             </div>
+            {showLoginWindow && <Login setShowLoginWindow={setShowLoginWindow} setShowRegisterWindow={setShowRegisterWindow} />}
+            {showRegisterWindow && <Register setShowLoginWindow={setShowLoginWindow} setShowRegisterWindow={setShowRegisterWindow} />}
           </div>
         </div>
       </nav>
@@ -190,7 +184,7 @@ function LandingPage() {
         <div className="flex justify-between items-center border border-gray-200 w-full max-w-96 mx-auto rounded-full pl-6 pr-2 py-1.5 shadow-lg">
           <div className={`flex justify-start items-center gap-2 h-full cursor-pointer min-h-12 max-md:pr-1`}>
             <div className="flex justify-start items-center">
-              <div className={`flex flex-col min-w-36`}>
+              <div className={`flex flex-col`}>
                 <p className={`text-black leading-tight font-semibold text-xs`}>Locations and</p>
                 <p className="text-sm font-light leading-4 text-gray-400 md:block hidden">Developments</p>
               </div>
@@ -198,7 +192,6 @@ function LandingPage() {
           </div>
           <div className={`rounded-full bg-black p-4 flex justify-start items-center gap-2`}>
             <WhiteSearchIcon className={"w-4 h-4 fill-white"} />
-            {/* <p className="text-white font-light text-sm">Search</p> */}
           </div>
         </div>
       ) : (
@@ -228,24 +221,8 @@ function LandingPage() {
       <img className="z-0 w-full h-screen object-cover" src={showLocalAmenitiesGPS ? LocalAmenitiesBackground : earthBackground} alt="earthBackground" />
 
       {
-        //* Contact Window
-        showContactWindow && <Contact showCalendarWindow={showCalendarWindow} setShowCalendarWindow={setShowCalendarWindow} setShowContactWindow={setShowContactWindow} />
-      }
-      {
         //* Calendar Window
         showCalendarWindow && <Calendar />
-      }
-      {
-        //* Login Window
-        showLoginWindow && <Login setShowLoginWindow={setShowLoginWindow} setShowRegisterWindow={setShowRegisterWindow} />
-      }
-      {
-        //* Register Window
-        showRegisterWindow && <Register setShowLoginWindow={setShowLoginWindow} setShowRegisterWindow={setShowRegisterWindow} />
-      }
-      {
-        //* Language Window
-        showLanguageWindow && <Language setShowLanguageWindow={setShowLanguageWindow} />
       }
 
       {!showLocalAmenitiesGPS && (

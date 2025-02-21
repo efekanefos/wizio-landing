@@ -22,8 +22,7 @@ const LargeMenu = ({
 }) => {
   return (
     <div
-      className={` flex justify-between items-center rounded-full shadow-xl py-0.5 relative pl-0.5 pr-2 w-fit max-sm:w-full
-        ${showPropertyDetails && "!pr-0.5"}
+      className={` flex justify-between items-center rounded-full shadow-xl relative w-fit max-sm:w-full hover:bg-gray-300
         ${openMobileMenu || openUserMobileMenu ? `border-0` : `border border-gray-200`}
         `}
     >
@@ -37,7 +36,9 @@ const LargeMenu = ({
             setShowPropertyDetails(false);
             setShowUpperOptions(showProjectList ? false : true);
           }}
-          className={`flex justify-start items-center gap-2 border-r border-gray-300 px-4 pl-6 h-full cursor-pointer min-h-12 max-md:pr-1 ${showUpperOptions ? "max-md:pr-2" : ""}
+          className={`flex justify-start items-center gap-2 border-r border-gray-300 px-4 pl-6 h-full cursor-pointer min-h-12 relative  
+            hover:bg-white hover:py-3.5 hover:pr-4 hover:rounded-full hover:border-r-0 hover:shadow-lg
+            max-md:pr-1 ${showUpperOptions ? "max-md:pr-2" : ""}
               ${
                 showProjectList
                   ? `bg-gray-300 py-3.5 pl-6 pr-4 rounded-full border-r-0`
@@ -57,8 +58,8 @@ const LargeMenu = ({
               <p className="text-sm font-light leading-4 text-gray-400 md:hidden block">Search des..</p>
             </div>
           </div>
-          {showProjectList && !showLocationDevelopments ? <DiscoverProjects /> : ""}
         </div>
+        {showProjectList && !showLocationDevelopments ? <DiscoverProjects /> : ""}
 
         {/* Number of Bedrooms Button */}
         {!showLocationDevelopments || !showUpperOptions ? (
@@ -70,9 +71,9 @@ const LargeMenu = ({
               setShowBedroomSlider(!showBedroomSlider);
               setShowUpperOptions(showBedroomSlider ? false : true);
             }}
-            className={`flex justify-start items-center gap-2 border-r border-gray-300 px-4 h-full cursor-pointer min-h-12 max-md:pr-1 ${showUpperOptions ? "max-md:pr-2" : ""} ${
-              showBedroomSlider ? `bg-gray-300 py-3.5 pl-6 pr-4 rounded-full border-r-0` : showPriceRange ? `border-r-0` : ""
-            }`}
+            className={`flex justify-start items-center gap-2 border-r border-gray-300 px-4 pl-6 h-full cursor-pointer min-h-12 relative max-md:pr-1 
+              hover:bg-white hover:py-3.5 hover:pr-4 hover:rounded-full hover:border-r-0 hover:shadow-lg
+              ${showUpperOptions ? "max-md:pr-2" : ""} ${showBedroomSlider ? `bg-gray-300 py-3.5 pl-6 pr-4 rounded-full border-r-0` : showPriceRange ? `border-r-0` : ""}`}
           >
             <div className="flex justify-start items-center">
               <div className={`flex flex-col min-w-36 max-md:min-w-20`}>
@@ -81,11 +82,11 @@ const LargeMenu = ({
                 <p className="text-sm font-light leading-4 text-gray-400 md:hidden block">Add bedro..</p>
               </div>
             </div>
+            {showBedroomSlider && <NumberOfBedrooms />}
           </div>
         ) : (
           ""
         )}
-        {showBedroomSlider && <NumberOfBedrooms />}
 
         {/* Price Range Button */}
         {!showLocationDevelopments || !showUpperOptions ? (
@@ -97,7 +98,8 @@ const LargeMenu = ({
               setShowPriceRange(!showPriceRange);
               setShowUpperOptions(showPriceRange ? false : true);
             }}
-            className={`flex justify-start items-center gap-2 border-r border-gray-300 px-4 h-full cursor-pointer 
+            className={`flex justify-start items-center gap-2 border-r border-gray-300 px-4 pl-6 h-full cursor-pointer relative 
+                hover:bg-white hover:py-3.5 hover:pr-4 hover:rounded-full hover:border-r-0 hover:shadow-lg
                 ${showPriceRange ? `bg-gray-300 py-3.5 pl-6 pr-4 rounded-full border-r-0` : showPropertyDetails ? `border-r-0` : ""} 
                 min-h-12 `}
           >
@@ -108,14 +110,14 @@ const LargeMenu = ({
                 <p className="text-sm font-light leading-4 text-gray-400 md:hidden block">Add price r..</p>
               </div>
             </div>
+            {showPriceRange && <PriceRange />}
           </div>
         ) : (
           ""
         )}
-        {showPriceRange && <PriceRange />}
 
         {/* Property Details and Search Container */}
-        <div className={`flex items-center ${showPropertyDetails && `bg-gray-300 rounded-full pr-2`}`}>
+        <div className={`flex items-center group ${showPropertyDetails && `bg-gray-300 rounded-full pr-2`} hover:bg-white hover:rounded-full hover:pr-2 hover:shadow-lg`}>
           {!showLocationDevelopments || !showUpperOptions ? (
             <div
               onClick={() => {
@@ -125,7 +127,8 @@ const LargeMenu = ({
                 setShowPropertyDetails(!showPropertyDetails);
                 setShowUpperOptions(showPropertyDetails ? false : true);
               }}
-              className={`flex justify-start items-center gap-2 px-4 h-full min-h-8 cursor-pointer 
+              className={`flex justify-start items-center gap-2 px-4 pl-6 h-full min-h-8 cursor-pointer 
+                group-hover:bg-white group-hover:py-3.5 group-hover:pr-4 group-hover:rounded-full group-hover:border-r-0 
                 ${showPropertyDetails && `bg-gray-300 py-3.5 pl-6 pr-4 rounded-full border-r-0`}`}
             >
               <div className="flex justify-start items-center">
@@ -139,10 +142,11 @@ const LargeMenu = ({
             ""
           )}
 
-          <div className={`rounded-full bg-black p-3 flex justify-start items-center gap-2 max-md:p-4`}>
-            <img className="w-4 h-4 max-md:w-5 max-md:h-5" src={searchIcon} alt="search" />
-            {/* <p className="text-white font-light text-sm">Search</p> */}
+          <div className={`rounded-full bg-black px-[27px] py-[14px] flex justify-start items-center gap-3 max-md:p-4 cursor-pointer`}>
+            <img className="w-5 h-5" src={searchIcon} alt="search" />
+            <p className="text-white font-light text-sm">Search</p>
           </div>
+          {showPropertyDetails && <PropertyDetails />}
         </div>
       </div>
       {/* Mobile Search Input */}
@@ -156,8 +160,6 @@ const LargeMenu = ({
       ) : (
         ""
       )}
-
-      {showPropertyDetails && <PropertyDetails />}
     </div>
   );
 };

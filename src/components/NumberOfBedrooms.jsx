@@ -6,7 +6,7 @@ function NumberOfBedrooms() {
   const maxVal = 5;
   const [values, setValues] = useState([minVal, maxVal]);
   return (
-    <div className="rangeSlider absolute left-48 top-20 shadow-2xl shadow-[rgba(0,0,0,0.25)] w-fit min-w-80 bg-white p-5 py-5 pb-10 rounded-3xl max-md:left-28">
+    <div className="rangeSlider absolute left-0 top-[70px] shadow-2xl shadow-[rgba(0,0,0,0.25)] w-fit min-w-80 bg-white p-5 py-5 pb-10 rounded-3xl max-md:left-28">
       <div className="w-full flex justify-between mb-6">
         <span
           className="relative flex flex-col text-gray-400 text-xs font-semibold ml-1.5

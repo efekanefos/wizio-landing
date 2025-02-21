@@ -4,19 +4,12 @@ import { useNavigate } from "react-router-dom";
 import GuestIcon from "../newIcons/GuestIcon";
 import CloseIcon from "../newIcons/CloseIcon";
 import VisiblePasswordIcon from "../newIcons/VisiblePasswordIcon";
-/* SVG Components */
-import OctagonProfileIcon from "../icons/OctagonProfileIcon";
-import MailInput from "../icons/MailInput";
-import LoginPasswordIcon from "../icons/LoginPasswordIcon";
-/* Images */
-import blackOctagonProfile from "../../assets/images/header/black_octagon_profile_icon.svg";
-import loginPasswordIcon from "../../assets/images/logoutWindows/login_password_icon.svg";
 
 function Login({ setShowLoginWindow, setShowRegisterWindow }) {
   const navigate = useNavigate();
 
   return (
-    <div className="absolute top-20 right-8 bg-white rounded-3xl p-3 min-w-72 w-fit z-10">
+    <div className="absolute top-9 right-0 bg-white rounded-3xl p-3 min-w-72 w-fit z-10 shadow-lg border border-gray-200">
       {/* Header Row */}
       <div className="flex justify-between items-center border-b border-gray-200 p-2.5">
         {/* Icon and Title */}

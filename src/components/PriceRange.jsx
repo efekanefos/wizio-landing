@@ -7,7 +7,7 @@ function PriceRange() {
   const [values, setValues] = useState([minVal, maxVal]);
   const formatCurrency = (value) => new Intl.NumberFormat("de-DE").format(value);
   return (
-    <div className="absolute left-[394px] top-20 shadow-2xl shadow-[rgba(0,0,0,0.25)] w-fit bg-white rounded-3xl max-md:left-56">
+    <div className="absolute left-0 top-[70px] shadow-2xl shadow-[rgba(0,0,0,0.25)] w-fit bg-white rounded-3xl max-md:left-56">
       <div className="p-6 pb-5">
         <ReactSlider className="horizontal-slider" onChange={setValues} value={values} min={minVal} max={maxVal} />
       </div>
