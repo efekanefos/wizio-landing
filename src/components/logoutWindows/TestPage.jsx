@@ -38,8 +38,8 @@ import Language from "./Language";
 import PropertyDetails from "../PropertyDetails";
 import PriceRange from "../PriceRange";
 import LocalAmenitiesGPS from "../LocalAmenitiesGPS";
-import MobileMenu from "../MobileMenu";
-import UserMobileMenu from "../UserMobileMenu";
+import MobileMenu from "../mobileMenus/MobileMenu";
+import UserMobileMenu from "../mobileMenus/UserMobileMenu";
 
 function TestPage({ theme, setTheme }) {
   const [showUpperOptions, setShowUpperOptions] = useState(false);

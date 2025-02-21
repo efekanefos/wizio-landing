@@ -63,7 +63,7 @@ const MiniLocationCardSideBar = () => {
           </div>
         </div>
         {Array.from({ length: 4 }).map((_, index) => (
-          <div className="w-full opacity-50 ">
+          <div key={index} className="w-full opacity-50 ">
             <div className="flex flex-col gap-3 p-2 border border-gray-200 shadow-md rounded-2xl mb-3">
               {/* Card Info */}
               <div className="flex justify-start items-start gap-6">

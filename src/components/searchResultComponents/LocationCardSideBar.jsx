@@ -73,7 +73,7 @@ const LocationCardSideBar = () => {
                 <img className="w-full h-full rounded-tl-xl rounded-tr-xl" src={locationCardImage} alt="locationCardImage" />
               </SplideSlide>
             </Splide>
-            <span className="w-9 h-9 text-white text-base font-medium bg-lime-500 rounded-full border-white border-4 flex justify-center items-center absolute top-1 right-1">999</span>
+            <span className="w-9 h-9 box-content text-white text-base font-medium bg-lime-500 rounded-full border-white border-4 flex justify-center items-center absolute top-1 right-1">999</span>
           </div>
           {/* Card Info */}
           <div className="mt-2 mb-3">
@@ -121,7 +121,7 @@ const LocationCardSideBar = () => {
                 <img className="w-full h-full rounded-tl-xl rounded-tr-xl" src={locationCardImage} alt="locationCardImage" />
               </SplideSlide>
             </Splide>
-            <span className="w-9 h-9 text-white text-base font-medium bg-lime-500 rounded-full border-white border-4 flex justify-center items-center absolute top-1 right-1">999</span>
+            <span className="w-9 h-9 box-content text-white text-base font-medium bg-lime-500 rounded-full border-white border-4 flex justify-center items-center absolute top-1 right-1">999</span>
           </div>
           {/* Card Info */}
           <div className="mt-2 mb-3">

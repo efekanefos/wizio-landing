@@ -16,6 +16,8 @@ const MiniMenu = ({
   setShowPriceRange,
   showPropertyDetails,
   setShowPropertyDetails,
+  showSearchResult,
+  setShowSearchResult,
 }) => {
   return (
     <div
@@ -110,7 +112,7 @@ const MiniMenu = ({
             ""
           )}
 
-          <div className={`p-2 rounded-full bg-buttonOrange`}>
+          <div onClick={() => setShowSearchResult(!showSearchResult)} className={`p-2 rounded-full bg-buttonOrange cursor-pointer`}>
             <img className="w-4" src={searchIcon} alt="search" />
           </div>
         </div>

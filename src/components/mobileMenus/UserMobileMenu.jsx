@@ -1,39 +1,39 @@
 import React, { useState } from "react";
-import NavbarCallIcon from "./newIcons/NavbarCallIcon";
-import GlobalIcon from "./newIcons/GlobalIcon";
-import GuestIcon from "./newIcons/GuestIcon";
-import CloseIcon from "./newIcons/CloseIcon";
+import NavbarCallIcon from "../newIcons/NavbarCallIcon";
+import GlobalIcon from "../newIcons/GlobalIcon";
+import GuestIcon from "../newIcons/GuestIcon";
+import CloseIcon from "../newIcons/CloseIcon";
 /* Contact SVG Components */
-import WhatsappIcon from "./newIcons/WhatsappIcon";
-import CalendarIcon from "./newIcons/CalendarIcon";
-import LetUsCallYouIcon from "./newIcons/LetUsCallYouIcon";
-import MailIcon from "./newIcons/MailIcon";
-import GoogleIcon from "./newIcons/GoogleIcon";
-import WindowsIcon from "./newIcons/WindowsIcon";
-import AppleIcon from "./newIcons/AppleIcon";
-import XIcon from "./newIcons/XIcon";
-import FacebookIcon from "./newIcons/FacebookIcon";
+import WhatsappIcon from "../newIcons/WhatsappIcon";
+import CalendarIcon from "../newIcons/CalendarIcon";
+import LetUsCallYouIcon from "../newIcons/LetUsCallYouIcon";
+import MailIcon from "../newIcons/MailIcon";
+import GoogleIcon from "../newIcons/GoogleIcon";
+import WindowsIcon from "../newIcons/WindowsIcon";
+import AppleIcon from "../newIcons/AppleIcon";
+import XIcon from "../newIcons/XIcon";
+import FacebookIcon from "../newIcons/FacebookIcon";
 /* Login SVG Components */
-import VisiblePasswordIcon from "./newIcons/VisiblePasswordIcon";
-import UserEditIcon from "./newIcons/UserEditIcon";
-import HiddenPasswordIcon from "./newIcons/HiddenPasswordIcon";
-import ForgetPasswordIcon from "./newIcons/ForgetPasswordIcon";
+import VisiblePasswordIcon from "../newIcons/VisiblePasswordIcon";
+import UserEditIcon from "../newIcons/UserEditIcon";
+import HiddenPasswordIcon from "../newIcons/HiddenPasswordIcon";
+import ForgetPasswordIcon from "../newIcons/ForgetPasswordIcon";
 /* Profile Window SVG Components */
-import FavouriteIcon from "./newIcons/FavouriteIcon";
-import RecentViewsIcon from "./newIcons/RecentViewsIcon";
-import NotificationsIcon from "./newIcons/NotificationsIcon";
-import LogOutIcon from "./newIcons/LogOutIcon";
-import RightArrowIcon from "./newIcons/RightArrowIcon";
+import FavouriteIcon from "../newIcons/FavouriteIcon";
+import RecentViewsIcon from "../newIcons/RecentViewsIcon";
+import NotificationsIcon from "../newIcons/NotificationsIcon";
+import LogOutIcon from "../newIcons/LogOutIcon";
+import RightArrowIcon from "../newIcons/RightArrowIcon";
 /* Favourites SVG Components */
-import BackArrowIcon from "./newIcons/BackArrowIcon";
-import UnFavouriteIcon from "./newIcons/UnFavouriteIcon";
-import RepeatIcon from "./newIcons/RepeatIcon";
-import CircledTickIcon from "./newIcons/CircledTickIcon";
-import MobileDownArrowIcon from "./newIcons/MobileDownArrowIcon";
+import BackArrowIcon from "../newIcons/BackArrowIcon";
+import UnFavouriteIcon from "../newIcons/UnFavouriteIcon";
+import RepeatIcon from "../newIcons/RepeatIcon";
+import CircledTickIcon from "../newIcons/CircledTickIcon";
+import MobileDownArrowIcon from "../newIcons/MobileDownArrowIcon";
 /* Recent Views SVG Components */
-import RedFavouriteIcon from "./newIcons/RedFavouriteIcon";
+import RedFavouriteIcon from "../newIcons/RedFavouriteIcon";
 /* Notifications SVG Components */
-import MobileMenuCloseIcon from "./newIcons/MobileMenuCloseIcon";
+import MobileMenuCloseIcon from "../newIcons/MobileMenuCloseIcon";
 
 /*
  * loginStatus === "button" -> Button styled
@@ -52,14 +52,28 @@ function UserMobileMenu() {
       <div className={`flex flex-col gap-3 relative mx-5`}>
         {/* Contact Button */}
         {!contactStatus ? (
-          <div onClick={() => setContactStatus(true)} className="flex justify-start items-center gap-4 p-5 border border-gray-200 rounded-full shadow-xl cursor-pointer">
+          <div
+            onClick={() => {
+              setContactStatus(true);
+              setLanguageStatus(false);
+              setLoginStatus("button");
+            }}
+            className="flex justify-start items-center gap-4 p-5 border border-gray-200 rounded-full shadow-xl cursor-pointer"
+          >
             <NavbarCallIcon className={"w-6 h-6 fill-white"} />
             <p className="text-[16px] font-semibold text-black">Contact</p>
           </div>
         ) : (
           <div className="flex flex-col border border-gray-200 rounded-[32px] shadow-xl p-5">
             {/* Header Row */}
-            <div onClick={() => setContactStatus(false)} className="flex justify-between items-center border-b border-gray-200 p-3 cursor-pointer">
+            <div
+              onClick={() => {
+                setContactStatus(false);
+                setLanguageStatus(false);
+                setLoginStatus("button");
+              }}
+              className="flex justify-between items-center border-b border-gray-200 p-3 cursor-pointer"
+            >
               {/* Icon and Title */}
               <div className="flex justify-start items-center gap-4 w-full">
                 <NavbarCallIcon className={"w-6 h-6 fill-white"} />
@@ -72,7 +86,7 @@ function UserMobileMenu() {
                 <WhatsappIcon className={"w-6 h-6 fill-white"} />
                 <p className="text-sm font-light">WhatsApp</p>
               </li>
-              <li onClick={() => setShowCalendarWindow(!showCalendarWindow)} className="flex  items-center justify-start gap-2.5 py-3 px-6 hover:bg-gray-200 rounded-full cursor-pointer">
+              <li className="flex  items-center justify-start gap-2.5 py-3 px-6 hover:bg-gray-200 rounded-full cursor-pointer">
                 <CalendarIcon className={"w-6 h-6 fill-white"} />
                 <p className="text-sm font-light">Book Now</p>
               </li>
@@ -112,7 +126,14 @@ function UserMobileMenu() {
 
         {/* Language Button */}
         {!languageStatus ? (
-          <div onClick={() => setLanguageStatus(true)} className="flex justify-start items-center gap-4 p-5 border border-gray-200 rounded-full shadow-xl cursor-pointer">
+          <div
+            onClick={() => {
+              setContactStatus(false);
+              setLanguageStatus(true);
+              setLoginStatus("button");
+            }}
+            className="flex justify-start items-center gap-4 p-5 border border-gray-200 rounded-full shadow-xl cursor-pointer"
+          >
             <GlobalIcon className={"w-6 h-6 fill-white"} />
             <p className="text-[16px] font-semibold text-black">Language</p>
           </div>
@@ -149,7 +170,14 @@ function UserMobileMenu() {
 
         {/* Login Button */}
         {loginStatus === "button" ? (
-          <div onClick={() => setLoginStatus("login")} className="flex justify-start items-center gap-4 p-5 border border-gray-200 rounded-full shadow-xl cursor-pointer">
+          <div
+            onClick={() => {
+              setContactStatus(false);
+              setLanguageStatus(false);
+              setLoginStatus("login");
+            }}
+            className="flex justify-start items-center gap-4 p-5 border border-gray-200 rounded-full shadow-xl cursor-pointer"
+          >
             <GuestIcon className={"w-6 h-6 fill-white"} />
             <p className="text-[16px] font-semibold text-black">Login</p>
           </div>
@@ -196,6 +224,8 @@ function UserMobileMenu() {
                 </label>
                 <button
                   onClick={() => {
+                    setContactStatus(false);
+                    setLanguageStatus(false);
                     setLoginStatus("password");
                   }}
                   className="text-xs font-light text-gray-300 cursor-pointer"
@@ -208,6 +238,8 @@ function UserMobileMenu() {
               <div className="w-full flex flex-col gap-3 p-3 pb-0">
                 <button
                   onClick={() => {
+                    setContactStatus(false);
+                    setLanguageStatus(false);
                     setLoginStatus("logged");
                   }}
                   className="bg-black text-sm text-white font-light text-center w-full py-3 rounded-full"
@@ -221,6 +253,8 @@ function UserMobileMenu() {
                   <button
                     className="text-xs font-light text-black"
                     onClick={() => {
+                      setContactStatus(false);
+                      setLanguageStatus(false);
                       setLoginStatus("register");
                     }}
                   >
@@ -315,6 +349,8 @@ function UserMobileMenu() {
                   <button
                     className="text-xs font-light text-black"
                     onClick={() => {
+                      setContactStatus(false);
+                      setLanguageStatus(false);
                       setLoginStatus("login");
                     }}
                   >
@@ -354,6 +390,8 @@ function UserMobileMenu() {
                   <button
                     className="text-xs font-light text-black"
                     onClick={() => {
+                      setContactStatus(false);
+                      setLanguageStatus(false);
                       setLoginStatus("register");
                     }}
                   >
@@ -365,6 +403,8 @@ function UserMobileMenu() {
                   <button
                     className="text-xs font-light text-black"
                     onClick={() => {
+                      setContactStatus(false);
+                      setLanguageStatus(false);
                       setLoginStatus("login");
                     }}
                   >

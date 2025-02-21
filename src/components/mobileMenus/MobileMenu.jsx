@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 import ReactSlider from "react-slider";
 /* SVG Components */
-import SearchIcon from "./icons/SearchIcon";
-import LocalAmenitiesIcon from "./icons/LocalAmenitiesIcon";
-import CloseIcon from "./newIcons/CloseIcon";
-import MobileMenuCloseIcon from "./newIcons/MobileMenuCloseIcon";
-import WhiteSearchIcon from "./newIcons/WhiteSearchIcon";
-import MobileDownArrowIcon from "./newIcons/MobileDownArrowIcon";
-import ApartmentsIcon from "./newIcons/ApartmentsIcon";
-import VillasIcon from "./newIcons/VillasIcon";
-import TownhouseIcon from "./newIcons/TownhouseIcon";
-import GardenIcon from "./newIcons/GardenIcon";
-import TerraceIcon from "./newIcons/TerraceIcon";
-import BalconyIcon from "./newIcons/BalconyIcon";
+import SearchIcon from "../icons/SearchIcon";
+import LocalAmenitiesIcon from "../icons/LocalAmenitiesIcon";
+import CloseIcon from "../newIcons/CloseIcon";
+import MobileMenuCloseIcon from "../newIcons/MobileMenuCloseIcon";
+import WhiteSearchIcon from "../newIcons/WhiteSearchIcon";
+import MobileDownArrowIcon from "../newIcons/MobileDownArrowIcon";
+import ApartmentsIcon from "../newIcons/ApartmentsIcon";
+import VillasIcon from "../newIcons/VillasIcon";
+import TownhouseIcon from "../newIcons/TownhouseIcon";
+import GardenIcon from "../newIcons/GardenIcon";
+import TerraceIcon from "../newIcons/TerraceIcon";
+import BalconyIcon from "../newIcons/BalconyIcon";
 
 function MobileMenu() {
   {
@@ -72,7 +72,7 @@ function MobileMenu() {
   } else {
   }
   return (
-    <div className="bg-white relative z-50 h-screen">
+    <div className="bg-white relative z-50 h-screen overflow-y-auto">
       {/* Discover - Local */}
       <div className="flex justify-center items-center gap-11 py-5">
         {/* Discover Projects */}
@@ -123,10 +123,18 @@ function MobileMenu() {
         </div>
       </div>
       {/* Menu List */}
-      <div className={`flex flex-col gap-3 relative ${locationStatus === "halfOpen" || locationStatus === "closed" ? "mx-5" : ""}`}>
+      <div className={`flex flex-col gap-3 relative flex-grow ${locationStatus === "halfOpen" || locationStatus === "closed" ? "mx-5" : ""}`}>
         {/* Location Button */}
         {locationStatus === "closed" ? (
-          <div onClick={() => setLocationStatus("halfOpen")} className={`flex justify-between items-center border border-gray-200 rounded-full p-5 shadow-xl cursor-pointer`}>
+          <div
+            onClick={() => {
+              setLocationStatus("halfOpen");
+              setBedroomStatus(false);
+              setPriceStatus(false);
+              setMoreDetailsStatus(false);
+            }}
+            className={`flex justify-between items-center border border-gray-200 rounded-full p-5 shadow-xl cursor-pointer`}
+          >
             <p className="text-sm font-semibold text-black">Location</p>
             <div className="flex justify-start items-center gap-3">
               <p className="text-sm font-light text-gray-400">Search Destination</p>
@@ -140,7 +148,15 @@ function MobileMenu() {
                 <div className="flex justify-between items-center mb-3">
                   <p className="text-2xl font-semibold text-black">Location</p>
                   {!localAmenities && (
-                    <p onClick={() => setLocationStatus("closed")} className="text-sm text-black font-light py-2 px-4 underline cursor-pointer">
+                    <p
+                      onClick={() => {
+                        setLocationStatus("closed");
+                        setBedroomStatus(false);
+                        setPriceStatus(false);
+                        setMoreDetailsStatus(false);
+                      }}
+                      className="text-sm text-black font-light py-2 px-4 underline cursor-pointer"
+                    >
                       Clear all
                     </p>
                   )}
@@ -179,12 +195,28 @@ function MobileMenu() {
 
               {!localAmenities &&
                 (locationStatus === "halfOpen" ? (
-                  <div onClick={() => setLocationStatus("full")} className="flex justify-center items-center py-1 border-t border-gray-200 mt-3 cursor-pointer">
+                  <div
+                    onClick={() => {
+                      setLocationStatus("full");
+                      setBedroomStatus(false);
+                      setPriceStatus(false);
+                      setMoreDetailsStatus(false);
+                    }}
+                    className="flex justify-center items-center py-1 border-t border-gray-200 mt-3 cursor-pointer"
+                  >
                     <MobileDownArrowIcon className={"w-6 h-6 fill-white"} />
                   </div>
                 ) : (
                   <div className={`flex justify-between items-center mt-5 ${locationStatus === "full" ? "absolute bottom-32 w-full left-0 px-5" : ""}`}>
-                    <p onClick={() => setLocationStatus("halfOpen")} className="text-sm text-black font-light py-2 underline cursor-pointer">
+                    <p
+                      onClick={() => {
+                        setLocationStatus("halfOpen");
+                        setBedroomStatus(false);
+                        setPriceStatus(false);
+                        setMoreDetailsStatus(false);
+                      }}
+                      className="text-sm text-black font-light py-2 underline cursor-pointer"
+                    >
                       Clear all
                     </p>
                     <button className="flex items-center gap-2 w-fit px-5 py-3 bg-black rounded-full cursor-pointer">
@@ -202,7 +234,15 @@ function MobileMenu() {
         {/* Bedrooms Button */}
         {!localAmenities &&
           (!bedroomStatus ? (
-            <div onClick={() => setBedroomStatus(true)} className="flex justify-between items-center p-5 border border-gray-200 rounded-full shadow-xl cursor-pointer">
+            <div
+              onClick={() => {
+                setBedroomStatus(true);
+                setLocationStatus("closed");
+                setPriceStatus(false);
+                setMoreDetailsStatus(false);
+              }}
+              className="flex justify-between items-center p-5 border border-gray-200 rounded-full shadow-xl cursor-pointer"
+            >
               <p className="text-sm font-semibold text-black">Bedrooms</p>
               <div className="flex justify-start items-center gap-3">
                 <p className="text-sm font-light text-gray-400">Add bedrooms</p>
@@ -263,7 +303,15 @@ function MobileMenu() {
         {/* Price Button */}
         {!localAmenities &&
           (!priceStatus ? (
-            <div onClick={() => setPriceStatus(true)} className="flex justify-between items-center p-5 border border-gray-200 rounded-full shadow-xl cursor-pointer">
+            <div
+              onClick={() => {
+                setPriceStatus(true);
+                setLocationStatus("closed");
+                setBedroomStatus(false);
+                setMoreDetailsStatus(false);
+              }}
+              className="flex justify-between items-center p-5 border border-gray-200 rounded-full shadow-xl cursor-pointer"
+            >
               <p className="text-sm font-semibold text-black">Price</p>
               <div className="flex justify-start items-center gap-3">
                 <p className="text-sm font-light text-gray-400">Add price range</p>
@@ -303,7 +351,15 @@ function MobileMenu() {
         {/* More Details Button */}
         {!localAmenities &&
           (!moreDetailsStatus ? (
-            <div onClick={() => setMoreDetailsStatus(true)} className="flex justify-between items-center p-5 border border-gray-200 rounded-full shadow-xl cursor-pointer">
+            <div
+              onClick={() => {
+                setMoreDetailsStatus(true);
+                setLocationStatus("closed");
+                setBedroomStatus(false);
+                setPriceStatus(false);
+              }}
+              className="flex justify-between items-center p-5 border border-gray-200 rounded-full shadow-xl cursor-pointer"
+            >
               <p className="text-sm font-semibold text-black">More</p>
               <div className="flex justify-start items-center gap-3">
                 <p className="text-sm font-light text-gray-400">Add details</p>

@@ -19,7 +19,6 @@ import PriceRange from "./components/PriceRange";
 import LocalAmenitiesGPS from "./components/LocalAmenitiesGPS";
 import LoggedInLandingPage from "./components/loggedInWindows/LoggedInLandingPage";
 import Lofos from "./components/lofos/Lofos";
-import TestPage from "./components/logoutWindows/TestPage";
 
 function App() {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
@@ -39,7 +38,7 @@ function App() {
         <Route
           path="/"
           element={
-            <div className="overflow-y-hidden h-screen relative">
+            <div className="h-screen relative">
               <LandingPage theme={theme} setTheme={setTheme} />
             </div>
           }
@@ -65,7 +64,6 @@ function App() {
         <Route path="/price-range" element={<PriceRange />} />
         <Route path="/local-amenities-gps" element={<LocalAmenitiesGPS />} />
         <Route path="/lofos" element={<Lofos />} />
-        <Route path="/test-page" element={<TestPage />} />
       </Routes>
     </Router>
   );

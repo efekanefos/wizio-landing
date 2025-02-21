@@ -4,7 +4,6 @@ import MiniMenu from "../menuVersions/miniMenu";
 import UpperMiniMenu from "../menuVersions/UpperMiniMenu";
 import LargeMenu from "../menuVersions/LargeMenu";
 /* New SVG Components */
-import HomeIcon from "../newIcons/HomeIcon";
 import GuestIcon from "../newIcons/GuestIcon";
 import NavbarCallIcon from "../newIcons/NavbarCallIcon";
 import NavbarGlobalIcon from "../newIcons/NavbarGlobalIcon";
@@ -24,16 +23,22 @@ import Register from "./Register";
 import Language from "./Language";
 import LocalAmenitiesGPS from "../LocalAmenitiesGPS";
 import LocalAmenitiesList from "../LocalAmenitiesList";
-import MobileMenu from "../MobileMenu";
-import UserMobileMenu from "../UserMobileMenu";
+import MobileMenu from "../mobileMenus/MobileMenu";
+import UserMobileMenu from "../mobileMenus/UserMobileMenu";
+import LocationCardSideBar from "../searchResultComponents/LocationCardSideBar";
+import LocationViewOptions from "../searchResultComponents/LocationViewOptions";
+import BelowHeaderFilterMenu from "../searchResultComponents/BelowHeaderFilterMenu";
+import CircleWithImage from "../searchResultComponents/CircleWithImage";
+import MiniLocationCardSideBar from "../searchResultComponents/MiniLocationCardSideBar";
 
-function TestPage({ theme, setTheme }) {
+function LandingPage() {
   const [showUpperOptions, setShowUpperOptions] = useState(false);
   const [showProjectList, setShowProjectList] = useState(false);
   const [showLocationDevelopments, setShowLocationDevelopments] = useState(false);
   const [showBedroomSlider, setShowBedroomSlider] = useState(false);
   const [showPropertyDetails, setShowPropertyDetails] = useState(false);
   const [showPriceRange, setShowPriceRange] = useState(false);
+  const [showSearchResult, setShowSearchResult] = useState(false);
   //* Windows
   const [showContactWindow, setShowContactWindow] = useState(false);
   const [showCalendarWindow, setShowCalendarWindow] = useState(false);
@@ -57,12 +62,10 @@ function TestPage({ theme, setTheme }) {
     <div className="overflow-y-hidden max-h-screen font-inter">
       <nav className={`flex justify-between items-center py-3 px-9 z-10 relative bg-white font-inter max-lg:px-5 max-md:px-5 max-sm:gap-4`}>
         {/* Logo Side */}
-        <div className="flex justify-start items-center gap-5 lg:min-w-40">
+        <div className="flex justify-start items-center gap-5 lg:min-w-40 max-sm:hidden">
           <div>
             <LogoIcon className={"w-20 h-7 fill-[#F78E2F]"} />
           </div>
-          {/* Sorulacak */}
-          <HomeIcon className={"w-5 h-5 fill-white max-lg:hidden"} />
         </div>
         {/* Middle Two Row Part */}
         <div className={`flex flex-col gap-7 max-sm:w-full`}>
@@ -90,6 +93,8 @@ function TestPage({ theme, setTheme }) {
               setShowPriceRange={setShowPriceRange}
               showPropertyDetails={showPropertyDetails}
               setShowPropertyDetails={setShowPropertyDetails}
+              showSearchResult={showSearchResult}
+              setShowSearchResult={setShowSearchResult}
             />
           )}
 
@@ -108,7 +113,6 @@ function TestPage({ theme, setTheme }) {
               }}
               className={`w-5 cursor-pointer max-md:hidden`}
             >
-              {/* <img className="w-full" src={showContactWindow ? WhiteCallIcon : callIcon} alt="callIcon" /> */}
               <NavbarCallIcon className={"w-6 h-6 fill-white"} />
             </div>
             {/* Language Button */}
@@ -188,6 +192,21 @@ function TestPage({ theme, setTheme }) {
       {showLocalAmenitiesGPS && <LocalAmenitiesGPS />}
       {showLocationDevelopments && <LocalAmenitiesList />}
 
+      {/* Search Filters Below Header */}
+      {showSearchResult && <BelowHeaderFilterMenu />}
+      {/* Searched Location Card Sidebar */}
+      {showSearchResult && <LocationCardSideBar />}
+      {/* Searched Location Card Sidebar (1024px Version) */}
+      {showSearchResult && <MiniLocationCardSideBar />}
+      {/* Searched Location View Option Badge */}
+      {showSearchResult && <LocationViewOptions />}
+      {/* Property Circle with Number */}
+      {/* showSearchResult && <CircleWithNumber /> */}
+      {/* Property Circle with Image */}
+      {showSearchResult && <CircleWithImage />}
+      {/* Vertical Detail Card */}
+      {/* showSearchResult && <VerticalDetailCard /> */}
+
       <img className="z-0 w-full h-screen object-cover" src={showLocalAmenitiesGPS ? LocalAmenitiesBackground : earthBackground} alt="earthBackground" />
 
       {
@@ -223,4 +242,4 @@ function TestPage({ theme, setTheme }) {
   );
 }
 
-export default TestPage;
+export default LandingPage;
