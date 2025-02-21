@@ -21,9 +21,9 @@ import buildingCircle from "../assets/images/homepage/building_circle.svg";
 
 function LocalAmenitiesGPS() {
   return (
-    <div className="border-t border-gray-300">
+    <div className="border-t border-gray-200 border-b mt-2">
       {/* Location Industries */}
-      <div className="w-full py-6 bg-white flex justify-center items-center z-10">
+      <div className="w-full py-3 bg-white flex justify-center items-center z-10">
         <div className="flex justify-center items-center gap-2">
           {/* Education Button */}
           <div className="pt-3 pb-3 px-6 flex justify-center items-center gap-2 rounded-3xl bg-middleMenuTextBlack bg-opacity-5 ">

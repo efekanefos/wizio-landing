@@ -10,6 +10,7 @@ import NavbarGlobalIcon from "../newIcons/NavbarGlobalIcon";
 import NavbarLightModeIcon from "../newIcons/NavbarLightModeIcon";
 import MobileHamburgerIcon from "../newIcons/MobileHamburgerIcon";
 import CloseIcon from "../newIcons/CloseIcon";
+import WhiteSearchIcon from "../newIcons/WhiteSearchIcon";
 /* SVG Components */
 import LogoIcon from "../icons/LogoIcon";
 /* SVG Images */
@@ -168,7 +169,7 @@ function LandingPage() {
           </div>
         </div>
       </nav>
-      {showUpperOptions && (
+      {showUpperOptions && !showLocalAmenitiesGPS ? (
         <div className="flex justify-center items-center mb-3">
           <LargeMenu
             openMobileMenu={openMobileMenu}
@@ -185,6 +186,23 @@ function LandingPage() {
             setShowPropertyDetails={setShowPropertyDetails}
           />
         </div>
+      ) : showUpperOptions && showLocalAmenitiesGPS ? (
+        <div className="flex justify-between items-center border border-gray-200 w-full max-w-96 mx-auto rounded-full pl-6 pr-2 py-1.5 shadow-lg">
+          <div className={`flex justify-start items-center gap-2 h-full cursor-pointer min-h-12 max-md:pr-1`}>
+            <div className="flex justify-start items-center">
+              <div className={`flex flex-col min-w-36`}>
+                <p className={`text-black leading-tight font-semibold text-xs`}>Locations and</p>
+                <p className="text-sm font-light leading-4 text-gray-400 md:block hidden">Developments</p>
+              </div>
+            </div>
+          </div>
+          <div className={`rounded-full bg-black p-4 flex justify-start items-center gap-2`}>
+            <WhiteSearchIcon className={"w-4 h-4 fill-white"} />
+            {/* <p className="text-white font-light text-sm">Search</p> */}
+          </div>
+        </div>
+      ) : (
+        ""
       )}
 
       {openMobileMenu && <MobileMenu />}

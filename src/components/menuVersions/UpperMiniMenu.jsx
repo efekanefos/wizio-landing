@@ -10,14 +10,14 @@ const UpperMiniMenu = ({ showProjectList, setShowProjectList, setShowBedroomSlid
           setShowProjectList(true);
           setShowLocalAmenitiesGPS(false);
         }}
-        className={`${!showProjectList && `opacity-30`} flex justify-start items-center gap-2 cursor-pointer`}
+        className={`${showLocalAmenitiesGPS && `opacity-30`} flex justify-start items-center gap-2 cursor-pointer`}
       >
         <div className="w-5">
           <SearchIcon className={"w-5 h-5 fill-white"} />
         </div>
         <p
           className={`text-middleMenuTextBlack font-medium text-xs ${
-            showProjectList &&
+            !showLocalAmenitiesGPS &&
             `relative before:bg-black before:w-7 before:absolute before:left-1/2 
         before:bottom-[-5px] before:h-px before:translate-x-[-50%]`
           }`}
@@ -34,14 +34,14 @@ const UpperMiniMenu = ({ showProjectList, setShowProjectList, setShowBedroomSlid
           setShowPropertyDetails(false);
           setShowLocalAmenitiesGPS(true);
         }}
-        className={`${!setShowLocalAmenitiesGPS && `opacity-30`} flex justify-start items-center gap-2 cursor-pointer`}
+        className={`${!showLocalAmenitiesGPS && `opacity-30`} flex justify-start items-center gap-2 cursor-pointer`}
       >
         <div className="w-5">
           <LocalAmenitiesIcon className={"w-5 h-5 fill-white"} />
         </div>
         <p
           className={`text-middleMenuTextBlack font-medium text-xs ${
-            !setShowLocalAmenitiesGPS &&
+            showLocalAmenitiesGPS &&
             `relative before:bg-black before:w-7 before:absolute before:left-1/2 
         before:bottom-[-5px] before:h-px before:translate-x-[-50%]`
           }`}
