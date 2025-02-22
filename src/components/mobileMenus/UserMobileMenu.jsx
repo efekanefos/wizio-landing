@@ -60,7 +60,7 @@ function UserMobileMenu() {
             }}
             className="flex justify-start items-center gap-4 p-5 border border-gray-200 rounded-full shadow-xl cursor-pointer"
           >
-            <NavbarCallIcon className={"w-6 h-6 fill-white"} />
+            <NavbarCallIcon className={"w-6 h-6 stroke-black stroke-[1.5px] fill-white"} />
             <p className="text-[16px] font-semibold text-black">Contact</p>
           </div>
         ) : (
@@ -76,7 +76,7 @@ function UserMobileMenu() {
             >
               {/* Icon and Title */}
               <div className="flex justify-start items-center gap-4 w-full">
-                <NavbarCallIcon className={"w-6 h-6 fill-white"} />
+                <NavbarCallIcon className={"w-6 h-6 stroke-black stroke-[1.5px] fill-white"} />
                 <p className="text-2xl text-black font-semibold">Contact</p>
               </div>
             </div>
@@ -95,7 +95,7 @@ function UserMobileMenu() {
                 <p className="text-sm font-light">Let us call you</p>
               </li>
               <li className="flex  items-center justify-start gap-2.5 py-3 px-6 hover:bg-gray-200 rounded-full cursor-pointer">
-                <NavbarCallIcon className={"w-6 h-6 fill-white"} />
+                <NavbarCallIcon className={"w-6 h-6 stroke-black stroke-[1.5px] fill-white"} />
                 <p className="text-sm font-light">+44 1202 299 707</p>
               </li>
               <li className="flex  items-center justify-start gap-2.5 py-3 px-6 hover:bg-gray-200 rounded-full cursor-pointer">
@@ -134,7 +134,7 @@ function UserMobileMenu() {
             }}
             className="flex justify-start items-center gap-4 p-5 border border-gray-200 rounded-full shadow-xl cursor-pointer"
           >
-            <GlobalIcon className={"w-6 h-6 fill-white"} />
+            <GlobalIcon className={"w-6 h-6 stroke-black stroke-[1.5px] fill-white"} />
             <p className="text-[16px] font-semibold text-black">Language</p>
           </div>
         ) : (
@@ -143,7 +143,7 @@ function UserMobileMenu() {
             <div onClick={() => setLanguageStatus(false)} className="flex justify-between items-center border-b border-gray-200 p-3 cursor-pointer">
               {/* Icon and Title */}
               <div className="flex justify-start items-center gap-4 w-full">
-                <GlobalIcon className={"w-6 h-6 fill-white"} />
+                <GlobalIcon className={"w-6 h-6 stroke-black stroke-[1.5px] fill-white"} />
                 <p className="text-2xl text-black font-semibold">Language</p>
               </div>
             </div>
@@ -178,7 +178,7 @@ function UserMobileMenu() {
             }}
             className="flex justify-start items-center gap-4 p-5 border border-gray-200 rounded-full shadow-xl cursor-pointer"
           >
-            <GuestIcon className={"w-6 h-6 fill-white"} />
+            <GuestIcon className={"w-6 h-6  fill-black"} />
             <p className="text-[16px] font-semibold text-black">Login</p>
           </div>
         ) : loginStatus === "login" ? (
@@ -187,7 +187,7 @@ function UserMobileMenu() {
             <div onClick={() => setLoginStatus("button")} className="flex justify-between items-center border-b border-gray-200 p-3 py-5 cursor-pointer">
               {/* Icon and Title */}
               <div className="flex justify-start items-center gap-4 w-full">
-                <GuestIcon className={"w-6 h-6 fill-white"} />
+                <GuestIcon className={"w-6 h-6 fill-black"} />
                 <p className="text-2xl text-black font-semibold">Login</p>
               </div>
             </div>
@@ -476,8 +476,8 @@ function UserMobileMenu() {
                 <FavouriteIcon className={"w-6 h-6 fill-white"} />
                 <h2 className="text-2xl font-semibold text-black">Favourite</h2>
               </div>
-              <div onClick={() => setLoginStatus("logged")} className="bg-gray-200 rounded-full p-1.5 flex justify-center items-center w-fit cursor-pointer">
-                <BackArrowIcon className={"w-5 h-5 fill-current"} />
+              <div onClick={() => setLoginStatus("logged")} className="bg-gray-200 rounded-full py-2.5 px-2 flex justify-center items-center w-fit cursor-pointer">
+                <BackArrowIcon className={"w-4 h-3 fill-black"} />
               </div>
             </div>
             {/* Favourites List */}
@@ -528,8 +528,8 @@ function UserMobileMenu() {
                 <RecentViewsIcon className={"w-6 h-6 fill-white"} />
                 <h2 className="text-2xl font-semibold text-black">Recent Views</h2>
               </div>
-              <div onClick={() => setLoginStatus("logged")} className="bg-gray-200 rounded-full p-1.5 flex justify-center items-center w-fit cursor-pointer">
-                <BackArrowIcon className={"w-5 h-5 fill-current"} />
+              <div onClick={() => setLoginStatus("logged")} className="bg-gray-200 rounded-full py-2.5 px-2 flex justify-center items-center w-fit cursor-pointer">
+                <BackArrowIcon className={"w-4 h-3 fill-black"} />
               </div>
             </div>
             {/* View List */}
@@ -611,8 +611,8 @@ function UserMobileMenu() {
                 <NotificationsIcon className={"w-6 h-6 fill-white"} />
                 <h2 className="text-2xl font-semibold text-black">Notifications</h2>
               </div>
-              <div onClick={() => setLoginStatus("logged")} className="bg-gray-200 rounded-full p-1.5 flex justify-center items-center w-fit cursor-pointer">
-                <BackArrowIcon className={"w-5 h-5 fill-current"} />
+              <div onClick={() => setLoginStatus("logged")} className="bg-gray-200 rounded-full py-2.5 px-2 flex justify-center items-center w-fit cursor-pointer">
+                <BackArrowIcon className={"w-4 h-3 fill-black"} />
               </div>
             </div>
             {/* Notifications List */}
@@ -642,8 +642,8 @@ function UserMobileMenu() {
                 <UserEditIcon className={"w-6 h-6 fill-white"} />
                 <h2 className="text-2xl font-semibold text-black">Settings</h2>
               </div>
-              <div onClick={() => setLoginStatus("logged")} className="bg-gray-200 rounded-full p-1.5 flex justify-center items-center w-fit cursor-pointer">
-                <BackArrowIcon className={"w-5 h-5 fill-current"} />
+              <div onClick={() => setLoginStatus("logged")} className="bg-gray-200 rounded-full py-2.5 px-2 flex justify-center items-center w-fit cursor-pointer">
+                <BackArrowIcon className={"w-4 h-3 fill-black"} />
               </div>
             </div>
             {/* User Form */}

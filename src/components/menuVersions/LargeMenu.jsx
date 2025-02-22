@@ -117,7 +117,7 @@ const LargeMenu = ({
         )}
 
         {/* Property Details and Search Container */}
-        <div className={`flex items-center group ${showPropertyDetails && `bg-gray-300 rounded-full pr-2`} hover:bg-white hover:rounded-full hover:pr-2 hover:shadow-lg`}>
+        <div className={`flex items-center group ${showPropertyDetails && `bg-gray-300 rounded-full`} hover:bg-white hover:rounded-full pr-2 hover:shadow-lg`}>
           {!showLocationDevelopments || !showUpperOptions ? (
             <div
               onClick={() => {

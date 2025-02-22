@@ -1,9 +1,9 @@
 import React from "react";
 /* New SVG Components */
-import UserEditIcon from "../newIcons/UserEditIcon";
-import VisiblePasswordIcon from "../newIcons/VisiblePasswordIcon";
-import HiddenPasswordIcon from "../newIcons/HiddenPasswordIcon";
-import CloseIcon from "../newIcons/CloseIcon";
+import UserEditIcon from "../../newIcons/UserEditIcon";
+import VisiblePasswordIcon from "../../newIcons/VisiblePasswordIcon";
+import HiddenPasswordIcon from "../../newIcons/HiddenPasswordIcon";
+import CloseIcon from "../../newIcons/CloseIcon";
 
 function Register({ setShowRegisterWindow, setShowLoginWindow }) {
   return (
@@ -110,50 +110,3 @@ function Register({ setShowRegisterWindow, setShowLoginWindow }) {
 }
 
 export default Register;
-
-/* 
-
-import UsernameInputIcon from "../icons/UsernameInputIcon";
-import PhoneInputIcon from "../icons/PhoneInputIcon";
-import MailInput from "../icons/MailInput";
-import ProfileSettingIcon from "../icons/ProfileSettingIcon";
-import LoginPasswordIcon from "../icons/LoginPasswordIcon";
-import OctagonProfileIcon from "../icons/OctagonProfileIcon";
-
-import usernameInput from "../../assets/images/loggedInWindows/username_input.svg";
-import phoneInput from "../../assets/images/loggedInWindows/phone_input.svg";
-import mailInput from "../../assets/images/loggedInWindows/mail_input.svg";
-import profileSetting from "../../assets/images/loggedInWindows/profile_setting.svg";
-import loginPasswordIcon from "../../assets/images/logoutWindows/login_password_icon.svg";
-import close from "../../assets/images/loggedInWindows/close.svg";
-import blackOctagonProfile from "../../assets/images/header/black_octagon_profile_icon.svg";
-<div className="flex flex-col justify-center items-center py-7 px-8 pb-10">
-
-        <div className="w-full flex justify-between items-center relative">
-          <div className="flex flex-col w-full">
-            <label className="text-[10px] text-middleMenuTextBlack text-opacity-80 absolute">
-              Username <span className="text-red-500">*</span>
-            </label>
-            <input readOnly className="pb-2 w-full text-base font-medium text-middleMenuTextBlack border-b border-middtext-middleMenuTextBlack outline-none" type="text" />
-          </div>
-
-          <div className="absolute right-0 top-0">
-            <UsernameInputIcon className={"w-5 h-5 fill-white"} />
-          </div>
-        </div>
-
-   
-        <div className="w-full flex justify-between items-center relative mt-8">
-          <div className="flex flex-col w-full">
-            <label className="text-[10px] text-middleMenuTextBlack text-opacity-80 absolute">
-              Mobile Number <span className="text-red-500">*</span>
-            </label>
-            <input readOnly className="pb-2 w-full text-base font-medium text-middleMenuTextBlack border-b border-middtext-middleMenuTextBlack outline-none" type="tel" />
-          </div>
-
-          <div className="absolute right-0 top-0">
-            <PhoneInputIcon className={"w-5 h-5 fill-white"} />
-          </div>
-        </div>
-        </div>
-*/

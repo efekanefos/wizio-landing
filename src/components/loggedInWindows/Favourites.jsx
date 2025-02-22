@@ -1,11 +1,5 @@
 import React from "react";
 import FavouriteIcon from "../newIcons/FavouriteIcon";
-import RecentViewsIcon from "../newIcons/RecentViewsIcon";
-import NotificationsIcon from "../newIcons/NotificationsIcon";
-import LogOutIcon from "../newIcons/LogOutIcon";
-import RightArrowIcon from "../newIcons/RightArrowIcon";
-import UserEditIcon from "../newIcons/UserEditIcon";
-import CloseIcon from "../newIcons/CloseIcon";
 import BackArrowIcon from "../newIcons/BackArrowIcon";
 import UnFavouriteIcon from "../newIcons/UnFavouriteIcon";
 import RepeatIcon from "../newIcons/RepeatIcon";
@@ -27,9 +21,9 @@ function Favourites({ setShowStatusWindow, setShowFavouritesWindow }) {
               setShowStatusWindow(true);
               setShowFavouritesWindow(false);
             }}
-            className="p-1.5 bg-gray-200 w-fit rounded-full cursor-pointer"
+            className="py-2.5 px-2 bg-gray-200 w-fit rounded-full cursor-pointer"
           >
-            <BackArrowIcon className={"w-5 h-5 fill-current"} />
+            <BackArrowIcon className={"w-4 h-3 fill-black"} />
           </div>
         </div>
         {/* Favourites List */}

@@ -1,5 +1,5 @@
 import React from "react";
-import SearchIcon from "../icons/SearchIcon";
+import SearchIcon from "../newIcons/SearchIcon";
 import LocalAmenitiesIcon from "../icons/LocalAmenitiesIcon";
 const UpperMiniMenu = ({ showProjectList, setShowProjectList, setShowBedroomSlider, setShowPriceRange, setShowPropertyDetails, showLocalAmenitiesGPS, setShowLocalAmenitiesGPS }) => {
   return (
@@ -13,7 +13,7 @@ const UpperMiniMenu = ({ showProjectList, setShowProjectList, setShowBedroomSlid
         className={`${showLocalAmenitiesGPS && `opacity-30`} flex justify-start items-center gap-2 cursor-pointer`}
       >
         <div className="w-5">
-          <SearchIcon className={"w-5 h-5 fill-white"} />
+          <SearchIcon className={"w-5 h-5 stroke-white"} />
         </div>
         <p
           className={`text-middleMenuTextBlack font-medium text-xs ${

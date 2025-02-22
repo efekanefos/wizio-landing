@@ -1,15 +1,15 @@
 import React from "react";
-import GlobalIcon from "../../newIcons/GlobalIcon";
+import NavbarGlobalIcon from "../../newIcons/NavbarGlobalIcon";
 import CloseIcon from "../../newIcons/CloseIcon";
 
 function Language({ setShowLanguageWindow }) {
   return (
-    <div className="absolute top-9 right-0 bg-white rounded-3xl p-3 pb-0 max-w-60 w-fit min-w-72 z-10 shadow-lg border border-gray-200">
+    <div className="absolute top-[68px] right-0 bg-white rounded-3xl p-3 pb-0 max-w-60 w-fit min-w-72 z-10 shadow-lg border border-gray-200">
       {/* Header Row */}
       <div className="flex justify-between items-center border-b border-gray-200 p-2.5">
         {/* Icon and Title */}
         <div className="flex justify-start items-center gap-2 w-full">
-          <GlobalIcon className={"w-6 h-6 fill-white"} />
+          <NavbarGlobalIcon className={"w-6 h-6 fill-white stroke-black"} />
 
           <p className="text-[16px] text-black font-semibold">Language</p>
         </div>

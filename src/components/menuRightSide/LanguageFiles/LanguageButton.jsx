@@ -4,15 +4,16 @@ import NavbarGlobalIcon from "../../newIcons/NavbarGlobalIcon";
 
 const LanguageButton = ({ showLanguageWindow, setShowLanguageWindow, setShowContactWindow, setShowLoginWindow }) => {
   return (
-    <div className="w-5 cursor-pointer max-md:hidden relative">
+    <div className="w-full cursor-pointer max-md:hidden relative">
       <div
         onClick={() => {
           setShowLanguageWindow(true);
           setShowContactWindow(false);
-          setShowLoginWindow(false);
+          setShowLoginWindow && setShowLoginWindow(false);
         }}
+        className={`flex justify-center items-center box-content w-12 h-12 rounded-full ${showLanguageWindow ? "bg-black" : "bg-white"}`}
       >
-        <NavbarGlobalIcon className={`w-6 h-6 fill-white`} />
+        <NavbarGlobalIcon className={`w-5 h-5 ${showLanguageWindow ? "stroke-white stroke-[1.5px] fill-black" : "stroke-black stroke-[1.5px] fill-white"} `} />
       </div>
       {showLanguageWindow && <Language setShowLanguageWindow={setShowLanguageWindow} />}
     </div>

@@ -16,15 +16,15 @@ function PropertyDetails() {
           <p className="text-xl text-black font-semibold mb-3">Types</p>
           <ul className="list-none">
             <li className="flex justify-start items-center gap-5 p-5 pl-1 min-w-60">
-              <ApartmentsIcon className={"w-6 h-6 fill-white"} />
+              <ApartmentsIcon className={"w-6 h-6 stroke-[1.5px] fill-gray-400"} />
               <p className="text-[16px] text-gray-400">Apartments</p>
             </li>
             <li className="flex justify-start items-center gap-5 p-5 pl-1 min-w-60">
-              <VillasIcon className={"w-6 h-6 fill-white"} />
+              <VillasIcon className={"w-6 h-6 stroke-[1.5px] fill-white stroke-gray-400"} />
               <p className="text-[16px] text-gray-400">Villas</p>
             </li>
             <li className="flex justify-start items-center gap-5 p-5 pl-1 min-w-60">
-              <TownhouseIcon className={"w-6 h-6 fill-white"} />
+              <TownhouseIcon className={"w-6 h-6 stroke-[1.5px] fill-white stroke-gray-400"} />
               <p className="text-[16px] text-gray-400">Townhouse</p>
             </li>
           </ul>
@@ -34,15 +34,15 @@ function PropertyDetails() {
           <p className="text-xl text-black font-semibold mb-3">Outdoor Space</p>
           <ul className="list-none">
             <li className="flex justify-start items-center gap-5 p-5 pl-1 min-w-60">
-              <GardenIcon className={"w-6 h-6 fill-white"} />
+              <GardenIcon className={"w-6 h-6 stroke-[1.5px] fill-white stroke-gray-400"} />
               <p className="text-[16px] text-gray-400">Garden</p>
             </li>
             <li className="flex justify-start items-center gap-5 p-5 pl-1 min-w-60">
-              <TerraceIcon className={"w-6 h-6 fill-white"} />
+              <TerraceIcon className={"w-6 h-6 stroke-[1.5px] fill-white stroke-gray-400"} />
               <p className="text-[16px] text-gray-400">Terrace</p>
             </li>
             <li className="flex justify-start items-center gap-5 p-5 pl-1 min-w-60">
-              <BalconyIcon className={"w-6 h-6 fill-white"} />
+              <BalconyIcon className={"w-6 h-6 stroke-[1.5px] fill-white stroke-gray-400"} />
               <p className="text-[16px] text-gray-400">Balcony</p>
             </li>
           </ul>

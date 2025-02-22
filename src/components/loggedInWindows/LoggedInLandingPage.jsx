@@ -5,18 +5,10 @@ import UpperMiniMenu from "../menuVersions/UpperMiniMenu";
 import LargeMenu from "../menuVersions/LargeMenu";
 import LanguageButton from "../menuRightSide/LanguageFiles/LanguageButton";
 /* New SVG Components */
-import GuestIcon from "../newIcons/GuestIcon";
-import NavbarCallIcon from "../newIcons/NavbarCallIcon";
-import NavbarGlobalIcon from "../newIcons/NavbarGlobalIcon";
-import NavbarLightModeIcon from "../newIcons/NavbarLightModeIcon";
-import MobileHamburgerIcon from "../newIcons/MobileHamburgerIcon";
-import CloseIcon from "../newIcons/CloseIcon";
-import WhiteSearchIcon from "../newIcons/WhiteSearchIcon";
+import SearchIcon from "../newIcons/SearchIcon";
 /* SVG Components */
-import LogoIcon from "../icons/LogoIcon";
 import moonBackground from "../../assets/images/homepage/moon_background.png";
 import buildingMap from "../../assets/images/homepage/building_map_background.png";
-import LocalAmenitiesBackground from "../../assets/images/homepage/local_amenities_background.svg";
 /* Windows */
 import Status from "./Status";
 import Favourites from "./Favourites";
@@ -27,14 +19,17 @@ import LocationViewOptions from "../searchResultComponents/LocationViewOptions";
 import BelowHeaderFilterMenu from "../searchResultComponents/BelowHeaderFilterMenu";
 import CircleWithImage from "../searchResultComponents/CircleWithImage";
 import MiniLocationCardSideBar from "../searchResultComponents/MiniLocationCardSideBar";
-import Contact from "../logoutWindows/Contact";
 import MobileMenu from "../mobileMenus/MobileMenu";
 import UserMobileMenu from "../mobileMenus/UserMobileMenu";
 import LocalAmenitiesGPS from "../LocalAmenitiesGPS";
 import LocalAmenitiesList from "../LocalAmenitiesList";
 import Calendar from "../Calendar";
+import ContactButton from "../menuRightSide/ContactFiles/ContactButton";
+import LoginButton from "../menuRightSide/LoginFiles/LoginButton";
+import ThemeButton from "../menuRightSide/ThemeFiles/ThemeButton";
+import LogoContent from "../menuLeftSide/LogoContent";
 
-function LoggedInLandingPage() {
+function LoggedInLandingPage({ isLoggedIn, toggleTheme, setToggleTheme }) {
   const [showStatusWindow, setShowStatusWindow] = useState(false);
   const [showFavouritesWindow, setShowFavouritesWindow] = useState(false);
   const [showRecentViewsWindow, setShowRecentViewsWindow] = useState(false);
@@ -68,13 +63,9 @@ function LoggedInLandingPage() {
   return (
     <div className="overflow-y-hidden max-h-screen font-inter">
       <nav className="flex justify-between items-center py-3 px-9 z-10 relative bg-white font-inter max-lg:px-5 max-md:px-5 max-sm:gap-4">
-        {/* Logo Side */}
-        <div className="flex justify-start items-center gap-5 lg:min-w-40 max-sm:hidden">
-          <div>
-            <LogoIcon className={"w-20 h-7 fill-[#F78E2F]"} />
-          </div>
-        </div>
-        {/* Middle Two Row Part */}
+        {/* Left Side Of The Navbar */}
+        <LogoContent />
+        {/* Middle Part Of The Navbar */}
         <div className={`flex flex-col gap-7 max-sm:w-full`}>
           {showUpperOptions ? (
             <UpperMiniMenu
@@ -104,60 +95,39 @@ function LoggedInLandingPage() {
               setShowSearchResult={setShowSearchResult}
             />
           )}
-          {/* Menu Side */}
         </div>
-        {/* Profile Side */}
-        <div className="flex justify-start items-center gap-6 max-md:gap-0">
-          <div className={`w-full flex justify-start items-center gap-6`}>
+        {/* Right Side Of The Navbar */}
+        <div className="flex justify-start items-center">
+          <div className={`w-full flex justify-start items-center`}>
             {/* Contact Button */}
-            <div className={`w-5 cursor-pointer max-md:hidden relative`}>
-              <div
-                onClick={() => {
-                  setShowContactWindow(true);
-                  setShowLanguageWindow(false);
-                  setShowStatusWindow(false);
-                }}
-              >
-                <NavbarCallIcon className={"w-6 h-6 fill-white"} />
-              </div>
-              {showContactWindow && <Contact showCalendarWindow={showCalendarWindow} setShowCalendarWindow={setShowCalendarWindow} setShowContactWindow={setShowContactWindow} />}
-            </div>
+            <ContactButton showContactWindow={showContactWindow} setShowContactWindow={setShowContactWindow} setShowLanguageWindow={setShowLanguageWindow} showCalendarWindow={showCalendarWindow} setShowCalendarWindow={setShowCalendarWindow} />
 
             {/* Language Button */}
             <LanguageButton showLanguageWindow={showLanguageWindow} setShowLanguageWindow={setShowLanguageWindow} setShowContactWindow={setShowContactWindow} />
+
             {/* Dark-Light Theme Button */}
-            <div className="w-5 max-md:hidden">
-              <NavbarLightModeIcon className={"w-6 h-6 fill-white"} />
-            </div>
+            <ThemeButton toggleTheme={toggleTheme} setToggleTheme={setToggleTheme} setShowContactWindow={setShowContactWindow} setShowLanguageWindow={setShowLanguageWindow} />
           </div>
           {/* Login Button */}
-          <div className="flex justify-start items-center gap-3 w-full h-full cursor-pointer">
-            <div className="w-full flex justify-between items-center">
-              {openMobileMenu && !openUserMobileMenu ? (
-                <div onClick={() => setOpenMobileMenu(false)} className="border border-gray-200 rounded-full p-3 cursor-pointer">
-                  <CloseIcon className={"w-3 h-3 fill-white"} />
-                </div>
-              ) : !openMobileMenu && openUserMobileMenu ? (
-                <div className="flex justify-start items-center gap-3">
-                  <div className="flex justify-center items-center">
-                    <NavbarLightModeIcon className={"w-6 h-6 fill-white"} />
-                  </div>
-                  <div onClick={() => setOpenUserMobileMenu(false)} className="border border-gray-200 rounded-full p-3 cursor-pointer">
-                    <CloseIcon className={"w-3 h-3 fill-white"} />
-                  </div>
-                </div>
-              ) : (
-                <div className="flex justify-start items-center w-full gap-2 max-md:border max-md:border-gray-200 max-md:rounded-full max-md:p-1">
-                  <div onClick={() => setShowStatusWindow(!showStatusWindow)}>
-                    <GuestIcon className={"w-6 h-6 fill-current max-md:w-5 max-md:h-5"} />
-                  </div>
-                  <div onClick={() => setOpenMobileMenu(!openMobileMenu)} className="hidden max-md:block px-1 py-1.5 pl-0 ">
-                    <MobileHamburgerIcon className={"w-4 h-3 fill-current"} />
-                  </div>
-                </div>
-              )}
-            </div>
-          </div>
+          <LoginButton
+            isLoggedIn={isLoggedIn}
+            openMobileMenu={openMobileMenu}
+            setOpenMobileMenu={setOpenMobileMenu}
+            openUserMobileMenu={openUserMobileMenu}
+            setOpenUserMobileMenu={setOpenUserMobileMenu}
+            showStatusWindow={showStatusWindow}
+            setShowStatusWindow={setShowStatusWindow}
+            setShowLanguageWindow={setShowLanguageWindow}
+            setShowContactWindow={setShowContactWindow}
+          />
+          {/* Status Window */}
+          {showStatusWindow && <Status setShowStatusWindow={setShowStatusWindow} setShowProfileWindow={setShowProfileWindow} setShowRecentViewsWindow={setShowRecentViewsWindow} setShowFavouritesWindow={setShowFavouritesWindow} />}
+          {/* Favourites Window */}
+          {showFavouritesWindow && <Favourites setShowStatusWindow={setShowStatusWindow} setShowFavouritesWindow={setShowFavouritesWindow} />}
+          {/* Recent Views Window */}
+          {showRecentViewsWindow && <RecentViews setShowStatusWindow={setShowStatusWindow} setShowRecentViewsWindow={setShowRecentViewsWindow} />}
+          {/* Profile Settings Window */}
+          {showProfileWindow && <ProfileSetting setShowStatusWindow={setShowStatusWindow} setShowProfileWindow={setShowProfileWindow} />}
         </div>
       </nav>
 
@@ -189,7 +159,7 @@ function LoggedInLandingPage() {
             </div>
           </div>
           <div className={`rounded-full bg-black p-4 flex justify-start items-center gap-2`}>
-            <WhiteSearchIcon className={"w-4 h-4 fill-white"} />
+            <SearchIcon className={"w-4 h-4 stroke-white"} />
           </div>
         </div>
       ) : (
@@ -224,22 +194,6 @@ function LoggedInLandingPage() {
       {
         //* Background Image
         showSearchResult ? <img className="z-0 w-full h-screen object-cover" src={buildingMap} alt="buildingMap" /> : <img className="z-0 w-full h-screen object-cover" src={moonBackground} alt="moonBackground" />
-      }
-      {
-        //* Status Window
-        showStatusWindow && <Status setShowStatusWindow={setShowStatusWindow} setShowProfileWindow={setShowProfileWindow} setShowRecentViewsWindow={setShowRecentViewsWindow} setShowFavouritesWindow={setShowFavouritesWindow} />
-      }
-      {
-        //* Favourites Window
-        showFavouritesWindow && <Favourites setShowStatusWindow={setShowStatusWindow} setShowFavouritesWindow={setShowFavouritesWindow} />
-      }
-      {
-        //* Recent Views Window
-        showRecentViewsWindow && <RecentViews setShowStatusWindow={setShowStatusWindow} setShowRecentViewsWindow={setShowRecentViewsWindow} />
-      }
-      {
-        //* Profile Window
-        showProfileWindow && <ProfileSetting setShowStatusWindow={setShowStatusWindow} setShowProfileWindow={setShowProfileWindow} />
       }
 
       {!showLocalAmenitiesGPS && (

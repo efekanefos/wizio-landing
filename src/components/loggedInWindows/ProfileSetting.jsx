@@ -18,9 +18,9 @@ function ProfileSetting({ setShowStatusWindow, setShowProfileWindow }) {
               setShowStatusWindow(true);
               setShowProfileWindow(false);
             }}
-            className="p-1.5 bg-gray-200 w-fit rounded-full cursor-pointer"
+            className="py-2.5 px-2 bg-gray-200 w-fit rounded-full cursor-pointer"
           >
-            <BackArrowIcon className={"w-5 h-5 fill-current"} />
+            <BackArrowIcon className={"w-4 h-3 fill-black"} />
           </div>
         </div>
         {/* User Form */}
