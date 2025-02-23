@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 /* Menu */
-import MiniMenu from "../menuVersions/miniMenu";
+import MiniMenu from "../menuVersions/MiniMenu";
 import UpperMiniMenu from "../menuVersions/UpperMiniMenu";
 import LargeMenu from "../menuVersions/LargeMenu";
 /* New SVG Components */
 import WhiteSearchIcon from "../newIcons/WhiteSearchIcon";
-/* SVG Components */
-import LogoIcon from "../icons/LogoIcon";
 /* SVG Images */
 import earthBackground from "../../assets/images/homepage/planet_earth_background.png";
 import LocalAmenitiesBackground from "../../assets/images/homepage/local_amenities_background.svg";
