@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 /* Menu */
-import MiniMenu from "../menuVersions/miniMenu";
+import MiniMenu from "../menuVersions/MiniMenu";
 import UpperMiniMenu from "../menuVersions/UpperMiniMenu";
 import LargeMenu from "../menuVersions/LargeMenu";
 import LanguageButton from "../menuRightSide/LanguageFiles/LanguageButton";
