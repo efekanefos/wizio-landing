@@ -2,11 +2,11 @@ import React from "react";
 
 function WindowsIcon({ className }) {
   return (
-    <svg className={className} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path fill-rule="evenodd" clip-rule="evenodd" d="M22 2L12 4V11H22V2Z" stroke="black" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-      <path fill-rule="evenodd" clip-rule="evenodd" d="M22 22L12 20V13H22V22Z" stroke="black" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-      <path fill-rule="evenodd" clip-rule="evenodd" d="M10 4.3L2 6V11H10V4.3Z" stroke="black" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-      <path fill-rule="evenodd" clip-rule="evenodd" d="M10 19.7L2 18V13H10V19.7Z" stroke="black" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+    <svg className={className} viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M21 1L11 3V10H21V1Z" />
+      <path d="M21 21L11 19V12H21V21Z" />
+      <path d="M9 3.3L1 5V10H9V3.3Z" />
+      <path d="M9 18.7L1 17V12H9V18.7Z" />
     </svg>
   );
 }

@@ -15,7 +15,7 @@ function Language({ setShowLanguageWindow }) {
         </div>
         {/* Close Button */}
         <button onClick={() => setShowLanguageWindow(false)} className="p-2.5 bg-gray-200 rounded-full">
-          <CloseIcon className={"w-3 h-3"} />
+          <CloseIcon className={"w-3 h-3 fill-black"} />
         </button>
       </div>
       {/* Language List */}

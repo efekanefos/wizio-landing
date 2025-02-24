@@ -24,7 +24,7 @@ const LoginButton = ({ isLoggedIn, openMobileMenu, setOpenMobileMenu, openUserMo
       <div className="w-full flex justify-between items-center">
         {openMobileMenu && !openUserMobileMenu ? (
           <div onClick={() => setOpenMobileMenu(false)} className="border border-gray-200 rounded-full p-3 cursor-pointer">
-            <CloseIcon className={"w-3 h-3 fill-white"} />
+            <CloseIcon className={"w-3 h-3 fill-black"} />
           </div>
         ) : !openMobileMenu && openUserMobileMenu ? (
           <div className="flex justify-start items-center gap-3">
@@ -32,7 +32,7 @@ const LoginButton = ({ isLoggedIn, openMobileMenu, setOpenMobileMenu, openUserMo
               <NavbarLightModeIcon className={"w-6 h-6 fill-white"} />
             </div>
             <div onClick={() => setOpenUserMobileMenu(false)} className="border border-gray-200 rounded-full p-3 cursor-pointer">
-              <CloseIcon className={"w-3 h-3 fill-white"} />
+              <CloseIcon className={"w-3 h-3 fill-black"} />
             </div>
           </div>
         ) : !openMobileMenu && !openUserMobileMenu && isLoggedIn ? (

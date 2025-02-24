@@ -1,5 +1,5 @@
 import React from "react";
-import FilterCloseIcon from "../newIcons/FilterCloseIcon";
+import MobileMenuCloseIcon from "../newIcons/MobileMenuCloseIcon";
 
 const BelowHeaderFilterMenu = () => {
   return (
@@ -9,7 +9,7 @@ const BelowHeaderFilterMenu = () => {
         <div className="py-1 px-3 flex justify-center items-center gap-1.5 rounded-3xl bg-gray-200">
           <p className="text-xs text-gray-400 font-light">Limassol</p>
           <div>
-            <FilterCloseIcon className={"w-5 h-5 fill-gray-400"} />
+            <MobileMenuCloseIcon className={"w-5 h-5 fill-gray-400"} />
           </div>
         </div>
 
@@ -17,7 +17,7 @@ const BelowHeaderFilterMenu = () => {
         <div className="py-1 px-3 flex justify-center items-center gap-1.5 rounded-3xl bg-gray-200">
           <p className="text-xs text-gray-400 font-light">3 Bedrooms</p>
           <div>
-            <FilterCloseIcon className={"w-5 h-5 fill-gray-400"} />
+            <MobileMenuCloseIcon className={"w-5 h-5 fill-gray-400"} />
           </div>
         </div>
 
@@ -25,7 +25,7 @@ const BelowHeaderFilterMenu = () => {
         <div className="py-1 px-3 flex justify-center items-center gap-1.5 rounded-3xl bg-gray-200">
           <p className="text-xs text-gray-400 font-light">€350,000-€450,000</p>
           <div>
-            <FilterCloseIcon className={"w-5 h-5 fill-gray-400"} />
+            <MobileMenuCloseIcon className={"w-5 h-5 fill-gray-400"} />
           </div>
         </div>
 
@@ -33,7 +33,7 @@ const BelowHeaderFilterMenu = () => {
         <div className="py-1 px-3 flex justify-center items-center gap-1.5 rounded-3xl bg-gray-200">
           <p className="text-xs text-gray-400 font-light">Bedrooms 1-3</p>
           <div>
-            <FilterCloseIcon className={"w-5 h-5 fill-gray-400"} />
+            <MobileMenuCloseIcon className={"w-5 h-5 fill-gray-400"} />
           </div>
         </div>
 
@@ -41,7 +41,7 @@ const BelowHeaderFilterMenu = () => {
         <div className="py-1 px-3 flex justify-center items-center gap-1.5 rounded-3xl bg-gray-200">
           <p className="text-xs text-gray-400 font-light">Villa, Townhouse</p>
           <div>
-            <FilterCloseIcon className={"w-5 h-5 fill-gray-400"} />
+            <MobileMenuCloseIcon className={"w-5 h-5 fill-gray-400"} />
           </div>
         </div>
       </div>

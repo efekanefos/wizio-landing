@@ -11,7 +11,7 @@ function RecentViews({ setShowStatusWindow, setShowRecentViewsWindow }) {
         {/* User Info Row */}
         <div className="mb-3 flex justify-between items-center p-3">
           <div className="flex justify-start items-center gap-3">
-            <RecentViewsIcon className={"w-6 h-6 fill-white"} />
+            <RecentViewsIcon className={"w-6 h-6 stroke-black stroke-[1.5px] fill-white"} />
             <h2 className="text-[16px] font-semibold text-black">Recent Views</h2>
           </div>
           <div
@@ -39,7 +39,7 @@ function RecentViews({ setShowStatusWindow, setShowRecentViewsWindow }) {
             </div>
 
             <div className="flex flex-col justify-center">
-              <RedFavouriteIcon className={"w-6 h-6 fill-white"} />
+              <RedFavouriteIcon className={"w-6 h-6 fill-red-600"} />
             </div>
           </li>
           {Array.from({ length: 2 }).map((_, index) => (
@@ -54,7 +54,7 @@ function RecentViews({ setShowStatusWindow, setShowRecentViewsWindow }) {
                 <p className="text-xs font-regular text-black">120 sqm</p>
               </div>
               <div className="flex flex-col justify-center invisible">
-                <RedFavouriteIcon className={"w-6 h-6 fill-white"} />
+                <RedFavouriteIcon className={"w-6 h-6 fill-red-600"} />
               </div>
             </li>
           ))}
@@ -71,7 +71,7 @@ function RecentViews({ setShowStatusWindow, setShowRecentViewsWindow }) {
             </div>
 
             <div className="flex flex-col justify-center">
-              <RedFavouriteIcon className={"w-6 h-6 fill-white"} />
+              <RedFavouriteIcon className={"w-6 h-6 fill-red-600"} />
             </div>
           </li>
           {Array.from({ length: 3 }).map((_, index) => (
@@ -86,14 +86,14 @@ function RecentViews({ setShowStatusWindow, setShowRecentViewsWindow }) {
                 <p className="text-xs font-regular text-black">120 sqm</p>
               </div>
               <div className="flex flex-col justify-center invisible">
-                <RedFavouriteIcon className={"w-6 h-6 fill-white"} />
+                <RedFavouriteIcon className={"w-6 h-6 fill-red-600"} />
               </div>
             </li>
           ))}
         </ul>
 
         <div className="flex justify-center items-center py-1">
-          <MobileDownArrowIcon className={"w-6 h-6 fill-white"} />
+          <MobileDownArrowIcon className={"w-4 h-2 fill-black"} />
         </div>
       </div>
     </div>

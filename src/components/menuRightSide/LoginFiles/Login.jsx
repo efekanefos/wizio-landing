@@ -14,7 +14,7 @@ function Login({ setShowLoginWindow, setShowRegisterWindow }) {
       <div className="flex justify-between items-center border-b border-gray-200 p-2.5">
         {/* Icon and Title */}
         <div className="flex justify-start items-center gap-2 w-full">
-          <GuestIcon className={"w-6 h-6 fill-white"} />
+          <GuestIcon className={"w-6 h-6 fill-black"} />
 
           <p className="text-[16px] text-black font-semibold">Login</p>
         </div>
@@ -38,7 +38,7 @@ function Login({ setShowLoginWindow, setShowRegisterWindow }) {
           <div className="flex flex-col w-full">
             <div className="pt-4 flex justify-between items-center">
               <label className="px-3 text-xs text-gray-300 font-light">Password</label>
-              <VisiblePasswordIcon className={"w-4 h-4 fill-current"} />
+              <VisiblePasswordIcon className={"w-4 h-4 stroke-gray-300 fill-none"} />
             </div>
             <input readOnly value="William324221" className="px-3 pb-3 w-full text-base outline-none border-b border-gray-200" type="text" />
           </div>

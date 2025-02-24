@@ -52,7 +52,7 @@ function Register({ setShowRegisterWindow, setShowLoginWindow }) {
           <div className="flex flex-col w-full">
             <div className="pt-3 flex justify-between items-center">
               <label className="px-3 text-xs text-gray-300 font-light">Password</label>
-              <VisiblePasswordIcon className={"w-4 h-4 fill-current"} />
+              <VisiblePasswordIcon className={"w-4 h-4 stroke-gray-300 fill-none"} />
             </div>
             <input readOnly value="William324221" className="px-3 pb-3 w-full text-base outline-none border-b border-gray-200" type="text" />
           </div>
@@ -63,7 +63,7 @@ function Register({ setShowRegisterWindow, setShowLoginWindow }) {
           <div className="flex flex-col w-full">
             <div className="pt-3 flex justify-between items-center">
               <label className="px-3 text-xs text-gray-300 font-light">Confirm password*</label>
-              <HiddenPasswordIcon className={"w-4 h-4 fill-current"} />
+              <HiddenPasswordIcon className={"w-4 h-4 fill-none stroke-gray-300"} />
             </div>
             <input readOnly value="****************" className="px-3 pb-3 w-full text-base outline-none border-b border-gray-200" type="password" />
           </div>

@@ -22,7 +22,6 @@ import MiniLocationCardSideBar from "../searchResultComponents/MiniLocationCardS
 import MobileMenu from "../mobileMenus/MobileMenu";
 import UserMobileMenu from "../mobileMenus/UserMobileMenu";
 import LocalAmenitiesGPS from "../LocalAmenitiesGPS";
-import LocalAmenitiesList from "../LocalAmenitiesList";
 import Calendar from "../Calendar";
 import ContactButton from "../menuRightSide/ContactFiles/ContactButton";
 import LoginButton from "../menuRightSide/LoginFiles/LoginButton";
@@ -39,7 +38,6 @@ function LoggedInLandingPage({ isLoggedIn, toggleTheme, setToggleTheme }) {
   // Other States
   const [showUpperOptions, setShowUpperOptions] = useState(false);
   const [showProjectList, setShowProjectList] = useState(false);
-  const [showLocationDevelopments, setShowLocationDevelopments] = useState(false);
   const [showBedroomSlider, setShowBedroomSlider] = useState(false);
   const [showPropertyDetails, setShowPropertyDetails] = useState(false);
   const [showPriceRange, setShowPriceRange] = useState(false);
@@ -169,7 +167,6 @@ function LoggedInLandingPage({ isLoggedIn, toggleTheme, setToggleTheme }) {
       {openMobileMenu && <MobileMenu />}
       {openUserMobileMenu && <UserMobileMenu />}
       {showLocalAmenitiesGPS && <LocalAmenitiesGPS />}
-      {showLocationDevelopments && <LocalAmenitiesList />}
 
       {/* Search Filters Below Header */}
       {showSearchResult && <BelowHeaderFilterMenu />}

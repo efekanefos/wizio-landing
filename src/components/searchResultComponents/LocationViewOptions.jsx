@@ -12,13 +12,13 @@ const LocationViewOptions = () => {
       </div>
       <div className="flex justify-center item-center gap-3">
         <div className="p-3.5 bg-black rounded-full">
-          <RotateViewIcon className={"w-5 h-5 fill-white"} />
+          <RotateViewIcon className={"w-5 h-5 fill-white  "} />
         </div>
         <div className="p-3.5 bg-gray-200 rounded-full">
-          <GridViewIcon className={"w-5 h-5 fill-white"} />
+          <GridViewIcon className={"w-5 h-5 fill-gray-400"} />
         </div>
         <div className="p-3.5 bg-gray-200 rounded-full">
-          <ListViewIcon className={"w-5 h-5 fill-white"} />
+          <ListViewIcon className={"w-5 h-5 fill-gray-400"} />
         </div>
       </div>
     </div>

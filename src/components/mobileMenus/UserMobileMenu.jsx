@@ -28,7 +28,7 @@ import RightArrowIcon from "../newIcons/RightArrowIcon";
 import BackArrowIcon from "../newIcons/BackArrowIcon";
 import UnFavouriteIcon from "../newIcons/UnFavouriteIcon";
 import RepeatIcon from "../newIcons/RepeatIcon";
-import CircledTickIcon from "../newIcons/CircledTickIcon";
+import TickIcon from "../newIcons/TickIcon";
 import MobileDownArrowIcon from "../newIcons/MobileDownArrowIcon";
 /* Recent Views SVG Components */
 import RedFavouriteIcon from "../newIcons/RedFavouriteIcon";
@@ -83,15 +83,15 @@ function UserMobileMenu() {
             {/* Contact Options List */}
             <ul className="mt-2.5">
               <li className="flex items-center justify-start gap-2.5 py-3 px-6 hover:bg-gray-200 rounded-full cursor-pointer">
-                <WhatsappIcon className={"w-6 h-6 fill-white"} />
+                <WhatsappIcon className={"w-6 h-6 fill-white stroke-black stroke-[1.5px]"} />
                 <p className="text-sm font-light">WhatsApp</p>
               </li>
               <li className="flex  items-center justify-start gap-2.5 py-3 px-6 hover:bg-gray-200 rounded-full cursor-pointer">
-                <CalendarIcon className={"w-6 h-6 fill-white"} />
+                <CalendarIcon className={"w-6 h-6 fill-black"} />
                 <p className="text-sm font-light">Book Now</p>
               </li>
               <li className="flex  items-center justify-start gap-2.5 py-3 px-6 hover:bg-gray-200 rounded-full cursor-pointer">
-                <LetUsCallYouIcon className={"w-6 h-6 fill-white"} />
+                <LetUsCallYouIcon className={"w-6 h-6 fill-white stroke-black stroke-[1.5px]"} />
                 <p className="text-sm font-light">Let us call you</p>
               </li>
               <li className="flex  items-center justify-start gap-2.5 py-3 px-6 hover:bg-gray-200 rounded-full cursor-pointer">
@@ -99,26 +99,26 @@ function UserMobileMenu() {
                 <p className="text-sm font-light">+44 1202 299 707</p>
               </li>
               <li className="flex  items-center justify-start gap-2.5 py-3 px-6 hover:bg-gray-200 rounded-full cursor-pointer">
-                <MailIcon className={"w-6 h-6 fill-white"} />
+                <MailIcon className={"w-6 h-6 fill-black"} />
                 <p className="text-sm font-light">Info@pafilia.com</p>
               </li>
             </ul>
             {/* Social Media List */}
             <ul className="flex justify-between items-center mt-2.5 border-t border-gray-200">
               <li className="flex items-center justify-start gap-2.5 p-3 cursor-pointer">
-                <GoogleIcon className={"w-6 h-6 fill-white"} />
+                <GoogleIcon className={"w-6 h-6 fill-white stroke-black"} />
               </li>
               <li className="flex items-center justify-start gap-2.5 p-3 cursor-pointer">
-                <WindowsIcon className={"w-6 h-6 fill-white"} />
+                <WindowsIcon className={"w-6 h-6 fill-white stroke-black"} />
               </li>
               <li className="flex items-center justify-start gap-2.5 p-3 cursor-pointer">
-                <AppleIcon className={"w-6 h-6 fill-white"} />
+                <AppleIcon className={"w-6 h-6 fill-white stroke-black"} />
               </li>
               <li className="flex items-center justify-start gap-2.5 p-3 cursor-pointer">
-                <XIcon className={"w-6 h-6 fill-white"} />
+                <XIcon className={"w-6 h-6 fill-white stroke-black"} />
               </li>
               <li className="flex items-center justify-start gap-2.5 p-3 cursor-pointer">
-                <FacebookIcon className={"w-6 h-6 fill-white"} />
+                <FacebookIcon className={"w-6 h-6 fill-white stroke-black"} />
               </li>
             </ul>
           </div>
@@ -206,7 +206,7 @@ function UserMobileMenu() {
                 <div className="flex flex-col w-full">
                   <div className="pt-4 flex justify-between items-center">
                     <label className="px-3 text-xs text-gray-300 font-light">Password</label>
-                    <VisiblePasswordIcon className={"w-4 h-4 fill-current"} />
+                    <VisiblePasswordIcon className={"w-4 h-4 stroke-gray-300 fill-none"} />
                   </div>
                   <input readOnly value="William324221" className="px-3 pb-3 w-full text-base outline-none border-b border-gray-200" type="text" />
                 </div>
@@ -270,7 +270,7 @@ function UserMobileMenu() {
             <div className="flex justify-between items-center border-b border-gray-200 p-3 py-5">
               {/* Icon and Title */}
               <div className="flex justify-start items-center gap-4 w-full">
-                <UserEditIcon className={"w-6 h-6 fill-white"} />
+                <UserEditIcon className={"w-6 h-6 fill-white stroke-black stroke-[1.5px]"} />
                 <p className="text-2xl text-black font-semibold">Register</p>
               </div>
             </div>
@@ -366,7 +366,7 @@ function UserMobileMenu() {
             <div className="flex justify-between items-center border-b border-gray-200 p-3 py-5">
               {/* Icon and Title */}
               <div className="flex justify-start items-center gap-4 w-full">
-                <ForgetPasswordIcon className={"w-7 h-7 fill-white translate-y-0.5"} />
+                <ForgetPasswordIcon className={"w-7 h-7 fill-black"} />
                 <p className="text-2xl text-black font-semibold">Forget Password</p>
               </div>
             </div>
@@ -426,45 +426,35 @@ function UserMobileMenu() {
               {/* Favourite Row */}
               <li onClick={() => setLoginStatus("favourites")} className="flex justify-between items-center gap-3 px-6 py-5 border-t border-gray-200 cursor-pointer">
                 <div className="flex justify-start items-center gap-3">
-                  <FavouriteIcon className={"w-6 h-6 fill-white"} />
+                  <FavouriteIcon className={"w-6 h-6 fill-black"} />
                   <p className="text-[16px] font-semibold text-black">Favourite</p>
                 </div>
-                <RightArrowIcon className={"w-2 h-3 fill-white"} />
+                <RightArrowIcon className={"w-2 h-3 stroke-black fill-white"} />
               </li>
               {/* Recent Views Row */}
               <li onClick={() => setLoginStatus("recentViews")} className="flex justify-between items-center gap-3 px-6 py-5 border-t border-gray-200 cursor-pointer">
                 <div className="flex justify-start items-center gap-3">
-                  <RecentViewsIcon className={"w-6 h-6 fill-white"} />
+                  <RecentViewsIcon className={"w-6 h-6 stroke-black stroke-[1.5px] fill-white"} />
                   <p className="text-[16px] font-semibold text-black">Recent Views</p>
                 </div>
-                <RightArrowIcon className={"w-2 h-3 fill-white"} />
+                <RightArrowIcon className={"w-2 h-3 stroke-black fill-white"} />
               </li>
-              {/* Notifications Row */}
-              <li onClick={() => setLoginStatus("notifications")} className="flex justify-between items-center gap-3 px-6 py-5 border-t border-gray-200 cursor-pointer">
-                <div className="flex justify-start items-center gap-3">
-                  <div className="relative">
-                    <NotificationsIcon className={"w-6 h-6 fill-white"} />
-                    <span className="absolute -top-0.5 -right-0.5 flex justify-center items-center bg-red-600 text-white w-3.5 h-3.5 p-0.5 rounded-full text-[10px] font-light">5</span>
-                  </div>
-                  <p className="text-[16px] font-semibold text-black">Notifications</p>
-                </div>
-                <RightArrowIcon className={"w-2 h-3 fill-white"} />
-              </li>
+
               {/* Settings Row */}
               <li onClick={() => setLoginStatus("settings")} className="flex justify-between items-center gap-3 px-6 py-5 border-t border-gray-200 cursor-pointer">
                 <div className="flex justify-start items-center gap-3">
-                  <UserEditIcon className={"w-6 h-6 fill-white"} />
+                  <UserEditIcon className={"w-6 h-6 stroke-black fill-white stroke-[1.5px]"} />
                   <p className="text-[16px] font-semibold text-black">Settings</p>
                 </div>
-                <RightArrowIcon className={"w-2 h-3 fill-white"} />
+                <RightArrowIcon className={"w-2 h-3 stroke-black fill-white"} />
               </li>
               {/* Log out Row */}
               <li onClick={() => setLoginStatus("button")} className="flex justify-between items-center gap-3 px-6 py-5 border-t border-gray-200 cursor-pointer">
                 <div className="flex justify-start items-center gap-3">
-                  <LogOutIcon className={"w-6 h-6 fill-current"} />
+                  <LogOutIcon className={"w-6 h-6 fill-black"} />
                   <p className="text-[16px] font-semibold text-black">Log out</p>
                 </div>
-                <RightArrowIcon className={"w-2 h-3 fill-white"} />
+                <RightArrowIcon className={"w-2 h-3 stroke-black fill-white"} />
               </li>
             </ul>
           </div>
@@ -473,7 +463,7 @@ function UserMobileMenu() {
             {/* Head Row */}
             <div className="flex justify-between items-center p-2.5 pl-0 border-b border-gray-200">
               <div className="flex justify-start items-center gap-6">
-                <FavouriteIcon className={"w-6 h-6 fill-white"} />
+                <FavouriteIcon className={"w-6 h-6 fill-black"} />
                 <h2 className="text-2xl font-semibold text-black">Favourite</h2>
               </div>
               <div onClick={() => setLoginStatus("logged")} className="bg-gray-200 rounded-full py-2.5 px-2 flex justify-center items-center w-fit cursor-pointer">
@@ -485,9 +475,9 @@ function UserMobileMenu() {
               {/* List Item wrote down 6 times */}
               {Array.from({ length: 6 }).map((_, index) => (
                 <li key={index} className="flex justify-between items-stretch gap-3 py-2 px-3 h-full border-b border-gray-200 w-full">
-                  <div className="flex gap-3">
-                    <div className="flex flex-col justify-center items-center">
-                      <CircledTickIcon className={"w-5 h-5 fill-white"} />
+                  <div className="flex items-center gap-3">
+                    <div className="flex justify-center p-1 rounded-full border border-black items-center">
+                      <TickIcon className={"w-3 h-3 fill-black"} />
                     </div>
                     <div className="flex flex-col justify-center gap-1 w-fit">
                       <p className="text-sm font-semibold text-black">Unit A15</p>
@@ -504,17 +494,17 @@ function UserMobileMenu() {
                   </div>
                   <div className="flex flex-col justify-between items-center">
                     <div className="bg-gray-200 rounded-full p-2 flex justify-center items-center w-fit">
-                      <UnFavouriteIcon className={"w-4 h-4 fill-white"} />
+                      <UnFavouriteIcon className={"w-4 h-4 fill-black"} />
                     </div>
                     <div className="bg-gray-200 rounded-full p-2 flex justify-center items-center w-fit">
-                      <RepeatIcon className={"w-4 h-4 fill-white"} />
+                      <RepeatIcon className={"w-4 h-4 fill-black"} />
                     </div>
                   </div>
                 </li>
               ))}
             </ul>
-            <div className="flex justify-center items-center py-1">
-              <MobileDownArrowIcon className={"w-6 h-6 fill-white"} />
+            <div className="flex justify-center items-center py-1 mt-3">
+              <MobileDownArrowIcon className={"w-4 h-2 fill-black"} />
             </div>
             <div className="m-3">
               <button className="bg-black w-full rounded-full text-white text-sm font-light text-center py-3">Share</button>
@@ -525,7 +515,7 @@ function UserMobileMenu() {
             {/* Head Row */}
             <div className="flex justify-between items-center p-2.5 border-b border-gray-200">
               <div className="flex justify-start items-center gap-6">
-                <RecentViewsIcon className={"w-6 h-6 fill-white"} />
+                <RecentViewsIcon className={"w-6 h-6 stroke-black stroke-[1.5px] fill-white"} />
                 <h2 className="text-2xl font-semibold text-black">Recent Views</h2>
               </div>
               <div onClick={() => setLoginStatus("logged")} className="bg-gray-200 rounded-full py-2.5 px-2 flex justify-center items-center w-fit cursor-pointer">
@@ -547,7 +537,7 @@ function UserMobileMenu() {
                 </div>
 
                 <div className="flex flex-col justify-center">
-                  <RedFavouriteIcon className={"w-6 h-6 fill-white"} />
+                  <RedFavouriteIcon className={"w-6 h-6 fill-red-600"} />
                 </div>
               </li>
               {Array.from({ length: 2 }).map((_, index) => (
@@ -579,7 +569,7 @@ function UserMobileMenu() {
                 </div>
 
                 <div className="flex flex-col justify-center">
-                  <RedFavouriteIcon className={"w-6 h-6 fill-white"} />
+                  <RedFavouriteIcon className={"w-6 h-6 fill-red-600"} />
                 </div>
               </li>
               {Array.from({ length: 3 }).map((_, index) => (
@@ -594,44 +584,13 @@ function UserMobileMenu() {
                     <p className="text-xs font-regular text-black">120 sqm</p>
                   </div>
                   <div className="flex flex-col justify-center invisible">
-                    <RedFavouriteIcon className={"w-6 h-6 fill-white"} />
+                    <RedFavouriteIcon className={"w-6 h-6 fill-red-600"} />
                   </div>
                 </li>
               ))}
             </ul>
-            <div className="flex justify-center items-center py-1 border-t border-gray-200">
-              <MobileDownArrowIcon className={"w-6 h-6 fill-white"} />
-            </div>
-          </div>
-        ) : loginStatus === "notifications" ? (
-          <div className="flex flex-col border border-gray-200 rounded-[32px] shadow-xl p-3">
-            {/* Head Row */}
-            <div className="flex justify-between items-center p-2.5 border-b border-gray-200">
-              <div className="flex justify-start items-center gap-6">
-                <NotificationsIcon className={"w-6 h-6 fill-white"} />
-                <h2 className="text-2xl font-semibold text-black">Notifications</h2>
-              </div>
-              <div onClick={() => setLoginStatus("logged")} className="bg-gray-200 rounded-full py-2.5 px-2 flex justify-center items-center w-fit cursor-pointer">
-                <BackArrowIcon className={"w-4 h-3 fill-black"} />
-              </div>
-            </div>
-            {/* Notifications List */}
-            <ul className="mb-6 mt-3">
-              {Array.from({ length: 7 }).map((_, index) => (
-                <li key={index} className="p-3 border-b border-gray-200">
-                  <div className="flex justify-between items-start">
-                    <h4 className="text-sm font-semibold text-black">System Update</h4>
-                    <MobileMenuCloseIcon className={"w-4 h-4 fill-white"} />
-                  </div>
-                  <p className="text-xs font-light text-gray-400">
-                    <span>Unit 201</span> \ <span>2 Bedrooms</span>
-                  </p>
-                  <p className="text-xs font-regular text-black">Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et</p>
-                </li>
-              ))}
-            </ul>
-            <div className="m-3">
-              <button className="bg-black w-full rounded-full text-white text-sm font-light text-center py-3">Delete All</button>
+            <div className="flex justify-center items-center py-1 pt-3 border-t border-gray-200">
+              <MobileDownArrowIcon className={"w-4 h-2 fill-black"} />
             </div>
           </div>
         ) : loginStatus === "settings" ? (
@@ -639,7 +598,7 @@ function UserMobileMenu() {
             {/* Head Row */}
             <div className="flex justify-between items-center p-2.5 border-b border-gray-200">
               <div className="flex justify-start items-center gap-6">
-                <UserEditIcon className={"w-6 h-6 fill-white"} />
+                <UserEditIcon className={"w-6 h-6 stroke-black fill-white stroke-[1.5px]"} />
                 <h2 className="text-2xl font-semibold text-black">Settings</h2>
               </div>
               <div onClick={() => setLoginStatus("logged")} className="bg-gray-200 rounded-full py-2.5 px-2 flex justify-center items-center w-fit cursor-pointer">
@@ -677,7 +636,7 @@ function UserMobileMenu() {
                 <div className="flex flex-col w-full">
                   <div className="pt-3 flex justify-between items-center">
                     <label className="px-3 text-xs text-gray-400 font-light">Password</label>
-                    <VisiblePasswordIcon className={"w-4 h-4 fill-current mr-3"} />
+                    <VisiblePasswordIcon className={"w-4 h-4 stroke-gray-300 fill-none mr-3"} />
                   </div>
                   <input readOnly value="William324221" className="px-3 pb-3 w-full text-base outline-none border-b border-gray-200" type="text" />
                 </div>
@@ -688,7 +647,7 @@ function UserMobileMenu() {
                 <div className="flex flex-col w-full">
                   <div className="pt-3 flex justify-between items-center">
                     <label className="px-3 text-xs text-gray-400 font-light">Password</label>
-                    <VisiblePasswordIcon className={"w-4 h-4 fill-current mr-3"} />
+                    <VisiblePasswordIcon className={"w-4 h-4 stroke-gray-300 fill-none mr-3"} />
                   </div>
                   <input readOnly value="****************" className="px-3 pb-3 w-full text-base outline-none border-b border-gray-200" type="password" />
                 </div>
@@ -705,3 +664,51 @@ function UserMobileMenu() {
 }
 
 export default UserMobileMenu;
+
+/* Notifications Row
+  <li onClick={() => setLoginStatus("notifications")} className="flex justify-between items-center gap-3 px-6 py-5 border-t border-gray-200 cursor-pointer">
+  <div className="flex justify-start items-center gap-3">
+    <div className="relative">
+      <NotificationsIcon className={"w-6 h-6 fill-white"} />
+      <span className="absolute -top-0.5 -right-0.5 flex justify-center items-center bg-red-600 text-white w-3.5 h-3.5 p-0.5 rounded-full text-[10px] font-light">5</span>
+    </div>
+    <p className="text-[16px] font-semibold text-black">Notifications</p>
+  </div>
+  <RightArrowIcon className={"w-2 h-3 fill-white"} />
+</li>
+  */
+
+/* 
+loginStatus === "notifications" ? (
+          <div className="flex flex-col border border-gray-200 rounded-[32px] shadow-xl p-3">
+            Head Row
+            <div className="flex justify-between items-center p-2.5 border-b border-gray-200">
+              <div className="flex justify-start items-center gap-6">
+                <NotificationsIcon className={"w-6 h-6 fill-white"} />
+                <h2 className="text-2xl font-semibold text-black">Notifications</h2>
+              </div>
+              <div onClick={() => setLoginStatus("logged")} className="bg-gray-200 rounded-full py-2.5 px-2 flex justify-center items-center w-fit cursor-pointer">
+                <BackArrowIcon className={"w-4 h-3 fill-black"} />
+              </div>
+            </div>
+             Notifications List
+            <ul className="mb-6 mt-3">
+              {Array.from({ length: 7 }).map((_, index) => (
+                <li key={index} className="p-3 border-b border-gray-200">
+                  <div className="flex justify-between items-start">
+                    <h4 className="text-sm font-semibold text-black">System Update</h4>
+                    <MobileMenuCloseIcon className={"w-4 h-4 fill-black"} />
+                  </div>
+                  <p className="text-xs font-light text-gray-400">
+                    <span>Unit 201</span> \ <span>2 Bedrooms</span>
+                  </p>
+                  <p className="text-xs font-regular text-black">Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et</p>
+                </li>
+              ))}
+            </ul>
+            <div className="m-3">
+              <button className="bg-black w-full rounded-full text-white text-sm font-light text-center py-3">Delete All</button>
+            </div>
+          </div>
+        )
+*/

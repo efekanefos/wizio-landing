@@ -13,7 +13,6 @@ import Calendar from "../Calendar";
 import Login from "../menuRightSide/LoginFiles/Login";
 import Register from "../menuRightSide/LoginFiles/Register";
 import LocalAmenitiesGPS from "../LocalAmenitiesGPS";
-import LocalAmenitiesList from "../LocalAmenitiesList";
 import MobileMenu from "../mobileMenus/MobileMenu";
 import UserMobileMenu from "../mobileMenus/UserMobileMenu";
 import LocationCardSideBar from "../searchResultComponents/LocationCardSideBar";
@@ -30,7 +29,6 @@ import LogoContent from "../menuLeftSide/LogoContent";
 function LandingPage({ isLoggedIn, toggleTheme, setToggleTheme }) {
   const [showUpperOptions, setShowUpperOptions] = useState(false);
   const [showProjectList, setShowProjectList] = useState(false);
-  const [showLocationDevelopments, setShowLocationDevelopments] = useState(false);
   const [showBedroomSlider, setShowBedroomSlider] = useState(false);
   const [showPropertyDetails, setShowPropertyDetails] = useState(false);
   const [showPriceRange, setShowPriceRange] = useState(false);
@@ -156,7 +154,6 @@ function LandingPage({ isLoggedIn, toggleTheme, setToggleTheme }) {
       {openMobileMenu && <MobileMenu />}
       {openUserMobileMenu && <UserMobileMenu />}
       {showLocalAmenitiesGPS && <LocalAmenitiesGPS />}
-      {showLocationDevelopments && <LocalAmenitiesList />}
 
       {/* Search Filters Below Header */}
       {showSearchResult && <BelowHeaderFilterMenu />}

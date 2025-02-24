@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import ReactSlider from "react-slider";
 /* SVG Components */
-import SearchIcon from "../icons/SearchIcon";
 import LocalAmenitiesIcon from "../icons/LocalAmenitiesIcon";
 import CloseIcon from "../newIcons/CloseIcon";
 import MobileMenuCloseIcon from "../newIcons/MobileMenuCloseIcon";
-import WhiteSearchIcon from "../newIcons/WhiteSearchIcon";
+import SearchIcon from "../newIcons/SearchIcon";
 import MobileDownArrowIcon from "../newIcons/MobileDownArrowIcon";
 import ApartmentsIcon from "../newIcons/ApartmentsIcon";
 import VillasIcon from "../newIcons/VillasIcon";
@@ -86,7 +85,7 @@ function MobileMenu() {
           className={`${!showProjectList && `opacity-30`} flex justify-start items-center gap-2 cursor-pointer`}
         >
           <div className="w-5">
-            <SearchIcon className={"w-5 h-5 fill-white"} />
+            <SearchIcon className={"w-5 h-5 fill-black"} />
           </div>
           <p
             className={`text-middleMenuTextBlack font-medium text-xs ${
@@ -138,7 +137,7 @@ function MobileMenu() {
             <p className="text-sm font-semibold text-black">Location</p>
             <div className="flex justify-start items-center gap-3">
               <p className="text-sm font-light text-gray-400">Search Destination</p>
-              <MobileMenuCloseIcon className={"w-5 h-5 fill-white"} />
+              <MobileMenuCloseIcon className={"w-5 h-5 fill-black"} />
             </div>
           </div>
         ) : locationStatus === "halfOpen" || locationStatus === "full" ? (
@@ -202,9 +201,9 @@ function MobileMenu() {
                       setPriceStatus(false);
                       setMoreDetailsStatus(false);
                     }}
-                    className="flex justify-center items-center py-1 border-t border-gray-200 mt-3 cursor-pointer"
+                    className="flex justify-center items-center py-3 pb-2 border-t border-gray-200 mt-3 cursor-pointer"
                   >
-                    <MobileDownArrowIcon className={"w-6 h-6 fill-white"} />
+                    <MobileDownArrowIcon className={"w-4 h-2 fill-black"} />
                   </div>
                 ) : (
                   <div className={`flex justify-between items-center mt-5 ${locationStatus === "full" ? "absolute bottom-32 w-full left-0 px-5" : ""}`}>
@@ -220,7 +219,7 @@ function MobileMenu() {
                       Clear all
                     </p>
                     <button className="flex items-center gap-2 w-fit px-5 py-3 bg-black rounded-full cursor-pointer">
-                      <WhiteSearchIcon className={"w-4 h-4"} />
+                      <SearchIcon className={"w-4 h-4 fill-white"} />
                       <p className="text-sm font-light text-white">Search</p>
                     </button>
                   </div>
@@ -246,7 +245,7 @@ function MobileMenu() {
               <p className="text-sm font-semibold text-black">Bedrooms</p>
               <div className="flex justify-start items-center gap-3">
                 <p className="text-sm font-light text-gray-400">Add bedrooms</p>
-                <MobileMenuCloseIcon className={"w-5 h-5 fill-white"} />
+                <MobileMenuCloseIcon className={"w-5 h-5 fill-black"} />
               </div>
             </div>
           ) : (
@@ -315,7 +314,7 @@ function MobileMenu() {
               <p className="text-sm font-semibold text-black">Price</p>
               <div className="flex justify-start items-center gap-3">
                 <p className="text-sm font-light text-gray-400">Add price range</p>
-                <MobileMenuCloseIcon className={"w-5 h-5 fill-white"} />
+                <MobileMenuCloseIcon className={"w-5 h-5 fill-black"} />
               </div>
             </div>
           ) : (
@@ -363,7 +362,7 @@ function MobileMenu() {
               <p className="text-sm font-semibold text-black">More</p>
               <div className="flex justify-start items-center gap-3">
                 <p className="text-sm font-light text-gray-400">Add details</p>
-                <MobileMenuCloseIcon className={"w-5 h-5 fill-white"} />
+                <MobileMenuCloseIcon className={"w-5 h-5 fill-black"} />
               </div>
             </div>
           ) : (
@@ -380,15 +379,15 @@ function MobileMenu() {
                   <p className="text-xl text-gray-400 font-semibold mb-3">Types</p>
                   <ul className="list-none">
                     <li className="flex justify-start items-center gap-5 p-5 pl-1">
-                      <ApartmentsIcon className={"w-6 h-6 fill-white"} />
+                      <ApartmentsIcon className={"w-6 h-6 stroke-[1.5px] fill-white stroke-gray-400"} />
                       <p className="text-[16px] text-gray-400">Apartments</p>
                     </li>
                     <li className="flex justify-start items-center gap-5 p-5 pl-1">
-                      <VillasIcon className={"w-6 h-6 fill-white"} />
+                      <VillasIcon className={"w-6 h-6 stroke-[1.5px] fill-white stroke-gray-400"} />
                       <p className="text-[16px] text-gray-400">Villas</p>
                     </li>
                     <li className="flex justify-start items-center gap-5 p-5 pl-1">
-                      <TownhouseIcon className={"w-6 h-6 fill-white"} />
+                      <TownhouseIcon className={"w-6 h-6 stroke-[1.5px] fill-white stroke-gray-400"} />
                       <p className="text-[16px] text-gray-400">Townhouse</p>
                     </li>
                   </ul>
@@ -398,15 +397,15 @@ function MobileMenu() {
                   <p className="text-xl text-gray-400 font-semibold mb-3">Outdoor Space</p>
                   <ul className="list-none">
                     <li className="flex justify-start items-center gap-5 p-5 pl-1">
-                      <GardenIcon className={"w-6 h-6 fill-white"} />
+                      <GardenIcon className={"w-6 h-6 stroke-[1.5px] fill-white stroke-gray-400"} />
                       <p className="text-[16px] text-gray-400">Garden</p>
                     </li>
                     <li className="flex justify-start items-center gap-5 p-5 pl-1">
-                      <TerraceIcon className={"w-6 h-6 fill-white"} />
+                      <TerraceIcon className={"w-6 h-6 stroke-[1.5px] fill-white stroke-gray-400"} />
                       <p className="text-[16px] text-gray-400">Terrace</p>
                     </li>
                     <li className="flex justify-start items-center gap-5 p-5 pl-1">
-                      <BalconyIcon className={"w-6 h-6 fill-white"} />
+                      <BalconyIcon className={"w-6 h-6 stroke-[1.5px] fill-white stroke-gray-400"} />
                       <p className="text-[16px] text-gray-400">Balcony</p>
                     </li>
                   </ul>
@@ -421,7 +420,7 @@ function MobileMenu() {
         <div className="flex justify-between items-center mt-5 px-5">
           <p className="text-sm text-black font-light py-2 px-4 underline">Clear all</p>
           <button className="flex items-center gap-2 w-fit px-5 py-3 bg-black rounded-full">
-            <WhiteSearchIcon className={"w-4 h-4"} />
+            <SearchIcon className={"w-4 h-4 fill-white"} />
             <p className="text-sm font-light text-white">Search</p>
           </button>
         </div>
