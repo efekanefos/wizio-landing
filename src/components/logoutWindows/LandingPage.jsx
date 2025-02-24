@@ -111,9 +111,9 @@ function LandingPage({ isLoggedIn, toggleTheme, setToggleTheme }) {
             setShowContactWindow={setShowContactWindow}
             showLoginWindow={showLoginWindow}
             setShowLoginWindow={setShowLoginWindow}
+            showRegisterWindow={showRegisterWindow}
+            setShowRegisterWindow={setShowRegisterWindow}
           />
-          {showLoginWindow && <Login setShowLoginWindow={setShowLoginWindow} setShowRegisterWindow={setShowRegisterWindow} />}
-          {showRegisterWindow && <Register setShowLoginWindow={setShowLoginWindow} setShowRegisterWindow={setShowRegisterWindow} />}
         </div>
       </nav>
       {showUpperOptions && !showLocalAmenitiesGPS ? (

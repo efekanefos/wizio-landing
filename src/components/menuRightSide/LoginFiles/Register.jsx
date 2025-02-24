@@ -7,12 +7,12 @@ import CloseIcon from "../../newIcons/CloseIcon";
 
 function Register({ setShowRegisterWindow, setShowLoginWindow }) {
   return (
-    <div className="absolute top-9 right-0 bg-white rounded-3xl p-3 min-w-72 w-fit z-10 shadow-lg border border-gray-200">
+    <div className="absolute top-[68px] right-0 bg-white rounded-3xl p-3 min-w-72 w-fit z-10 shadow-lg border border-gray-200">
       {/* Header Row */}
       <div className="flex justify-between items-center border-b border-gray-200 p-2.5">
         {/* Icon and Title */}
         <div className="flex justify-start items-center gap-2 w-full">
-          <UserEditIcon className={"w-6 h-6 fill-white"} />
+          <UserEditIcon className={"w-6 h-6 fill-white stroke-black stroke-[1.5px]"} />
           <p className="text-[16px] text-black font-semibold">Register</p>
         </div>
         {/* Close Button */}

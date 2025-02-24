@@ -1,10 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
+import Login from "./Login";
+import Register from "./Register";
 import CloseIcon from "../../newIcons/CloseIcon";
 import NavbarLightModeIcon from "../../newIcons/NavbarLightModeIcon";
 import GuestIcon from "../../newIcons/GuestIcon";
 import MobileHamburgerIcon from "../../newIcons/MobileHamburgerIcon";
+import ForgetPassword from "./ForgetPassword";
 
-const LoginButton = ({ isLoggedIn, openMobileMenu, setOpenMobileMenu, openUserMobileMenu, setOpenUserMobileMenu, showStatusWindow, setShowStatusWindow, setShowContactWindow, setShowLanguageWindow, setShowLoginWindow, showLoginWindow }) => {
+const LoginButton = ({
+  isLoggedIn,
+  openMobileMenu,
+  setOpenMobileMenu,
+  openUserMobileMenu,
+  setOpenUserMobileMenu,
+  showStatusWindow,
+  setShowStatusWindow,
+  setShowContactWindow,
+  setShowLanguageWindow,
+  setShowLoginWindow,
+  showLoginWindow,
+  showRegisterWindow,
+  setShowRegisterWindow,
+}) => {
   const handleUserMobileMenuToggle = () => {
     if (window.innerWidth > 768) {
       setShowLoginWindow((prev) => !prev);
@@ -19,8 +36,11 @@ const LoginButton = ({ isLoggedIn, openMobileMenu, setOpenMobileMenu, openUserMo
       setOpenUserMobileMenu((prev) => !prev);
     }
   };
+
+  const [showForgetPassword, setShowForgetPassword] = useState(false);
+
   return (
-    <div className="flex justify-start items-center gap-3 w-full h-full cursor-pointer">
+    <div className="flex justify-start items-center gap-3 w-full h-full cursor-pointer relative">
       <div className="w-full flex justify-between items-center">
         {openMobileMenu && !openUserMobileMenu ? (
           <div onClick={() => setOpenMobileMenu(false)} className="border border-gray-200 rounded-full p-3 cursor-pointer">
@@ -59,9 +79,9 @@ const LoginButton = ({ isLoggedIn, openMobileMenu, setOpenMobileMenu, openUserMo
                 setShowLanguageWindow(false);
                 setShowContactWindow(false);
               }}
-              className={`flex justify-center items-center box-content w-12 h-12 max-md:w-6 max-md:h-6 rounded-full ${showLoginWindow ? "bg-black" : "bg-white"}`}
+              className={`flex justify-center items-center box-content w-12 h-12 max-md:w-6 max-md:h-6 rounded-full ${showLoginWindow || showRegisterWindow || showForgetPassword ? "bg-black" : "bg-white"}`}
             >
-              <GuestIcon className={`w-5 h-5 ${showLoginWindow ? "fill-white" : "fill-black"}`} />
+              <GuestIcon className={`w-5 h-5 ${showLoginWindow || showRegisterWindow || showForgetPassword ? "fill-white" : "fill-black"}`} />
             </div>
             <div onClick={() => setOpenMobileMenu(!openMobileMenu)} className="hidden max-md:block px-1 py-1.5 pl-0 ">
               <MobileHamburgerIcon className={"w-4 h-3 fill-current"} />
@@ -69,6 +89,9 @@ const LoginButton = ({ isLoggedIn, openMobileMenu, setOpenMobileMenu, openUserMo
           </div>
         )}
       </div>
+      {showLoginWindow && <Login setShowLoginWindow={setShowLoginWindow} setShowRegisterWindow={setShowRegisterWindow} setShowForgetPassword={setShowForgetPassword} />}
+      {showRegisterWindow && <Register setShowLoginWindow={setShowLoginWindow} setShowRegisterWindow={setShowRegisterWindow} />}
+      {showForgetPassword && <ForgetPassword setShowForgetPassword={setShowForgetPassword} setShowLoginWindow={setShowLoginWindow} setShowRegisterWindow={setShowRegisterWindow} />}
     </div>
   );
 };

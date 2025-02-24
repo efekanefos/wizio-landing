@@ -5,7 +5,7 @@ import GuestIcon from "../../newIcons/GuestIcon";
 import CloseIcon from "../../newIcons/CloseIcon";
 import VisiblePasswordIcon from "../../newIcons/VisiblePasswordIcon";
 
-function Login({ setShowLoginWindow, setShowRegisterWindow }) {
+function Login({ setShowLoginWindow, setShowRegisterWindow, setShowForgetPassword }) {
   const navigate = useNavigate();
 
   return (
@@ -54,7 +54,15 @@ function Login({ setShowLoginWindow, setShowRegisterWindow }) {
             </div>
             <span className="text-xs font-light text-gray-300">Remember me</span>
           </label>
-          <p className="text-xs font-light text-gray-300 cursor-pointer">Forget Password?</p>
+          <p
+            onClick={() => {
+              setShowForgetPassword(true);
+              setShowLoginWindow(false);
+            }}
+            className="text-xs font-light text-gray-300 cursor-pointer"
+          >
+            Forget Password?
+          </p>
         </div>
 
         {/* Buttons */}
