@@ -6,9 +6,10 @@ import LargeMenu from "../menuVersions/LargeMenu";
 import LanguageButton from "../menuRightSide/LanguageFiles/LanguageButton";
 /* New SVG Components */
 import SearchIcon from "../newIcons/SearchIcon";
-/* SVG Components */
-import moonBackground from "../../assets/images/homepage/moon_background.png";
+/* Background Images */
 import buildingMap from "../../assets/images/homepage/building_map_background.png";
+import earthBackground from "../../assets/images/homepage/planet_earth_background.png";
+import LocalAmenitiesBackground from "../../assets/images/homepage/local_amenities_background.svg";
 /* Windows */
 import Status from "./Status";
 import Favourites from "./Favourites";
@@ -190,11 +191,11 @@ function LoggedInLandingPage({ isLoggedIn, toggleTheme, setToggleTheme }) {
 
       {
         //* Background Image
-        showSearchResult ? <img className="z-0 w-full h-screen object-cover" src={buildingMap} alt="buildingMap" /> : <img className="z-0 w-full h-screen object-cover" src={moonBackground} alt="moonBackground" />
+        <img className="z-0 w-full h-screen object-cover" src={showSearchResult ? buildingMap : showLocalAmenitiesGPS ? LocalAmenitiesBackground : earthBackground} alt="Background Image" />
       }
 
-      {!showLocalAmenitiesGPS && (
-        <div className="font-inter text-white absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
+      {!showLocalAmenitiesGPS && !showSearchResult && (
+        <div className="font-inter text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
           <h1 className="text-7xl text-center">
             World of <span className="font-bold">Pafilia</span>
           </h1>

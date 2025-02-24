@@ -5,13 +5,12 @@ import UpperMiniMenu from "../menuVersions/UpperMiniMenu";
 import LargeMenu from "../menuVersions/LargeMenu";
 /* New SVG Components */
 import WhiteSearchIcon from "../newIcons/WhiteSearchIcon";
-/* SVG Images */
+/* Background Images */
 import earthBackground from "../../assets/images/homepage/planet_earth_background.png";
 import LocalAmenitiesBackground from "../../assets/images/homepage/local_amenities_background.svg";
+import buildingMap from "../../assets/images/homepage/building_map_background.png";
 /* Windows */
 import Calendar from "../Calendar";
-import Login from "../menuRightSide/LoginFiles/Login";
-import Register from "../menuRightSide/LoginFiles/Register";
 import LocalAmenitiesGPS from "../LocalAmenitiesGPS";
 import MobileMenu from "../mobileMenus/MobileMenu";
 import UserMobileMenu from "../mobileMenus/UserMobileMenu";
@@ -170,15 +169,18 @@ function LandingPage({ isLoggedIn, toggleTheme, setToggleTheme }) {
       {/* Vertical Detail Card */}
       {/* showSearchResult && <VerticalDetailCard /> */}
 
-      <img className="z-0 w-full h-screen object-cover" src={showLocalAmenitiesGPS ? LocalAmenitiesBackground : earthBackground} alt="earthBackground" />
-
       {
         //* Calendar Window
         showCalendarWindow && <Calendar />
       }
 
-      {!showLocalAmenitiesGPS && (
-        <div className="font-inter text-white absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
+      {
+        //* Background Image
+        <img className="z-0 w-full h-screen object-cover" src={showSearchResult ? buildingMap : showLocalAmenitiesGPS ? LocalAmenitiesBackground : earthBackground} alt="Background Image" />
+      }
+
+      {!showLocalAmenitiesGPS && !showSearchResult && (
+        <div className="font-inter text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
           <h1 className="text-7xl text-center">
             World of <span className="font-bold">Pafilia</span>
           </h1>
