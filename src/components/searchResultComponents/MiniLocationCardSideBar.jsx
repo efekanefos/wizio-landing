@@ -6,7 +6,7 @@ import LocalAmenitiesIcon from "../icons/LocalAmenitiesIcon";
 const MiniLocationCardSideBar = () => {
   return (
     <div
-      className="hidden max-lg:block bg-white h-full max-h-[820px] max-w-80 w-full overflow-y-hidden absolute left-0 translate-y-6 p-6 pr-3 font-inter z-50 
+      className="hidden max-lg:block max-md:hidden bg-white h-full max-h-[820px] max-w-80 w-full overflow-y-hidden absolute left-0 translate-y-6 p-6 pr-3 font-inter z-50 
      max-xl:left-0 max-xl:translate-y-0"
     >
       <div className="flex flex-col w-full">

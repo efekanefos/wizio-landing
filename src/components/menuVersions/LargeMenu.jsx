@@ -22,7 +22,7 @@ const LargeMenu = ({
 }) => {
   return (
     <div
-      className={` flex justify-between items-center rounded-full shadow-xl relative w-fit max-sm:w-full hover:bg-gray-300
+      className={`flex justify-between items-center rounded-full shadow-xl relative w-fit max-sm:w-full hover:bg-gray-300 z-10
         ${openMobileMenu || openUserMobileMenu ? `border-0` : `border border-gray-200`}
         `}
     >

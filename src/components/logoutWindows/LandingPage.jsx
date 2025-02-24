@@ -19,6 +19,7 @@ import LocationViewOptions from "../searchResultComponents/LocationViewOptions";
 import BelowHeaderFilterMenu from "../searchResultComponents/BelowHeaderFilterMenu";
 import CircleWithImage from "../searchResultComponents/CircleWithImage";
 import MiniLocationCardSideBar from "../searchResultComponents/MiniLocationCardSideBar";
+import MobileLocationCardSlider from "../searchResultComponents/MobileLocationCardSlider";
 import LanguageButton from "../menuRightSide/LanguageFiles/LanguageButton";
 import ContactButton from "../menuRightSide/ContactFiles/ContactButton";
 import ThemeButton from "../menuRightSide/ThemeFiles/ThemeButton";
@@ -168,6 +169,8 @@ function LandingPage({ isLoggedIn, toggleTheme, setToggleTheme }) {
       {showSearchResult && <CircleWithImage />}
       {/* Vertical Detail Card */}
       {/* showSearchResult && <VerticalDetailCard /> */}
+      {/* Mobile Card Slider */}
+      {showSearchResult && <MobileLocationCardSlider />}
 
       {
         //* Calendar Window

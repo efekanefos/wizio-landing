@@ -32,7 +32,7 @@ function Contact({ setShowContactWindow, showCalendarWindow, setShowCalendarWind
       {/* Contact Options List */}
       <ul className="my-3">
         <li className="flex  items-center justify-start gap-2.5 py-3 px-6 hover:bg-gray-200 rounded-full cursor-pointer">
-          <WhatsappIcon className={"w-6 h-6 fill-white stroke-black stroke-[1.5px]"} />
+          <WhatsappIcon className={"w-6 h-6 fill-none stroke-black stroke-[1.5px]"} />
           <p className="text-sm font-light">WhatsApp</p>
         </li>
         <li onClick={() => setShowCalendarWindow(!showCalendarWindow)} className="flex  items-center justify-start gap-2.5 py-3 px-6 hover:bg-gray-200 rounded-full cursor-pointer">
@@ -40,11 +40,11 @@ function Contact({ setShowContactWindow, showCalendarWindow, setShowCalendarWind
           <p className="text-sm font-light">Book Now</p>
         </li>
         <li className="flex  items-center justify-start gap-2.5 py-3 px-6 hover:bg-gray-200 rounded-full cursor-pointer">
-          <LetUsCallYouIcon className={"w-6 h-6 fill-white stroke-black stroke-[1.5px]"} />
+          <LetUsCallYouIcon className={"w-6 h-6 fill-none stroke-black stroke-[1.5px]"} />
           <p className="text-sm font-light">Let us call you</p>
         </li>
         <li className="flex  items-center justify-start gap-2.5 py-3 px-6 hover:bg-gray-200 rounded-full cursor-pointer">
-          <NavbarCallIcon className={"w-5 h-5 stroke-black stroke-[1.5px] fill-white"} />
+          <NavbarCallIcon className={"w-5 h-5 stroke-black stroke-[1.5px] fill-none"} />
           <p className="text-sm font-light">+44 1202 299 707</p>
         </li>
         <li className="flex  items-center justify-start gap-2.5 py-3 px-6 hover:bg-gray-200 rounded-full cursor-pointer">
@@ -56,19 +56,19 @@ function Contact({ setShowContactWindow, showCalendarWindow, setShowCalendarWind
       {/* Social Media List */}
       <ul className="flex justify-start items-center mt-3 border-t border-gray-200">
         <li className="flex items-center justify-start gap-2.5 p-3 cursor-pointer">
-          <GoogleIcon className={"w-6 h-6 stroke-black fill-white"} />
+          <GoogleIcon className={"w-6 h-6 stroke-black fill-none"} />
         </li>
         <li className="flex items-center justify-start gap-2.5 p-3 cursor-pointer">
-          <WindowsIcon className={"w-6 h-6 stroke-black fill-white"} />
+          <WindowsIcon className={"w-6 h-6 stroke-black fill-none"} />
         </li>
         <li className="flex items-center justify-start gap-2.5 p-3 cursor-pointer">
-          <AppleIcon className={"w-6 h-6 stroke-black fill-white"} />
+          <AppleIcon className={"w-6 h-6 stroke-black fill-none"} />
         </li>
         <li className="flex items-center justify-start gap-2.5 p-3 cursor-pointer">
-          <XIcon className={"w-6 h-6 stroke-black fill-white"} />
+          <XIcon className={"w-6 h-6 stroke-black fill-none"} />
         </li>
         <li className="flex items-center justify-start gap-2.5 p-3 cursor-pointer">
-          <FacebookIcon className={"w-6 h-6 stroke-black fill-white"} />
+          <FacebookIcon className={"w-6 h-6 stroke-black fill-none"} />
         </li>
       </ul>
     </div>

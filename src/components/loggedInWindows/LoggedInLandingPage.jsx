@@ -51,14 +51,6 @@ function LoggedInLandingPage({ isLoggedIn, toggleTheme, setToggleTheme }) {
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
   const [openUserMobileMenu, setOpenUserMobileMenu] = useState(false);
 
-  const handleUserMobileMenuToggle = () => {
-    if (window.innerWidth > 768) {
-      setShowLoginWindow((prev) => !prev);
-    } else {
-      setOpenUserMobileMenu((prev) => !prev);
-    }
-  };
-
   return (
     <div className="overflow-y-hidden max-h-screen font-inter">
       <nav className="flex justify-between items-center py-3 px-9 z-10 relative bg-white font-inter max-lg:px-5 max-md:px-5 max-sm:gap-4">

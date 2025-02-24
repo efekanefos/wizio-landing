@@ -7,7 +7,7 @@ const ContactButton = ({ showContactWindow, setShowContactWindow, setShowLanguag
     <div className={`w-full cursor-pointer max-md:hidden relative`}>
       <div
         onClick={() => {
-          setShowContactWindow(true);
+          setShowContactWindow(!showContactWindow);
           setShowLanguageWindow(false);
           setShowLoginWindow && setShowLoginWindow(false);
         }}

@@ -7,7 +7,7 @@ const LanguageButton = ({ showLanguageWindow, setShowLanguageWindow, setShowCont
     <div className="w-full cursor-pointer max-md:hidden relative">
       <div
         onClick={() => {
-          setShowLanguageWindow(true);
+          setShowLanguageWindow(!showLanguageWindow);
           setShowContactWindow(false);
           setShowLoginWindow && setShowLoginWindow(false);
         }}
