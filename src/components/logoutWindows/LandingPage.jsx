@@ -43,6 +43,8 @@ function LandingPage({ isLoggedIn, toggleTheme, setToggleTheme }) {
   //* Mobile Menu
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
   const [openUserMobileMenu, setOpenUserMobileMenu] = useState(false);
+  //* All Navbar Windows
+  const isAnyWindowOpen = showProjectList || showBedroomSlider || showPropertyDetails || showPriceRange;
 
   return (
     <div className="overflow-y-hidden max-h-screen font-inter">
@@ -92,13 +94,14 @@ function LandingPage({ isLoggedIn, toggleTheme, setToggleTheme }) {
               setShowLoginWindow={setShowLoginWindow}
               showCalendarWindow={showCalendarWindow}
               setShowCalendarWindow={setShowCalendarWindow}
+              isAnyWindowOpen={isAnyWindowOpen}
             />
 
             {/* Language Button */}
-            <LanguageButton showLanguageWindow={showLanguageWindow} setShowLanguageWindow={setShowLanguageWindow} setShowContactWindow={setShowContactWindow} setShowLoginWindow={setShowLoginWindow} />
+            <LanguageButton showLanguageWindow={showLanguageWindow} setShowLanguageWindow={setShowLanguageWindow} setShowContactWindow={setShowContactWindow} setShowLoginWindow={setShowLoginWindow} isAnyWindowOpen={isAnyWindowOpen} />
 
             {/* Dark-Light Theme Button */}
-            <ThemeButton toggleTheme={toggleTheme} setToggleTheme={setToggleTheme} setShowContactWindow={setShowContactWindow} setShowLanguageWindow={setShowLanguageWindow} setShowLoginWindow={setShowLoginWindow} />
+            <ThemeButton toggleTheme={toggleTheme} setToggleTheme={setToggleTheme} setShowContactWindow={setShowContactWindow} setShowLanguageWindow={setShowLanguageWindow} setShowLoginWindow={setShowLoginWindow} isAnyWindowOpen={isAnyWindowOpen} />
           </div>
           {/* Login Button */}
           <LoginButton
@@ -131,6 +134,7 @@ function LandingPage({ isLoggedIn, toggleTheme, setToggleTheme }) {
             setShowPriceRange={setShowPriceRange}
             showPropertyDetails={showPropertyDetails}
             setShowPropertyDetails={setShowPropertyDetails}
+            isAnyWindowOpen={isAnyWindowOpen}
           />
         </div>
       ) : showUpperOptions && showLocalAmenitiesGPS ? (

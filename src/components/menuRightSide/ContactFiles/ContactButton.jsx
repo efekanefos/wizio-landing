@@ -2,7 +2,7 @@ import React from "react";
 import NavbarCallIcon from "../../newIcons/NavbarCallIcon";
 import Contact from "./Contact";
 
-const ContactButton = ({ showContactWindow, setShowContactWindow, setShowLanguageWindow, setShowLoginWindow, showCalendarWindow, setShowCalendarWindow }) => {
+const ContactButton = ({ showContactWindow, setShowContactWindow, setShowLanguageWindow, setShowLoginWindow, showCalendarWindow, setShowCalendarWindow, isAnyWindowOpen }) => {
   return (
     <div className={`w-full cursor-pointer max-md:hidden relative`}>
       <div
