@@ -10,7 +10,7 @@ function ProfileSetting({ setShowStatusWindow, setShowProfileWindow }) {
         {/* User Info Row */}
         <div className="flex justify-between items-center p-3">
           <div className="flex justify-start items-center gap-3">
-            <UserEditIcon className={"w-6 h-6 fill-white"} />
+            <UserEditIcon className={"w-6 h-6 stroke-black stroke-[1.5px] fill-none"} />
             <h2 className="text-[16px] font-semibold text-black">Settings</h2>
           </div>
           <div
@@ -54,7 +54,7 @@ function ProfileSetting({ setShowStatusWindow, setShowProfileWindow }) {
             <div className="flex flex-col w-full">
               <div className="pt-3 flex justify-between items-center">
                 <label className="px-3 text-xs text-gray-400 font-light">Password</label>
-                <VisiblePasswordIcon className={"w-4 h-4 fill-current mr-3"} />
+                <VisiblePasswordIcon className={"w-4 h-4 fill-gray-300 stroke-white mr-3"} />
               </div>
               <input readOnly value="William324221" className="px-3 pb-3 w-full text-base outline-none border-b border-gray-200" type="text" />
             </div>
@@ -65,7 +65,7 @@ function ProfileSetting({ setShowStatusWindow, setShowProfileWindow }) {
             <div className="flex flex-col w-full">
               <div className="pt-3 flex justify-between items-center">
                 <label className="px-3 text-xs text-gray-400 font-light">Password</label>
-                <VisiblePasswordIcon className={"w-4 h-4 fill-current mr-3"} />
+                <VisiblePasswordIcon className={"w-4 h-4 fill-gray-300 stroke-white mr-3"} />
               </div>
               <input readOnly value="****************" className="px-3 pb-3 w-full text-base outline-none border-b border-gray-200" type="password" />
             </div>

@@ -12,7 +12,7 @@ function Register({ setShowRegisterWindow, setShowLoginWindow }) {
       <div className="flex justify-between items-center border-b border-gray-200 p-2.5">
         {/* Icon and Title */}
         <div className="flex justify-start items-center gap-2 w-full">
-          <UserEditIcon className={"w-6 h-6 fill-white stroke-black stroke-[1.5px]"} />
+          <UserEditIcon className={"w-6 h-6 fill-none stroke-black stroke-[1.5px]"} />
           <p className="text-[16px] text-black font-semibold">Register</p>
         </div>
         {/* Close Button */}
@@ -52,7 +52,7 @@ function Register({ setShowRegisterWindow, setShowLoginWindow }) {
           <div className="flex flex-col w-full">
             <div className="pt-3 flex justify-between items-center">
               <label className="px-3 text-xs text-gray-300 font-light">Password</label>
-              <VisiblePasswordIcon className={"w-4 h-4 stroke-gray-300 fill-none"} />
+              <VisiblePasswordIcon className={"w-4 h-4 stroke-white fill-gray-300"} />
             </div>
             <input readOnly value="William324221" className="px-3 pb-3 w-full text-base outline-none border-b border-gray-200" type="text" />
           </div>
