@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 /* New SVG Components */
 import NavbarCallIcon from "../../newIcons/NavbarCallIcon";
 import CloseIcon from "../../newIcons/CloseIcon";
@@ -12,9 +12,9 @@ import AppleIcon from "../../newIcons/AppleIcon";
 import XIcon from "../../newIcons/XIcon";
 import FacebookIcon from "../../newIcons/FacebookIcon";
 
-function Contact({ setShowContactWindow, showCalendarWindow, setShowCalendarWindow }) {
+const Contact = forwardRef(({ setShowContactWindow, showCalendarWindow, setShowCalendarWindow }, ref) => {
   return (
-    <div className="absolute top-[68px] right-0 bg-white rounded-3xl p-3 min-w-72 w-fit z-10 shadow-lg border border-gray-200">
+    <div ref={ref} className="absolute top-[68px] right-0 bg-white rounded-3xl p-3 min-w-72 w-fit z-10 shadow-lg border border-gray-200">
       {/* Header Row */}
       <div className="flex justify-between items-center border-b border-gray-200 p-2.5">
         {/* Icon and Title */}
@@ -73,7 +73,7 @@ function Contact({ setShowContactWindow, showCalendarWindow, setShowCalendarWind
       </ul>
     </div>
   );
-}
+});
 
 export default Contact;
 
