@@ -1,5 +1,5 @@
 import React from "react";
-import searchIcon from "../../assets/images/header/search_icon.svg";
+import SearchIcon from "../newIcons/SearchIcon";
 import PropertyDetails from "../PropertyDetails";
 
 const MiniMenu = ({
@@ -113,7 +113,7 @@ const MiniMenu = ({
           )}
 
           <div onClick={() => setShowSearchResult(!showSearchResult)} className={`p-2 rounded-full bg-black cursor-pointer`}>
-            <img className="w-4" src={searchIcon} alt="search" />
+            <SearchIcon className={"w-4 fill-white"} />
           </div>
         </div>
       </div>
@@ -122,7 +122,7 @@ const MiniMenu = ({
         <div className={`hidden max-sm:flex w-full rounded-full`}>
           <input className="w-full outline-none px-6 text-middleMenuTextBlack text-base font-light rounded-full" type="text" name="searchInput" id="searchInput" placeholder="Search" />
           <div onClick={() => setOpenMobileMenu(true)} className={`p-2 rounded-full w-fit bg-black cursor-pointer`}>
-            <img className="w-4" src={searchIcon} alt="search" />
+            <SearchIcon className={"w-4 fill-white"} />
           </div>
         </div>
       ) : (

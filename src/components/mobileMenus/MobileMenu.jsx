@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import ReactSlider from "react-slider";
 /* SVG Components */
 import LocalAmenitiesIcon from "../icons/LocalAmenitiesIcon";
-import CloseIcon from "../newIcons/CloseIcon";
 import MobileMenuCloseIcon from "../newIcons/MobileMenuCloseIcon";
 import SearchIcon from "../newIcons/SearchIcon";
 import MobileDownArrowIcon from "../newIcons/MobileDownArrowIcon";
