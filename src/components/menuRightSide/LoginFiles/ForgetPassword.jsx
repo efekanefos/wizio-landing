@@ -1,10 +1,10 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import ForgetPasswordIcon from "../../newIcons/ForgetPasswordIcon";
 import BackArrowIcon from "../../newIcons/BackArrowIcon";
 
-function ForgetPassword({ setShowForgetPassword, setShowLoginWindow, setShowRegisterWindow }) {
+const ForgetPassword = forwardRef(({ setShowForgetPassword, setShowLoginWindow, setShowRegisterWindow }, ref) => {
   return (
-    <div className="absolute top-[68px] right-0 bg-white rounded-3xl p-3 min-w-72 w-fit z-10 shadow-lg border border-gray-200">
+    <div ref={ref} className="absolute top-[68px] right-0 bg-white rounded-3xl p-3 min-w-72 w-fit z-10 shadow-lg border border-gray-200">
       {/* Header Row */}
       <div className="flex justify-between items-center border-b border-gray-200 p-2.5">
         {/* Icon and Title */}
@@ -68,6 +68,6 @@ function ForgetPassword({ setShowForgetPassword, setShowLoginWindow, setShowRegi
       </div>
     </div>
   );
-}
+});
 
 export default ForgetPassword;

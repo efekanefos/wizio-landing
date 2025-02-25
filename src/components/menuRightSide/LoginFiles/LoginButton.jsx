@@ -22,47 +22,31 @@ const LoginButton = ({
   showRegisterWindow,
   setShowRegisterWindow,
 }) => {
+  const [showForgetPassword, setShowForgetPassword] = useState(false);
   const buttonRef = useRef(null);
   const loginWindowRef = useRef(null);
   const registerWindowRef = useRef(null);
+  const passwordWindowRef = useRef(null);
 
   useEffect(() => {
     function handleClickOutside(event) {
-      if (loginWindowRef.current && !loginWindowRef.current.contains(event.target) && buttonRef.current && !buttonRef.current.contains(event.target)) {
+      if (
+        (showLoginWindow && loginWindowRef.current && !loginWindowRef.current.contains(event.target)) ||
+        (showRegisterWindow && registerWindowRef.current && !registerWindowRef.current.contains(event.target)) ||
+        (showForgetPassword && passwordWindowRef.current && !passwordWindowRef.current.contains(event.target))
+      ) {
         setShowLoginWindow(false);
-      }
-    }
-
-    if (showLoginWindow) {
-      document.addEventListener("mousedown", handleClickOutside);
-    } else {
-      document.removeEventListener("mousedown", handleClickOutside);
-    }
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [showLoginWindow]);
-
-  useEffect(() => {
-    function handleClickOutside(event) {
-      if (registerWindowRef.current && !registerWindowRef.current.contains(event.target) && buttonRef.current && !buttonRef.current.contains(event.target)) {
         setShowRegisterWindow(false);
+        setShowForgetPassword(false);
       }
     }
-
-    if (showRegisterWindow) {
+    if (showLoginWindow || showRegisterWindow || showForgetPassword) {
       document.addEventListener("mousedown", handleClickOutside);
-    } else {
-      document.removeEventListener("mousedown", handleClickOutside);
     }
-
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [showRegisterWindow]);
-
-  const [showForgetPassword, setShowForgetPassword] = useState(false);
+  }, [showLoginWindow, showRegisterWindow, showForgetPassword]);
 
   return (
     <div className="flex justify-start items-center gap-3 w-full h-full cursor-pointer relative" ref={buttonRef}>
@@ -114,7 +98,11 @@ const LoginButton = ({
           >
             <div
               onClick={() => {
-                window.innerWidth > 768 ? setShowLoginWindow(!showLoginWindow) : "";
+                setTimeout(() => {
+                  if (window.innerWidth > 768) {
+                    setShowLoginWindow((prev) => !prev);
+                  }
+                }, 0); // 0 ms olsa bile bir sonraki döngüye atar
                 setShowLanguageWindow(false);
                 setShowContactWindow(false);
               }}
@@ -130,7 +118,7 @@ const LoginButton = ({
       </div>
       {showLoginWindow && <Login setShowLoginWindow={setShowLoginWindow} setShowRegisterWindow={setShowRegisterWindow} setShowForgetPassword={setShowForgetPassword} ref={loginWindowRef} />}
       {showRegisterWindow && <Register setShowLoginWindow={setShowLoginWindow} setShowRegisterWindow={setShowRegisterWindow} ref={registerWindowRef} />}
-      {showForgetPassword && <ForgetPassword setShowForgetPassword={setShowForgetPassword} setShowLoginWindow={setShowLoginWindow} setShowRegisterWindow={setShowRegisterWindow} />}
+      {showForgetPassword && <ForgetPassword setShowForgetPassword={setShowForgetPassword} setShowLoginWindow={setShowLoginWindow} setShowRegisterWindow={setShowRegisterWindow} ref={passwordWindowRef} />}
     </div>
   );
 };

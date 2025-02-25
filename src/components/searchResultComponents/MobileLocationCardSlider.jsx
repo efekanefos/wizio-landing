@@ -4,35 +4,31 @@ import "@splidejs/react-splide/css";
 import LocalAmenitiesIcon from "../icons/LocalAmenitiesIcon";
 import whiteBox from "../../assets/images/logoutWindows/white_box.svg";
 import MiniLocationSideBarCardImage from "../../assets/images/newIcons/MiniLocationSideBarCardImage.png";
-import { LOOP } from "@splidejs/splide";
 
 const MobileLocationCardSlider = () => {
   return (
-    <div className="hidden max-md:block absolute bottom-20">
+    <div className="hidden max-md:block absolute bottom-20 overflow-x-hidden max-w-[760px] w-full tabletCardSlider">
       <Splide
         options={{
-          rewind: true,
-          perPage: 3,
+          perPage: 2, // İlk ekranda 2 kart görünecek
           perMove: 1,
+          padding: "2.5rem", // Kenardaki kartlar biraz gözüksün
+          arrows: false,
+          pagination: false,
+          loop: true,
+          rewind: true,
         }}
         aria-label="Mobile Card Slider"
       >
         {Array.from({ length: 6 }).map((_, index) => (
-          <SplideSlide key={index}>
-            {/* Card #1 */}
-            <div className="w-full">
-              <div className="flex flex-col gap-3 p-2 border border-gray-200 shadow-md rounded-2xl mb-3 bg-white">
+          <SplideSlide key={index} className="splide__slide tabletCardSlider">
+            <div className="w-[325px] splide-card">
+              <div className="flex flex-col gap-4 p-3 border border-gray-200 shadow-md rounded-2xl mb-3 bg-white">
                 {/* Card Info */}
                 <div className="flex justify-start items-start gap-6">
-                  {/* Card Image Side */}
                   <div className="relative">
-                    <img src={MiniLocationSideBarCardImage} alt="MiniLocationSideBarCardImage" />
-                    <span
-                      className="w-9 h-9 box-content leading-normal max-w-full text-white text-base font-medium bg-lime-500 rounded-full border-white border-4 flex justify-center items-center absolute 
-                    -top-3 -right-4"
-                    >
-                      999
-                    </span>
+                    <img className="w-24 h-24 " src={MiniLocationSideBarCardImage} alt="MiniLocationSideBarCardImage" />
+                    <span className="w-9 h-9 box-content leading-normal text-white text-base font-medium bg-lime-500 rounded-full border-white border-4 flex justify-center items-center absolute -top-3 -right-4">999</span>
                   </div>
                   {/* Card Text Side */}
                   <div>
