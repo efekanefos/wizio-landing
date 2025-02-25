@@ -56,10 +56,17 @@ const LoginButton = ({
             </div>
           </div>
         ) : !openMobileMenu && !openUserMobileMenu && isLoggedIn ? (
-          <div className="flex justify-start items-center w-full gap-2 max-md:border max-md:border-gray-200 max-md:rounded-full max-md:p-1">
+          <div
+            onClick={() => {
+              if (window.innerWidth < 768) {
+                setOpenUserMobileMenu(true);
+              }
+            }}
+            className="flex justify-start items-center w-full gap-2 max-md:border max-md:border-gray-200 max-md:rounded-full max-md:p-1"
+          >
             <div
               onClick={() => {
-                handleMobileMenuToggle();
+                window.innerWidth > 768 ? setShowStatusWindow(true) : "";
                 setShowLanguageWindow(false);
                 setShowContactWindow(false);
               }}
@@ -67,15 +74,22 @@ const LoginButton = ({
             >
               <GuestIcon className={`w-5 h-5 ${showStatusWindow ? "fill-white" : "fill-black"}`} />
             </div>
-            <div onClick={() => setOpenMobileMenu(!openMobileMenu)} className="hidden max-md:block px-1 py-1.5 pl-0">
+            <div className="hidden max-md:block px-1 py-1.5 pl-0">
               <MobileHamburgerIcon className={"w-4 h-3 fill-current"} />
             </div>
           </div>
         ) : (
-          <div className="flex justify-start items-center w-full gap-2 max-md:border max-md:border-gray-200 max-md:rounded-full max-md:p-1">
+          <div
+            onClick={() => {
+              if (window.innerWidth < 768) {
+                setOpenUserMobileMenu(true);
+              }
+            }}
+            className="flex justify-start items-center w-full gap-2 max-md:border max-md:border-gray-200 max-md:rounded-full max-md:p-1"
+          >
             <div
               onClick={() => {
-                handleUserMobileMenuToggle();
+                window.innerWidth > 768 ? setShowLoginWindow(true) : "";
                 setShowLanguageWindow(false);
                 setShowContactWindow(false);
               }}
@@ -83,7 +97,7 @@ const LoginButton = ({
             >
               <GuestIcon className={`w-5 h-5 ${showLoginWindow || showRegisterWindow || showForgetPassword ? "fill-white" : "fill-black"}`} />
             </div>
-            <div onClick={() => setOpenMobileMenu(!openMobileMenu)} className="hidden max-md:block px-1 py-1.5 pl-0 ">
+            <div className="hidden max-md:block px-1 py-1.5 pl-0 ">
               <MobileHamburgerIcon className={"w-4 h-3 fill-current"} />
             </div>
           </div>

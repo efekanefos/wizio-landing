@@ -71,6 +71,7 @@ function LoggedInLandingPage({ isLoggedIn, toggleTheme, setToggleTheme }) {
           ) : (
             <MiniMenu
               openMobileMenu={openMobileMenu}
+              setOpenMobileMenu={setOpenMobileMenu}
               openUserMobileMenu={openUserMobileMenu}
               showUpperOptions={showUpperOptions}
               setShowUpperOptions={setShowUpperOptions}

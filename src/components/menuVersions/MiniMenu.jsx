@@ -17,10 +17,11 @@ const MiniMenu = ({
   setShowPropertyDetails,
   showSearchResult,
   setShowSearchResult,
+  setOpenMobileMenu,
 }) => {
   return (
     <div
-      className={` flex justify-between items-center rounded-full shadow-xl py-1.5 relative pl-1 pr-2 w-fit max-sm:w-full
+      className={` flex justify-between items-center rounded-full shadow-xl py-1.5 relative pl-1 pr-2 w-fit max-sm:w-full hover:shadow-2xl
             ${openMobileMenu || openUserMobileMenu ? `border-0` : `border border-gray-200`}
             `}
     >
@@ -120,7 +121,7 @@ const MiniMenu = ({
       {!(openMobileMenu || openUserMobileMenu) ? (
         <div className={`hidden max-sm:flex w-full rounded-full`}>
           <input className="w-full outline-none px-6 text-middleMenuTextBlack text-base font-light rounded-full" type="text" name="searchInput" id="searchInput" placeholder="Search" />
-          <div className={`p-2 rounded-full w-fit bg-black`}>
+          <div onClick={() => setOpenMobileMenu(true)} className={`p-2 rounded-full w-fit bg-black cursor-pointer`}>
             <img className="w-4" src={searchIcon} alt="search" />
           </div>
         </div>
