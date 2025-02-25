@@ -1,15 +1,15 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import { useNavigate } from "react-router-dom";
 /* New SVG Components */
 import GuestIcon from "../../newIcons/GuestIcon";
 import CloseIcon from "../../newIcons/CloseIcon";
 import VisiblePasswordIcon from "../../newIcons/VisiblePasswordIcon";
 
-function Login({ setShowLoginWindow, setShowRegisterWindow, setShowForgetPassword }) {
+const Login = forwardRef(({ setShowLoginWindow, setShowRegisterWindow, setShowForgetPassword }, ref) => {
   const navigate = useNavigate();
 
   return (
-    <div className="absolute top-[68px] right-0 bg-white rounded-3xl p-3 min-w-72 w-fit z-10 shadow-lg border border-gray-200">
+    <div ref={ref} className="absolute top-[68px] right-0 bg-white rounded-3xl p-3 min-w-72 w-fit z-10 shadow-lg border border-gray-200">
       {/* Header Row */}
       <div className="flex justify-between items-center border-b border-gray-200 p-2.5">
         {/* Icon and Title */}
@@ -87,7 +87,7 @@ function Login({ setShowLoginWindow, setShowRegisterWindow, setShowForgetPasswor
       </div>
     </div>
   );
-}
+});
 
 export default Login;
 
