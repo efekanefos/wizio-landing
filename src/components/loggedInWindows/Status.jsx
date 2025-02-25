@@ -38,7 +38,7 @@ function Status({ setShowStatusWindow, setShowProfileWindow, setShowRecentViewsW
               <FavouriteIcon className={"w-6 h-6 fill-black"} />
               <p className="text-sm font-light text-black">Favourite</p>
             </div>
-            <RightArrowIcon className={"w-2 h-3 stroke-black fill-white"} />
+            <RightArrowIcon className={"w-2 h-3 stroke-black fill-none"} />
           </li>
           {/* Recent Views Row */}
           <li
@@ -49,10 +49,10 @@ function Status({ setShowStatusWindow, setShowProfileWindow, setShowRecentViewsW
             className="flex justify-between items-center gap-3 p-3 cursor-pointer hover:bg-gray-200 hover:rounded-full"
           >
             <div className="flex justify-start items-center gap-3">
-              <RecentViewsIcon className={"w-6 h-6 stroke-black stroke-[1.5px] fill-white"} />
+              <RecentViewsIcon className={"w-6 h-6 stroke-black stroke-[1.5px] fill-none"} />
               <p className="text-sm font-light text-black">Recent Views</p>
             </div>
-            <RightArrowIcon className={"w-2 h-3 stroke-black fill-white"} />
+            <RightArrowIcon className={"w-2 h-3 stroke-black fill-none"} />
           </li>
           {/* Settings Row */}
           <li
@@ -63,10 +63,10 @@ function Status({ setShowStatusWindow, setShowProfileWindow, setShowRecentViewsW
             className="flex justify-between items-center gap-3 p-3 cursor-pointer hover:bg-gray-200 hover:rounded-full"
           >
             <div className="flex justify-start items-center gap-3">
-              <UserEditIcon className={"w-6 h-6 stroke-black fill-white stroke-[1.5px]"} />
+              <UserEditIcon className={"w-6 h-6 stroke-black fill-none stroke-[1.5px]"} />
               <p className="text-sm font-light text-black">Settings</p>
             </div>
-            <RightArrowIcon className={"w-2 h-3 stroke-black fill-white"} />
+            <RightArrowIcon className={"w-2 h-3 stroke-black fill-none"} />
           </li>
           {/* Log out Row */}
           <li onClick={() => navigate("/landing-page")} className="flex justify-between items-center gap-3 p-3 cursor-pointer hover:bg-gray-200 hover:rounded-full">
@@ -74,7 +74,7 @@ function Status({ setShowStatusWindow, setShowProfileWindow, setShowRecentViewsW
               <LogOutIcon className={"w-6 h-6 fill-black"} />
               <p className="text-sm font-light text-black">Log out</p>
             </div>
-            <RightArrowIcon className={"w-2 h-3 stroke-black fill-white"} />
+            <RightArrowIcon className={"w-2 h-3 stroke-black fill-none"} />
           </li>
         </ul>
       </div>

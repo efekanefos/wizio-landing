@@ -22,21 +22,6 @@ const LoginButton = ({
   showRegisterWindow,
   setShowRegisterWindow,
 }) => {
-  const handleUserMobileMenuToggle = () => {
-    if (window.innerWidth > 768) {
-      setShowLoginWindow((prev) => !prev);
-    } else {
-      setOpenUserMobileMenu((prev) => !prev);
-    }
-  };
-  const handleMobileMenuToggle = () => {
-    if (window.innerWidth > 768) {
-      setShowStatusWindow((prev) => !prev);
-    } else {
-      setOpenUserMobileMenu((prev) => !prev);
-    }
-  };
-
   const [showForgetPassword, setShowForgetPassword] = useState(false);
 
   return (
@@ -66,7 +51,7 @@ const LoginButton = ({
           >
             <div
               onClick={() => {
-                window.innerWidth > 768 ? setShowStatusWindow(true) : "";
+                window.innerWidth > 768 ? setShowStatusWindow(!showStatusWindow) : "";
                 setShowLanguageWindow(false);
                 setShowContactWindow(false);
               }}
@@ -89,7 +74,7 @@ const LoginButton = ({
           >
             <div
               onClick={() => {
-                window.innerWidth > 768 ? setShowLoginWindow(true) : "";
+                window.innerWidth > 768 ? setShowLoginWindow(!showLoginWindow) : "";
                 setShowLanguageWindow(false);
                 setShowContactWindow(false);
               }}
@@ -111,3 +96,20 @@ const LoginButton = ({
 };
 
 export default LoginButton;
+
+/* 
+  const handleUserMobileMenuToggle = () => {
+    if (window.innerWidth > 768) {
+      setShowLoginWindow((prev) => !prev);
+    } else {
+      setOpenUserMobileMenu((prev) => !prev);
+    }
+  };
+  const handleMobileMenuToggle = () => {
+    if (window.innerWidth > 768) {
+      setShowStatusWindow((prev) => !prev);
+    } else {
+      setOpenUserMobileMenu((prev) => !prev);
+    }
+  };
+*/

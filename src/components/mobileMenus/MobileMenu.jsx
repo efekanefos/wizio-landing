@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ReactSlider from "react-slider";
 /* SVG Components */
-import LocalAmenitiesIcon from "../icons/LocalAmenitiesIcon";
+import LocalAmenitiesIcon from "../newIcons/LocalAmenitiesIcon";
 import MobileMenuCloseIcon from "../newIcons/MobileMenuCloseIcon";
 import SearchIcon from "../newIcons/SearchIcon";
 import MobileDownArrowIcon from "../newIcons/MobileDownArrowIcon";
@@ -107,7 +107,7 @@ function MobileMenu() {
           className={`${!showLocationDevelopments && `opacity-30`} flex justify-start items-center gap-2 cursor-pointer`}
         >
           <div className="w-5">
-            <LocalAmenitiesIcon className={"w-5 h-5 fill-white"} />
+            <LocalAmenitiesIcon className={"w-5 h-5 fill-black"} />
           </div>
           <p
             className={`text-middleMenuTextBlack font-medium text-xs ${
@@ -378,15 +378,15 @@ function MobileMenu() {
                   <p className="text-xl text-gray-400 font-semibold mb-3">Types</p>
                   <ul className="list-none">
                     <li className="flex justify-start items-center gap-5 p-5 pl-1">
-                      <ApartmentsIcon className={"w-6 h-6 stroke-[1.5px] fill-white stroke-gray-400"} />
+                      <ApartmentsIcon className={"w-6 h-6  fill-gray-400 "} />
                       <p className="text-[16px] text-gray-400">Apartments</p>
                     </li>
                     <li className="flex justify-start items-center gap-5 p-5 pl-1">
-                      <VillasIcon className={"w-6 h-6 stroke-[1.5px] fill-white stroke-gray-400"} />
+                      <VillasIcon className={"w-6 h-6 stroke-[1.5px] fill-none stroke-gray-400"} />
                       <p className="text-[16px] text-gray-400">Villas</p>
                     </li>
                     <li className="flex justify-start items-center gap-5 p-5 pl-1">
-                      <TownhouseIcon className={"w-6 h-6 stroke-[1.5px] fill-white stroke-gray-400"} />
+                      <TownhouseIcon className={"w-6 h-6 stroke-[1.5px] fill-none stroke-gray-400"} />
                       <p className="text-[16px] text-gray-400">Townhouse</p>
                     </li>
                   </ul>
@@ -396,15 +396,15 @@ function MobileMenu() {
                   <p className="text-xl text-gray-400 font-semibold mb-3">Outdoor Space</p>
                   <ul className="list-none">
                     <li className="flex justify-start items-center gap-5 p-5 pl-1">
-                      <GardenIcon className={"w-6 h-6 stroke-[1.5px] fill-white stroke-gray-400"} />
+                      <GardenIcon className={"w-6 h-6 stroke-[1.5px] fill-none stroke-gray-400"} />
                       <p className="text-[16px] text-gray-400">Garden</p>
                     </li>
                     <li className="flex justify-start items-center gap-5 p-5 pl-1">
-                      <TerraceIcon className={"w-6 h-6 stroke-[1.5px] fill-white stroke-gray-400"} />
+                      <TerraceIcon className={"w-6 h-6 stroke-[1.5px] fill-none stroke-gray-400"} />
                       <p className="text-[16px] text-gray-400">Terrace</p>
                     </li>
                     <li className="flex justify-start items-center gap-5 p-5 pl-1">
-                      <BalconyIcon className={"w-6 h-6 stroke-[1.5px] fill-white stroke-gray-400"} />
+                      <BalconyIcon className={"w-6 h-6 stroke-[1.5px] fill-none stroke-gray-400"} />
                       <p className="text-[16px] text-gray-400">Balcony</p>
                     </li>
                   </ul>
