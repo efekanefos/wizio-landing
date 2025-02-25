@@ -7,7 +7,6 @@ const MiniMenu = ({
   openUserMobileMenu,
   showUpperOptions,
   setShowUpperOptions,
-  showLocationDevelopments,
   showProjectList,
   setShowProjectList,
   showBedroomSlider,
@@ -112,7 +111,7 @@ const MiniMenu = ({
             ""
           )}
 
-          <div onClick={() => setShowSearchResult(!showSearchResult)} className={`p-2 rounded-full bg-buttonOrange cursor-pointer`}>
+          <div onClick={() => setShowSearchResult(!showSearchResult)} className={`p-2 rounded-full bg-black cursor-pointer`}>
             <img className="w-4" src={searchIcon} alt="search" />
           </div>
         </div>
@@ -121,7 +120,7 @@ const MiniMenu = ({
       {!(openMobileMenu || openUserMobileMenu) ? (
         <div className={`hidden max-sm:flex w-full rounded-full`}>
           <input className="w-full outline-none px-6 text-middleMenuTextBlack text-base font-light rounded-full" type="text" name="searchInput" id="searchInput" placeholder="Search" />
-          <div className={`p-2 rounded-full w-fit bg-buttonOrange`}>
+          <div className={`p-2 rounded-full w-fit bg-black`}>
             <img className="w-4" src={searchIcon} alt="search" />
           </div>
         </div>
