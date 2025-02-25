@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 /* New SVG Components */
 import FavouriteIcon from "../newIcons/FavouriteIcon";
 import RecentViewsIcon from "../newIcons/RecentViewsIcon";
-import NotificationsIcon from "../newIcons/NotificationsIcon";
 import LogOutIcon from "../newIcons/LogOutIcon";
 import RightArrowIcon from "../newIcons/RightArrowIcon";
 import UserEditIcon from "../newIcons/UserEditIcon";

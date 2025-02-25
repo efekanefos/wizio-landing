@@ -1,5 +1,5 @@
 import React from "react";
-import searchIcon from "../../assets/images/header/search_icon.svg";
+import SearchIcon from "../newIcons/SearchIcon";
 import PropertyDetails from "../PropertyDetails";
 import DiscoverProjects from "../DiscoverProjects";
 import NumberOfBedrooms from "../NumberOfBedrooms";
@@ -151,7 +151,7 @@ const LargeMenu = ({
           )}
           {/* Search Button */}
           <div className={`rounded-full bg-black px-[27px] py-[14px] flex justify-start items-center gap-3 max-md:p-4 cursor-pointer`}>
-            <img className="w-5 h-5" src={searchIcon} alt="search" />
+            <SearchIcon className={"w-5 h-5 fill-white"} />
             <p className="text-white font-light text-sm">Search</p>
           </div>
           {showPropertyDetails && <PropertyDetails />}
@@ -162,7 +162,7 @@ const LargeMenu = ({
         <div className={`hidden max-sm:flex w-full rounded-full`}>
           <input className="w-full outline-none px-6 text-middleMenuTextBlack text-base font-light rounded-full" type="text" name="searchInput" id="searchInput" placeholder="Search" />
           <div className={`rounded-full w-fit bg-black p-7 py-3 flex justify-start items-center gap-2`}>
-            <img className="w-4" src={searchIcon} alt="search" />
+            <SearchIcon className={"w-5 h-5 fill-white"} />
           </div>
         </div>
       ) : (

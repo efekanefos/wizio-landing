@@ -151,7 +151,7 @@ function LoggedInLandingPage({ isLoggedIn, toggleTheme, setToggleTheme }) {
             </div>
           </div>
           <div className={`rounded-full bg-black p-4 flex justify-start items-center gap-2`}>
-            <SearchIcon className={"w-4 h-4 stroke-white"} />
+            <SearchIcon className={"w-4 h-4 fill-white"} />
           </div>
         </div>
       ) : (

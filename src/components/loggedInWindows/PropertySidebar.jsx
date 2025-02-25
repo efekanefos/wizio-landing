@@ -2,7 +2,6 @@ import React from "react";
 /* SVG Components */
 import DollarIcon from "../icons/DollarIcon";
 import SizeArrowIcon from "../icons/SizeArrowIcon";
-import BoxIcon from "../icons/BoxIcon";
 import LocalAmenitiesIcon from "../icons/LocalAmenitiesIcon";
 import MailInput from "../icons/MailInput";
 /* Images */

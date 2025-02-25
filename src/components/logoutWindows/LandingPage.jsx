@@ -4,7 +4,7 @@ import MiniMenu from "../menuVersions/MiniMenu";
 import UpperMiniMenu from "../menuVersions/UpperMiniMenu";
 import LargeMenu from "../menuVersions/LargeMenu";
 /* New SVG Components */
-import WhiteSearchIcon from "../newIcons/WhiteSearchIcon";
+import SearchIcon from "../newIcons/SearchIcon";
 /* Background Images */
 import earthBackground from "../../assets/images/homepage/planet_earth_background.png";
 import LocalAmenitiesBackground from "../../assets/images/homepage/local_amenities_background.svg";
@@ -149,7 +149,7 @@ function LandingPage({ isLoggedIn, toggleTheme, setToggleTheme }) {
             </div>
           </div>
           <div className={`rounded-full bg-black p-4 flex justify-start items-center gap-2`}>
-            <WhiteSearchIcon className={"w-4 h-4 fill-white"} />
+            <SearchIcon className={"w-4 h-4 fill-white"} />
           </div>
         </div>
       ) : (
