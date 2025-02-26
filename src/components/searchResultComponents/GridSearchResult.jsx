@@ -10,7 +10,7 @@ import ListViewIcon from "../newIcons/ListViewIcon";
 
 const GridSearchResult = () => {
   return (
-    <div className="mt-[72px]">
+    <div className="mt-5">
       {/* Share Buttons */}
       <div className="flex justify-end items-center gap-2 mb-6 max-md:mr-5">
         <div className="w-12 h-12 flex justify-center items-center border border-gray-200 rounded-full p-3">
@@ -71,7 +71,7 @@ const GridSearchResult = () => {
       </div>
 
       {/* Project Logo */}
-      <div className="fixed bottom-10 right-12">
+      <div className="fixed bottom-10 right-12 max-md:hidden">
         <ProjectLogo className={"w-8 h-6 fill-black"} />
       </div>
     </div>
