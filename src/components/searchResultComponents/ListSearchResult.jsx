@@ -1,5 +1,7 @@
 import React from "react";
 import CloseIcon from "../newIcons/CloseIcon";
+import SendMessageIcon from "../svg/SendMessage";
+import ShareIcon from "../svg/ShareIcon";
 import MobileDownArrowIcon from "../newIcons/MobileDownArrowIcon";
 import RotateViewIcon from "../newIcons/RotateViewIcon";
 import GridViewIcon from "../newIcons/GridViewIcon";
@@ -109,72 +111,78 @@ const ListSearchResult = () => {
     <div className="mt-5">
       {/* Buttons */}
       <div className="flex justify-end items-center gap-2 mb-6 mr-12 max-md:mr-5">
+        <div className="hidden max-sm:flex justify-center items-center w-12 h-12 border border-gray-200 rounded-full p-3">
+          <SendMessageIcon className={"w-6 h-6 fill-black translate-x-0.5"} />
+        </div>
+        <div className="hidden max-sm:flex justify-center items-center w-12 h-12 border border-gray-200 rounded-full p-3">
+          <ShareIcon className={"w-5 h-5 fill-black "} />
+        </div>
         <div className="w-12 h-12 flex justify-center items-center border border-gray-200 rounded-full p-3">
           <CloseIcon className={"w-3.5 h-3.5 fill-black "} />
         </div>
       </div>
 
-      <div className="max-w-[1364px] mx-auto ">
+      <div className="max-w-[1364px] mx-auto">
         <div className="w-full overflow-x-auto rounded-t-2xl">
-          <table className="w-full border-collapse border-x border-gray-200">
+          <table className="w-full border-collapse border-x border-gray-200 overflow-x-auto max-w-96">
             <thead className="bg-black text-white ">
               <tr className="table-row ">
                 <th>
-                  <div className="flex justify-center items-center gap-2.5 min-w-72">
+                  <div className="flex justify-center items-center gap-2.5 w-[360px] max-md:w-[171px] max-sm:w-64">
                     <p className="text-sm font-semibold text-white">Project</p>
                     <MobileDownArrowIcon className={"w-4 h-2 fill-white"} />
                   </div>
                 </th>
                 <th className="px-4 py-10">
-                  <div className="flex justify-center items-center gap-2.5">
+                  <div className="flex justify-center items-center gap-2.5 w-16">
                     <p className="text-sm font-semibold text-white">Unit</p>
                     <MobileDownArrowIcon className={"w-4 h-2 fill-white"} />
                   </div>
                 </th>
                 <th>
-                  <div className="flex justify-center items-center gap-2.5">
+                  <div className="flex justify-center items-center gap-2.5 w-32">
                     <p className="text-sm font-semibold text-white">Availability</p>
                     <MobileDownArrowIcon className={"w-4 h-2 fill-white"} />
                   </div>
                 </th>
                 <th>
-                  <div className="flex justify-center items-center gap-2.5">
+                  <div className="flex justify-center items-center gap-2.5 w-32">
                     <p className="text-sm font-semibold text-white">Price</p>
                     <MobileDownArrowIcon className={"w-4 h-2 fill-white"} />
                   </div>
                 </th>
                 <th>
-                  <div className="flex justify-center items-center gap-2.5">
+                  <div className="flex justify-center items-center gap-2.5 w-28">
                     <p className="text-sm font-semibold text-white">Bedrooms</p>
                     <MobileDownArrowIcon className={"w-4 h-2 fill-white"} />
                   </div>
                 </th>
                 <th>
-                  <div className="flex justify-center items-center gap-2.5">
+                  <div className="flex justify-center items-center gap-2.5 w-32">
                     <p className="text-sm font-semibold text-white">Bathrooms</p>
                     <MobileDownArrowIcon className={"w-4 h-2 fill-white"} />
                   </div>
                 </th>
                 <th>
-                  <div className="flex justify-center items-center gap-2.5">
+                  <div className="flex justify-center items-center gap-2.5 w-28">
                     <p className="text-sm font-semibold text-white">Gross Area</p>
                     <MobileDownArrowIcon className={"w-4 h-2 fill-white"} />
                   </div>
                 </th>
                 <th>
-                  <div className="flex justify-center items-center gap-2.5">
+                  <div className="flex justify-center items-center gap-2.5 w-28">
                     <p className="text-sm font-semibold text-white">Net Area</p>
                     <MobileDownArrowIcon className={"w-4 h-2 fill-white"} />
                   </div>
                 </th>
                 <th>
-                  <div className="flex justify-center items-center gap-2.5">
+                  <div className="flex justify-center items-center gap-2.5 w-24">
                     <p className="text-sm font-semibold text-white">Outdoor</p>
                     <MobileDownArrowIcon className={"w-4 h-2 fill-white"} />
                   </div>
                 </th>
                 <th>
-                  <div className="flex justify-center items-center gap-2.5">
+                  <div className="flex justify-center items-center gap-2.5 w-24">
                     <p className="text-sm font-semibold text-white">Parking</p>
                     <MobileDownArrowIcon className={"w-4 h-2 fill-white"} />
                   </div>
@@ -184,7 +192,7 @@ const ListSearchResult = () => {
             <tbody>
               {properties.map((property, index) => (
                 <tr key={property.unit} className="bg-white border-b border-gray-200">
-                  <td className="font-medium  h-24">
+                  <td className="font-medium h-24">
                     <div className="flex justify-center items-center">
                       <p className="text-base font-light">{property.project}</p>
                     </div>
