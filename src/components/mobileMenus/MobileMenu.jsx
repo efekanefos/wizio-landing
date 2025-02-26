@@ -140,7 +140,8 @@ function MobileMenu() {
               <MobileDownArrowIcon className={"w-4 h-2 fill-black"} />
             </div>
             {/*  ) : ( */}
-            <div className={`flex justify-between items-center mt-5 ${locationStatus === "full" ? "absolute bottom-32 w-full left-0 px-5" : ""}`}>
+            <div className={`flex justify-between items-center mt-5`}>
+              {/* ${locationStatus === "full" ? "absolute bottom-32 w-full left-0 px-5" : ""} */}
               <p className="text-sm text-black font-light py-2 underline cursor-pointer">Clear all</p>
               <button className="flex items-center gap-2 w-fit px-5 py-3 bg-black rounded-full cursor-pointer">
                 <SearchIcon className={"w-4 h-4 fill-white"} />

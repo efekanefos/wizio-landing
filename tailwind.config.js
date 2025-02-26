@@ -22,7 +22,7 @@ export default {
         base: ["14px", "1.5"],
       },
       fontFamily: {
-        inter: ["Inter", "sans-serif"], // Fontu tanımla
+        sans: ["Inter", "sans-serif"], // Fontu tanımla
       },
     },
   },

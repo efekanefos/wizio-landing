@@ -1,13 +1,12 @@
 //! React Libraries
-import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 //* Components
 import LandingPage from "./components/logoutWindows/LandingPage";
 import LoggedInLandingPage from "./components/loggedInWindows/LoggedInLandingPage";
+import GridSearchResult from "./components/searchResultComponents/GridSearchResult";
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState();
-  const [toggleTheme, setToggleTheme] = useState("light");
   return (
     <Router>
       <Routes>
@@ -15,12 +14,13 @@ function App() {
           path="/"
           element={
             <div className="h-screen relative">
-              <LandingPage isLoggedIn={false} toggleTheme={toggleTheme} setToggleTheme={setToggleTheme} />
+              <LandingPage />
             </div>
           }
         />
-        <Route path="/logged-in-landing-page" element={<LoggedInLandingPage isLoggedIn={true} toggleTheme={toggleTheme} setToggleTheme={setToggleTheme} />} />
-        <Route path="/landing-page" element={<LandingPage isLoggedIn={false} toggleTheme={toggleTheme} setToggleTheme={setToggleTheme} />} />
+        <Route path="/logged-in-landing-page" element={<LoggedInLandingPage />} />
+        <Route path="/landing-page" element={<LandingPage />} />
+        <Route path="/grid-search" element={<GridSearchResult />} />
       </Routes>
     </Router>
   );
