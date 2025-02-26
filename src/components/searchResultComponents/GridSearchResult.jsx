@@ -12,7 +12,7 @@ const GridSearchResult = () => {
   return (
     <div className="mt-5">
       {/* Share Buttons */}
-      <div className="flex justify-end items-center gap-2 mb-6 max-md:mr-5">
+      <div className="flex justify-end items-center gap-2 mb-6 mr-12 max-md:mr-5">
         <div className="w-12 h-12 flex justify-center items-center border border-gray-200 rounded-full p-3">
           <SendMessageIcon className={"w-6 h-6 fill-black translate-x-0.5"} />
         </div>

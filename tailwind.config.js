@@ -18,9 +18,6 @@ export default {
       height: {
         fill: "stretch",
       },
-      fontSize: {
-        base: ["14px", "1.5"],
-      },
       fontFamily: {
         sans: ["Inter", "sans-serif"], // Fontu tanımla
       },

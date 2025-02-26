@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LandingPage from "./components/logoutWindows/LandingPage";
 import LoggedInLandingPage from "./components/loggedInWindows/LoggedInLandingPage";
 import GridSearchResult from "./components/searchResultComponents/GridSearchResult";
+import ListSearchResult from "./components/searchResultComponents/ListSearchResult";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/logged-in-landing-page" element={<LoggedInLandingPage />} />
         <Route path="/landing-page" element={<LandingPage />} />
         <Route path="/grid-search" element={<GridSearchResult />} />
+        <Route path="/list-search" element={<ListSearchResult />} />
       </Routes>
     </Router>
   );
