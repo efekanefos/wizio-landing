@@ -1,15 +1,15 @@
-import React, { forwardRef } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 /* New SVG Components */
 import GuestIcon from "../../newIcons/GuestIcon";
 import CloseIcon from "../../newIcons/CloseIcon";
 import VisiblePasswordIcon from "../../newIcons/VisiblePasswordIcon";
 
-const Login = forwardRef(({ setShowLoginWindow, setShowRegisterWindow, setShowForgetPassword }, ref) => {
+const Login = () => {
   const navigate = useNavigate();
 
   return (
-    <div ref={ref} className="absolute top-[68px] right-0 bg-white rounded-3xl p-3 min-w-72 w-fit z-10 shadow-lg border border-gray-200">
+    <div className="absolute top-[68px] right-0 bg-white rounded-3xl p-3 min-w-72 w-fit z-10 shadow-lg border border-gray-200">
       {/* Header Row */}
       <div className="flex justify-between items-center border-b border-gray-200 p-2.5">
         {/* Icon and Title */}
@@ -19,7 +19,7 @@ const Login = forwardRef(({ setShowLoginWindow, setShowRegisterWindow, setShowFo
           <p className="text-[16px] text-black font-semibold">Login</p>
         </div>
         {/* Close Button */}
-        <button onClick={() => setShowLoginWindow(false)} className="p-2.5 bg-gray-200 rounded-full">
+        <button className="p-2.5 bg-gray-200 rounded-full">
           <CloseIcon className={"w-3 h-3"} />
         </button>
       </div>
@@ -54,15 +54,7 @@ const Login = forwardRef(({ setShowLoginWindow, setShowRegisterWindow, setShowFo
             </div>
             <span className="text-xs font-light text-gray-300">Remember me</span>
           </label>
-          <p
-            onClick={() => {
-              setShowForgetPassword(true);
-              setShowLoginWindow(false);
-            }}
-            className="text-xs font-light text-gray-300 cursor-pointer"
-          >
-            Forget Password?
-          </p>
+          <p className="text-xs font-light text-gray-300 cursor-pointer">Forget Password?</p>
         </div>
 
         {/* Buttons */}
@@ -73,41 +65,12 @@ const Login = forwardRef(({ setShowLoginWindow, setShowRegisterWindow, setShowFo
 
           <div className="flex flex-col justify-center items-center text-center">
             <p className="text-xs font-light text-gray-300">Don't have an account?</p>
-            <button
-              className="text-xs font-light text-black"
-              onClick={() => {
-                setShowLoginWindow(false);
-                setShowRegisterWindow(true);
-              }}
-            >
-              Sign Up
-            </button>
+            <button className="text-xs font-light text-black">Sign Up</button>
           </div>
         </div>
       </div>
     </div>
   );
-});
+};
 
 export default Login;
-
-/* 
-<div className="flex justify-start items-center gap-3 mt-12">
-<input className="appearance-none min-w-5 min-h-5 border border-black rounded-sm" type="checkbox" />
-<label className="text-xs text-middleMenuTextBlack leading-3 max-w-sm">"I give my consent to the processing of personal data and agree to the terms and privacy policy.</label>
-</div>
-
-
-
-
-<button
-            onClick={() => {
-              setShowLoginWindow(false);
-              setShowRegisterWindow(true);
-            }}
-            className="bg-gray-100 text-xs text-middleMenuTextBlack text-center w-full p-4 rounded-3xl"
-            type="submit"
-          >
-            Do you want to register?
-          </button>
-*/

@@ -4,7 +4,6 @@ import ReactSlider from "react-slider";
 function NumberOfBedrooms() {
   const minVal = 1;
   const maxVal = 5;
-  const [values, setValues] = useState([minVal, maxVal]);
   return (
     <div className="rangeSlider absolute left-0 top-[70px] shadow-2xl shadow-[rgba(0,0,0,0.25)] w-fit min-w-80 bg-white p-5 py-5 pb-10 rounded-3xl max-md:left-28">
       <div className="w-full flex justify-between mb-6">
@@ -44,21 +43,9 @@ function NumberOfBedrooms() {
           5
         </span>
       </div>
-      <ReactSlider className="horizontal-slider bedroomSlider" onChange={setValues} value={values} min={minVal} max={maxVal} />
+      <ReactSlider className="horizontal-slider bedroomSlider" min={minVal} max={maxVal} />
     </div>
   );
 }
 
 export default NumberOfBedrooms;
-
-/* 
-<input
-        type="range"
-        min={1}
-        max={5}
-        className="appearance-none bg-transparent w-full border border-gray-200 min-w-60 rounded-full h-1.5
-    [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:w-5
-     [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-middleMenuTextBlack [&::-webkit-slider-thumb]:border
-     [&::-webkit-slider-thumb]:border-gray-950 relative z-10"
-      />
-*/

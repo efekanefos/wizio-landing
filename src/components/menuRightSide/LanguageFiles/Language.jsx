@@ -1,10 +1,10 @@
-import React, { forwardRef } from "react";
+import React from "react";
 import NavbarGlobalIcon from "../../newIcons/NavbarGlobalIcon";
 import CloseIcon from "../../newIcons/CloseIcon";
 
-const Language = forwardRef(({ setShowLanguageWindow }, ref) => {
+const Language = () => {
   return (
-    <div ref={ref} className="absolute top-[68px] right-0 bg-white rounded-3xl p-3 pb-0 max-w-60 w-fit min-w-72 z-10 shadow-lg border border-gray-200">
+    <div className="absolute top-[68px] right-0 bg-white rounded-3xl p-3 pb-0 max-w-60 w-fit min-w-72 z-10 shadow-lg border border-gray-200">
       {/* Header Row */}
       <div className="flex justify-between items-center border-b border-gray-200 p-2.5">
         {/* Icon and Title */}
@@ -14,7 +14,7 @@ const Language = forwardRef(({ setShowLanguageWindow }, ref) => {
           <p className="text-[16px] text-black font-semibold">Language</p>
         </div>
         {/* Close Button */}
-        <button onClick={() => setShowLanguageWindow(false)} className="p-2.5 bg-gray-200 rounded-full">
+        <button className="p-2.5 bg-gray-200 rounded-full">
           <CloseIcon className={"w-3 h-3 fill-black"} />
         </button>
       </div>
@@ -28,6 +28,6 @@ const Language = forwardRef(({ setShowLanguageWindow }, ref) => {
       </ul>
     </div>
   );
-});
+};
 
 export default Language;

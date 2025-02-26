@@ -5,9 +5,9 @@ import VisiblePasswordIcon from "../../newIcons/VisiblePasswordIcon";
 import HiddenPasswordIcon from "../../newIcons/HiddenPasswordIcon";
 import CloseIcon from "../../newIcons/CloseIcon";
 
-const Register = forwardRef(({ setShowRegisterWindow, setShowLoginWindow }, ref) => {
+const Register = () => {
   return (
-    <div ref={ref} className="absolute top-[68px] right-0 bg-white rounded-3xl p-3 min-w-72 w-fit z-10 shadow-lg border border-gray-200">
+    <div className="absolute top-[68px] right-0 bg-white rounded-3xl p-3 min-w-72 w-fit z-10 shadow-lg border border-gray-200">
       {/* Header Row */}
       <div className="flex justify-between items-center border-b border-gray-200 p-2.5">
         {/* Icon and Title */}
@@ -16,7 +16,7 @@ const Register = forwardRef(({ setShowRegisterWindow, setShowLoginWindow }, ref)
           <p className="text-[16px] text-black font-semibold">Register</p>
         </div>
         {/* Close Button */}
-        <button onClick={() => setShowRegisterWindow(false)} className="p-2.5 bg-gray-200 rounded-full">
+        <button className="p-2.5 bg-gray-200 rounded-full">
           <CloseIcon className={"w-3 h-3"} />
         </button>
       </div>
@@ -93,20 +93,12 @@ const Register = forwardRef(({ setShowRegisterWindow, setShowLoginWindow }, ref)
 
           <div className="flex flex-col justify-center items-center text-center">
             <p className="text-xs font-light text-gray-300">Do you have an account?</p>
-            <button
-              className="text-xs font-light text-black"
-              onClick={() => {
-                setShowLoginWindow(true);
-                setShowRegisterWindow(false);
-              }}
-            >
-              Sign in
-            </button>
+            <button className="text-xs font-light text-black">Sign in</button>
           </div>
         </div>
       </div>
     </div>
   );
-});
+};
 
 export default Register;

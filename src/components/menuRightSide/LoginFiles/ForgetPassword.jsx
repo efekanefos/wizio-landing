@@ -1,10 +1,10 @@
-import React, { forwardRef } from "react";
+import React from "react";
 import ForgetPasswordIcon from "../../newIcons/ForgetPasswordIcon";
 import BackArrowIcon from "../../newIcons/BackArrowIcon";
 
-const ForgetPassword = forwardRef(({ setShowForgetPassword, setShowLoginWindow, setShowRegisterWindow }, ref) => {
+const ForgetPassword = () => {
   return (
-    <div ref={ref} className="absolute top-[68px] right-0 bg-white rounded-3xl p-3 min-w-72 w-fit z-10 shadow-lg border border-gray-200">
+    <div className="absolute top-[68px] right-0 bg-white rounded-3xl p-3 min-w-72 w-fit z-10 shadow-lg border border-gray-200">
       {/* Header Row */}
       <div className="flex justify-between items-center border-b border-gray-200 p-2.5">
         {/* Icon and Title */}
@@ -14,13 +14,7 @@ const ForgetPassword = forwardRef(({ setShowForgetPassword, setShowLoginWindow, 
           <p className="text-[16px] text-black font-semibold">Forget Password</p>
         </div>
         {/* Close Button */}
-        <button
-          onClick={() => {
-            setShowLoginWindow(true);
-            setShowForgetPassword(false);
-          }}
-          className="p-2.5 bg-gray-200 rounded-full"
-        >
+        <button className="p-2.5 bg-gray-200 rounded-full">
           <BackArrowIcon className={"w-3 h-3"} />
         </button>
       </div>
@@ -42,32 +36,16 @@ const ForgetPassword = forwardRef(({ setShowForgetPassword, setShowLoginWindow, 
 
           <div className="flex justify-center items-center gap-1 text-center mt-2.5">
             <p className="text-xs font-light text-gray-300">Don't have an account?</p>
-            <button
-              className="text-xs font-light text-black"
-              onClick={() => {
-                setShowForgetPassword(false);
-                setShowRegisterWindow(true);
-              }}
-            >
-              Sign Up
-            </button>
+            <button className="text-xs font-light text-black">Sign Up</button>
           </div>
           <div className="flex justify-center items-center gap-1 text-center mt-2">
             <p className="text-xs font-light text-gray-300">or go back to</p>
-            <button
-              className="text-xs font-light text-black"
-              onClick={() => {
-                setShowForgetPassword(false);
-                setShowLoginWindow(true);
-              }}
-            >
-              Sign in
-            </button>
+            <button className="text-xs font-light text-black">Sign in</button>
           </div>
         </div>
       </div>
     </div>
   );
-});
+};
 
 export default ForgetPassword;

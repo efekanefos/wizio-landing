@@ -4,7 +4,7 @@ import RedFavouriteIcon from "../newIcons/RedFavouriteIcon";
 import MobileDownArrowIcon from "../newIcons/MobileDownArrowIcon";
 import BackArrowIcon from "../newIcons/BackArrowIcon";
 
-function RecentViews({ setShowStatusWindow, setShowRecentViewsWindow }) {
+function RecentViews() {
   return (
     <div className="absolute top-20 right-2 bg-white rounded-3xl p-3 min-w-72 w-fit z-10">
       <div className="flex flex-col">
@@ -14,13 +14,7 @@ function RecentViews({ setShowStatusWindow, setShowRecentViewsWindow }) {
             <RecentViewsIcon className={"w-6 h-6 stroke-black stroke-[1.5px] fill-white"} />
             <h2 className="text-[16px] font-semibold text-black">Recent Views</h2>
           </div>
-          <div
-            onClick={() => {
-              setShowStatusWindow(true);
-              setShowRecentViewsWindow(false);
-            }}
-            className="py-2.5 px-2 bg-gray-200 w-fit rounded-full cursor-pointer"
-          >
+          <div className="py-2.5 px-2 bg-gray-200 w-fit rounded-full cursor-pointer">
             <BackArrowIcon className={"w-4 h-3 fill-black"} />
           </div>
         </div>

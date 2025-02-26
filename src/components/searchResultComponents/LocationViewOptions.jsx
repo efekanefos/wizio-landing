@@ -11,11 +11,17 @@ const LocationViewOptions = () => {
         <p className="text-xl font-semibold text-white">Map</p>
       </div>
       <div className="flex justify-center item-center gap-3">
-        <div className="p-3.5 bg-white rounded-full">
-          <RotateViewIcon className={"w-5 h-5 fill-black"} />
+        <div
+          className={`p-3.5 rounded-full cursor-pointer`}
+          // ${showSearchResult ? "bg-white" : "bg-gray-200"}
+        >
+          <RotateViewIcon className={`w-5 h-5 `} />
+          {/* ${showSearchResult ? "fill-black" : "fill-gray-400"} */}
         </div>
-        <div className="p-3.5 bg-gray-200 rounded-full">
-          <GridViewIcon className={"w-5 h-5 fill-gray-400"} />
+        <div className={`p-3.5  rounded-full cursor-pointer`}>
+          {/* ${showGridSearchResult ? "bg-white" : "bg-gray-200"} */}
+          <GridViewIcon className={`w-5 h-5 `} />
+          {/* ${showGridSearchResult ? "fill-black" : "fill-gray-400"} */}
         </div>
         <div className="p-3.5 bg-gray-200 rounded-full">
           <ListViewIcon className={"w-5 h-5 fill-gray-400"} />

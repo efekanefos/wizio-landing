@@ -12,9 +12,9 @@ import AppleIcon from "../../newIcons/AppleIcon";
 import XIcon from "../../newIcons/XIcon";
 import FacebookIcon from "../../newIcons/FacebookIcon";
 
-const Contact = forwardRef(({ setShowContactWindow, showCalendarWindow, setShowCalendarWindow }, ref) => {
+const Contact = () => {
   return (
-    <div ref={ref} className="absolute top-[68px] right-0 bg-white rounded-3xl p-3 min-w-72 w-fit z-10 shadow-lg border border-gray-200">
+    <div className="absolute top-[68px] right-0 bg-white rounded-3xl p-3 min-w-72 w-fit z-10 shadow-lg border border-gray-200">
       {/* Header Row */}
       <div className="flex justify-between items-center border-b border-gray-200 p-2.5">
         {/* Icon and Title */}
@@ -25,7 +25,7 @@ const Contact = forwardRef(({ setShowContactWindow, showCalendarWindow, setShowC
           <p className="text-[16px] text-black font-semibold">Contact</p>
         </div>
         {/* Close Button */}
-        <button onClick={() => setShowContactWindow(false)} className="p-2.5 bg-gray-200 rounded-full">
+        <button className="p-2.5 bg-gray-200 rounded-full">
           <CloseIcon className={"w-3 h-3"} />
         </button>
       </div>
@@ -35,7 +35,7 @@ const Contact = forwardRef(({ setShowContactWindow, showCalendarWindow, setShowC
           <WhatsappIcon className={"w-6 h-6 fill-none stroke-black stroke-[1.5px]"} />
           <p className="text-sm font-light">WhatsApp</p>
         </li>
-        <li onClick={() => setShowCalendarWindow(!showCalendarWindow)} className="flex  items-center justify-start gap-2.5 py-3 px-6 hover:bg-gray-200 rounded-full cursor-pointer">
+        <li className="flex  items-center justify-start gap-2.5 py-3 px-6 hover:bg-gray-200 rounded-full cursor-pointer">
           <CalendarIcon className={"w-6 h-6 fill-black"} />
           <p className="text-sm font-light">Book Now</p>
         </li>
@@ -73,90 +73,6 @@ const Contact = forwardRef(({ setShowContactWindow, showCalendarWindow, setShowC
       </ul>
     </div>
   );
-});
+};
 
 export default Contact;
-
-/* 
-
-import CallIcon from "../icons/CallIcon";
-import BookNowIcon from "../icons/BookNowIcon";
-import ContactCallIcon from "../icons/ContactCallIcon";
-import LinkedInIcon from "../icons/LinkedInIcon";
-import InstagramIcon from "../icons/InstagramIcon";
-import TwitterIcon from "../icons/TwitterIcon";
-import YoutubeIcon from "../icons/YoutubeIcon";
-
-import callIcon from "../../assets/images/header/call_icon.svg";
-import close from "../../assets/images/loggedInWindows/close.svg";
-import whiteWhatsApp from "../../assets/images/logoutWindows/white_whatsapp.svg";
-import blackBookNowIcon from "../../assets/images/logoutWindows/black_book_now_icon.svg";
-import blackContactCallIcon from "../../assets/images/logoutWindows/black_contact_call_icon.svg";
-import blackLinkedin from "../../assets/images/logoutWindows/black_linkedin.svg";
-import blackFacebook from "../../assets/images/logoutWindows/black_facebook.svg";
-import blackInstagram from "../../assets/images/logoutWindows/black_instagram.svg";
-import blackTwitter from "../../assets/images/logoutWindows/black_twitter.svg";
-import blackYoutube from "../../assets/images/logoutWindows/black_youtube.svg";
-
-<div className="flex flex-col gap-2 px-7 py-11">
-
-<button className="bg-buttonOrange w-full py-4 px-7 flex justify-start items-center gap-3 rounded-full">
-  <div>
-    <WhatsappIcon className={"w-5.5 h-5.5 fill-white"} />
-  </div>
-  <p className="text-white text-sm">WhatsApp</p>
-</button>
-
-<button onClick={() => setShowCalendarWindow(!showCalendarWindow)} className="bg-middleMenuTextBlack bg-opacity-5 w-full py-4 px-7 flex justify-start items-center gap-3 rounded-full">
-  <div>
-    <BookNowIcon className={"w-5 h-5 fill-white"} />
-  </div>
-  <p className="text-black text-sm">Book Now</p>
-</button>
-
-<button className="bg-middleMenuTextBlack bg-opacity-5 w-full py-4 px-7 flex justify-start items-center gap-3 rounded-full">
-  <div>
-    <ContactCallIcon className={"w-5 h-5 fill-white"} />
-  </div>
-  <p className="text-black text-sm">Let us call you</p>
-</button>
-
-<button className="bg-middleMenuTextBlack bg-opacity-5 w-full py-4 px-7 flex justify-start items-center gap-3 rounded-full">
-  <div className="bg-black w-1.5 h-1.5 rounded-full ml-2"></div>
-  <p className="text-black text-sm">+44 117 2345678</p>
-</button>
-
-<button className="bg-middleMenuTextBlack bg-opacity-5 w-full py-4 px-7 flex justify-start items-center gap-3 rounded-full">
-  <div className="bg-black w-1.5 h-1.5 rounded-full ml-2"></div>
-  <p className="text-black text-sm">info@pafilia.com</p>
-</button>
-</div>
-
-
-<div className="px-8 pt-0 pb-8">
-<p className="text-black text-sm">Social Media</p>
-
-<div className="w-full flex justify-between items-center mt-5">
-
-  <div className="flex justify-center items-center bg-gray-100 p-4 rounded-full w-12 h-12">
-    <LinkedInIcon className={"w-4 h-4 fill-white"} />
-  </div>
-
-  <div className="flex justify-center items-center bg-gray-100 p-4 rounded-full w-12 h-12">
-    <FacebookIcon className={"w-4 h-4 fill-white"} />
-  </div>
-
-  <div className="flex justify-center items-center bg-gray-100 p-4 rounded-full w-12 h-12">
-    <InstagramIcon className={"w-4 h-4 fill-white"} />
-  </div>
-
-  <div className="flex justify-center items-center bg-gray-100 p-4 rounded-full w-12 h-12">
-    <img src={blackTwitter} alt="blackTwitter" />
-  </div>
-
-  <div className="flex justify-center items-center bg-gray-100 p-4 rounded-full w-12 h-12">
-    <YoutubeIcon className={"w-4 h-4 fill-white"} />
-  </div>
-</div>
-</div>
-*/

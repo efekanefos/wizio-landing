@@ -6,7 +6,7 @@ import RepeatIcon from "../newIcons/RepeatIcon";
 import TickIcon from "../newIcons/TickIcon";
 import MobileDownArrowIcon from "../newIcons/MobileDownArrowIcon";
 
-function Favourites({ setShowStatusWindow, setShowFavouritesWindow }) {
+function Favourites() {
   return (
     <div className="absolute top-20 right-2 bg-white rounded-3xl p-3 min-w-72 w-fit z-10">
       <div className="flex flex-col">
@@ -16,13 +16,7 @@ function Favourites({ setShowStatusWindow, setShowFavouritesWindow }) {
             <FavouriteIcon className={"w-6 h-6 fill-black"} />
             <h2 className="text-[16px] font-semibold text-black">Favourite</h2>
           </div>
-          <div
-            onClick={() => {
-              setShowStatusWindow(true);
-              setShowFavouritesWindow(false);
-            }}
-            className="py-2.5 px-2 bg-gray-200 w-fit rounded-full cursor-pointer"
-          >
+          <div className="py-2.5 px-2 bg-gray-200 w-fit rounded-full cursor-pointer">
             <BackArrowIcon className={"w-4 h-3 fill-black"} />
           </div>
         </div>
