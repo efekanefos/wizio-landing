@@ -103,7 +103,7 @@ function LocalAmenitiesGPS() {
         </div>
 
         {/* Circled Reserve Icon with Border */}
-        <div className="absolute top-80 left-96 p-2 border-2 border-black rounded-full bg-white max-sm:left-[50%] max-sm:top-5 max-sm:translate-x-[-50%]">
+        <div className="absolute top-80 left-96 p-2 border-2 border-black rounded-full bg-white max-sm:left-[50%] max-sm:top-14 max-sm:translate-x-[-50%]">
           <HospitalityIcon className={"w-4 h-4 stroke-black stroke-[1.5px] fill-none"} />
         </div>
 
