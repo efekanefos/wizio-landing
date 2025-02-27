@@ -122,7 +122,7 @@ const ListSearchResult = () => {
         </div>
       </div>
 
-      <div className="max-w-[1364px] mx-auto">
+      <div className="max-w-fit mx-auto">
         <div className="w-full overflow-x-auto rounded-t-2xl">
           <table className="w-full border-collapse border-x border-gray-200 overflow-x-auto max-w-96">
             <thead className="bg-black text-white ">

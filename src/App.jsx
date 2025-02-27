@@ -6,6 +6,7 @@ import LandingPage from "./components/logoutWindows/LandingPage";
 import LoggedInLandingPage from "./components/loggedInWindows/LoggedInLandingPage";
 import GridSearchResult from "./components/searchResultComponents/GridSearchResult";
 import ListSearchResult from "./components/searchResultComponents/ListSearchResult";
+import LocalAmenitiesGPS from "./components/LocalAmenitiesGPS";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/landing-page" element={<LandingPage />} />
         <Route path="/grid-search" element={<GridSearchResult />} />
         <Route path="/list-search" element={<ListSearchResult />} />
+        <Route path="/local-amenities" element={<LocalAmenitiesGPS />} />
       </Routes>
     </Router>
   );
