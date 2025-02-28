@@ -7,6 +7,8 @@ import LoggedInLandingPage from "./components/loggedInWindows/LoggedInLandingPag
 import GridSearchResult from "./components/searchResultComponents/GridSearchResult";
 import ListSearchResult from "./components/searchResultComponents/ListSearchResult";
 import LocalAmenitiesGPS from "./components/LocalAmenitiesGPS";
+import RotateSearchResult from "./components/searchResultComponents/RotateSearchResult";
+import UnitCompareGrid from "./components/searchResultComponents/UnitCompareGrid";
 
 function App() {
   return (
@@ -25,6 +27,8 @@ function App() {
         <Route path="/grid-search" element={<GridSearchResult />} />
         <Route path="/list-search" element={<ListSearchResult />} />
         <Route path="/local-amenities" element={<LocalAmenitiesGPS />} />
+        <Route path="/rotate-search" element={<RotateSearchResult />} />
+        <Route path="/unit-compare-grid" element={<UnitCompareGrid />} />
       </Routes>
     </Router>
   );
