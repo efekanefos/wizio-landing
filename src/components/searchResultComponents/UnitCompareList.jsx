@@ -6,7 +6,6 @@ import GridViewIcon from "../newIcons/GridViewIcon";
 import ListViewIcon from "../newIcons/ListViewIcon";
 import RoomViewIcon from "../svg/RoomViewIcon";
 import project360 from "../svg/project_360_search.png";
-import MobileDownArrowIcon from "../newIcons/MobileDownArrowIcon";
 
 const UnitCompareList = () => {
   const properties = [

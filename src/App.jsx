@@ -10,6 +10,7 @@ import LocalAmenitiesGPS from "./components/LocalAmenitiesGPS";
 import RotateSearchResult from "./components/searchResultComponents/RotateSearchResult";
 import UnitCompareGrid from "./components/searchResultComponents/UnitCompareGrid";
 import UnitCompareList from "./components/searchResultComponents/UnitCompareList";
+import GridProjectSearchResult from "./components/searchResultComponents/GridProjectSearchResult";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Route path="/rotate-search" element={<RotateSearchResult />} />
         <Route path="/unit-compare-grid" element={<UnitCompareGrid />} />
         <Route path="/unit-compare-list" element={<UnitCompareList />} />
+        <Route path="/grid-project-search-result" element={<GridProjectSearchResult />} />
       </Routes>
     </Router>
   );
