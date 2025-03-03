@@ -28,7 +28,25 @@ function DropdownMenu() {
   };
 
   return (
-    <div className="fixed bottom-3 right-3 z-20">
+    <div className="fixed bottom-3 right-3 z-20 flex flex-col gap-1">
+      {links.map((link, index) => (
+        <a key={index} href={link.href} className=" bg-white text-black px-4 py-2 rounded-[30px] text-[12px] hover:bg-black hover:text-white">
+          {link.label}
+        </a>
+      ))}
+    </div>
+  );
+}
+
+createRoot(document.getElementById("root")).render(
+  <StrictMode>
+    <App />
+    <DropdownMenu />
+  </StrictMode>
+);
+
+{
+  /* 
       <select className="bg-white border border-middleMenuTextBlack rounded-[30px] p-2 w-[250px] text-[12px]" value={selectedValue} onChange={handleChange}>
         <option value="" disabled>
           Select a Page
@@ -39,19 +57,5 @@ function DropdownMenu() {
           </option>
         ))}
       </select>
-    </div>
-  );
+      */
 }
-
-createRoot(document.getElementById("root")).render(
-  <StrictMode>
-    <App />
-    <DropdownMenu />
-    <button className="fixed bottom-12 right-3 bg-white text-black px-4 py-2 rounded-[30px] text-[12px] hover:bg-black hover:text-white" onClick={() => (window.location.href = "/list-search")}>
-      List Search
-    </button>
-    <a className="fixed bottom-24 right-3 bg-white text-black px-4 py-2 rounded-[30px] text-[12px] hover:bg-black hover:text-white" href="/grid-search">
-      Grid Search
-    </a>
-  </StrictMode>
-);
