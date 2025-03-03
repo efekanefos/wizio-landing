@@ -73,8 +73,8 @@ const UnitCompareList = () => {
       </div>
 
       <div className="max-w-[1362px] w-full mx-auto absolute top-24 left-1/2 translate-x-[-50%] z-20">
-        <div className="w-full overflow-x-auto rounded-2xl">
-          <table className="w-full border-collapse border-x border-gray-200 overflow-x-auto min-w-[1362px] bg-white shadow-2xl">
+        <div className="w-full overflow-x-auto rounded-2xl scrollbar-custom">
+          <table className="w-full border-collapse border-x border-gray-200 overflow-x-auto min-w-[1362px] bg-white shadow-2xl max-[1362px]:mb-6">
             <thead className="text-black border-b border-gray-200 ">
               <tr className="table-row">
                 <th className="pl-5 pr-5">
