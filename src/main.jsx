@@ -3,16 +3,26 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
 
-const links = [{ href: "/local-amenities-gps", label: "Local Amenities GPS" }];
+const links = [
+  { href: "/logged-in-landing-page", label: "LoggedIn Landing Page" },
+  { href: "/grid-search", label: "Grid Search" },
+  { href: "/list-search", label: "List Search" },
+  { href: "/local-amenities", label: "Local Amenities" },
+  { href: "/rotate-search", label: "Rotate Search" },
+  { href: "/unit-compare-grid", label: "Unit Compare Grid" },
+  { href: "/unit-compare-list", label: "Unit Compare List" },
+  { href: "/grid-project-search-result", label: "Grid Project Search Result" },
+  { href: "/list-project-search-result", label: "List Project Search Result" },
+];
 
 function DropdownMenu() {
   const [selectedValue, setSelectedValue] = useState("");
 
   const handleChange = (event) => {
     const selectedHref = event.target.value;
-    setSelectedValue(selectedHref); // Update state
+    setSelectedValue(selectedHref);
     if (selectedHref) {
-      window.location.href = selectedHref; // Redirect to the selected link
+      window.location.href = selectedHref;
     }
   };
 
@@ -35,5 +45,6 @@ function DropdownMenu() {
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <App />
+    <DropdownMenu />
   </StrictMode>
 );
