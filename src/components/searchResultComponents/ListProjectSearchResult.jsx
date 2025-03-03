@@ -77,7 +77,7 @@ const ListProjectSearchResult = () => {
                   </div>
                 </th>
                 <th>
-                  <div className="flex justify-center items-center gap-2.5 w-40">
+                  <div className="flex justify-center items-center gap-2.5 w-28">
                     <p className="text-sm font-semibold text-white">Unit on Sale</p>
                     <MobileDownArrowIcon className={"w-4 h-2 fill-white"} />
                   </div>
@@ -89,28 +89,31 @@ const ListProjectSearchResult = () => {
                   </div>
                 </th>
                 <th>
-                  <div className="flex justify-center items-center gap-2.5 w-40">
+                  <div className="flex justify-center items-center gap-2.5 w-28">
                     <p className="text-sm font-semibold text-white">Bedrooms</p>
                     <MobileDownArrowIcon className={"w-4 h-2 fill-white"} />
                   </div>
                 </th>
                 <th>
-                  <div className="flex justify-center items-center gap-2.5 w-40">
+                  <div className="flex justify-center items-center gap-2.5 w-28">
                     <p className="text-sm font-semibold text-white">Bathrooms</p>
                     <MobileDownArrowIcon className={"w-4 h-2 fill-white"} />
                   </div>
                 </th>
                 <th>
-                  <div className="flex justify-center items-center gap-2.5 w-40">
+                  <div className="flex justify-center items-center gap-2.5 w-28">
                     <p className="text-sm font-semibold text-white">Net Area</p>
                     <MobileDownArrowIcon className={"w-4 h-2 fill-white"} />
                   </div>
                 </th>
                 <th>
-                  <div className="flex justify-center items-center gap-2.5 w-40">
+                  <div className="flex justify-center items-center gap-2.5 w-28">
                     <p className="text-sm font-semibold text-white">Parking</p>
                     <MobileDownArrowIcon className={"w-4 h-2 fill-white"} />
                   </div>
+                </th>
+                <th>
+                  <div className="w-44"></div>
                 </th>
               </tr>
             </thead>
@@ -121,24 +124,10 @@ const ListProjectSearchResult = () => {
                     <div className="flex justify-start items-center gap-3 py-4 pl-5">
                       <div className="w-24 h-20 relative">
                         <img className="w-full h-full object-cover rounded-xl" src={locationCardImage} alt="MiniLocationSideBarCardImage" />
-                        <span className="w-9 h-9 box-content text-black text-sm font-medium bg-lime-500 rounded-full border border-black flex justify-center items-center absolute -top-2 -right-2">999</span>
+                        <span className="w-9 h-9 box-content text-black text-sm font-medium bg-lime-500 rounded-full border border-black flex justify-center items-center absolute -top-3.5 -right-3.5">999</span>
                       </div>
                       <div>
                         <p className="text-base font-light">Limassol Marina</p>
-                        <div className="flex flex-col justify-between items-center gap-1">
-                          <button className="flex justify-center items-center gap-1 w-full px-3 py-1 bg-gray-100 rounded-full">
-                            <div className="flex justify-center items-center max-w-4 max-h-4">
-                              <LocalAmenitiesIcon className={"w-4 h-4 fill-current"} />
-                            </div>
-                            <p className="text-xs font-light">Local Amenities</p>
-                          </button>
-                          <button className="bg-black flex justify-center items-center gap-1 w-full px-3 py-1 rounded-full">
-                            <div className="flex justify-center items-center max-w-4 max-h-4">
-                              <BoxIcon className={"w-5 h-5 fill-none stroke-white"} />
-                            </div>
-                            <p className="text-xs text-white font-light">Portal</p>
-                          </button>
-                        </div>
                       </div>
                     </div>
                   </td>
@@ -170,6 +159,24 @@ const ListProjectSearchResult = () => {
                   <td>
                     <div className="flex justify-center items-center">
                       <p className="text-base font-light">{property.parking}</p>
+                    </div>
+                  </td>
+                  <td>
+                    <div className="flex justify-center items-center w-full">
+                      <div className="flex flex-col justify-between items-center gap-2.5 w-full px-2">
+                        <button className="flex justify-center items-center gap-1 w-full px-3 py-1.5 bg-gray-100 rounded-full">
+                          <div className="flex justify-center items-center max-w-4 max-h-4">
+                            <LocalAmenitiesIcon className={"w-4 h-4 fill-current"} />
+                          </div>
+                          <p className="text-xs font-light">Local Amenities</p>
+                        </button>
+                        <button className="bg-black flex justify-center items-center gap-1 w-full px-3 py-1.5 rounded-full">
+                          <div className="flex justify-center items-center max-w-4 max-h-4">
+                            <BoxIcon className={"w-5 h-5 fill-none stroke-white"} />
+                          </div>
+                          <p className="text-xs text-white font-light">Portal</p>
+                        </button>
+                      </div>
                     </div>
                   </td>
                 </tr>

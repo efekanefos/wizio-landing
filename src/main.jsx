@@ -27,7 +27,7 @@ function DropdownMenu() {
   };
 
   return (
-    <div className="absolute bottom-3 right-3 z-20">
+    <div className="fixed bottom-3 right-3 z-20">
       <select className="bg-white border border-middleMenuTextBlack rounded-[30px] p-2 w-[250px] text-[12px]" value={selectedValue} onChange={handleChange}>
         <option value="" disabled>
           Select a Page
