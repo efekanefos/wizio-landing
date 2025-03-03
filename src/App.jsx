@@ -12,6 +12,7 @@ import UnitCompareGrid from "./components/searchResultComponents/UnitCompareGrid
 import UnitCompareList from "./components/searchResultComponents/UnitCompareList";
 import GridProjectSearchResult from "./components/searchResultComponents/GridProjectSearchResult";
 import ListProjectSearchResult from "./components/searchResultComponents/ListProjectSearchResult";
+import RotateProjectSearchResult from "./components/searchResultComponents/RotateProjectSearchResult";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
         <Route path="/unit-compare-list" element={<UnitCompareList />} />
         <Route path="/grid-project-search-result" element={<GridProjectSearchResult />} />
         <Route path="/list-project-search-result" element={<ListProjectSearchResult />} />
+        <Route path="/rotate-project-search-result" element={<RotateProjectSearchResult />} />
       </Routes>
     </Router>
   );

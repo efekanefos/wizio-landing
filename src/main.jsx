@@ -13,6 +13,7 @@ const links = [
   { href: "/unit-compare-list", label: "Unit Compare List" },
   { href: "/grid-project-search-result", label: "Grid Project Search Result" },
   { href: "/list-project-search-result", label: "List Project Search Result" },
+  { href: "/rotate-project-search-result", label: "Rotate Project Search Result" },
 ];
 
 function DropdownMenu() {
