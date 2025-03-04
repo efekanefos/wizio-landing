@@ -17,7 +17,7 @@ const RotateProjectSearchResult = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setImageSrc(window.innerWidth > 768 ? homeInside : tabletRoomView);
+      setImageSrc(window.innerWidth > 1024 ? homeInside : tabletRoomView);
     };
 
     window.addEventListener("resize", handleResize);
@@ -33,22 +33,22 @@ const RotateProjectSearchResult = () => {
           {Array.from({ length: 6 }).map((_, index) => (
             <div
               key={index}
-              className="bg-white p-3 border border-gray-200 shadow-md rounded-2xl max-md:flex max-md:gap-6 max-md:max-w-80 max-md:w-full max-md:justify-start
+              className="bg-white p-3 border border-gray-200 shadow-md rounded-2xl max-lg:flex max-lg:gap-6 max-lg:max-w-80 max-lg:w-full max-lg:justify-start
             max-sm:flex-col max-sm:gap-3"
             >
               {/* Card Img Side */}
-              <div className="max-w-[296px] max-h-44 max-md:border max-md:border-gray-200 max-md:p-0.5 max-md:rounded-xl max-md:max-h-[107px] max-md:max-w-24 max-sm:max-w-full max-sm:rounded-b-none">
-                <img className="w-full h-full max-sm:object-contain max-sm:max-w-full max-sm:max-h-24" src={imageSrc} alt="homeInside" />
+              <div className="max-w-[296px] max-h-44 max-lg:border max-lg:border-gray-200 max-lg:p-0.5 max-lg:rounded-xl max-lg:max-h-[107px] max-lg:max-w-24 max-sm:max-w-full max-sm:rounded-b-none">
+                <img className="w-full h-full max-sm:object-contain max-sm:max-w-full max-sm:max-h-24 max-lg:rounded-xl" src={imageSrc} alt="homeInside" />
               </div>
               {/* Card Info Side */}
-              <div className="flex flex-col gap-3 mt-2 max-md:mt-0 max-md:gap-6 max-md:justify-between max-sm:gap-3">
+              <div className="flex flex-col gap-3 mt-2 max-lg:mt-0 max-lg:gap-6 max-lg:justify-between max-sm:gap-3">
                 {/* Unit Name, Price...  */}
-                <div className="mt-3 flex justify-between items-start max-md:mt-0">
+                <div className="mt-3 flex justify-between items-start max-lg:mt-0">
                   <div>
                     <p className="text-base font-semibold">Unit 305</p>
-                    <p className="text-sm font-light">€17,666,000+VAT</p>
+                    <p className="text-sm font-light max-lg:mt-1">€17,666,000+VAT</p>
                   </div>
-                  <div className="flex justify-start items-center gap-3 max-md:hidden">
+                  <div className="flex justify-start items-center gap-3 max-lg:hidden">
                     <button className="w-8 h-8 rounded-full bg-gray-200 flex justify-center items-center">
                       <CompareIcon className={"w-4 h-4 fill-black"} />
                     </button>
@@ -58,7 +58,7 @@ const RotateProjectSearchResult = () => {
                   </div>
                 </div>
                 {/* Bedrooms, Sqm  */}
-                <div className="flex justify-start items-start">
+                <div className="flex justify-start items-start max-lg:gap-3">
                   <div className="w-full">
                     <p className="text-xs font-medium">Bedrooms</p>
                     <p className="text-sm font-light">2-3</p>
@@ -80,7 +80,7 @@ const RotateProjectSearchResult = () => {
       </div>
 
       {/* Desktop Detail Card */}
-      <div className="absolute top-20 right-96 p-3 bg-white rounded-2xl rounded-tl-none max-md:hidden">
+      <div className="absolute top-20 right-96 p-3 bg-white rounded-2xl rounded-tl-none max-lg:hidden">
         <div className="relative">
           <div className="max-w-[200px] max-h-36 border border-gray-200 rounded-b-none  p-0.5 rounded-xl relative z-20">
             <img className="w-full h-full" src={imageSrc} alt="homeInside" />
@@ -109,7 +109,7 @@ const RotateProjectSearchResult = () => {
 
       {/* View Options */}
       <div className="flex flex-col justify-center items-center gap-9 fixed -bottom-6 left-[60%] translate-x-[-50%] translate-y-[-50%] max-md:left-[50%]">
-        <div className="w-[448px] h-[34px] bg-gradient-to-r from-transparent via-white to-transparent rounded-[32px] backdrop-blur-xl flex justify-center items-center max-md:hidden">
+        <div className="w-[448px] h-[34px] bg-gradient-to-r from-transparent via-white to-transparent rounded-[32px] backdrop-blur-xl flex justify-center items-center max-lg:hidden">
           <img src={navigator} alt="navigator" />
         </div>
         <div className="bg-black w-fit flex items-center gap-3 py-1.5 pl-5 pr-1.5 rounded-full">
