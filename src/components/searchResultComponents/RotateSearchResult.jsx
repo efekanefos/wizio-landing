@@ -12,6 +12,7 @@ import RotateViewIcon from "../newIcons/RotateViewIcon";
 import GridViewIcon from "../newIcons/GridViewIcon";
 import ListViewIcon from "../newIcons/ListViewIcon";
 import FullRotateIcon from "../svg/FullRotateIcon";
+import MobileLocationCardSlider from "./MobileLocationCardSlider";
 
 {
   //*Index.css İçerisinde bu kodlar mevcut
@@ -38,7 +39,7 @@ import FullRotateIcon from "../svg/FullRotateIcon";
 const RotateSearchResult = () => {
   return (
     <div>
-      <div className="bg-white h-full absolute left-0 p-6">
+      <div className="bg-white h-full absolute left-0 p-6 max-md:hidden">
         <div className="flex flex-col gap-3">
           {/* Card #1 */}
           <div className="bg-white p-3 border border-gray-200 shadow-md rounded-2xl max-md:min-w-72 max-md:p-2 max-md:pt-1">
@@ -164,8 +165,10 @@ const RotateSearchResult = () => {
         </div>
       </div>
 
+      <MobileLocationCardSlider />
+
       {/* ABC Circle */}
-      <div className="flex justify-center items-center absolute top-72 left-96">
+      <div className="flex justify-center items-center absolute top-72 left-96 max-md:hidden">
         <div className="relative w-9 h-9">
           <div className="w-full h-full rounded-full relative bg-lime-500">
             <div className="w-8 h-8 flex justify-center items-center text-xl font-semibold bg-white text-middleMenuTextBlack rounded-full absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]">
@@ -177,7 +180,7 @@ const RotateSearchResult = () => {
       </div>
 
       {/* 123 Circle */}
-      <div className="flex justify-center items-center absolute top-56 left-96">
+      <div className="flex justify-center items-center absolute top-56 left-96 max-md:hidden">
         <div className="relative w-9 h-9">
           <div className="w-full h-full rounded-full relative" style={{ background: "conic-gradient(#F78E2F 0deg 120deg, #36BB2A  120deg 240deg, #FF0004 240deg 360deg)" }}>
             <div className="w-8 h-8 flex justify-center items-center text-xl font-semibold bg-white text-middleMenuTextBlack rounded-full absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]">

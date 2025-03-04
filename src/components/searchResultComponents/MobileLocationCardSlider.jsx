@@ -7,7 +7,7 @@ import MiniLocationSideBarCardImage from "../../assets/images/newIcons/MiniLocat
 
 const MobileLocationCardSlider = () => {
   return (
-    <div className="hidden max-md:block absolute bottom-20 overflow-x-hidden max-w-[760px] w-full tabletCardSlider">
+    <div className="hidden max-md:block absolute bottom-24 overflow-x-hidden max-w-[760px] w-full tabletCardSlider">
       <Splide
         options={{
           perPage: 2, // İlk ekranda 2 kart görünecek

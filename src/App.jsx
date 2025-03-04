@@ -13,6 +13,7 @@ import UnitCompareList from "./components/searchResultComponents/UnitCompareList
 import GridProjectSearchResult from "./components/searchResultComponents/GridProjectSearchResult";
 import ListProjectSearchResult from "./components/searchResultComponents/ListProjectSearchResult";
 import RotateProjectSearchResult from "./components/searchResultComponents/RotateProjectSearchResult";
+import LocationCardSideBar from "./components/searchResultComponents/LocationCardSideBar";
 
 function App() {
   return (
