@@ -74,13 +74,13 @@ const RotateProjectSearchResult = () => {
         </div>
       </div>
 
-      {/* ABC Circle */}
-      <div className="absolute top-96 left-[600px] w-6 h-6 flex justify-center items-center rounded-full bg-[#36BB2A] border border-black max-md:left-36">
+      {/* 2 Circle */}
+      <div className="absolute top-96 left-[600px] w-6 h-6 flex justify-center items-center rounded-full bg-[#36BB2A] border border-black max-md:left-36 max-md:top-72">
         <p className="text-sm font-semibold text-black">2</p>
       </div>
 
       {/* Desktop Detail Card */}
-      <div className="absolute top-20 right-96 p-3 bg-white rounded-2xl rounded-tl-none">
+      <div className="absolute top-20 right-96 p-3 bg-white rounded-2xl rounded-tl-none max-md:hidden">
         <div className="relative">
           <div className="max-w-[200px] max-h-36 border border-gray-200 rounded-b-none  p-0.5 rounded-xl relative z-20">
             <img className="w-full h-full" src={imageSrc} alt="homeInside" />
@@ -105,28 +105,32 @@ const RotateProjectSearchResult = () => {
         </div>
       </div>
 
-      <div className="w-[448px] h-[34px] bg-gradient-to-r from-transparent via-white to-transparent rounded-[32px] backdrop-blur-xl flex justify-center items-center absolute bottom-32 left-[61%] translate-x-[-50%]">
-        <img src={navigator} alt="navigator" />
-      </div>
+      {/* Desktop Navigator */}
 
       {/* View Options */}
-      <div className="bg-black flex items-center gap-3 fixed -bottom-0 left-[60%] translate-x-[-50%] translate-y-[-50%] py-1.5 pl-5 pr-1.5 rounded-full max-md:left-[50%]">
-        <div className="flex flex-col justify-center w-20">
-          <p className="text-xs font-light text-white">View in</p>
-          <p className="text-xl font-semibold text-white">360</p>
+      <div className="flex flex-col justify-center items-center gap-9 fixed -bottom-6 left-[60%] translate-x-[-50%] translate-y-[-50%] max-md:left-[50%]">
+        <div className="w-[448px] h-[34px] bg-gradient-to-r from-transparent via-white to-transparent rounded-[32px] backdrop-blur-xl flex justify-center items-center max-md:hidden">
+          <img src={navigator} alt="navigator" />
         </div>
-        <div className="flex justify-center item-center gap-3 cursor-pointer">
-          <div className="p-3.5 rounded-full cursor-pointer bg-white">
-            <FullRotateIcon className={`w-5 h-5 fill-black`} />
+        <div className="bg-black w-fit flex items-center gap-3 py-1.5 pl-5 pr-1.5 rounded-full">
+          <div className="flex flex-col justify-center w-20">
+            <p className="text-xs font-light text-white">View in</p>
+            <p className="text-xl font-semibold text-white">360</p>
           </div>
-          <div className="p-3.5 bg-gray-200 rounded-full cursor-pointer">
-            <GridViewIcon className={`w-5 h-5 fill-gray-400`} />
-          </div>
-          <div className="p-3.5 bg-gray-200 rounded-full cursor-pointer">
-            <ListViewIcon className={`w-5 h-5 fill-gray-400`} />
+          <div className="flex justify-center item-center gap-3 cursor-pointer">
+            <div className="p-3.5 rounded-full cursor-pointer bg-white">
+              <FullRotateIcon className={`w-5 h-5 fill-black`} />
+            </div>
+            <div className="p-3.5 bg-gray-200 rounded-full cursor-pointer">
+              <GridViewIcon className={`w-5 h-5 fill-gray-400`} />
+            </div>
+            <div className="p-3.5 bg-gray-200 rounded-full cursor-pointer">
+              <ListViewIcon className={`w-5 h-5 fill-gray-400`} />
+            </div>
           </div>
         </div>
       </div>
+
       {/* Background Image */}
       <img className="w-full h-screen object-cover" src={project360} alt="localBackground" />
 
