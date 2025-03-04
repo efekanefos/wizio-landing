@@ -6,7 +6,7 @@ import LocalAmenitiesIcon from "../icons/LocalAmenitiesIcon";
 const MiniLocationCardSideBar = () => {
   return (
     <div
-      className="hidden max-lg:block max-md:hidden bg-white h-full max-h-[820px] max-w-80 w-full overflow-y-hidden absolute left-0 translate-y-6 p-6 pr-3 font-inter z-50 
+      className="hidden max-lg:block max-md:hidden bg-white h-full max-w-80 w-full overflow-y-hidden absolute left-0 translate-y-6 p-6 pr-3 font-inter z-50 
      max-xl:left-0 max-xl:translate-y-0"
     >
       <div className="flex flex-col w-full">
@@ -18,12 +18,8 @@ const MiniLocationCardSideBar = () => {
               {/* Card Image Side */}
               <div className="relative">
                 <img src={MiniLocationSideBarCardImage} alt="MiniLocationSideBarCardImage" />
-                <span
-                  className="w-9 h-9 box-content leading-normal max-w-full text-white text-base font-medium bg-lime-500 rounded-full border-white border-4 flex justify-center items-center absolute 
-                  -top-3 -right-4"
-                >
-                  999
-                </span>
+
+                <span className="w-9 h-9 box-content text-black text-sm font-medium bg-lime-500 rounded-full border border-black flex justify-center items-center absolute -top-1.5 -right-3">999</span>
               </div>
               {/* Card Text Side */}
               <div>
@@ -46,7 +42,7 @@ const MiniLocationCardSideBar = () => {
             </div>
             {/* Card Buttons */}
             <div className="flex justify-between items-center gap-1.5">
-              <button className="flex justify-center items-center gap-1 w-full px-3 py-1.5 bg-gray-100 rounded-full">
+              <button className="flex justify-center items-center gap-1 w-full px-3 py-1.5 bg-gray-200 rounded-full">
                 <div className="flex justify-center items-center max-w-3 max-h-3">
                   <LocalAmenitiesIcon className={"w-3 h-3 fill-current"} />
                 </div>
@@ -70,12 +66,7 @@ const MiniLocationCardSideBar = () => {
                 {/* Card Image Side */}
                 <div className="relative">
                   <img src={MiniLocationSideBarCardImage} alt="MiniLocationSideBarCardImage" />
-                  <span
-                    className="w-9 h-9 box-content leading-normal max-w-full text-white text-base font-medium bg-lime-500 rounded-full border-white border-4 flex justify-center items-center absolute 
-                    -top-3 -right-4"
-                  >
-                    999
-                  </span>
+                  <span className="w-9 h-9 box-content text-black text-sm font-medium bg-lime-500 rounded-full border border-black flex justify-center items-center absolute -top-1.5 -right-3">999</span>
                 </div>
                 {/* Card Text Side */}
                 <div>
@@ -98,7 +89,7 @@ const MiniLocationCardSideBar = () => {
               </div>
               {/* Card Buttons */}
               <div className="flex justify-between items-center gap-1.5">
-                <button className="flex justify-center items-center gap-1 w-full px-3 py-1.5 bg-gray-100 rounded-full">
+                <button className="flex justify-center items-center gap-1 w-full px-3 py-1.5 bg-gray-200 rounded-full">
                   <div className="flex justify-center items-center max-w-3 max-h-3">
                     <LocalAmenitiesIcon className={"w-3 h-3 fill-current"} />
                   </div>

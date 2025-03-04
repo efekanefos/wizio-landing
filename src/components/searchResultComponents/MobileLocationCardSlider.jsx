@@ -17,18 +17,19 @@ const MobileLocationCardSlider = () => {
           pagination: false,
           loop: true,
           rewind: true,
+          start: 1,
         }}
         aria-label="Mobile Card Slider"
       >
         {Array.from({ length: 6 }).map((_, index) => (
           <SplideSlide key={index} className="splide__slide tabletCardSlider">
             <div className="w-[325px] splide-card">
-              <div className="flex flex-col gap-4 p-3 border border-gray-200 shadow-md rounded-2xl mb-3 bg-white">
+              <div className="flex flex-col gap-4 p-2 border border-gray-200 shadow-md rounded-2xl mb-3 bg-white">
                 {/* Card Info */}
                 <div className="flex justify-start items-start gap-6">
                   <div className="relative">
                     <img className="w-24 h-24 " src={MiniLocationSideBarCardImage} alt="MiniLocationSideBarCardImage" />
-                    <span className="w-9 h-9 box-content leading-normal text-white text-base font-medium bg-lime-500 rounded-full border-white border-4 flex justify-center items-center absolute -top-3 -right-4">999</span>
+                    <span className="w-9 h-9 box-content text-black text-sm font-medium bg-lime-500 rounded-full border border-black flex justify-center items-center absolute -top-1.5 -right-3">999</span>
                   </div>
                   {/* Card Text Side */}
                   <div>
@@ -51,7 +52,7 @@ const MobileLocationCardSlider = () => {
                 </div>
                 {/* Card Buttons */}
                 <div className="flex justify-between items-center gap-1.5">
-                  <button className="flex justify-center items-center gap-1 w-full px-3 py-1.5 bg-gray-100 rounded-full">
+                  <button className="flex justify-center items-center gap-1 w-full px-3 py-1.5 bg-gray-200 rounded-full">
                     <div className="flex justify-center items-center max-w-3 max-h-3">
                       <LocalAmenitiesIcon className={"w-3 h-3 fill-current"} />
                     </div>

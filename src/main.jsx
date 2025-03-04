@@ -14,7 +14,6 @@ const links = [
   { href: "/grid-project-search-result", label: "Grid Project Search Result" },
   { href: "/list-project-search-result", label: "List Project Search Result" },
   { href: "/rotate-project-search-result", label: "Rotate Project Search Result" },
-  { href: "/local-gps", label: "Local" },
 ];
 
 function DropdownMenu() {
