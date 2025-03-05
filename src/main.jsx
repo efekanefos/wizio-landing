@@ -16,6 +16,7 @@ const links = [
   { href: "/rotate-project-search-result", label: "Rotate Project Search Result" },
   { href: "/unit-compare", label: "Unit Compare" },
   { href: "/unit-compare-floor-plan", label: "Unit Compare Floor Plan" },
+  { href: "/email-form-card", label: "Email Form Card" },
 ];
 
 function DropdownMenu() {

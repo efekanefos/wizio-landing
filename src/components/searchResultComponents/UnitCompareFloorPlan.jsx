@@ -79,10 +79,7 @@ const UnitCompareFloorPlan = () => {
           </div>
         </div>
       </div>
-      {/* Background Blur Overlay 
-      
-      <div className="w-full h-full bg-white bg-opacity-50 backdrop-blur-md absolute top-0 left-0"></div>
-      */}
+      {/* Background Blur Overlay */}
 
       <div className="absolute inset-0 bg-white/50 backdrop-blur-md"></div>
     </div>

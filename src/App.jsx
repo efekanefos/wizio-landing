@@ -16,6 +16,7 @@ import RotateProjectSearchResult from "./components/searchResultComponents/Rotat
 import LocationCardSideBar from "./components/searchResultComponents/LocationCardSideBar";
 import UnitCompare from "./components/searchResultComponents/UnitCompare";
 import UnitCompareFloorPlan from "./components/searchResultComponents/UnitCompareFloorPlan";
+import EmailFormCard from "./components/searchResultComponents/EmailFormCard";
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
         <Route path="/rotate-project-search-result" element={<RotateProjectSearchResult />} />
         <Route path="/unit-compare" element={<UnitCompare />} />
         <Route path="/unit-compare-floor-plan" element={<UnitCompareFloorPlan />} />
+        <Route path="/email-form-card" element={<EmailFormCard />} />
       </Routes>
     </Router>
   );
