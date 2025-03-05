@@ -14,6 +14,7 @@ import GridProjectSearchResult from "./components/searchResultComponents/GridPro
 import ListProjectSearchResult from "./components/searchResultComponents/ListProjectSearchResult";
 import RotateProjectSearchResult from "./components/searchResultComponents/RotateProjectSearchResult";
 import LocationCardSideBar from "./components/searchResultComponents/LocationCardSideBar";
+import UnitCompare from "./components/searchResultComponents/UnitCompare";
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
         <Route path="/grid-project-search-result" element={<GridProjectSearchResult />} />
         <Route path="/list-project-search-result" element={<ListProjectSearchResult />} />
         <Route path="/rotate-project-search-result" element={<RotateProjectSearchResult />} />
+        <Route path="/unit-compare" element={<UnitCompare />} />
       </Routes>
     </Router>
   );
