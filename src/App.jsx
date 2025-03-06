@@ -17,6 +17,7 @@ import LocationCardSideBar from "./components/searchResultComponents/LocationCar
 import UnitCompare from "./components/searchResultComponents/UnitCompare";
 import UnitCompareFloorPlan from "./components/searchResultComponents/UnitCompareFloorPlan";
 import EmailFormCard from "./components/searchResultComponents/EmailFormCard";
+import UnitDetails from "./components/searchResultComponents/UnitDetails";
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
         <Route path="/unit-compare" element={<UnitCompare />} />
         <Route path="/unit-compare-floor-plan" element={<UnitCompareFloorPlan />} />
         <Route path="/email-form-card" element={<EmailFormCard />} />
+        <Route path="/unit-details" element={<UnitDetails />} />
       </Routes>
     </Router>
   );

@@ -40,32 +40,38 @@ import MiniLocationSideBarCard from "./MiniLocationCardSideBar";
 const RotateSearchResult = () => {
   return (
     <div>
-      <div className="bg-white h-full absolute left-0 p-6 max-lg:hidden">
+      <div className="bg-white h-full absolute left-0 p-6">
         <div className="flex flex-col gap-3">
           {/* Card #1 */}
           <div className="bg-white p-3 border border-gray-200 shadow-md rounded-2xl max-md:min-w-72 max-md:p-2 max-md:pt-1">
-            <div className="max-md:flex max-md:justify-start max-md:items-start max-md:gap-6 max-md:w-full">
-              <div className="locationCard max-w-[296px] relative w-full mt-1.5 max-md:w-24 max-md:h-28">
+            <div className="max-lg:flex max-lg:justify-start max-lg:items-start max-lg:gap-6 max-lg:w-full">
+              {/* Slider Container */}
+              <div className="locationCard max-w-[296px] relative w-full mt-1.5 max-lg:max-w-24">
                 <Splide aria-label="Location Images">
-                  <SplideSlide>
-                    <img className="w-full h-full rounded-tl-xl rounded-tr-xl max-md:w-24 max-md:h-28 max-md:object-cover max-md:rounded-xl" src={locationCardImage} alt="locationCardImage" />
+                  <SplideSlide className="w-fit max-lg:max-w-24">
+                    <img className="w-full h-full rounded-tl-xl rounded-tr-xl max-lg:rounded-xl max-lg:w-24 max-lg:h-28 max-lg:object-cover" src={locationCardImage} alt="locationCardImage" />
                   </SplideSlide>
-                  <SplideSlide>
-                    <img className="w-full h-full rounded-tl-xl rounded-tr-xl max-md:w-24 max-md:h-28 max-md:object-cover max-md:rounded-xl" src={locationCardImage} alt="locationCardImage" />
+                  <SplideSlide className="w-fit max-lg:max-w-24">
+                    <img className="w-full h-full rounded-tl-xl rounded-tr-xl max-lg:rounded-xl max-lg:w-24 max-lg:h-28 max-lg:object-cover" src={locationCardImage} alt="locationCardImage" />
                   </SplideSlide>
                 </Splide>
-                <span className="w-9 h-9 box-content text-black text-sm font-medium bg-lime-500 rounded-full border border-black flex justify-center items-center absolute top-2 right-2">999</span>
+                <span
+                  className="w-9 h-9 box-content text-black text-sm font-medium bg-lime-500 rounded-full border border-black flex justify-center items-center absolute top-2 right-2
+                max-lg:-top-2.5 max-lg:-right-2.5"
+                >
+                  999
+                </span>
               </div>
               {/* Card Info */}
               <div className="mt-2 mb-3">
-                <h4 className="text-base font-semibold">Aria Residences</h4>
+                <h4 className="text-base font-semibold max-lg:mb-2">Aria Residences</h4>
                 <div className="flex justify-between items-start">
-                  <div className="flex w-full max-md:flex-col">
-                    <div className="max-md:w-full min-w-32">
-                      <p className="text-xs font-medium max-md:hidden">From</p>
-                      <p className="text-sm font-light max-md:mt-2">€17,555,000+VAT</p>
+                  <div className="flex w-full max-lg:flex-col">
+                    <div className="max-md:w-full min-w-32 max-lg:mb-6">
+                      <p className="text-xs font-medium max-lg:hidden">From</p>
+                      <p className="text-sm font-light">€17,555,000+VAT</p>
                     </div>
-                    <div className="flex justify-between gap-2 w-full max-md:mt-6">
+                    <div className="flex justify-between gap-2 w-full">
                       <div className="w-full min-w-16">
                         <p className="text-xs font-medium">Bedrooms</p>
                         <p className="text-sm font-light">2-3</p>
@@ -82,13 +88,13 @@ const RotateSearchResult = () => {
 
             {/* Card Buttons */}
             <div className="flex justify-between items-center gap-2.5">
-              <button className="flex justify-center items-center gap-1 w-full px-3 py-1 bg-gray-200 rounded-full max-md:py-2">
+              <button className="flex justify-center items-center gap-1 w-full px-3 py-1 bg-gray-200 rounded-full max-lg:py-2">
                 <div className="flex justify-center items-center max-w-4 max-h-4">
                   <LocalAmenitiesIcon className={"w-4 h-4 fill-current"} />
                 </div>
                 <p className="text-xs font-light w-max">Local Amenities</p>
               </button>
-              <button className="bg-black flex justify-center items-center gap-1 w-full px-3 py-1 rounded-full max-md:py-2">
+              <button className="bg-black flex justify-center items-center gap-1 w-full px-3 py-1 rounded-full max-lg:py-2">
                 <div className="flex justify-center items-center max-w-4 max-h-4">
                   <BoxIcon className={"w-5 h-5 stroke-white fill-none"} />
                 </div>
@@ -97,29 +103,35 @@ const RotateSearchResult = () => {
             </div>
           </div>
           {Array.from({ length: 2 }).map((_, index) => (
-            <div key={index} className="bg-white p-3 border border-gray-200 shadow-md rounded-2xl max-md:min-w-72 max-md:p-2 max-md:pt-1 opacity-50">
-              <div className="max-md:flex max-md:justify-start max-md:items-start max-md:gap-6 max-md:w-full">
-                <div className="locationCard max-w-[296px] relative w-full mt-1.5 max-md:w-24 max-md:h-28">
+            <div className="bg-white p-3 border border-gray-200 shadow-md rounded-2xl max-md:min-w-72 max-md:p-2 max-md:pt-1">
+              <div className="max-lg:flex max-lg:justify-start max-lg:items-start max-lg:gap-6 max-lg:w-full">
+                {/* Slider Container */}
+                <div className="locationCard max-w-[296px] relative w-full mt-1.5 max-lg:max-w-24">
                   <Splide aria-label="Location Images">
-                    <SplideSlide>
-                      <img className="w-full h-full rounded-tl-xl rounded-tr-xl max-md:w-24 max-md:h-28 max-md:object-cover max-md:rounded-xl" src={locationCardImage} alt="locationCardImage" />
+                    <SplideSlide className="w-fit max-lg:max-w-24">
+                      <img className="w-full h-full rounded-tl-xl rounded-tr-xl max-lg:rounded-xl max-lg:w-24 max-lg:h-28 max-lg:object-cover" src={locationCardImage} alt="locationCardImage" />
                     </SplideSlide>
-                    <SplideSlide>
-                      <img className="w-full h-full rounded-tl-xl rounded-tr-xl max-md:w-24 max-md:h-28 max-md:object-cover max-md:rounded-xl" src={locationCardImage} alt="locationCardImage" />
+                    <SplideSlide className="w-fit max-lg:max-w-24">
+                      <img className="w-full h-full rounded-tl-xl rounded-tr-xl max-lg:rounded-xl max-lg:w-24 max-lg:h-28 max-lg:object-cover" src={locationCardImage} alt="locationCardImage" />
                     </SplideSlide>
                   </Splide>
-                  <span className="w-9 h-9 box-content text-black text-sm font-medium bg-lime-500 rounded-full border border-black flex justify-center items-center absolute top-2 right-2">999</span>
+                  <span
+                    className="w-9 h-9 box-content text-black text-sm font-medium bg-lime-500 rounded-full border border-black flex justify-center items-center absolute top-2 right-2
+                max-lg:-top-2.5 max-lg:-right-2.5"
+                  >
+                    999
+                  </span>
                 </div>
                 {/* Card Info */}
                 <div className="mt-2 mb-3">
-                  <h4 className="text-base font-semibold">Aria Residences</h4>
+                  <h4 className="text-base font-semibold max-lg:mb-2">Aria Residences</h4>
                   <div className="flex justify-between items-start">
-                    <div className="flex w-full max-md:flex-col">
-                      <div className="max-md:w-full min-w-32">
-                        <p className="text-xs font-medium max-md:hidden">From</p>
-                        <p className="text-sm font-light max-md:mt-2">€17,555,000+VAT</p>
+                    <div className="flex w-full max-lg:flex-col">
+                      <div className="max-md:w-full min-w-32 max-lg:mb-6">
+                        <p className="text-xs font-medium max-lg:hidden">From</p>
+                        <p className="text-sm font-light">€17,555,000+VAT</p>
                       </div>
-                      <div className="flex justify-between gap-2 w-full max-md:mt-6">
+                      <div className="flex justify-between gap-2 w-full">
                         <div className="w-full min-w-16">
                           <p className="text-xs font-medium">Bedrooms</p>
                           <p className="text-sm font-light">2-3</p>
@@ -136,13 +148,13 @@ const RotateSearchResult = () => {
 
               {/* Card Buttons */}
               <div className="flex justify-between items-center gap-2.5">
-                <button className="flex justify-center items-center gap-1 w-full px-3 py-1 bg-gray-200 rounded-full max-md:py-2">
+                <button className="flex justify-center items-center gap-1 w-full px-3 py-1 bg-gray-200 rounded-full max-lg:py-2">
                   <div className="flex justify-center items-center max-w-4 max-h-4">
                     <LocalAmenitiesIcon className={"w-4 h-4 fill-current"} />
                   </div>
                   <p className="text-xs font-light w-max">Local Amenities</p>
                 </button>
-                <button className="bg-black flex justify-center items-center gap-1 w-full px-3 py-1 rounded-full max-md:py-2">
+                <button className="bg-black flex justify-center items-center gap-1 w-full px-3 py-1 rounded-full max-lg:py-2">
                   <div className="flex justify-center items-center max-w-4 max-h-4">
                     <BoxIcon className={"w-5 h-5 stroke-white fill-none"} />
                   </div>
@@ -157,10 +169,12 @@ const RotateSearchResult = () => {
       <div className="hidden max-md:block">
         <MobileLocationCardSlider />
       </div>
-
+      {/* 
+          
       <div className="hidden max-lg:block">
         <MiniLocationSideBarCard />
       </div>
+          */}
 
       {/* View Options */}
       <div className="bg-black flex items-center gap-3 fixed -bottom-0 left-[50%] translate-x-[-50%] translate-y-[-50%] py-1.5 pl-5 pr-1.5 rounded-full">

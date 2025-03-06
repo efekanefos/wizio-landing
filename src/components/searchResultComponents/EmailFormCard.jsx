@@ -18,7 +18,10 @@ const EmailFormCard = () => {
             <CloseIcon className={"w-3 h-3 fill-black "} />
           </div>
         </div>
-        <div className="w-full px-3 py-4 border-b border-gray-200 flex flex-col justify-start items-start gap-0.5 ">
+        <div
+          className="w-full px-3 py-4 border-b border-gray-200 flex flex-col justify-start items-start gap
+        -0.5 "
+        >
           <label className="text-gray-400 text-xs font-light" htmlFor="email">
             Email Address
           </label>

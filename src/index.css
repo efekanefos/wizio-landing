@@ -57,6 +57,14 @@
   width: 12px;
   height: 10px;
 }
+@media (max-width: 1024px) {
+  .locationCard .splide__arrow--next {
+    right: 0.35rem;
+  }
+  .locationCard .splide__arrow--prev {
+    left: 0.35rem;
+  }
+}
 
 @media (max-width: 768px) {
   .locationCard .splide__arrow {
