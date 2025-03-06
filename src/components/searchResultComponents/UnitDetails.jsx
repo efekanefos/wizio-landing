@@ -84,49 +84,49 @@ const UnitDetails = () => {
       <div className="max-w-[1362px] mx-auto mb-11 max-2xl:px-6 max-xl:px-5 max-md:px-4 max-sm:px-3">
         <h3 className="text-3xl font-semibold border-b border-gray-200 pl-2.5 py-2.5">Specifications</h3>
         <ul className="grid grid-cols-4 gap-x-11 gap-y-12 mt-12 max-md:grid-cols-3 max-sm:grid-cols-2">
-          <li className="flex gap-3 items-center min-w-48">
+          <li className="flex gap-3 items-center min-w-48 max-sm:min-w-fit">
             <PoolIcon className={"w-6 h-6 fill-black"} />
             <p className="font-light">
               <span className="font-semibold">20 sqm</span> Pool
             </p>
           </li>
-          <li className="flex gap-3 items-center min-w-48">
+          <li className="flex gap-3 items-center min-w-48 max-sm:min-w-fit">
             <ParkingIcon className={"w-6 h-6 fill-black"} />
             <p className="font-light">
               <span className="font-semibold">1</span> Parking Space
             </p>
           </li>
-          <li className="flex gap-3 items-center min-w-48">
+          <li className="flex gap-3 items-center min-w-48 max-sm:min-w-fit">
             <TerraceIcon className={"w-6 h-6 stroke-black stroke-[1.5px] fill-none"} />
             <p className="font-light">
               <span className="font-semibold">23 sqm</span> Terrace
             </p>
           </li>
-          <li className="flex gap-3 items-center min-w-48">
+          <li className="flex gap-3 items-center min-w-48 max-sm:min-w-fit">
             <BalconyIcon className={"w-6 h-6 stroke-black stroke-[1.5px] fill-none"} />
             <p className="font-light">
               <span className="font-semibold">7 sqm</span> Balcony
             </p>
           </li>
-          <li className="flex gap-3 items-center min-w-48">
+          <li className="flex gap-3 items-center min-w-48 max-sm:min-w-fit">
             <BedroomIcon className={"w-6 h-6 fill-black"} />
             <p className="font-light">
               <span className="font-semibold">3</span> Bedrooms
             </p>
           </li>
-          <li className="flex gap-3 items-center min-w-48">
+          <li className="flex gap-3 items-center min-w-48 max-sm:min-w-fit">
             <BathroomIcon className={"w-6 h-6 fill-black"} />
             <p className="font-light">
               <span className="font-semibold">2</span> Bathrooms
             </p>
           </li>
-          <li className="flex gap-3 items-center min-w-48">
+          <li className="flex gap-3 items-center min-w-48 max-sm:min-w-fit">
             <GrossAreaIcon className={"w-6 h-6 fill-black"} />
             <p className="font-light">
               <span className="font-semibold">189 sqm</span> gross area
             </p>
           </li>
-          <li className="flex gap-3 items-center min-w-48">
+          <li className="flex gap-3 items-center min-w-48 max-sm:min-w-fit">
             <NetAreaIcon className={"w-6 h-6 fill-black"} />
             <p className="font-light">
               <span className="font-semibold">135 sqm</span> net area
@@ -139,99 +139,99 @@ const UnitDetails = () => {
       <div className="max-w-[1362px] mx-auto mb-11 max-2xl:px-6 max-xl:px-5 max-md:px-4 max-sm:px-3">
         <h3 className="text-3xl font-semibold border-b border-gray-200 mb-12 ml-2.5 pl-2.5 py-2.5">Project Specifications</h3>
         <ul className="grid grid-cols-4 gap-x-11 gap-y-12 mt-12 max-md:grid-cols-3 max-sm:grid-cols-2">
-          <li className="flex gap-3 items-center min-w-48">
+          <li className="flex gap-3 items-center min-w-48 max-sm:min-w-fit">
             <BedroomIcon className={"w-6 h-6 fill-black"} />
             <p className="font-light">24/7 controlled entery</p>
           </li>
-          <li className="flex gap-3 items-center min-w-48">
+          <li className="flex gap-3 items-center min-w-48 max-sm:min-w-fit">
             <BedroomIcon className={"w-6 h-6 fill-black"} />
             <p className="font-light">Spa</p>
           </li>
-          <li className="flex gap-3 items-center min-w-48">
+          <li className="flex gap-3 items-center min-w-48 max-sm:min-w-fit">
             <BedroomIcon className={"w-6 h-6 fill-black"} />
             <p className="font-light">Landry</p>
           </li>
-          <li className="flex gap-3 items-center min-w-48">
+          <li className="flex gap-3 items-center min-w-48 max-sm:min-w-fit">
             <BedroomIcon className={"w-6 h-6 fill-black"} />
             <p className="font-light">Landry</p>
           </li>
-          <li className="flex gap-3 items-center min-w-48">
+          <li className="flex gap-3 items-center min-w-48 max-sm:min-w-fit">
             <BathroomIcon className={"w-6 h-6 fill-black"} />
             <p className="font-light">Site management</p>
           </li>
-          <li className="flex gap-3 items-center min-w-48">
+          <li className="flex gap-3 items-center min-w-48 max-sm:min-w-fit">
             <BathroomIcon className={"w-6 h-6 fill-black"} />
             <p className="font-light">Outdoor gym</p>
           </li>
-          <li className="flex gap-3 items-center min-w-48">
+          <li className="flex gap-3 items-center min-w-48 max-sm:min-w-fit">
             <BathroomIcon className={"w-6 h-6 fill-black"} />
             <p className="font-light">Private beach</p>
           </li>
-          <li className="flex gap-3 items-center min-w-48">
+          <li className="flex gap-3 items-center min-w-48 max-sm:min-w-fit">
             <BathroomIcon className={"w-6 h-6 fill-black"} />
             <p className="font-light">Private beach</p>
           </li>
-          <li className="flex gap-3 items-center min-w-48">
+          <li className="flex gap-3 items-center min-w-48 max-sm:min-w-fit">
             <GrossAreaIcon className={"w-6 h-6 fill-black"} />
             <p className="font-light">Playground</p>
           </li>
-          <li className="flex gap-3 items-center min-w-48">
+          <li className="flex gap-3 items-center min-w-48 max-sm:min-w-fit">
             <GrossAreaIcon className={"w-6 h-6 fill-black"} />
             <p className="font-light">Outdoor yoga area</p>
           </li>
-          <li className="flex gap-3 items-center min-w-48">
+          <li className="flex gap-3 items-center min-w-48 max-sm:min-w-fit">
             <GrossAreaIcon className={"w-6 h-6 fill-black"} />
             <p className="font-light">Tennis court</p>
           </li>
-          <li className="flex gap-3 items-center min-w-48">
+          <li className="flex gap-3 items-center min-w-48 max-sm:min-w-fit">
             <GrossAreaIcon className={"w-6 h-6 fill-black"} />
             <p className="font-light">Tennis court</p>
           </li>
-          <li className="flex gap-3 items-center min-w-48">
+          <li className="flex gap-3 items-center min-w-48 max-sm:min-w-fit">
             <NetAreaIcon className={"w-6 h-6 fill-black"} />
             <p className="font-light">Adult swimming pool</p>
           </li>
-          <li className="flex gap-3 items-center min-w-48">
+          <li className="flex gap-3 items-center min-w-48 max-sm:min-w-fit">
             <NetAreaIcon className={"w-6 h-6 fill-black"} />
             <p className="font-light">Restaurants</p>
           </li>
-          <li className="flex gap-3 items-center min-w-48">
+          <li className="flex gap-3 items-center min-w-48 max-sm:min-w-fit">
             <NetAreaIcon className={"w-6 h-6 fill-black"} />
             <p className="font-light">Running path</p>
           </li>
-          <li className="flex gap-3 items-center min-w-48">
+          <li className="flex gap-3 items-center min-w-48 max-sm:min-w-fit">
             <NetAreaIcon className={"w-6 h-6 fill-black"} />
             <p className="font-light">Running path</p>
           </li>
-          <li className="flex gap-3 items-center min-w-48">
+          <li className="flex gap-3 items-center min-w-48 max-sm:min-w-fit">
             <PoolIcon className={"w-6 h-6 fill-black"} />
             <p className="font-light">Children swimming pool</p>
           </li>
-          <li className="flex gap-3 items-center min-w-48">
+          <li className="flex gap-3 items-center min-w-48 max-sm:min-w-fit">
             <PoolIcon className={"w-6 h-6 fill-black"} />
             <p className="font-light">18 hole golf court</p>
           </li>
-          <li className="flex gap-3 items-center min-w-48">
+          <li className="flex gap-3 items-center min-w-48 max-sm:min-w-fit">
             <PoolIcon className={"w-6 h-6 fill-black"} />
             <p className="font-light">Sea view</p>
           </li>
-          <li className="flex gap-3 items-center min-w-48">
+          <li className="flex gap-3 items-center min-w-48 max-sm:min-w-fit">
             <PoolIcon className={"w-6 h-6 fill-black"} />
             <p className="font-light">Sea view</p>
           </li>
-          <li className="flex gap-3 items-center min-w-48">
+          <li className="flex gap-3 items-center min-w-48 max-sm:min-w-fit">
             <ParkingIcon className={"w-6 h-6 fill-black"} />
             <p className="font-light">Gym</p>
           </li>
-          <li className="flex gap-3 items-center min-w-48">
+          <li className="flex gap-3 items-center min-w-48 max-sm:min-w-fit">
             <ParkingIcon className={"w-6 h-6 fill-black"} />
             <p className="font-light">Parking</p>
           </li>
-          <li className="flex gap-3 items-center min-w-48">
+          <li className="flex gap-3 items-center min-w-48 max-sm:min-w-fit">
             <ParkingIcon className={"w-6 h-6 fill-black"} />
             <p className="font-light">Outdoor yoga</p>
           </li>
-          <li className="flex gap-3 items-center min-w-48">
+          <li className="flex gap-3 items-center min-w-48 max-sm:min-w-fit">
             <ParkingIcon className={"w-6 h-6 fill-black"} />
             <p className="font-light">Outdoor yoga</p>
           </li>
@@ -246,34 +246,34 @@ const UnitDetails = () => {
           <div className="col-span-2 px-6 max-md:col-span-full">
             <h3 className="text-3xl font-semibold pt-12">Unit Specifications </h3>
             <ul className="grid grid-cols-2 gap-x-11 gap-y-12 mt-12">
-              <li className="flex gap-3 items-center min-w-48">
+              <li className="flex gap-3 items-center min-w-48 max-sm:min-w-fit">
                 <p className="font-light">Hallway</p>
               </li>
-              <li className="flex gap-3 items-center min-w-48">
+              <li className="flex gap-3 items-center min-w-48 max-sm:min-w-fit">
                 <p className="font-light">Bedroom 2</p>
               </li>
-              <li className="flex gap-3 items-center min-w-48">
+              <li className="flex gap-3 items-center min-w-48 max-sm:min-w-fit">
                 <p className="font-light">Open-plan living room</p>
               </li>
-              <li className="flex gap-3 items-center min-w-48">
+              <li className="flex gap-3 items-center min-w-48 max-sm:min-w-fit">
                 <p className="font-light">Master bedroom</p>
               </li>
-              <li className="flex gap-3 items-center min-w-48">
+              <li className="flex gap-3 items-center min-w-48 max-sm:min-w-fit">
                 <p className="font-light">Bathroom</p>
               </li>
-              <li className="flex gap-3 items-center min-w-48">
+              <li className="flex gap-3 items-center min-w-48 max-sm:min-w-fit">
                 <p className="font-light">Master bedroom Ensuit</p>
               </li>
-              <li className="flex gap-3 items-center min-w-48">
+              <li className="flex gap-3 items-center min-w-48 max-sm:min-w-fit">
                 <p className="font-light">Bedroom 1</p>
               </li>
-              <li className="flex gap-3 items-center min-w-48">
+              <li className="flex gap-3 items-center min-w-48 max-sm:min-w-fit">
                 <p className="font-light">Master bedroom closet</p>
               </li>
-              <li className="flex gap-3 items-center min-w-48">
+              <li className="flex gap-3 items-center min-w-48 max-sm:min-w-fit">
                 <p className="font-light">Bedroom 1 Ensuit</p>
               </li>
-              <li className="flex gap-3 items-center min-w-48">
+              <li className="flex gap-3 items-center min-w-48 max-sm:min-w-fit">
                 <p className="font-light">Balconies</p>
               </li>
             </ul>
