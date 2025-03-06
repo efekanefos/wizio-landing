@@ -83,7 +83,7 @@ const UnitDetails = () => {
       {/* Specifications */}
       <div className="max-w-[1362px] mx-auto mb-11 max-2xl:px-6 max-xl:px-5 max-md:px-4 max-sm:px-3">
         <h3 className="text-3xl font-semibold border-b border-gray-200 pl-2.5 py-2.5">Specifications</h3>
-        <ul className="grid grid-cols-4 gap-x-11 gap-y-12 mt-12 max-md:grid-cols-3 max-sm:grid-cols-2">
+        <ul className="grid grid-cols-4 gap-x-11 gap-y-12 mt-12 max-md:grid-cols-3 max-sm:grid-cols-2 max-sm:gap-3">
           <li className="flex gap-3 items-center min-w-48 max-sm:min-w-fit">
             <PoolIcon className={"w-6 h-6 fill-black"} />
             <p className="font-light">
@@ -138,7 +138,7 @@ const UnitDetails = () => {
       {/* Project Specifications */}
       <div className="max-w-[1362px] mx-auto mb-11 max-2xl:px-6 max-xl:px-5 max-md:px-4 max-sm:px-3">
         <h3 className="text-3xl font-semibold border-b border-gray-200 mb-12 ml-2.5 pl-2.5 py-2.5">Project Specifications</h3>
-        <ul className="grid grid-cols-4 gap-x-11 gap-y-12 mt-12 max-md:grid-cols-3 max-sm:grid-cols-2">
+        <ul className="grid grid-cols-4 gap-x-11 gap-y-12 mt-12 max-md:grid-cols-3 max-sm:grid-cols-2 max-sm:gap-3">
           <li className="flex gap-3 items-center min-w-48 max-sm:min-w-fit">
             <BedroomIcon className={"w-6 h-6 fill-black"} />
             <p className="font-light">24/7 controlled entery</p>
@@ -245,7 +245,7 @@ const UnitDetails = () => {
         <div className="grid grid-cols-3 items-center max-md:grid-cols-none">
           <div className="col-span-2 px-6 max-md:col-span-full">
             <h3 className="text-3xl font-semibold pt-12">Unit Specifications </h3>
-            <ul className="grid grid-cols-2 gap-x-11 gap-y-12 mt-12">
+            <ul className="grid grid-cols-2 gap-x-11 gap-y-12 mt-12 max-sm:gap-6">
               <li className="flex gap-3 items-center min-w-48 max-sm:min-w-fit">
                 <p className="font-light">Hallway</p>
               </li>
