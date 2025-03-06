@@ -40,7 +40,7 @@ import MiniLocationSideBarCard from "./MiniLocationCardSideBar";
 const RotateSearchResult = () => {
   return (
     <div>
-      <div className="bg-white h-full absolute left-0 p-6">
+      <div className="bg-white h-full absolute left-0 p-6 max-md:hidden">
         <div className="flex flex-col gap-3">
           {/* Card #1 */}
           <div className="bg-white p-3 border border-gray-200 shadow-md rounded-2xl max-lg:min-w-72 max-lg:p-2 max-lg:pt-1">
