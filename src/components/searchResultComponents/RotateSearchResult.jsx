@@ -43,7 +43,7 @@ const RotateSearchResult = () => {
       <div className="bg-white h-full absolute left-0 p-6">
         <div className="flex flex-col gap-3">
           {/* Card #1 */}
-          <div className="bg-white p-3 border border-gray-200 shadow-md rounded-2xl max-md:min-w-72 max-md:p-2 max-md:pt-1">
+          <div className="bg-white p-3 border border-gray-200 shadow-md rounded-2xl max-lg:min-w-72 max-lg:p-2 max-lg:pt-1">
             <div className="max-lg:flex max-lg:justify-start max-lg:items-start max-lg:gap-6 max-lg:w-full">
               {/* Slider Container */}
               <div className="locationCard max-w-[296px] relative w-full mt-1.5 max-lg:max-w-24">
@@ -103,7 +103,7 @@ const RotateSearchResult = () => {
             </div>
           </div>
           {Array.from({ length: 2 }).map((_, index) => (
-            <div className="bg-white p-3 border border-gray-200 shadow-md rounded-2xl max-md:min-w-72 max-md:p-2 max-md:pt-1">
+            <div key={index} className="bg-white p-3 border border-gray-200 shadow-md rounded-2xl max-lg:min-w-72 max-lg:p-2 max-lg:pt-1">
               <div className="max-lg:flex max-lg:justify-start max-lg:items-start max-lg:gap-6 max-lg:w-full">
                 {/* Slider Container */}
                 <div className="locationCard max-w-[296px] relative w-full mt-1.5 max-lg:max-w-24">
