@@ -7,9 +7,9 @@ const SelectUnit = () => {
   return (
     <div className="relative h-screen bg-cover bg-center bg-no-repeat max-2xl:px-6 max-xl:px-5 max-md:px-4 max-md:h-screen max-sm:px-3" style={{ backgroundImage: `url(${propertyFrontView})` }}>
       {/* Buttons */}
-      <button className="font-semibold bg-lime-500 py-2 px-5 rounded-full border border-white absolute top-96 left-72">Flat 305</button>
-      <button className="font-semibold bg-lime-500 py-2 px-5 rounded-full border border-white absolute bottom-80 left-80">Flat 305</button>
-      <button className="font-semibold bg-red-600 py-2 px-5 rounded-full border border-red-600 text-white absolute bottom-80 right-96">Sold</button>
+      <button className="font-semibold bg-lime-500 py-2 px-5 rounded-full border border-white absolute top-[415px] left-96">Flat 305</button>
+      <button className="font-semibold bg-lime-500 py-2 px-5 rounded-full border border-white absolute bottom-72 left-96">Flat 305</button>
+      <button className="font-semibold bg-red-600 py-2 px-5 rounded-full border border-red-600 text-white absolute top-[415px] right-[620px]">Sold</button>
 
       {/* Desktop Detail Card */}
       <div className="absolute left-10 bottom-14 p-3 bg-white rounded-2xl rounded-tr-none max-lg:hidden">

@@ -13,10 +13,15 @@ import BathroomIcon from "../svg/BathroomIcon";
 import GrossAreaIcon from "../svg/GrossAreaIcon";
 import NetAreaIcon from "../svg/NetAreaIcon";
 import detailedRoomTopView from "../svg/detailedRoomTopView.png";
+import MobileDownArrowIcon from "../newIcons/MobileDownArrowIcon";
 
 const UnitDetails = () => {
   return (
     <div>
+      {/* Go Up Button */}
+      <button className="w-12 h-12 rounded-full border border-gray-200 fixed bottom-0 right-56 flex justify-center items-center">
+        <MobileDownArrowIcon className={"w-4 h-2 fill-black rotate-180"} />
+      </button>
       {/* Upper Unit Filter */}
       <div className="max-xl:hidden max-2xl:px-6">
         <ul className="flex justify-center items-center gap-4 py-2 border border-x-0 border-gray-200 shadow-lg">
