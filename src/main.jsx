@@ -18,6 +18,7 @@ const links = [
   { href: "/unit-compare-floor-plan", label: "Unit Compare Floor Plan" },
   { href: "/email-form-card", label: "Email Form Card" },
   { href: "/unit-details", label: "Unit Details" },
+  { href: "/select-unit", label: "Select Unit" },
 ];
 
 function DropdownMenu() {
