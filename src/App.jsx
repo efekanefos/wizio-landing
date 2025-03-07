@@ -19,6 +19,7 @@ import UnitCompareFloorPlan from "./components/searchResultComponents/UnitCompar
 import EmailFormCard from "./components/searchResultComponents/EmailFormCard";
 import UnitDetails from "./components/searchResultComponents/UnitDetails";
 import SelectUnit from "./components/searchResultComponents/SelectUnit";
+import UnitSlider from "./components/searchResultComponents/UnitSlider";
 
 function App() {
   return (
@@ -48,6 +49,7 @@ function App() {
         <Route path="/email-form-card" element={<EmailFormCard />} />
         <Route path="/unit-details" element={<UnitDetails />} />
         <Route path="/select-unit" element={<SelectUnit />} />
+        <Route path="/unit-slider" element={<UnitSlider />} />
       </Routes>
     </Router>
   );

@@ -19,6 +19,7 @@ const links = [
   { href: "/email-form-card", label: "Email Form Card" },
   { href: "/unit-details", label: "Unit Details" },
   { href: "/select-unit", label: "Select Unit" },
+  { href: "/unit-slider", label: "Unit Slider" },
 ];
 
 function DropdownMenu() {

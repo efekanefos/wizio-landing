@@ -7,6 +7,38 @@
     clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%);
   }
 }
+.customSlider .splide__pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: black;
+  padding: 6px 16px;
+  border-radius: 999px;
+  width: fit-content;
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.customSlider .splide__pagination__page {
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0.5;
+  transition: all 0.3s ease-in-out;
+}
+
+.customSlider .splide__pagination__page.is-active {
+  width: 24px;
+  height: 8px;
+  border-radius: 12px;
+  background-color: white;
+  opacity: 1;
+}
+
 .custom-resize::-webkit-resizer {
   filter: brightness(0.7); /* gri ton verir */
 }
