@@ -11,6 +11,7 @@ import homeInside from "../../assets/images/searchResults/homeInside.png";
 import tabletRoomView from "../svg/tabletRoomView.png";
 import navigator from "../svg/navigator.png";
 import ProjectLogo from "../svg/ProjectLogo";
+import MobileDownArrowIcon from "../newIcons/MobileDownArrowIcon";
 
 const RotateProjectSearchResult = () => {
   const [imageSrc, setImageSrc] = useState(window.innerWidth > 768 ? homeInside : tabletRoomView);
@@ -25,7 +26,17 @@ const RotateProjectSearchResult = () => {
   }, [homeInside, tabletRoomView]);
   return (
     <div>
-      <div className="bg-white h-full absolute left-0 p-6 overflow-y-auto scrollbar-custom max-md:w-full max-md:max-h-[366px] max-md:bottom-0 max-md:pt-0 max-md:pr-5 max-sm:px-4 max-sm:max-h-[560px]">
+      <div style={{ scrollbarWidth: "none", msOverflowStyle: "none" }} className="bg-white h-full absolute left-0 p-6 overflow-y-auto  max-md:w-full max-md:max-h-[366px] max-md:bottom-0 max-md:pt-0 max-md:pr-5 max-sm:px-4 max-sm:max-h-[560px]">
+        <div className="flex justify-between items-center mb-3">
+          <div className="flex justify-center items-center gap-3 h-10 px-5 border border-gray-200 rounded-full ">
+            <p className="text-sm font-light">Sort by</p>
+            <MobileDownArrowIcon className={"w-3 h-2 fill-black stroke-2 stroke-black"} />
+          </div>
+
+          <div className="w-10 h-10 flex justify-center items-center border border-gray-200 rounded-full">
+            <MobileDownArrowIcon className={"w-4 h-4 fill-black  rotate-90"} />
+          </div>
+        </div>
         <div className="hidden max-md:flex w-full bg-white py-4 justify-center items-center max-sm:mt-3">
           <img src={navigator} alt="navigator" />
         </div>
@@ -80,7 +91,7 @@ const RotateProjectSearchResult = () => {
       </div>
 
       {/* Desktop Detail Card */}
-      <div className="absolute top-20 right-96 p-3 bg-white rounded-2xl rounded-tl-none max-lg:hidden">
+      <div className="absolute top-20 right-96 p-3 bg-white rounded-2xl rounded-tl-none shadow-lg max-lg:hidden">
         <div className="relative">
           <div className="max-w-[200px] max-h-36 border border-gray-200 rounded-b-none  p-0.5 rounded-xl relative z-20">
             <img className="w-full h-full" src={imageSrc} alt="homeInside" />
@@ -108,7 +119,7 @@ const RotateProjectSearchResult = () => {
       {/* Desktop Navigator */}
 
       {/* View Options */}
-      <div className="flex flex-col justify-center items-center gap-9 fixed -bottom-6 left-[60%] translate-x-[-50%] translate-y-[-50%] max-md:left-[50%]">
+      <div className="flex flex-col justify-center items-center gap-9 fixed -bottom-6 left-[60%] translate-x-[-50%] translate-y-[-50%] md:left-[calc(370px+((100vw-370px)/2))] max-md:left-[50%]">
         <div className="w-[448px] h-[34px] bg-gradient-to-r from-transparent via-white to-transparent rounded-[32px] backdrop-blur-xl flex justify-center items-center max-lg:hidden">
           <img src={navigator} alt="navigator" />
         </div>

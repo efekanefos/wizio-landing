@@ -12,7 +12,7 @@ import "@splidejs/react-splide/css";
 import LocalAmenitiesIcon from "../newIcons/LocalAmenitiesIcon";
 import BoxIcon from "../svg/BoxIcon";
 /* Images */
-import locationCardImage from "../../assets/images/newIcons/locationCardImage.png";
+import notRoundedLocationImage from "../svg/notRoundedLocationImage.png";
 
 const GridProjectSearchResult = () => {
   return (
@@ -40,10 +40,10 @@ const GridProjectSearchResult = () => {
             <div className="locationCard max-w-[296px] relative w-full max-lg:max-w-full">
               <Splide aria-label="Location Images">
                 <SplideSlide>
-                  <img className="w-full h-full rounded-tl-xl rounded-tr-xl" src={locationCardImage} alt="locationCardImage" />
+                  <img className="w-full h-full rounded-tl-xl rounded-tr-xl" src={notRoundedLocationImage} alt="notRoundedLocationImage" />
                 </SplideSlide>
                 <SplideSlide>
-                  <img className="w-full h-full rounded-tl-xl rounded-tr-xl" src={locationCardImage} alt="locationCardImage" />
+                  <img className="w-full h-full rounded-tl-xl rounded-tr-xl" src={notRoundedLocationImage} alt="notRoundedLocationImage" />
                 </SplideSlide>
               </Splide>
               <span className="w-9 h-9 box-content text-black text-sm font-medium bg-lime-500 rounded-full border border-black flex justify-center items-center absolute top-2 right-2">999</span>

@@ -3,7 +3,7 @@ import SearchIcon from "../newIcons/SearchIcon";
 
 const LargeMenu = () => {
   return (
-    <div className={`flex justify-between items-center rounded-full shadow-xl relative w-fit max-sm:w-full z-10 border border-gray-200 `}>
+    <div className={`flex justify-between items-center rounded-full shadow-xl relative w-fit max-sm:w-full z-10 border border-gray-200 py-1.5`}>
       <div className="flex justify-center items-center max-sm:hidden">
         {/* Location Button */}
         <div

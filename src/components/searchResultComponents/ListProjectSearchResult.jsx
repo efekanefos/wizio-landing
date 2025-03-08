@@ -51,9 +51,9 @@ const ListProjectSearchResult = () => {
     },
   ];
   return (
-    <div className="mt-5">
+    <div className="mt-5 max-2xl:px-6 max-xl:px-5 max-md:px-4 max-sm:px-3">
       {/* Share Buttons */}
-      <div className="flex justify-end items-center gap-2 max-w-[1364px] mx-auto mb-6 max-md:mb-0">
+      <div className="flex justify-end items-center gap-2 max-w-[1364px] mx-auto mb-6">
         <div className="w-12 h-12 flex justify-center items-center border border-gray-200 rounded-full p-3">
           <SendMessageIcon className={"w-6 h-6 fill-black translate-x-0.5"} />
         </div>
@@ -65,9 +65,9 @@ const ListProjectSearchResult = () => {
         </div>
       </div>
 
-      <div className="max-w-[1362px] w-full mx-auto">
+      <div className="max-w-[1362px] w-full mx-auto shadow-lg">
         <div className="w-full overflow-x-auto rounded-2xl scrollbar-custom">
-          <table className="w-full border-collapse overflow-x-auto min-w-[1362px] bg-white shadow-2xl max-[1362px]:mb-6">
+          <table className="w-full border-collapse overflow-x-auto min-w-[1362px] bg-white shadow-2xl max-[1362px]:mb-6 ">
             <thead className="bg-black text-white ">
               <tr className="table-row h-24">
                 <th>
@@ -119,7 +119,7 @@ const ListProjectSearchResult = () => {
             </thead>
             <tbody>
               {properties.map((property, index) => (
-                <tr key={index} className="bg-white border-b border-gray-200">
+                <tr key={index} className="bg-white border-b border-x border-gray-200 hover:bg-gray-200">
                   <td className="font-medium h-24">
                     <div className="flex justify-start items-center gap-3 py-4 pl-5">
                       <div className="w-24 h-20 relative">

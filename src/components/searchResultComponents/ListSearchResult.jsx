@@ -3,15 +3,18 @@ import CloseIcon from "../newIcons/CloseIcon";
 import SendMessageIcon from "../svg/SendMessage";
 import ShareIcon from "../svg/ShareIcon";
 import MobileDownArrowIcon from "../newIcons/MobileDownArrowIcon";
-import RotateViewIcon from "../newIcons/RotateViewIcon";
+import FullRotateIcon from "../svg/FullRotateIcon";
 import GridViewIcon from "../newIcons/GridViewIcon";
 import ListViewIcon from "../newIcons/ListViewIcon";
 import ProjectLogo from "../svg/ProjectLogo";
+import floorPlanMiniImage from "../svg/floorPlanMiniImage.png";
+import FavouriteIcon from "../newIcons/FavouriteIcon";
+import CompareIcon from "../svg/CompareIcon";
 
 const ListSearchResult = () => {
   const properties = [
     {
-      project: "Limassol Marina",
+      project: "Li..",
       unit: "305",
       availability: true,
       price: 17350,
@@ -23,7 +26,7 @@ const ListSearchResult = () => {
       parking: 1,
     },
     {
-      project: "Bamboo Garden",
+      project: "Bam...",
       unit: "306",
       availability: true,
       price: 21500,
@@ -35,7 +38,7 @@ const ListSearchResult = () => {
       parking: 2,
     },
     {
-      project: "Tech Hub",
+      project: "Tech...",
       unit: "307",
       availability: true,
       price: 19200,
@@ -47,7 +50,7 @@ const ListSearchResult = () => {
       parking: 2,
     },
     {
-      project: "Greenfield Initiative",
+      project: "Gree...",
       unit: "308",
       availability: true,
       price: 21500,
@@ -59,7 +62,7 @@ const ListSearchResult = () => {
       parking: 2,
     },
     {
-      project: "Ocean View Resort",
+      project: "Ocea...",
       unit: "309",
       availability: true,
       price: 22800,
@@ -71,7 +74,7 @@ const ListSearchResult = () => {
       parking: 3,
     },
     {
-      project: "Urban Oasis",
+      project: "Urba...",
       unit: "310",
       availability: true,
       price: 25000,
@@ -83,7 +86,7 @@ const ListSearchResult = () => {
       parking: 1,
     },
     {
-      project: "Cloud Nine",
+      project: "Clou...",
       unit: "311",
       availability: true,
       price: 27500,
@@ -95,7 +98,7 @@ const ListSearchResult = () => {
       parking: 4,
     },
     {
-      project: "Solar Farm",
+      project: "Solar...",
       unit: "312",
       availability: true,
       price: 23000,
@@ -108,13 +111,13 @@ const ListSearchResult = () => {
     },
   ];
   return (
-    <div className="mt-5">
-      {/* Buttons */}
-      <div className="flex justify-end items-center gap-2 mb-6 mr-12 max-md:mr-5">
-        <div className="hidden max-sm:flex justify-center items-center w-12 h-12 border border-gray-200 rounded-full p-3">
+    <div className="mt-5 max-2xl:px-6 max-xl:px-5 max-md:px-4 max-sm:px-3">
+      {/* Share Buttons */}
+      <div className="max-w-[1364px] w-full mx-auto flex justify-end items-center gap-2 mb-6">
+        <div className="w-12 h-12 flex justify-center items-center border border-gray-200 rounded-full p-3">
           <SendMessageIcon className={"w-6 h-6 fill-black translate-x-0.5"} />
         </div>
-        <div className="hidden max-sm:flex justify-center items-center w-12 h-12 border border-gray-200 rounded-full p-3">
+        <div className="w-12 h-12 flex justify-center items-center border border-gray-200 rounded-full p-3">
           <ShareIcon className={"w-5 h-5 fill-black "} />
         </div>
         <div className="w-12 h-12 flex justify-center items-center border border-gray-200 rounded-full p-3">
@@ -122,13 +125,19 @@ const ListSearchResult = () => {
         </div>
       </div>
 
-      <div className="max-w-fit mx-auto">
+      <div className="max-w-[1365px] mx-auto">
         <div className="w-full overflow-x-auto rounded-t-2xl">
-          <table className="w-full border-collapse border-x border-gray-200 overflow-x-auto max-w-96">
+          <table className="w-full border-collapse border-x border-gray-200 overflow-x-auto">
             <thead className="bg-black text-white ">
               <tr className="table-row ">
                 <th>
-                  <div className="flex justify-center items-center gap-2.5 w-[360px] max-md:w-[171px] max-sm:w-64">
+                  <div className="flex justify-center items-center gap-2.5 w-48">
+                    <p className="text-sm font-semibold text-white">Floor Plan</p>
+                    <MobileDownArrowIcon className={"w-4 h-2 fill-white"} />
+                  </div>
+                </th>
+                <th>
+                  <div className="flex justify-center items-center gap-2.5 w-[77px]">
                     <p className="text-sm font-semibold text-white">Project</p>
                     <MobileDownArrowIcon className={"w-4 h-2 fill-white"} />
                   </div>
@@ -170,7 +179,7 @@ const ListSearchResult = () => {
                   </div>
                 </th>
                 <th>
-                  <div className="flex justify-center items-center gap-2.5 w-28">
+                  <div className="flex justify-center items-center gap-2.5 w-24">
                     <p className="text-sm font-semibold text-white">Net Area</p>
                     <MobileDownArrowIcon className={"w-4 h-2 fill-white"} />
                   </div>
@@ -182,10 +191,13 @@ const ListSearchResult = () => {
                   </div>
                 </th>
                 <th>
-                  <div className="flex justify-center items-center gap-2.5 w-24">
+                  <div className="flex justify-center items-center gap-2.5 w-20">
                     <p className="text-sm font-semibold text-white">Parking</p>
                     <MobileDownArrowIcon className={"w-4 h-2 fill-white"} />
                   </div>
+                </th>
+                <th>
+                  <div className="w-24"></div>
                 </th>
               </tr>
             </thead>
@@ -194,7 +206,12 @@ const ListSearchResult = () => {
                 <tr key={property.unit} className="bg-white border-b border-gray-200">
                   <td className="font-medium h-24">
                     <div className="flex justify-center items-center">
-                      <p className="text-base font-light">{property.project}</p>
+                      <img src={floorPlanMiniImage} alt="floorPlanMiniImage" />
+                    </div>
+                  </td>
+                  <td className="font-medium h-24">
+                    <div className="flex justify-center items-center">
+                      <p className="text-base font-light w-14">{property.project}</p>
                     </div>
                   </td>
                   <td>
@@ -240,6 +257,16 @@ const ListSearchResult = () => {
                       <p className="text-base font-light">{property.parking}</p>
                     </div>
                   </td>
+                  <td>
+                    <div className="flex flex-col justify-start items-center gap-3">
+                      <button className="w-8 h-8 rounded-full bg-gray-200 flex justify-center items-center">
+                        <CompareIcon className={"w-4 h-4 fill-black"} />
+                      </button>
+                      <button className="w-8 h-8 rounded-full bg-black flex justify-center items-center">
+                        <FavouriteIcon className={"w-4 h-4 fill-white"} />
+                      </button>
+                    </div>
+                  </td>
                 </tr>
               ))}
             </tbody>
@@ -255,7 +282,7 @@ const ListSearchResult = () => {
         </div>
         <div className="flex justify-center item-center gap-3">
           <div className={`p-3.5 rounded-full cursor-pointer bg-gray-200`}>
-            <RotateViewIcon className={`w-5 h-5 fill-gray-400`} />
+            <FullRotateIcon className={`w-5 h-5 fill-gray-400`} />
           </div>
           <div className={`p-3.5  rounded-full cursor-pointer bg-gray-200`}>
             <GridViewIcon className={`w-5 h-5 fill-gray-400`} />

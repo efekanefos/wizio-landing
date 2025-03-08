@@ -64,9 +64,26 @@ const UnitCompareGrid = () => {
   ];
   return (
     <div>
-      <div className="max-w-[1362px] w-full mx-auto h-full">
+      <div
+        className="relative h-screen flex flex-col justify-start items-center bg-cover bg-center bg-no-repeat pb-5 max-2xl:px-6 max-xl:px-5 max-md:px-4 max-md:h-screen max-sm:overflow-x-hidden max-sm:px-3"
+        style={{ backgroundImage: `url(${project360})` }}
+      >
+        <div className="max-w-[1362px] w-full relative z-20 mt-5 mb-6">
+          {/* Buttons */}
+          <div className="flex justify-end items-center gap-2 z-20">
+            <div className="flex justify-center items-center w-12 h-12 border border-gray-200 rounded-full p-3 bg-white">
+              <SendMessageIcon className={"w-6 h-6 fill-black translate-x-0.5"} />
+            </div>
+            <div className="flex justify-center items-center w-12 h-12 border border-gray-200 rounded-full p-3 bg-white">
+              <ShareIcon className={"w-5 h-5 fill-black "} />
+            </div>
+            <div className="w-12 h-12 flex justify-center items-center border border-gray-200 rounded-full p-3 bg-white">
+              <CloseIcon className={"w-3.5 h-3.5 fill-black "} />
+            </div>
+          </div>
+        </div>
         {/* Compare Cards */}
-        <div className="z-20 absolute left-1/2 top-1/2 translate-y-[-50%] translate-x-[-50%] flex justify-center items-center gap-7 w-full max-w-[1375px] max-[1375px]:justify-start max-[1375px]:pb-6 overflow-x-auto px-6 scrollbar-custom">
+        <div className="z-20 absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] flex justify-between items-center gap-6 w-full max-w-[1364px] max-[1364px]:justify-start max-[1364px]:pb-6 max-[1364px]:px-6 overflow-x-auto scrollbar-custom">
           {Array.from({ length: 3 }).map((_, index) => (
             <div key={index} className="w-80 h-fit rounded-[32px] p-5 bg-white relative">
               <div className="flex justify-between items-center">
@@ -113,20 +130,6 @@ const UnitCompareGrid = () => {
             </div>
           </div>
         </div>
-        <div className="max-w-[1362px] mx-auto relative">
-          {/* Buttons */}
-          <div className="flex justify-end items-center gap-2 z-20 absolute top-5 right-0">
-            <div className="flex justify-center items-center w-12 h-12 border border-gray-200 rounded-full p-3 bg-white">
-              <SendMessageIcon className={"w-6 h-6 fill-black translate-x-0.5"} />
-            </div>
-            <div className="flex justify-center items-center w-12 h-12 border border-gray-200 rounded-full p-3 bg-white">
-              <ShareIcon className={"w-5 h-5 fill-black "} />
-            </div>
-            <div className="w-12 h-12 flex justify-center items-center border border-gray-200 rounded-full p-3 bg-white">
-              <CloseIcon className={"w-3.5 h-3.5 fill-black "} />
-            </div>
-          </div>
-        </div>
       </div>
 
       {/* View Options */}
@@ -148,10 +151,9 @@ const UnitCompareGrid = () => {
         </div>
       </div>
 
-      {/* Background Image */}
-      <img className="w-full h-screen object-cover" src={project360} alt="localBackground" />
       {/* Background Blur Overlay */}
-      <div className="w-full h-full bg-white bg-opacity-50 backdrop-blur-md z-10 absolute top-0 left-0"></div>
+
+      <div className="absolute inset-0 bg-white/50 backdrop-blur-md"></div>
     </div>
   );
 };

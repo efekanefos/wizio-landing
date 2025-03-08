@@ -6,6 +6,7 @@ import GridViewIcon from "../newIcons/GridViewIcon";
 import ListViewIcon from "../newIcons/ListViewIcon";
 import RoomViewIcon from "../svg/RoomViewIcon";
 import project360 from "../svg/project_360_search.png";
+import MobileDownArrowIcon from "../newIcons/MobileDownArrowIcon";
 
 const UnitCompareList = () => {
   const properties = [
@@ -56,7 +57,7 @@ const UnitCompareList = () => {
   ];
   return (
     <div>
-      <div className="max-w-[1362px] mx-auto relative">
+      <div className="max-w-[1364px] mx-auto relative">
         {/* Buttons */}
         <div className="flex justify-end items-center gap-2 z-20 absolute top-5 right-0">
           <div className="flex justify-center items-center w-12 h-12 border border-gray-200 rounded-full p-3 bg-white">
@@ -71,54 +72,63 @@ const UnitCompareList = () => {
         </div>
       </div>
 
-      <div className="max-w-[1362px] w-full mx-auto absolute top-24 left-1/2 translate-x-[-50%] z-20">
+      <div className="max-w-[1364px] w-full mx-auto absolute top-24 left-1/2 translate-x-[-50%] z-20">
         <div className="w-full overflow-x-auto rounded-2xl scrollbar-custom">
           <table className="w-full border-collapse border-x border-gray-200 overflow-x-auto min-w-[1362px] bg-white shadow-2xl max-[1362px]:mb-6">
-            <thead className="text-black border-b border-gray-200 ">
+            <thead className="border-b border-gray-200 bg-black text-white">
               <tr className="table-row">
                 <th className="pl-5 pr-5">
-                  <div className="flex justify-center items-center">
-                    <p className="text-sm font-light text-black w-40">Project</p>
+                  <div className="flex justify-center items-center gap-2.5 w-48">
+                    <p className="text-sm font-semibold">Project</p>
+                    <MobileDownArrowIcon className={"w-4 h-2 fill-white"} />
                   </div>
                 </th>
                 <th className="py-7 px-5">
-                  <div className="flex justify-center items-center">
-                    <p className="text-sm font-light text-black w-32">Unit</p>
+                  <div className="flex justify-center items-center gap-2.5 w-24">
+                    <p className="text-sm font-semibold">Unit</p>
+                    <MobileDownArrowIcon className={"w-4 h-2 fill-white"} />
                   </div>
                 </th>
                 <th className="px-5">
-                  <div className="flex justify-center items-center">
-                    <p className="text-sm font-light text-black w-24">Price</p>
+                  <div className="flex justify-center items-center gap-2.5 w-24">
+                    <p className="text-sm font-semibold">Price</p>
+                    <MobileDownArrowIcon className={"w-4 h-2 fill-white"} />
                   </div>
                 </th>
                 <th className="px-5">
-                  <div className="flex justify-center items-center">
-                    <p className="text-sm font-light text-black w-24">Bedrooms</p>
+                  <div className="flex justify-center items-center gap-2.5 w-24">
+                    <p className="text-sm font-semibold text-white">Bedrooms</p>
+                    <MobileDownArrowIcon className={"w-4 h-2 fill-white"} />
                   </div>
                 </th>
                 <th className="px-5">
-                  <div className="flex justify-center items-center">
-                    <p className="text-sm font-light text-black w-24">Bathrooms</p>
+                  <div className="flex justify-center items-center gap-2.5 w-24">
+                    <p className="text-sm font-semibold text-white">Bathrooms</p>
+                    <MobileDownArrowIcon className={"w-4 h-2 fill-white"} />
                   </div>
                 </th>
                 <th className="px-5">
-                  <div className="flex justify-center items-center">
-                    <p className="text-sm font-light text-black w-24">Gross Area</p>
+                  <div className="flex justify-center items-center gap-2.5 w-28">
+                    <p className="text-sm font-semibold text-white">Gross Area</p>
+                    <MobileDownArrowIcon className={"w-4 h-2 fill-white"} />
                   </div>
                 </th>
                 <th className="px-5">
-                  <div className="flex justify-center items-center">
-                    <p className="text-sm font-light text-black w-24">Net Area</p>
+                  <div className="flex justify-center items-center gap-2.5 w-24">
+                    <p className="text-sm font-semibold text-white">Net Area</p>
+                    <MobileDownArrowIcon className={"w-4 h-2 fill-white"} />
                   </div>
                 </th>
                 <th className="px-5">
-                  <div className="flex justify-center items-center">
-                    <p className="text-sm font-light text-black w-24">Garden</p>
+                  <div className="flex justify-center items-center gap-2.5 w-24">
+                    <p className="text-sm font-semibold text-white">Garden</p>
+                    <MobileDownArrowIcon className={"w-4 h-2 fill-white"} />
                   </div>
                 </th>
                 <th className="px-5">
-                  <div className="flex justify-center items-center">
-                    <p className="text-sm font-light text-black w-24">Parking</p>
+                  <div className="flex justify-center items-center gap-2.5 w-24">
+                    <p className="text-sm font-semibold text-white">Parking</p>
+                    <MobileDownArrowIcon className={"w-4 h-2 fill-white"} />
                   </div>
                 </th>
               </tr>
@@ -128,47 +138,47 @@ const UnitCompareList = () => {
                 <tr key={index} className="bg-white border-b border-gray-200">
                   <td className="font-medium h-[77px]">
                     <div className="flex justify-center items-center">
-                      <p className="text-base font-semibold">{property.project}</p>
+                      <p className="text-base font-regular">{property.project}</p>
                     </div>
                   </td>
                   <td>
                     <div className="flex justify-center items-center">
-                      <p className="text-base font-semibold">Unit {property.unit}</p>
+                      <p className="text-base font-regular">Unit {property.unit}</p>
                     </div>
                   </td>
                   <td>
                     <div className="flex justify-center items-center">
-                      <p className="text-base font-semibold">€{property.price.toLocaleString()},00</p>
+                      <p className="text-base font-regular">€{property.price.toLocaleString()},00</p>
                     </div>
                   </td>
                   <td>
                     <div className="flex justify-center items-center">
-                      <p className="text-base font-semibold">{property.bedrooms}</p>
+                      <p className="text-base font-regular">{property.bedrooms}</p>
                     </div>
                   </td>
                   <td>
                     <div className="flex justify-center items-center">
-                      <p className="text-base font-semibold">{property.bathrooms}</p>
+                      <p className="text-base font-regular">{property.bathrooms}</p>
                     </div>
                   </td>
                   <td>
                     <div className="flex justify-center items-center">
-                      <p className="text-base font-semibold">{property.grossArea}sqm</p>
+                      <p className="text-base font-regular">{property.grossArea}sqm</p>
                     </div>
                   </td>
                   <td>
                     <div className="flex justify-center items-center">
-                      <p className="text-base font-semibold">{property.netArea}sqm</p>
+                      <p className="text-base font-regular">{property.netArea}sqm</p>
                     </div>
                   </td>
                   <td>
                     <div className="flex justify-center items-center">
-                      <p className="text-base font-semibold">{property.garden}sqm</p>
+                      <p className="text-base font-regular">{property.garden}sqm</p>
                     </div>
                   </td>
                   <td>
                     <div className="flex justify-center items-center">
-                      <p className="text-base font-semibold">{property.parking}</p>
+                      <p className="text-base font-regular">{property.parking}</p>
                     </div>
                   </td>
                 </tr>
