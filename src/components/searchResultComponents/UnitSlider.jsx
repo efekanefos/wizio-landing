@@ -18,7 +18,7 @@ const UnitSlider = () => {
       max-2xl:px-6 max-xl:px-5 max-md:px-4 max-sm:px-3"
       >
         {/* Buttons */}
-        <div className="flex justify-center items-center gap-3 overflow-x-auto max-lg:justify-start scrollbar-custom">
+        <div style={{ scrollbarWidth: "none", msOverflowStyle: "none" }} className="flex justify-center items-center gap-3 overflow-x-auto max-lg:justify-start scrollbar-custom">
           {/* Exteriors Button */}
           <div className="py-1.5 px-3 flex justify-center items-center gap-1.5 rounded-full bg-gray-200">
             <HomeIcon className={"w-5 h-5 stroke-gray-300 fill-none"} />

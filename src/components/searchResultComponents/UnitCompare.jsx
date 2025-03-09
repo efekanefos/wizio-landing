@@ -7,12 +7,13 @@ const UnitCompare = () => {
     <div className="relative">
       {/* Compare Container */}
       <div
-        className="bg-white h-40 w-full absolute bottom-0 z-50 py-10 flex justify-center items-center gap-12 
-      max-2xl:px-6 max-xl:px-5 max-md:px-4 max-md:h-96 max-md:flex-col max-md:py-6 max-md:justify-between max-sm:h-[536px] max-sm:py-3 max-sm:justify-end"
+        className="bg-white h-40 w-full absolute bottom-0 z-50 py-10 flex justify-between items-center gap-12 
+      px-6 max-xl:px-5 max-md:px-4 max-md:h-96 max-md:flex-col max-md:py-6 max-md:justify-between max-sm:h-[536px] max-sm:py-3 max-sm:justify-end"
       >
         {/* Compare Cards */}
         <div
-          className="pb-1 max-w-[1070px] w-full flex justify-start items-center max-md:flex-wrap gap-36 overflow-x-auto scrollbar-custom
+          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+          className="pb-1 w-full flex justify-between items-center max-md:flex-wrap gap-6 overflow-x-auto
         max-md:gap-12 max-md:justify-center max-sm:gap-6"
         >
           {Array.from({ length: 4 }).map((_, index) => (
@@ -22,7 +23,7 @@ const UnitCompare = () => {
                 <div className="flex justify-between items-center mb-1">
                   <h4 className="text-sm font-semibold">Unit A15</h4>
                   <button className="w-4 h-4 border border-black flex justify-center items-center rounded-full">
-                    <CloseIcon className={"w-2 h-2 fill-black"} />
+                    <CloseIcon className={"w-2 h-2 fill-black translate-y-[0.5px] translate-x-[0.25px]"} />
                   </button>
                 </div>
                 <p className="text-xs mb-1">Limassol Marina</p>

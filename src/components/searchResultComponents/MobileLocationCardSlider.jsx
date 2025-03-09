@@ -28,7 +28,7 @@ const MobileLocationCardSlider = () => {
                 {/* Card Info */}
                 <div className="flex justify-start items-start gap-6">
                   <div className="relative">
-                    <img className="w-24 h-24 " src={MiniLocationSideBarCardImage} alt="MiniLocationSideBarCardImage" />
+                    <img className="w-24 h-28 object-cover" src={MiniLocationSideBarCardImage} alt="MiniLocationSideBarCardImage" />
                     <span className="w-9 h-9 box-content text-black text-sm font-medium bg-lime-500 rounded-full border border-black flex justify-center items-center absolute -top-1.5 -right-3">999</span>
                   </div>
                   {/* Card Text Side */}

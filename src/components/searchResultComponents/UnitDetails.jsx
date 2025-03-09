@@ -19,7 +19,7 @@ const UnitDetails = () => {
   return (
     <div>
       {/* Go Up Button */}
-      <button className="w-12 h-12 rounded-full border border-gray-200 fixed bottom-0 right-56 flex justify-center items-center">
+      <button className="w-12 h-12 rounded-full border border-gray-200 fixed bottom-5 left-5 flex justify-center items-center bg-white">
         <MobileDownArrowIcon className={"w-4 h-2 fill-black rotate-180"} />
       </button>
       {/* Upper Unit Filter */}
@@ -61,7 +61,7 @@ const UnitDetails = () => {
             <div className="w-8 h-8 flex justify-center items-center border border-gray-200 rounded-full">
               <ShareIcon className={"w-3.5 h-3.5 fill-black "} />
             </div>
-            <a href="/" className="text-white font-sm py-1.5 px-4 bg-black rounded-full text-center">
+            <a href="/" className="text-white text-sm font-light py-1.5 px-4 bg-black rounded-full text-center ">
               Book Now
             </a>
           </div>
@@ -70,8 +70,7 @@ const UnitDetails = () => {
         {/* Unit Name,Availability, Price */}
         <div className="max-w-[1362px] mx-auto flex justify-between items-center max-2xl:px-6 max-xl:px-5 max-md:px-4 max-sm:px-3">
           <div className="relative">
-            <h3 className="text-3xl font-semibold ml-5 max-md:ml-7">R-305</h3>
-            <span className="w-5 h-5 bg-[#4DCE5C] rounded-full absolute -top-2 -left-0 max-md:top-2"></span>
+            <h3 className="text-5xl font-semibold">R-305</h3>
           </div>
           <div>
             <p className="font-semibold max-md:hidden">Price</p>

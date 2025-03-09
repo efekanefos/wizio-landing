@@ -59,7 +59,7 @@ const UnitCompareList = () => {
     <div>
       <div className="max-w-[1364px] mx-auto relative">
         {/* Buttons */}
-        <div className="flex justify-end items-center gap-2 z-20 absolute top-5 right-0">
+        <div className="flex justify-end items-center gap-2 z-20 absolute top-5 right-0 max-2xl:px-6 max-xl:px-5 max-md:px-4 max-sm:px-3">
           <div className="flex justify-center items-center w-12 h-12 border border-gray-200 rounded-full p-3 bg-white">
             <SendMessageIcon className={"w-6 h-6 fill-black translate-x-0.5"} />
           </div>
@@ -72,7 +72,7 @@ const UnitCompareList = () => {
         </div>
       </div>
 
-      <div className="max-w-[1364px] w-full mx-auto absolute top-24 left-1/2 translate-x-[-50%] z-20">
+      <div className="max-w-[1364px] w-full mx-auto absolute top-24 left-1/2 translate-x-[-50%] z-20 max-2xl:px-6 max-xl:px-5 max-md:px-4 max-sm:px-3">
         <div className="w-full overflow-x-auto rounded-2xl scrollbar-custom">
           <table className="w-full border-collapse border-x border-gray-200 overflow-x-auto min-w-[1362px] bg-white shadow-2xl max-[1362px]:mb-6">
             <thead className="border-b border-gray-200 bg-black text-white">
