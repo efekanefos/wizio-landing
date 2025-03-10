@@ -4,10 +4,17 @@ import "@splidejs/react-splide/css";
 import LocalAmenitiesIcon from "../icons/LocalAmenitiesIcon";
 import whiteBox from "../../assets/images/logoutWindows/white_box.svg";
 import MiniLocationSideBarCardImage from "../../assets/images/newIcons/MiniLocationSideBarCardImage.png";
+import MobileDownArrowIcon from "../newIcons/MobileDownArrowIcon";
 
 const MobileLocationCardSlider = () => {
   return (
-    <div className="hidden max-md:block absolute bottom-24 overflow-x-hidden max-w-[760px] w-full tabletCardSlider">
+    <div className="hidden max-md:block absolute bottom-0 overflow-x-hidden w-full tabletCardSlider bg-white max-sm:pb-3">
+      <div className="flex justify-between items-center my-3">
+        <div className="flex justify-center items-center gap-3 h-10 px-5 border border-gray-200 rounded-full ">
+          <p className="text-sm font-light">Sort by</p>
+          <MobileDownArrowIcon className={"w-3 h-2 fill-black stroke-2 stroke-black"} />
+        </div>
+      </div>
       <Splide
         options={{
           perPage: 2, // İlk ekranda 2 kart görünecek
