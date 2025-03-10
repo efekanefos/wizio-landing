@@ -10,7 +10,7 @@ const MobileLocationCardSlider = () => {
   return (
     <div className="hidden max-md:block absolute bottom-0 overflow-x-hidden w-full tabletCardSlider bg-white max-sm:pb-3">
       <div className="flex justify-between items-center my-3">
-        <div className="flex justify-center items-center gap-3 h-10 px-5 border border-gray-200 rounded-full ">
+        <div className="flex justify-center items-center gap-3 h-10 px-5 border border-gray-200 rounded-full ml-3">
           <p className="text-sm font-light">Sort by</p>
           <MobileDownArrowIcon className={"w-3 h-2 fill-black stroke-2 stroke-black"} />
         </div>

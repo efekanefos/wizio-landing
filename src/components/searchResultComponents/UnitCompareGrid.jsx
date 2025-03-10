@@ -65,7 +65,7 @@ const UnitCompareGrid = () => {
   return (
     <div>
       <div
-        className="relative h-screen flex flex-col justify-start items-center bg-cover bg-center bg-no-repeat pb-5 max-2xl:px-6 max-xl:px-5 max-md:px-4 max-md:h-screen max-sm:overflow-x-hidden max-sm:px-3"
+        className="relative h-screen overflow-y-auto flex flex-col items-center bg-cover bg-center bg-no-repeat pb-5 max-2xl:px-6 max-xl:px-5 max-md:px-4 max-md:h-screen max-sm:overflow-x-hidden max-sm:px-3"
         style={{ backgroundImage: `url(${project360})` }}
       >
         <div className="max-w-[1362px] w-full relative z-20 mt-5 mb-6">
@@ -83,9 +83,10 @@ const UnitCompareGrid = () => {
           </div>
         </div>
         {/* Compare Cards */}
-        <div className="z-20 absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] flex justify-between items-center gap-6 w-full max-w-[1364px] max-[1364px]:justify-start max-[1364px]:pb-6 max-[1364px]:px-6 overflow-x-auto scrollbar-custom">
+        <div className="z-20 flex justify-between min-h-fit h-full items-center gap-6 w-full max-w-[1364px] max-[1364px]:justify-start max-[1364px]:pb-6 max-[1364px]:px-6 overflow-x-auto scrollbar-custom">
+          {/* absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] */}
           {Array.from({ length: 3 }).map((_, index) => (
-            <div key={index} className="w-80 h-fit rounded-[32px] p-5 bg-white relative">
+            <div key={index} className="w-80 h-fit min-h-fit rounded-[32px] p-5 bg-white relative">
               <div className="flex justify-between items-center">
                 <p className="text-xl font-semibold text-black">Unit 278</p>
                 <div className="flex justify-end items-center gap-2">
@@ -101,7 +102,7 @@ const UnitCompareGrid = () => {
                 </div>
               </div>
               <p className="text-base font-light text-black mb-3 mt-1">Limassol Marina</p>
-              <img className="w-full h-full max-w-[280px]" src={roomView} alt="roomView" />
+              <img className="w-full h-fit max-w-[280px]" src={roomView} alt="roomView" />
               <ul>
                 {propertyFeatureList.map((item, index) => (
                   <li key={index} className="flex justify-between items-center border-b border-gray-200 py-2">
@@ -130,23 +131,24 @@ const UnitCompareGrid = () => {
             </div>
           </div>
         </div>
-      </div>
 
-      {/* View Options */}
-      <div className="bg-black flex items-center gap-3 fixed -bottom-0 left-[50%] translate-x-[-50%] translate-y-[-50%] py-1.5 pl-5 pr-1.5 rounded-full z-20">
-        <div className="flex flex-col justify-center w-20">
-          <p className="text-xs font-light text-white">View in</p>
-          <p className="text-xl font-semibold text-white">Grid</p>
-        </div>
-        <div className="flex justify-center item-center gap-3 cursor-pointer">
-          <div className="p-3.5 bg-gray-200 rounded-full cursor-pointer">
-            <RoomViewIcon className={`w-5 h-5 fill-gray-400`} />
+        {/* View Options */}
+        <div className="bg-black flex items-center gap-3 py-1.5 pl-5 pr-1.5 rounded-full z-20 mt-6">
+          {/* fixed -bottom-0 left-[50%] translate-x-[-50%] translate-y-[-50%] */}
+          <div className="flex flex-col justify-center w-20">
+            <p className="text-xs font-light text-white">View in</p>
+            <p className="text-xl font-semibold text-white">Grid</p>
           </div>
-          <div className="p-3.5 bg-white rounded-full cursor-pointer">
-            <GridViewIcon className={`w-5 h-5 fill-black`} />
-          </div>
-          <div className="p-3.5 bg-gray-200 rounded-full cursor-pointer">
-            <ListViewIcon className={`w-5 h-5 fill-gray-400`} />
+          <div className="flex justify-center item-center gap-3 cursor-pointer">
+            <div className="p-3.5 bg-gray-200 rounded-full cursor-pointer">
+              <RoomViewIcon className={`w-5 h-5 fill-gray-400`} />
+            </div>
+            <div className="p-3.5 bg-white rounded-full cursor-pointer">
+              <GridViewIcon className={`w-5 h-5 fill-black`} />
+            </div>
+            <div className="p-3.5 bg-gray-200 rounded-full cursor-pointer">
+              <ListViewIcon className={`w-5 h-5 fill-gray-400`} />
+            </div>
           </div>
         </div>
       </div>

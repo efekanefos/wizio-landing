@@ -16,9 +16,9 @@ import notRoundedLocationImage from "../svg/notRoundedLocationImage.png";
 
 const GridProjectSearchResult = () => {
   return (
-    <div className="mt-5">
+    <div className="mt-5 max-2xl:px-6 max-xl:px-5 max-md:px-4 max-sm:px-3">
       {/* Share Buttons */}
-      <div className="flex justify-end items-center gap-2 max-w-[1364px] mx-auto mb-6 max-md:mb-0">
+      <div className="flex justify-end items-center gap-2 max-w-[1364px] mx-auto mb-5 max-md:mb-0">
         <div className="w-12 h-12 flex justify-center items-center border border-gray-200 rounded-full p-3">
           <SendMessageIcon className={"w-6 h-6 fill-black translate-x-0.5"} />
         </div>
@@ -31,10 +31,7 @@ const GridProjectSearchResult = () => {
       </div>
 
       {/* Cards */}
-      <div
-        className="max-w-[1364px] w-full mx-auto overflow-y-auto flex flex-wrap gap-6 justify-center items-center max-lg:grid max-lg:grid-cols-2 max-md:grid-cols-1 max-md:pt-6 
-      max-lg:px-14 max-md:px-12 max-sm:px-2"
-      >
+      <div className="max-w-[1364px] w-full mx-auto overflow-y-auto flex flex-wrap gap-6 justify-center items-center max-lg:grid max-lg:grid-cols-2 max-md:grid-cols-1 max-md:pt-5">
         {Array.from({ length: 6 }).map((_, index) => (
           <div key={index} className="bg-white p-3 border border-gray-200 shadow-md rounded-2xl">
             <div className="locationCard max-w-[296px] relative w-full max-lg:max-w-full">

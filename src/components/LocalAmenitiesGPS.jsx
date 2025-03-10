@@ -108,7 +108,7 @@ function LocalAmenitiesGPS() {
         </div>
 
         {/* Distance Bar */}
-        <div className="fixed bottom-6 left-1/2 translate-x-[-50%] flex justify-center items-center gap-2.5 bg-black rounded-full w-72 shadow-lg">
+        <div className="fixed bottom-6 max-md:bottom-64 left-1/2 translate-x-[-50%] flex justify-center items-center gap-2.5 bg-black rounded-full w-72 shadow-lg">
           {/* Distance Side */}
           <div className="py-2.5 pl-3">
             <p className="text-xs text-white font-light">8.3 miles</p>
@@ -175,10 +175,10 @@ function LocalAmenitiesGPS() {
         </div>
 
         {/* Tablet Industry Filter Buttons and Location List */}
-        <div className="hidden max-md:block py-6 px-16 absolute left-1/2 bottom-20 translate-x-[-50%] w-full max-sm:px-3 max-sm:py-6">
+        <div className="hidden max-md:block py-6 px-16 absolute left-1/2 bottom-20 translate-x-[-50%] w-full max-md:bottom-0 max-sm:px-3 max-sm:py-6">
           <div className="rounded-3xl   bg-white shadow-lg border border-gray-200">
             {/* Buttons */}
-            <div className="flex justify-between items-center gap-3 py-3 px-16 shadow-lg w-full max-sm:max-w-[630px] max-sm:overflow-x-auto max-sm:justify-start max-sm:px-3">
+            <div style={{ scrollbarWidth: "none", msOverflowStyle: "none" }} className="flex justify-between items-center gap-3 py-3 px-16 shadow-lg w-full max-sm:max-w-[630px] max-sm:overflow-x-auto max-sm:justify-start max-sm:px-3">
               <div className="py-1.5 px-3 flex justify-center items-center gap-1.5 rounded-full bg-gray-200 w-full">
                 <HospitalityIcon className={"w-5 h-5 stroke-gray-300 fill-none"} />
                 <p className="text-gray-400 text-xs font-light">Hospitality</p>

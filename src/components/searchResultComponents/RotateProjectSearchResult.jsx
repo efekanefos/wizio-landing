@@ -27,6 +27,9 @@ const RotateProjectSearchResult = () => {
   return (
     <div>
       <div style={{ scrollbarWidth: "none", msOverflowStyle: "none" }} className="bg-white h-full absolute left-0 p-6 overflow-y-auto  max-md:w-full max-md:max-h-[366px] max-md:bottom-0 max-md:pt-0 max-md:pr-5 max-sm:px-4 max-sm:max-h-[560px]">
+        <div className="hidden max-md:flex w-full bg-white py-4 justify-center items-center max-sm:mt-3">
+          <img src={navigator} alt="navigator" />
+        </div>
         <div className="flex justify-between items-center mb-3">
           <div className="flex justify-center items-center gap-3 h-10 px-5 border border-gray-200 rounded-full ">
             <p className="text-sm font-light">Sort by</p>
@@ -36,9 +39,6 @@ const RotateProjectSearchResult = () => {
           <div className="w-10 h-10 flex justify-center items-center border border-gray-200 rounded-full">
             <MobileDownArrowIcon className={"w-4 h-4 fill-black  rotate-90"} />
           </div>
-        </div>
-        <div className="hidden max-md:flex w-full bg-white py-4 justify-center items-center max-sm:mt-3">
-          <img src={navigator} alt="navigator" />
         </div>
         <div className="flex flex-col gap-3 max-md:grid max-md:grid-cols-2 max-md:justify-center max-md:place-items-center max-sm:mt-3">
           {Array.from({ length: 6 }).map((_, index) => (
@@ -115,8 +115,6 @@ const RotateProjectSearchResult = () => {
           </div>
         </div>
       </div>
-
-      {/* Desktop Navigator */}
 
       {/* View Options */}
       <div className="flex flex-col justify-center items-center gap-9 fixed -bottom-6 left-[60%] translate-x-[-50%] translate-y-[-50%] md:left-[calc(370px+((100vw-370px)/2))] max-md:left-[50%]">

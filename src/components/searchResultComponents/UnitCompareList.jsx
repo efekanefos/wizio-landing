@@ -72,11 +72,11 @@ const UnitCompareList = () => {
         </div>
       </div>
 
-      <div className="max-w-[1364px] w-full mx-auto absolute top-24 left-1/2 translate-x-[-50%] z-20 max-2xl:px-6 max-xl:px-5 max-md:px-4 max-sm:px-3">
-        <div className="w-full overflow-x-auto rounded-2xl scrollbar-custom">
-          <table className="w-full border-collapse border-x border-gray-200 overflow-x-auto min-w-[1362px] bg-white shadow-2xl max-[1362px]:mb-6">
-            <thead className="border-b border-gray-200 bg-black text-white">
-              <tr className="table-row">
+      <div className="max-w-[1364px] w-full mx-auto absolute top-24 left-1/2 translate-x-[-50%] z-20 max-2xl:pl-6 max-xl:pl-5 max-md:pl-4 max-sm:pl-3">
+        <div className="w-full overflow-x-auto scrollbar-custom rounded-2xl">
+          <table className="w-full border-collapse border-x border-gray-200 min-w-[1362px] bg-white shadow-2xl max-[1362px]:mb-6">
+            <thead className="border-b border-gray-200 bg-black text-white ">
+              <tr className="table-row ">
                 <th className="pl-5 pr-5">
                   <div className="flex justify-center items-center gap-2.5 w-48">
                     <p className="text-sm font-semibold">Project</p>
@@ -204,7 +204,7 @@ const UnitCompareList = () => {
       <div className="bg-black flex items-center gap-3 fixed -bottom-0 left-[50%] translate-x-[-50%] translate-y-[-50%] py-1.5 pl-5 pr-1.5 rounded-full z-20">
         <div className="flex flex-col justify-center w-20">
           <p className="text-xs font-light text-white">View in</p>
-          <p className="text-xl font-semibold text-white">Grid</p>
+          <p className="text-xl font-semibold text-white">List</p>
         </div>
         <div className="flex justify-center item-center gap-3 cursor-pointer">
           <div className="p-3.5 bg-gray-200 rounded-full cursor-pointer">
