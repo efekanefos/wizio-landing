@@ -183,7 +183,7 @@ const RotateSearchResult = () => {
       </div>
 
       {/* View Options */}
-      <div className="bg-black flex items-center gap-3 fixed bottom-60 md:left-[calc(370px+((100vw-370px)/2))] max-md:left-[50%] translate-x-[-50%] translate-y-[-50%] py-1.5 pl-5 pr-1.5 rounded-full">
+      <div className="bg-black flex items-center gap-3 fixed bottom-0 md:left-[calc(370px+((100vw-370px)/2))] max-md:left-[50%] translate-x-[-50%] translate-y-[-50%] py-1.5 pl-5 pr-1.5 rounded-full max-md:bottom-60 max-sm:bottom-64">
         <div className="flex flex-col justify-center w-20">
           <p className="text-xs font-light text-white">View in</p>
           <p className="text-xl font-semibold text-white">Map</p>
