@@ -7,7 +7,6 @@
     clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%);
   }
 }
-
 .customSlider .splide__pagination {
   display: flex;
   align-items: center;

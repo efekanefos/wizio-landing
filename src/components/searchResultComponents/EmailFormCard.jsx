@@ -6,7 +6,7 @@ import TextAreaResizeIcon from "../svg/TextAreaResizeIcon";
 const EmailFormCard = () => {
   return (
     <div
-      className="relative h-screen flex flex-col justify-center items-center bg-cover bg-center bg-no-repeat pb-5 max-2xl:px-6 max-xl:px-5 max-md:px-4 max-md:h-screen max-sm:overflow-x-hidden max-sm:px-3"
+      className="relative h-screen flex flex-col justify-center items-center bg-cover bg-center bg-no-repeat max-2xl:px-6 max-xl:px-5 max-md:px-4 max-md:h-screen max-sm:overflow-x-hidden max-sm:px-3 "
       style={{ backgroundImage: `url(${project360})` }}
     >
       <div className="z-10 w-full max-w-[448px] h-fit p-3 bg-white rounded-[32px] shadow-lg flex flex-col justify-start items-center gap-5">
@@ -72,7 +72,7 @@ const EmailFormCard = () => {
         </div>
       </div>
       {/* Background Blur Overlay */}
-      <div className="absolute inset-0 bg-white/50 backdrop-blur-md"></div>
+      <div className="absolute h-screen inset-0 bg-white/50 backdrop-blur-md"></div>
     </div>
   );
 };

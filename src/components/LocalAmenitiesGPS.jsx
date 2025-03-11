@@ -21,19 +21,6 @@ import BoxIcon from "./svg/BoxIcon";
 function LocalAmenitiesGPS() {
   return (
     <div>
-      {/* Buttons */}
-      <div className="absolute top-5 right-0 hidden max-sm:flex justify-end items-center gap-2 mb-6 mr-12 max-md:mr-5">
-        <div className="hidden max-sm:flex justify-center items-center w-12 h-12 border border-gray-200 rounded-full p-3 bg-white">
-          <SendMessageIcon className={"w-6 h-6 fill-black translate-x-0.5"} />
-        </div>
-        <div className="hidden max-sm:flex justify-center items-center w-12 h-12 border border-gray-200 rounded-full p-3 bg-white">
-          <ShareIcon className={"w-5 h-5 fill-black "} />
-        </div>
-        <div className="w-12 h-12 flex justify-center items-center border border-gray-200 rounded-full p-3 bg-white">
-          <CloseIcon className={"w-3.5 h-3.5 fill-black "} />
-        </div>
-      </div>
-
       <div className="border-t border-gray-200 border-b">
         {/* Location Industries */}
         <div className="max-md:hidden w-full py-3 bg-white flex justify-center items-center z-10">

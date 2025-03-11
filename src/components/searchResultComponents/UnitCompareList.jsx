@@ -7,6 +7,7 @@ import ListViewIcon from "../newIcons/ListViewIcon";
 import RoomViewIcon from "../svg/RoomViewIcon";
 import project360 from "../svg/project_360_search.png";
 import MobileDownArrowIcon from "../newIcons/MobileDownArrowIcon";
+import { Scrollbars } from "react-custom-scrollbars-2";
 
 const UnitCompareList = () => {
   const properties = [
@@ -73,11 +74,12 @@ const UnitCompareList = () => {
       </div>
 
       <div className="max-w-[1364px] w-full mx-auto absolute top-24 left-1/2 translate-x-[-50%] z-20 max-2xl:pl-6 max-xl:pl-5 max-md:pl-4 max-sm:pl-3">
-        <div className="w-full overflow-x-auto scrollbar-custom rounded-2xl">
-          <table className="w-full border-collapse border-x border-gray-200 min-w-[1362px] bg-white shadow-2xl max-[1362px]:mb-6">
+        {/* <div className="w-full overflow-x-auto scrollbar-custom rounded-2xl"> */}
+        <div className="w-full rounded-2xl scrollbar-custom overflow-x-auto">
+          <table className="w-full border-collapse border-x border-gray-200 min-w-[1362px] bg-white shadow-2xl ">
             <thead className="border-b border-gray-200 bg-black text-white ">
               <tr className="table-row ">
-                <th className="pl-5 pr-5">
+                <th className="px-5">
                   <div className="flex justify-center items-center gap-2.5 w-48">
                     <p className="text-sm font-semibold">Project</p>
                     <MobileDownArrowIcon className={"w-4 h-2 fill-white"} />

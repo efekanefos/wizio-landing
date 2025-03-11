@@ -30,7 +30,7 @@ const RotateProjectSearchResult = () => {
         <div className="hidden max-md:flex w-full bg-white py-4 justify-center items-center max-sm:mt-3">
           <img src={navigator} alt="navigator" />
         </div>
-        <div className="flex justify-between items-center mb-3">
+        <div className="flex justify-between items-center mb-3 max-sm:mt-1">
           <div className="flex justify-center items-center gap-3 h-10 px-5 border border-gray-200 rounded-full ">
             <p className="text-sm font-light">Sort by</p>
             <MobileDownArrowIcon className={"w-3 h-2 fill-black stroke-2 stroke-black"} />
@@ -40,7 +40,7 @@ const RotateProjectSearchResult = () => {
             <MobileDownArrowIcon className={"w-4 h-4 fill-black  rotate-90"} />
           </div>
         </div>
-        <div className="flex flex-col gap-3 max-md:grid max-md:grid-cols-2 max-md:justify-center max-md:place-items-center max-sm:mt-3">
+        <div className="flex flex-col gap-3 max-md:grid max-md:grid-cols-2 max-md:justify-center max-md:place-items-center max-sm:mt-4">
           {Array.from({ length: 6 }).map((_, index) => (
             <div
               key={index}
