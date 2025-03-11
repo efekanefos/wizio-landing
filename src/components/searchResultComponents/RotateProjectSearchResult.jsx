@@ -36,7 +36,7 @@ const RotateProjectSearchResult = () => {
             <MobileDownArrowIcon className={"w-3 h-2 fill-black stroke-2 stroke-black"} />
           </div>
 
-          <div className="w-10 h-10 flex justify-center items-center border border-gray-200 rounded-full">
+          <div className="w-10 h-10 flex justify-center items-center border border-gray-200 rounded-full max-md:hidden">
             <MobileDownArrowIcon className={"w-4 h-4 fill-black  rotate-90"} />
           </div>
         </div>

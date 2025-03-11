@@ -42,7 +42,9 @@ import VerticalDetailCard from "./VerticalDetailCard";
 const RotateSearchResult = () => {
   return (
     <div>
-      <VerticalDetailCard />
+      <div className="max-lg:hidden">
+        <VerticalDetailCard />
+      </div>
       <div style={{ scrollbarWidth: "none", msOverflowStyle: "none" }} className="bg-white h-full absolute left-0 p-6 overflow-y-auto max-md:hidden">
         <div className="flex justify-between items-center mb-3">
           <div className="flex justify-center items-center gap-3 h-10 px-5 border border-gray-200 rounded-full ">
