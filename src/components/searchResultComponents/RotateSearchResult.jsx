@@ -15,6 +15,7 @@ import FullRotateIcon from "../svg/FullRotateIcon";
 import MobileLocationCardSlider from "./MobileLocationCardSlider";
 import MobileDownArrowIcon from "../newIcons/MobileDownArrowIcon";
 import mapSearchResultBackgroundImage from "../svg/mapSearchResultBackgroundImage.png";
+import VerticalDetailCard from "./VerticalDetailCard";
 
 {
   //*Index.css İçerisinde bu kodlar mevcut
@@ -41,6 +42,7 @@ import mapSearchResultBackgroundImage from "../svg/mapSearchResultBackgroundImag
 const RotateSearchResult = () => {
   return (
     <div>
+      <VerticalDetailCard />
       <div style={{ scrollbarWidth: "none", msOverflowStyle: "none" }} className="bg-white h-full absolute left-0 p-6 overflow-y-auto max-md:hidden">
         <div className="flex justify-between items-center mb-3">
           <div className="flex justify-center items-center gap-3 h-10 px-5 border border-gray-200 rounded-full ">
