@@ -7,14 +7,14 @@ import FullRotateIcon from "../svg/FullRotateIcon";
 import GridViewIcon from "../newIcons/GridViewIcon";
 import ListViewIcon from "../newIcons/ListViewIcon";
 import ProjectLogo from "../svg/ProjectLogo";
-import floorPlanMiniImage from "../svg/floorPlanMiniImage.png";
+import listFloorPlanImage from "../svg/listFloorPlanImage.png";
 import FavouriteIcon from "../newIcons/FavouriteIcon";
 import CompareIcon from "../svg/CompareIcon";
 
 const ListSearchResult = () => {
   const properties = [
     {
-      project: "Li..",
+      project: "Limassol Mar..",
       unit: "305",
       availability: true,
       price: 17350,
@@ -26,7 +26,7 @@ const ListSearchResult = () => {
       parking: 1,
     },
     {
-      project: "Bam...",
+      project: "Bamboo Garden",
       unit: "306",
       availability: true,
       price: 21500,
@@ -38,7 +38,7 @@ const ListSearchResult = () => {
       parking: 2,
     },
     {
-      project: "Tech...",
+      project: "Tech Hub",
       unit: "307",
       availability: true,
       price: 19200,
@@ -50,7 +50,7 @@ const ListSearchResult = () => {
       parking: 2,
     },
     {
-      project: "Gree...",
+      project: "Greenfield Initia...",
       unit: "308",
       availability: true,
       price: 21500,
@@ -62,7 +62,7 @@ const ListSearchResult = () => {
       parking: 2,
     },
     {
-      project: "Ocea...",
+      project: "Ocean View Re...",
       unit: "309",
       availability: true,
       price: 22800,
@@ -74,7 +74,7 @@ const ListSearchResult = () => {
       parking: 3,
     },
     {
-      project: "Urba...",
+      project: "Urban Oasis",
       unit: "310",
       availability: true,
       price: 25000,
@@ -86,7 +86,7 @@ const ListSearchResult = () => {
       parking: 1,
     },
     {
-      project: "Clou...",
+      project: "Cloud Nine",
       unit: "311",
       availability: true,
       price: 27500,
@@ -98,7 +98,7 @@ const ListSearchResult = () => {
       parking: 4,
     },
     {
-      project: "Solar...",
+      project: "Solar Farm",
       unit: "312",
       availability: true,
       price: 23000,
@@ -131,13 +131,12 @@ const ListSearchResult = () => {
             <thead className="bg-black text-white ">
               <tr className="table-row ">
                 <th>
-                  <div className="flex justify-center items-center gap-2.5 w-48">
+                  <div className="flex justify-center items-center gap-2.5 w-28">
                     <p className="text-sm font-semibold text-white">Floor Plan</p>
-                    <MobileDownArrowIcon className={"w-4 h-2 fill-white"} />
                   </div>
                 </th>
                 <th>
-                  <div className="flex justify-center items-center gap-2.5 w-[77px]">
+                  <div className="flex justify-center items-center gap-2.5 w-[151px]">
                     <p className="text-sm font-semibold text-white">Project</p>
                     <MobileDownArrowIcon className={"w-4 h-2 fill-white"} />
                   </div>
@@ -203,15 +202,15 @@ const ListSearchResult = () => {
             </thead>
             <tbody>
               {properties.map((property, index) => (
-                <tr key={property.unit} className="bg-white border-b border-gray-200">
+                <tr key={index} className="bg-white border-b border-gray-200">
                   <td className="font-medium h-24">
-                    <div className="flex justify-center items-center">
-                      <img src={floorPlanMiniImage} alt="floorPlanMiniImage" />
+                    <div className="flex justify-center items-center p-2 pr-0">
+                      <img src={listFloorPlanImage} alt="listFloorPlanImage" />
                     </div>
                   </td>
                   <td className="font-medium h-24">
-                    <div className="flex justify-center items-center">
-                      <p className="text-base font-light w-14">{property.project}</p>
+                    <div className="flex justify-left items-center ml-5">
+                      <p className="text-base font-light w-full">{property.project}</p>
                     </div>
                   </td>
                   <td>
@@ -220,7 +219,7 @@ const ListSearchResult = () => {
                     </div>
                   </td>
                   <td className="flex justify-center items-center h-24">
-                    <div className="h-2 w-2 rounded-full bg-green-500"></div>
+                    <div className="h-4 w-4 rounded-full bg-lime-500"></div>
                   </td>
                   <td>
                     <div className="flex justify-center items-center">
