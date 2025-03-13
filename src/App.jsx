@@ -20,6 +20,8 @@ import EmailFormCard from "./components/searchResultComponents/EmailFormCard";
 import UnitDetails from "./components/searchResultComponents/UnitDetails";
 import SelectUnit from "./components/searchResultComponents/SelectUnit";
 import UnitSlider from "./components/searchResultComponents/UnitSlider";
+import UpdatedMoreDetails from "./components/UpdatedMoreDetails";
+import DiscoverProjects from "./components/DiscoverProjects";
 
 function App() {
   return (
@@ -50,6 +52,8 @@ function App() {
         <Route path="/unit-details" element={<UnitDetails />} />
         <Route path="/select-unit" element={<SelectUnit />} />
         <Route path="/unit-slider" element={<UnitSlider />} />
+        <Route path="/project-list" element={<DiscoverProjects />} />
+        <Route path="/more-details" element={<UpdatedMoreDetails />} />
       </Routes>
     </Router>
   );

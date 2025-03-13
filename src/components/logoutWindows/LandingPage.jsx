@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 /* Menu */
 import MiniMenu from "../menuVersions/MiniMenu";
 import UpperMiniMenu from "../menuVersions/UpperMiniMenu";
@@ -14,13 +14,11 @@ import ThemeButton from "../menuRightSide/ThemeFiles/ThemeButton";
 import LoginButton from "../menuRightSide/LoginFiles/LoginButton";
 import LogoContent from "../menuLeftSide/LogoContent";
 import DiscoverProjects from "../DiscoverProjects";
+import UpdatedMoreDetails from "../UpdatedMoreDetails";
 
 function LandingPage() {
   return (
     <div className={`max-h-screen overflow-y-auto`}>
-      <div className="absolute w-full top-72 z-20 max-lg:hidden">
-        <DiscoverProjects />
-      </div>
       <nav className={`flex justify-between items-center max-sm:gap-4 py-3 px-9 z-10 relative bg-white max-2xl:px-6 max-xl:px-5 max-md:px-4 max-sm:px-3`}>
         {/* Left Side Of The Navbar */}
         <LogoContent />
