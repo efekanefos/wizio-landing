@@ -92,9 +92,9 @@ const LargeMenu = () => {
         </div>
       </div>
       {/* Mobile Search Input */}
-      <div className={`hidden max-sm:flex w-full rounded-full`}>
+      <div className={`hidden max-sm:flex w-full rounded-full max-sm:pr-3`}>
         <input className="w-full outline-none px-6 text-middleMenuTextBlack text-base font-light rounded-full" type="text" name="searchInput" id="searchInput" placeholder="Search" />
-        <div className={`rounded-full w-fit bg-black p-7 py-3 flex justify-start items-center gap-2`}>
+        <div className={`rounded-full w-fit bg-black p-7 py-3 flex justify-start items-center gap-2 max-md:p-4`}>
           <SearchIcon className={"w-5 h-5 fill-white"} />
         </div>
       </div>
