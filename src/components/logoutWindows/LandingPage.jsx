@@ -13,11 +13,15 @@ import ContactButton from "../menuRightSide/ContactFiles/ContactButton";
 import ThemeButton from "../menuRightSide/ThemeFiles/ThemeButton";
 import LoginButton from "../menuRightSide/LoginFiles/LoginButton";
 import LogoContent from "../menuLeftSide/LogoContent";
+import DiscoverProjects from "../DiscoverProjects";
 
 function LandingPage() {
   return (
-    <div className={`max-h-screen font-inter overflow-y-auto`}>
-      <nav className={`flex justify-between items-center py-3 px-9 z-10 relative bg-white font-inter max-lg:px-5 max-md:px-5 max-sm:gap-4`}>
+    <div className={`max-h-screen overflow-y-auto`}>
+      <div className="absolute w-full top-72 z-20">
+        <DiscoverProjects />
+      </div>
+      <nav className={`flex justify-between items-center py-3 px-9 z-10 relative bg-white max-lg:px-5 max-md:px-5 max-sm:gap-4`}>
         {/* Left Side Of The Navbar */}
         <LogoContent />
         {/* Middle Part Of The Navbar */}
@@ -61,7 +65,7 @@ function LandingPage() {
       </div>
       <img className="z-0 w-full h-screen object-cover" src={earthBackground} alt="Background Image" />
 
-      <div className="font-inter text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+      <div className="text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
         <h1 className="text-7xl text-center">
           World of <span className="font-bold">Pafilia</span>
         </h1>
