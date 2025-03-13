@@ -22,6 +22,7 @@ const links = [
   { href: "/unit-slider", label: "Unit Slider" },
   { href: "/more-details", label: "More Details" },
   { href: "/project-list", label: "Project List" },
+  { href: "/sliders", label: "Sliders" },
 ];
 
 function DropdownMenu() {
