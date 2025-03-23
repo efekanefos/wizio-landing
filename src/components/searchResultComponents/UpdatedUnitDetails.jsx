@@ -17,6 +17,12 @@ import TownhouseIcon from "../newIcons/TownhouseIcon";
 import FloorIcon from "../svg/FloorIcon";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
+import virtualTourImg from "../svg/virtualTourImg.png";
+import CloseIcon from "../newIcons/CloseIcon";
+import RotateViewIcon from "../newIcons/RotateViewIcon";
+import ResizeIcon from "../svg/ResizeIcon";
+import unitLocationImg from "../svg/unitLocationImg.png";
+import homeInside from "../../assets/images/searchResults/homeInside.png";
 
 const UpdatedUnitDetails = () => {
   return (
@@ -202,7 +208,7 @@ const UpdatedUnitDetails = () => {
             </p>
           </div>
 
-          <div className="mt-12 pb-12 border-b border-gray-200">
+          <div className="mt-12 pb-12">
             <p className="text-3xl font-semibold mb-7">Project Specifications</p>
             <ul className="grid grid-cols-4 gap-x-12 gap-y-4 mt-4 pb-12 border-b border-gray-200 max-xl:grid-cols-3 max-md:grid-cols-3 max-sm:grid-cols-2">
               <li className="flex gap-3 items-center min-w-36 max-sm:min-w-fit w-full">
@@ -307,6 +313,224 @@ const UpdatedUnitDetails = () => {
                 <p className="font-light whitespace-nowrap max-sm:whitespace-normal">Outdoor yoga</p>
               </li>
             </ul>
+          </div>
+        </div>
+      </div>
+      {/* Floor Plans */}
+      <div className="max-w-[1400px] mx-auto max-lg:block my-12 max-2xl:px-6 max-xl:px-5 max-md:px-4 max-sm:px-3 max-sm:mb-3 max-lg:my-6 customSlider unitDetailSlider">
+        <p className="text-3xl font-semibold mb-5">Floor Plans</p>
+        <Splide
+          options={{
+            perMove: 1,
+            arrows: false,
+            loop: true,
+            rewind: true,
+          }}
+          aria-label="Location Images"
+        >
+          <SplideSlide className="w-fit">
+            <div className="rounded-[44px] overflow-hidden">
+              <img className="w-full h-full" src={updatedUnitImg_1} alt="updatedUnitImg_1" />
+            </div>
+          </SplideSlide>
+          <SplideSlide className="w-fit">
+            <div className="rounded-[44px] overflow-hidden">
+              <img className="w-full h-full" src={updatedUnitImg_1} alt="updatedUnitImg_1" />
+            </div>
+          </SplideSlide>
+          <SplideSlide className="w-fit">
+            <div className="rounded-[44px] overflow-hidden">
+              <img className="w-full h-full" src={updatedUnitImg_1} alt="updatedUnitImg_1" />
+            </div>
+          </SplideSlide>
+          <SplideSlide className="w-fit">
+            <div className="rounded-[44px] overflow-hidden">
+              <img className="w-full h-full" src={updatedUnitImg_1} alt="updatedUnitImg_1" />
+            </div>
+          </SplideSlide>
+          <SplideSlide className="w-fit">
+            <div className="rounded-[44px] overflow-hidden">
+              <img className="w-full h-full" src={updatedUnitImg_1} alt="updatedUnitImg_1" />
+            </div>
+          </SplideSlide>
+          <SplideSlide className="w-fit">
+            <div className="rounded-[44px] overflow-hidden">
+              <img className="w-full h-full" src={updatedUnitImg_1} alt="updatedUnitImg_1" />
+            </div>
+          </SplideSlide>
+        </Splide>
+      </div>
+      {/* Virtual Tour */}
+      <div className="max-w-[1400px] mx-auto my-12 mt-16 max-2xl:px-6 max-xl:px-5 max-md:px-4 max-sm:px-3">
+        <p className="text-3xl font-semibold mb-5">Virtual Tour</p>
+        <div className="relative rounded-[32px] overflow-hidden">
+          <img className="w-full h-full" src={virtualTourImg} alt="virtualTourImg" />
+          <div className="w-12 h-12 bg-white rounded-full border-gray-200 flex justify-center items-center absolute top-6 left-6">
+            <ResizeIcon className={"w-5 h-5 fill-black"} />
+          </div>
+          <div className="w-12 h-12 bg-white rounded-full border-gray-200 flex justify-center items-center absolute top-6 right-6">
+            <CloseIcon className={"w-4 h-4 fill-black"} />
+          </div>
+          <div className="w-12 h-12 bg-white rounded-full border-gray-200 flex justify-center items-center absolute bottom-6 right-6">
+            <RotateViewIcon className={"w-5 h-5 fill-black"} />
+          </div>
+          <p className="text-white text-2xl font-light absolute bottom-6 left-6">Living room</p>
+        </div>
+      </div>
+      {/* Unit Location */}
+      <div className="max-w-[1400px] mx-auto my-12 max-2xl:px-6 max-xl:px-5 max-md:px-4 max-sm:px-3">
+        <p className="text-3xl font-semibold">Unit Location</p>
+        <div className="relative rounded-[32px] overflow-hidden my-12">
+          <img className="w-full h-full" src={unitLocationImg} alt="virtualTourImg" />
+        </div>
+      </div>
+      {/* Similar Units */}
+      <div className="max-w-[1400px] mx-auto my-12 max-2xl:px-6 max-xl:px-5 max-md:px-4 max-sm:px-3">
+        <p className="text-3xl font-semibold">Similar Units</p>
+        <div className="flex flex-wrap justify-start items-start gap-6 mt-12 max-xl:justify-center">
+          {/* Card #1 */}
+          <div className="max-w-80 bg-white p-3 border border-gray-200 shadow-md rounded-2xl">
+            {/* Card Img Side */}
+            <div className="max-w-[296px] max-h-44">
+              <img className="w-full h-full" src={homeInside} alt="homeInside" />
+            </div>
+            {/* Card Info Side */}
+            <div className="flex flex-col gap-3 mt-2">
+              {/* Unit Name, Price...  */}
+              <div className="mt-3 flex justify-between items-start">
+                <div>
+                  <p className="text-base font-semibold">Unit 305</p>
+                  <p className="text-sm font-light">€17,666,000+VAT</p>
+                </div>
+                <div className="flex justify-start items-center gap-3">
+                  <button className="w-8 h-8 rounded-full bg-gray-200 flex justify-center items-center">
+                    <CompareIcon className={"w-4 h-4 fill-black"} />
+                  </button>
+                  <button className="w-8 h-8 rounded-full bg-black flex justify-center items-center">
+                    <FavouriteIcon className={"w-4 h-4 fill-white"} />
+                  </button>
+                </div>
+              </div>
+              {/* Bedrooms, Sqm  */}
+              <div className="flex justify-start items-start">
+                <div className="w-full">
+                  <p className="text-xs font-medium">Bedrooms</p>
+                  <p className="text-sm font-light">2-3</p>
+                </div>
+                <div className="w-full">
+                  <p className="text-xs font-medium">Sqm</p>
+                  <p className="text-sm font-light">150-225</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* Card #2 */}
+          <div className="max-w-80 bg-white p-3 border border-gray-200 shadow-md rounded-2xl">
+            {/* Card Img Side */}
+            <div className="max-w-[296px] max-h-44">
+              <img className="w-full h-full" src={homeInside} alt="homeInside" />
+            </div>
+            {/* Card Info Side */}
+            <div className="flex flex-col gap-3 mt-2">
+              {/* Unit Name, Price...  */}
+              <div className="mt-3 flex justify-between items-start">
+                <div>
+                  <p className="text-base font-semibold">Unit 305</p>
+                  <p className="text-sm font-light">€17,666,000+VAT</p>
+                </div>
+                <div className="flex justify-start items-center gap-3">
+                  <button className="w-8 h-8 rounded-full bg-gray-200 flex justify-center items-center">
+                    <CompareIcon className={"w-4 h-4 fill-black"} />
+                  </button>
+                  <button className="w-8 h-8 rounded-full bg-black flex justify-center items-center">
+                    <FavouriteIcon className={"w-4 h-4 fill-white"} />
+                  </button>
+                </div>
+              </div>
+              {/* Bedrooms, Sqm  */}
+              <div className="flex justify-start items-start">
+                <div className="w-full">
+                  <p className="text-xs font-medium">Bedrooms</p>
+                  <p className="text-sm font-light">2-3</p>
+                </div>
+                <div className="w-full">
+                  <p className="text-xs font-medium">Sqm</p>
+                  <p className="text-sm font-light">150-225</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* Card #3 */}
+          <div className="max-w-80 bg-white p-3 border border-gray-200 shadow-md rounded-2xl">
+            {/* Card Img Side */}
+            <div className="max-w-[296px] max-h-44">
+              <img className="w-full h-full" src={homeInside} alt="homeInside" />
+            </div>
+            {/* Card Info Side */}
+            <div className="flex flex-col gap-3 mt-2">
+              {/* Unit Name, Price...  */}
+              <div className="mt-3 flex justify-between items-start">
+                <div>
+                  <p className="text-base font-semibold">Unit 305</p>
+                  <p className="text-sm font-light">€17,666,000+VAT</p>
+                </div>
+                <div className="flex justify-start items-center gap-3">
+                  <button className="w-8 h-8 rounded-full bg-gray-200 flex justify-center items-center">
+                    <CompareIcon className={"w-4 h-4 fill-black"} />
+                  </button>
+                  <button className="w-8 h-8 rounded-full bg-black flex justify-center items-center">
+                    <FavouriteIcon className={"w-4 h-4 fill-white"} />
+                  </button>
+                </div>
+              </div>
+              {/* Bedrooms, Sqm  */}
+              <div className="flex justify-start items-start">
+                <div className="w-full">
+                  <p className="text-xs font-medium">Bedrooms</p>
+                  <p className="text-sm font-light">2-3</p>
+                </div>
+                <div className="w-full">
+                  <p className="text-xs font-medium">Sqm</p>
+                  <p className="text-sm font-light">150-225</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* Card #4 */}
+          <div className="max-w-80 bg-white p-3 border border-gray-200 shadow-md rounded-2xl">
+            {/* Card Img Side */}
+            <div className="max-w-[296px] max-h-44">
+              <img className="w-full h-full" src={homeInside} alt="homeInside" />
+            </div>
+            {/* Card Info Side */}
+            <div className="flex flex-col gap-3 mt-2">
+              {/* Unit Name, Price...  */}
+              <div className="mt-3 flex justify-between items-start">
+                <div>
+                  <p className="text-base font-semibold">Unit 305</p>
+                  <p className="text-sm font-light">€17,666,000+VAT</p>
+                </div>
+                <div className="flex justify-start items-center gap-3">
+                  <button className="w-8 h-8 rounded-full bg-gray-200 flex justify-center items-center">
+                    <CompareIcon className={"w-4 h-4 fill-black"} />
+                  </button>
+                  <button className="w-8 h-8 rounded-full bg-black flex justify-center items-center">
+                    <FavouriteIcon className={"w-4 h-4 fill-white"} />
+                  </button>
+                </div>
+              </div>
+              {/* Bedrooms, Sqm  */}
+              <div className="flex justify-start items-start">
+                <div className="w-full">
+                  <p className="text-xs font-medium">Bedrooms</p>
+                  <p className="text-sm font-light">2-3</p>
+                </div>
+                <div className="w-full">
+                  <p className="text-xs font-medium">Sqm</p>
+                  <p className="text-sm font-light">150-225</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
