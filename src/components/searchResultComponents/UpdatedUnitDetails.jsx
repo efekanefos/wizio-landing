@@ -116,7 +116,7 @@ const UpdatedUnitDetails = () => {
         </Splide>
       </div>
       {/* Unit Details */}
-      <div className="max-w-[1400px] mx-auto grid grid-cols-3 items-start gap-6 px-6 max-xl:px-5 max-md:px-4 max-md:mt-12 max-sm:px-3">
+      <div className="max-w-[1400px] mx-auto grid grid-cols-3 items-start gap-6 px-6 max-xl:px-5 max-md:px-4 max-md:mt-16 max-sm:px-3">
         {/* Unit Detail Box */}
         <div
           className="col-span-1 shadow-lg p-6 rounded-[32px] w-full border border-gray-200 bg-white max-lg:fixed max-lg:left-1/2 max-lg:translate-x-[-50%] max-lg:bottom-0 max-lg:rounded-none
