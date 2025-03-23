@@ -23,6 +23,7 @@ import UnitSlider from "./components/searchResultComponents/UnitSlider";
 import UpdatedMoreDetails from "./components/UpdatedMoreDetails";
 import DiscoverProjects from "./components/DiscoverProjects";
 import Sliders from "./components/Sliders";
+import UpdatedUnitDetails from "./components/searchResultComponents/UpdatedUnitDetails";
 
 function App() {
   return (
@@ -56,6 +57,7 @@ function App() {
         <Route path="/project-list" element={<DiscoverProjects />} />
         <Route path="/more-details" element={<UpdatedMoreDetails />} />
         <Route path="/sliders" element={<Sliders />} />
+        <Route path="/updated-unit-details" element={<UpdatedUnitDetails />} />
       </Routes>
     </Router>
   );
