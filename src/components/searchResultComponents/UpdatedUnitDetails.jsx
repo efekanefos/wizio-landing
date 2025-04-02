@@ -23,6 +23,7 @@ import RotateViewIcon from "../newIcons/RotateViewIcon";
 import ResizeIcon from "../svg/ResizeIcon";
 import unitLocationImg from "../svg/unitLocationImg.png";
 import homeInside from "../../assets/images/searchResults/homeInside.png";
+import MobileDownArrowIcon from "../newIcons/MobileDownArrowIcon";
 
 const UpdatedUnitDetails = () => {
   return (
@@ -377,6 +378,67 @@ const UpdatedUnitDetails = () => {
           <p className="text-white text-2xl font-light absolute bottom-6 left-6">Living room</p>
         </div>
       </div>
+      {/* Financial Calculator */}
+      <div className="max-w-[1400px] mx-auto my-12 flex justify-between gap-6 max-2xl:px-6 max-xl:px-5 max-lg:flex-col max-md:px-4 max-sm:px-3">
+        {/* Calculator Container */}
+        <div className="max-w-[900px] w-full bg-gray-200 rounded-[32px] p-12 flex flex-col gap-12 max-lg:max-w-full">
+          <p className="text-3xl font-semibold">Financial Calculator</p>
+
+          <div className="flex justify-between items-center gap-4 max-sm:flex-col">
+            <input className="outline-none w-full text-black placeholder:text-gray-400 text-base font-light px-5 py-3 rounded-[32px] border border-gray-400 bg-transparent" type="text" placeholder="£7,350,000" />
+            <div className="relative w-full">
+              <input className="outline-none w-full text-black placeholder:text-gray-400 text-base font-light px-5 pr-10 py-3 rounded-[32px] border border-gray-400 bg-transparent" type="text" placeholder="Interest Rate" />
+              <span className="text-gray-400 text-base font-light pl-2 border-l border-gray-400 absolute right-3 top-3.5">%</span>
+            </div>
+          </div>
+
+          <div className="flex justify-between items-center gap-4 max-sm:flex-col">
+            <div className="flex justify-start items-center gap-3">
+              <input className="outline-none w-full text-black placeholder:text-gray-400 text-base font-light px-5 py-3 rounded-[32px] border border-gray-400 bg-transparent" type="text" placeholder="Deposit" />
+              <div className="relative w-full">
+                <input className="outline-none w-full text-black placeholder:text-gray-400 text-base font-light px-5 pr-10 py-3 rounded-[32px] border border-gray-400 bg-transparent" type="text" />
+                <span className="text-gray-400 text-base font-light pl-2 border-l border-gray-400 absolute right-3 top-3.5">%</span>
+              </div>
+            </div>
+            <div className="relative w-full max-w-sm max-sm:max-w-full">
+              <input className="outline-none w-full text-black placeholder:text-gray-400 text-base font-light px-5 pr-20 py-3 rounded-[32px] border border-gray-400 bg-transparent" type="text" />
+              <span className="text-gray-400 text-base font-light pl-2 border-l border-gray-400 absolute right-3 top-3.5">Months</span>
+            </div>
+          </div>
+
+          <div className="text-left">
+            <p className="text-xl font-light">Monthly Payment</p>
+            <p className="text-5xl font-semibold">£3,678.00</p>
+          </div>
+
+          <p className="text-sm font-light text-center text-gray-400 max-w-xl mx-auto">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus.
+          </p>
+        </div>
+        {/* Stamp Container */}
+        <div className="max-w-[500px] w-full bg-gray-200 rounded-[32px] p-12 flex flex-col gap-12 max-lg:max-w-full">
+          <p className="text-3xl font-semibold">Stamp Duty</p>
+
+          <input className="outline-none w-full text-black placeholder:text-gray-400 text-base font-light px-5 py-3 rounded-[32px] border border-gray-400 bg-transparent" type="text" placeholder="£7,350,000" />
+
+          <div className="relative">
+            <select className="appearance-none outline-none w-full text-gray-400 text-base font-light px-5 py-3 rounded-[32px] border border-gray-400 bg-transparent" name="stamp" id="stamp">
+              <option value="IAm">I am...</option>
+              <option value="IAm">I am...</option>
+              <option value="IAm">I am...</option>
+            </select>
+            <MobileDownArrowIcon className={"w-4 h-2 fill-gray-400 absolute top-[22px] right-3"} />
+          </div>
+
+          <button className="bg-black w-fit text-white text-base font-light py-4 px-11 rounded-[32px]">Calculate</button>
+
+          <div className="text-left">
+            <p className="text-xl font-light">Estimate</p>
+            <p className="text-5xl font-semibold">£7,500.00</p>
+          </div>
+        </div>
+      </div>
+
       {/* Unit Location */}
       <div className="max-w-[1400px] mx-auto my-12 max-2xl:px-6 max-xl:px-5 max-md:px-4 max-sm:px-3">
         <p className="text-3xl font-semibold">Unit Location</p>
