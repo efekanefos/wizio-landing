@@ -24,6 +24,8 @@ import UpdatedMoreDetails from "./components/UpdatedMoreDetails";
 import DiscoverProjects from "./components/DiscoverProjects";
 import Sliders from "./components/Sliders";
 import UpdatedUnitDetails from "./components/searchResultComponents/UpdatedUnitDetails";
+import StepPopup from "./components/searchResultComponents/StepPopup";
+import RegisterClient from "./components/searchResultComponents/RegisterClient";
 
 function App() {
   return (
@@ -58,6 +60,8 @@ function App() {
         <Route path="/more-details" element={<UpdatedMoreDetails />} />
         <Route path="/sliders" element={<Sliders />} />
         <Route path="/updated-unit-details" element={<UpdatedUnitDetails />} />
+        <Route path="/step-popup" element={<StepPopup />} />
+        <Route path="/register-client" element={<RegisterClient />} />
       </Routes>
     </Router>
   );

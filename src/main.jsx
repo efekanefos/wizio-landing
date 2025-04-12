@@ -24,6 +24,8 @@ const links = [
   { href: "/project-list", label: "Project List" },
   { href: "/sliders", label: "Sliders" },
   { href: "/updated-unit-details", label: "Updated Unit Details" },
+  { href: "/step-popup", label: "Step Popup" },
+  { href: "/register-client", label: "Register Client" },
 ];
 
 function DropdownMenu() {
